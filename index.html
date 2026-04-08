@@ -63,8 +63,8 @@
         <a href="/" class="nav__logo" aria-label="Origo — Home">
           <!-- Horizontal black logo, viewBox cropped to content -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 1000 2230 540" aria-hidden="true">
-            <path fill="#0b0b0b" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
-            <path fill="#0b0b0b" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+            <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+            <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
             <!-- Separator -->
             <path fill="#0b0b0b" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
             <!-- ORIGO wordmark -->
@@ -79,7 +79,7 @@
 
           <!-- Services dropdown -->
           <div class="nav__dropdown">
-            <span class="nav__links nav__dropdown-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
+            <span class="nav__dropdown-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
               Services <span class="chevron" aria-hidden="true">▾</span>
             </span>
             <div class="nav__dropdown-menu" role="menu">
@@ -179,28 +179,9 @@
             </div>
           </div>
 
-          <!-- Hero visual: browser mockup placeholder -->
-          <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
-            <div class="mockup">
-              <div class="mockup__bar">
-                <div class="mockup__dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="mockup__url">origo.ooo</div>
-              </div>
-              <div class="mockup__body">
-                <div class="mockup__nav-bar"></div>
-                <div class="mockup__hero-block"></div>
-                <div class="mockup__text-lines">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="mockup__cards">
-                  <div class="mockup__card"></div>
-                  <div class="mockup__card"></div>
-                  <div class="mockup__card"></div>
-                </div>
-              </div>
-            </div>
+          <!-- Hero visual -->
+          <div class="hero__visual reveal reveal-delay-2">
+            <img src="images/hero-mock-up.png" alt="Website design example by Origo" class="hero__mockup-img">
           </div>
 
         </div>
@@ -249,12 +230,10 @@
       <div class="container">
         <div class="guide__inner">
 
-          <!-- Photo: Jon -->
+          <!-- Photo: Why Origo -->
           <div class="guide__photo reveal">
             <div class="guide__photo-wrap">
-              <div class="guide__photo-placeholder" aria-label="Photo of Jon, co-founder of Origo">
-                <span class="initials" aria-hidden="true">J</span>
-              </div>
+              <img src="images/Why-Origo.jpg" alt="The Origo team at work" class="guide__photo-img">
             </div>
             <div class="guide__photo-accent" aria-hidden="true"></div>
           </div>
@@ -301,7 +280,9 @@
 
           <article class="service-card reveal reveal-delay-1">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">Brand</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/scribble-loop-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">Branding</h3>
@@ -311,7 +292,9 @@
 
           <article class="service-card reveal reveal-delay-2">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">Web</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/browsers-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">Web Design</h3>
@@ -321,7 +304,9 @@
 
           <article class="service-card reveal reveal-delay-3">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">SEO / AEO</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/sparkle-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">SEO &amp; AEO</h3>
@@ -331,7 +316,9 @@
 
           <article class="service-card reveal reveal-delay-1">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">Copy</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/pen-nib-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">Copywriting</h3>
@@ -341,7 +328,9 @@
 
           <article class="service-card reveal reveal-delay-2">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">Concierge</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/key-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">Website Concierge</h3>
@@ -351,7 +340,9 @@
 
           <article class="service-card reveal reveal-delay-3">
             <div class="service-card__thumb" aria-hidden="true">
-              <span class="service-thumb-label">Apps</span>
+              <div class="service-card__icon-wrap">
+                <img src="images/icons/device-mobile-speaker-duotone.svg" class="service-card__icon" alt="">
+              </div>
             </div>
             <div class="service-card__body">
               <h3 class="service-card__name">App Development</h3>
@@ -379,31 +370,33 @@
 
         <div class="work__grid">
 
-          <!-- Featured: Groomer's Seafood -->
+          <!-- Featured: Alpine Humane Society -->
           <article class="work-card work-card--featured reveal reveal-delay-1">
-            <a href="/work#groomers-seafood" aria-label="Groomer's Seafood — Web Design, Website Concierge">
+            <a href="/work#alpine-humane" aria-label="Alpine Humane Society — Branding, Web Design">
               <div class="work-card__visual">
                 <div class="work-card__bg">
-                  <span class="work-card__bg-text" aria-hidden="true">GS</span>
+                  <img src="images/mockup-1.png" alt="Alpine Humane Society website redesign" class="work-card__img">
                 </div>
                 <div class="work-card__overlay">
-                  <span class="work-card__tag">Web Design · Website Concierge</span>
-                  <div class="work-card__name">Groomer's Seafood</div>
+                  <span class="work-card__tag">Branding · Web Design</span>
+                  <div class="work-card__name">Alpine Humane Society</div>
+                  <p class="work-card__desc">A longtime partner. A brand refresh that finally matched the heart behind their mission.</p>
                 </div>
               </div>
             </a>
           </article>
 
-          <!-- Top right: Redemption Hill Church -->
+          <!-- Top right: U.S. Safety Training -->
           <article class="work-card reveal reveal-delay-2">
-            <a href="/work#redemption-hill" aria-label="Redemption Hill Church — Branding, Web Design">
+            <a href="/work#us-safety-training" aria-label="U.S. Safety Training — Web Design">
               <div class="work-card__visual">
                 <div class="work-card__bg">
-                  <span class="work-card__bg-text" aria-hidden="true">RHC</span>
+                  <img src="images/mockup-2.png" alt="U.S. Safety Training website redesign" class="work-card__img">
                 </div>
                 <div class="work-card__overlay">
-                  <span class="work-card__tag">Branding · Web Design</span>
-                  <div class="work-card__name">Redemption Hill Church</div>
+                  <span class="work-card__tag">Web Design</span>
+                  <div class="work-card__name">U.S. Safety Training</div>
+                  <p class="work-card__desc">A modern presence built to help a Texas safety training company grow.</p>
                 </div>
               </div>
             </a>
@@ -531,7 +524,34 @@
 
 
     <!-- ======================================================
-         SECTION 08 — CLOSING CTA
+         SECTION 08 — FOUNDER
+    ====================================================== -->
+    <section class="section founder" id="founder" aria-label="Meet Jon">
+      <div class="container">
+        <div class="founder__inner reveal">
+          <div class="founder__photo-wrap">
+            <img src="images/jon-headshot.jpg" alt="Jon Herrera, founder of Origo" class="founder__photo">
+          </div>
+          <div class="founder__content">
+            <p class="t-label">Meet Your Guide</p>
+            <h2 class="founder__headline">Hi, I'm Jon.</h2>
+            <p class="founder__body">
+              I started Origo because I kept seeing great businesses get overlooked online — not because their work wasn't good, but because their digital presence didn't reflect it. We built Origo to fix that. No shortcuts, no bloated agencies. Just a focused team that treats your business like it matters — because it does.
+            </p>
+            <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar"
+               class="btn btn--outline"
+               target="_blank"
+               rel="noopener">
+              Let's talk <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 09 — CLOSING CTA
     ====================================================== -->
     <section class="section--dark closing-cta" id="cta" aria-labelledby="cta-headline">
       <!-- Background circles -->
@@ -580,7 +600,7 @@
         <div class="footer__brand">
           <a href="/" class="footer__logo" aria-label="Origo — Home">
             <!-- Vertical white logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="880 700 740 1100" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="580 880 1180 840" aria-hidden="true">
               <path fill="#fff" d="M1391.75,1146.44c27.43,0,50.82-10.08,70.14-30.24,19.32-20.16,28.98-49,28.98-86.52,0-17.86-2.15-33.73-6.4-47.65-.43-1.38-.88-2.75-1.34-4.11-4.68-13.55-11.46-25.15-20.4-34.75-18.77-20.16-41.87-30.24-69.3-30.24s-51.24,9.95-69.72,29.82c-6,6.46-11.01,13.9-15.07,22.27,4.68,3.52,9.14,7.56,13.38,12.11,18.76,20.16,28.14,49.01,28.14,86.52,0,25.69-4.53,47.3-13.59,64.85,15.65,11.96,34.04,17.94,55.18,17.94Z"/>
               <path fill="#fff" d="M1267.85,1241.36c-36.68-19.6-65.52-47.59-86.52-84-21-36.4-31.5-78.96-31.5-127.68s10.63-90.58,31.92-127.26c19.65-33.86,46-60.44,79.03-79.75-2.67-.07-5.36-.1-8.06-.1-45.92,0-87.36,9.8-124.32,29.4-36.96,19.61-66.08,47.75-87.36,84.42-21.29,36.68-31.92,79.1-31.92,127.26s10.5,91.28,31.5,127.68c21,36.41,49.84,64.4,86.52,84,36.67,19.61,77.98,29.4,123.9,29.4s87.49-9.79,124.74-29.4c2.85-1.5,5.63-3.06,8.38-4.66-42.9-1.02-81.67-10.78-116.32-29.3Z"/>
               <text style="font-family:Poppins,sans-serif;font-size:365px;font-weight:700;fill:#fff;" transform="translate(645.76 1674.89)">ORIGO</text>
