@@ -321,27 +321,43 @@
         submit.disabled = true;
         submit.textContent = 'Sending…';
 
+        const payload = {
+          first_name: firstName,
+          last_name:  lastName,
+          email:      email,
+          phone:      getField('phone').value.trim(),
+          service:    getField('service').value,
+          message:    getField('message').value.trim(),
+        };
+
+        console.log('[Contact Form] Submitting to:', GHL_WEBHOOK_URL);
+        console.log('[Contact Form] Payload:', payload);
+
         fetch(GHL_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            first_name: firstName,
-            last_name:  lastName,
-            email:      email,
-            phone:      getField('phone').value.trim(),
-            service:    getField('service').value,
-            message:    getField('message').value.trim(),
-          }),
+          body: JSON.stringify(payload),
         })
         .then(function (res) {
-          if (res.ok) {
+          console.log('[Contact Form] Response status:', res.status, res.statusText);
+          console.log('[Contact Form] Response headers:', [...res.headers.entries()]);
+          return res.text().then(function (body) {
+            console.log('[Contact Form] Response body:', body);
+            return { ok: res.ok, status: res.status, body: body };
+          });
+        })
+        .then(function (result) {
+          if (result.ok) {
+            console.log('[Contact Form] Success');
             form.style.display = 'none';
             success.classList.add('visible');
           } else {
-            throw new Error('non-ok');
+            console.error('[Contact Form] Server returned non-OK status:', result.status, result.body);
+            throw new Error('non-ok: ' + result.status);
           }
         })
-        .catch(function () {
+        .catch(function (err) {
+          console.error('[Contact Form] Fetch error:', err);
           submit.disabled = false;
           submit.textContent = 'Send Message';
           const errEl = form.querySelector('.contact-form__submit-error');
