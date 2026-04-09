@@ -1,0 +1,930 @@
+/* ============================================================
+   ORIGO — Services Pages (shared)
+   services/services.css
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Shared utilities
+   ------------------------------------------------------------ */
+.svc-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.svc-section {
+  padding: 80px 0;
+}
+
+.svc-section--white { background: var(--color-white); }
+.svc-section--dark  { background: var(--color-black); }
+.svc-section--gray  { background: #F5F5F5; }
+
+/* Active nav link */
+.nav__active {
+  color: var(--color-blue) !important;
+  border-bottom: 1.5px solid var(--color-blue);
+  padding-bottom: 2px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Eyebrow / label */
+.svc-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+}
+
+.svc-eyebrow--dark {
+  color: rgba(255,255,255,0.45);
+}
+
+/* Two-column layout */
+.svc-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ------------------------------------------------------------
+   Services overview — Hero
+   ------------------------------------------------------------ */
+.svc-overview-hero {
+  padding: 120px 0 80px;
+  background: var(--color-white);
+}
+
+.svc-overview-hero__headline {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.svc-overview-hero__sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #888888;
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+
+/* ------------------------------------------------------------
+   Services overview — Card grid
+   ------------------------------------------------------------ */
+.svc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.svc-card {
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 28px;
+  background: var(--color-white);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.svc-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(0,102,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.svc-card__icon {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(2500%) hue-rotate(213deg) brightness(102%) contrast(102%);
+}
+
+.svc-card__title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-black);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.svc-card__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.65;
+  color: #888888;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.svc-card__link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.svc-card__link:hover { gap: 8px; }
+
+/* ------------------------------------------------------------
+   Services overview — Better Together (dark)
+   ------------------------------------------------------------ */
+.svc-better {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.svc-better__inner {
+  max-width: 680px;
+}
+
+.svc-better__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.svc-better__body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+
+/* ------------------------------------------------------------
+   Services overview — Not Sure Where to Start
+   ------------------------------------------------------------ */
+.svc-notsure {
+  background: #F5F5F5;
+  padding: 80px 0;
+}
+
+.svc-notsure__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--color-black);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.svc-notsure__body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  color: #666666;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Hero
+   ------------------------------------------------------------ */
+.sp-hero {
+  padding: 120px 0 80px;
+  background: var(--color-white);
+}
+
+.sp-hero__breadcrumb {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sp-hero__breadcrumb a {
+  color: #888888;
+  transition: color 0.2s;
+}
+
+.sp-hero__breadcrumb a:hover { color: var(--color-blue); }
+
+.sp-hero__breadcrumb span { opacity: 0.5; }
+
+.sp-hero__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+}
+
+.sp-hero__headline {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.sp-hero__sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #888888;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.sp-hero__buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Problem
+   ------------------------------------------------------------ */
+.sp-problem {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.sp-problem__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.sp-problem__body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+
+.sp-problem__list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sp-problem__list li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.55);
+  padding-left: 20px;
+  position: relative;
+}
+
+.sp-problem__list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-blue);
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Solution
+   ------------------------------------------------------------ */
+.sp-solution {
+  background: var(--color-white);
+  padding: 80px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.sp-solution__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 36px);
+  color: var(--color-black);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.sp-solution__body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  color: #666666;
+  margin-bottom: 16px;
+  max-width: 500px;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — What's Included
+   ------------------------------------------------------------ */
+.sp-included {
+  background: #F5F5F5;
+  padding: 80px 0;
+}
+
+.sp-included__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--color-black);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.sp-included__sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.sp-deliverables {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.sp-deliverable {
+  background: var(--color-white);
+  border: 0.5px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sp-deliverable__title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.sp-deliverable__desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888888;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Process
+   ------------------------------------------------------------ */
+.sp-process {
+  background: var(--color-white);
+  padding: 80px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.sp-process__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--color-black);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.sp-process__sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 48px;
+}
+
+.sp-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 680px;
+}
+
+.sp-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.sp-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 36px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.sp-step__num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,102,255,0.08);
+  border: 1px solid rgba(0,102,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.sp-step__content {}
+
+.sp-step__title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.sp-step__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.65;
+  color: #888888;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Right Fit
+   ------------------------------------------------------------ */
+.sp-fit {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.sp-fit__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--color-white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.sp-fit__sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 40px;
+}
+
+.sp-fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sp-fit-col__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 16px;
+}
+
+.sp-fit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sp-fit-list li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.6);
+  padding-left: 20px;
+  position: relative;
+}
+
+.sp-fit-list--yes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+.sp-fit-list--no li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Testimonials
+   ------------------------------------------------------------ */
+.sp-testimonials {
+  background: var(--color-white);
+  padding: 80px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.sp-testimonials__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.sp-testi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sp-testi {
+  background: #F8F8F8;
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.sp-testi__quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+.sp-testi__name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-black);
+}
+
+.sp-testi__title {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #888888;
+}
+
+.sp-testi-placeholder {
+  background: #F8F8F8;
+  border: 1px dashed rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sp-testi-placeholder p {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #AAAAAA;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------
+   Individual service pages — Closing CTA
+   ------------------------------------------------------------ */
+.sp-cta {
+  background: var(--color-black);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.sp-cta__inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.sp-cta__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.sp-cta__sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  max-width: 420px;
+  margin: 0 auto 36px;
+}
+
+.sp-cta__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sp-cta__secondary {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  border: 0.5px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.sp-cta__secondary:hover {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ------------------------------------------------------------
+   Concierge — Plan comparison table
+   ------------------------------------------------------------ */
+.sp-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sp-plan {
+  border: 0.5px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 28px;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-plan--featured {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 2px rgba(0,102,255,0.12);
+}
+
+.sp-plan__badge {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-blue);
+  background: rgba(0,102,255,0.08);
+  border-radius: 20px;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.sp-plan__name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.sp-plan__price {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.sp-plan__price span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.sp-plan__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #888888;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.sp-plan__list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.sp-plan__list li {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #444444;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.sp-plan__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-blue);
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------
+   SEO page — AEO explainer block
+   ------------------------------------------------------------ */
+.sp-aeo {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.sp-aeo__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.sp-aeo__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.sp-aeo__body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+  max-width: 560px;
+}
+
+.sp-aeo-engines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.sp-aeo-engine {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  border: 0.5px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 5px 14px;
+}
+
+/* ------------------------------------------------------------
+   Web Design page — Concierge callout
+   ------------------------------------------------------------ */
+.sp-concierge-callout {
+  background: rgba(0,102,255,0.04);
+  border: 0.5px solid rgba(0,102,255,0.18);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.sp-concierge-callout__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.65;
+  color: #444444;
+  max-width: 480px;
+}
+
+.sp-concierge-callout__text strong {
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 1023px) {
+  .svc-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .svc-two-col {
+    display: block;
+  }
+
+  .svc-two-col > * + * {
+    margin-top: 40px;
+  }
+
+  .sp-deliverables {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sp-fit-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sp-testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-plans {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .svc-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-deliverables {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sp-cta__secondary {
+    text-align: center;
+  }
+
+  .sp-hero__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sp-concierge-callout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
