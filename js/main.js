@@ -9,16 +9,17 @@
   /* ----------------------------------------------------------
      1. Dynamic footer year
   ---------------------------------------------------------- */
-  const yearEl = document.getElementById('year');
+  const yearEl = document.getElementById('year') || document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 
   /* ----------------------------------------------------------
      2. Nav scroll state
   ---------------------------------------------------------- */
-  const nav = document.getElementById('nav');
+  const nav = document.getElementById('nav') || document.getElementById('site-nav');
 
   function onScroll() {
+    if (!nav) return;
     if (window.scrollY > 20) {
       nav.classList.add('scrolled');
     } else {
@@ -33,8 +34,8 @@
   /* ----------------------------------------------------------
      3. Mobile hamburger / nav overlay
   ---------------------------------------------------------- */
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
+  const hamburger = document.getElementById('hamburger') || document.getElementById('nav-hamburger');
+  const mobileNav = document.getElementById('mobile-nav') || document.getElementById('nav-links');
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', function () {
