@@ -114,7 +114,7 @@
 
           <!-- Success state (hidden until submit) -->
           <div class="contact-form__success" id="form-success" role="alert">
-            <p>Thank you — we'll be in touch within one business day.</p>
+            <p>Thanks — we'll be in touch within one business day.</p>
           </div>
 
           <!-- Form -->
@@ -166,6 +166,7 @@
 
             <button type="submit" class="contact-form__submit" id="form-submit">Send Message</button>
             <p class="contact-form__note">We respond to every inquiry personally — usually within one business day.</p>
+            <p class="contact-form__submit-error" style="display:none;font-size:12px;color:#CC0000;text-align:center;margin-top:8px;">Something went wrong. Please try again or email us at <a href="mailto:jon@origo.ooo">jon@origo.ooo</a></p>
 
           </form>
         </div>
@@ -262,44 +263,36 @@
 
   <script src="/js/main.js"></script>
   <script>
-    /* --------------------------------------------------------
-       Contact form — validation + GHL submission
-       --------------------------------------------------------
-       SETUP: Replace GHL_WEBHOOK_URL below with your GHL
-       webhook or Forms API endpoint. In GHL: Automations →
-       Webhooks → Create → copy the URL here.
-    -------------------------------------------------------- */
-    const GHL_WEBHOOK_URL = 'YOUR_GHL_WEBHOOK_URL_HERE';
-
     (function () {
+      const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/uEL4ayBklqQs6ylNNJt6/webhook-trigger/f44f7397-4cf6-4f76-b966-54d32f590cae';
+
       const form    = document.getElementById('contact-form');
       const success = document.getElementById('form-success');
       const submit  = document.getElementById('form-submit');
 
       if (!form) return;
 
-      function getField(id)  { return document.getElementById(id); }
-      function getError(id)  { return document.getElementById(id + '-error'); }
+      function getField(id) { return document.getElementById(id); }
+      function getError(id) { return document.getElementById(id + '-error'); }
 
       function showError(fieldId, msg) {
         const field = getField(fieldId);
         const error = getError(fieldId);
-        if (field)  field.classList.add('field-error');
+        if (field) field.classList.add('field-error');
         if (error) { error.textContent = msg; error.classList.add('visible'); }
       }
 
       function clearError(fieldId) {
         const field = getField(fieldId);
         const error = getError(fieldId);
-        if (field)  field.classList.remove('field-error');
-        if (error)  error.classList.remove('visible');
+        if (field) field.classList.remove('field-error');
+        if (error) error.classList.remove('visible');
       }
 
       function isValidEmail(val) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
       }
 
-      /* Clear errors on input */
       ['first-name', 'last-name', 'email'].forEach(function (id) {
         const el = getField(id);
         if (el) el.addEventListener('input', function () { clearError(id); });
@@ -310,7 +303,6 @@
 
         /* Validate */
         let valid = true;
-
         const firstName = getField('first-name').value.trim();
         const lastName  = getField('last-name').value.trim();
         const email     = getField('email').value.trim();
@@ -321,52 +313,39 @@
         if (!lastName) { showError('last-name', 'This field is required.'); valid = false; }
         else clearError('last-name');
 
-        if (!email || !isValidEmail(email)) {
-          showError('email', 'Please enter a valid email.');
-          valid = false;
-        } else {
-          clearError('email');
-        }
+        if (!email || !isValidEmail(email)) { showError('email', 'Please enter a valid email.'); valid = false; }
+        else clearError('email');
 
         if (!valid) return;
 
-        /* Submit */
         submit.disabled = true;
         submit.textContent = 'Sending…';
-
-        const payload = {
-          firstName: firstName,
-          lastName:  lastName,
-          email:     email,
-          phone:     getField('phone').value.trim(),
-          service:   getField('service').value,
-          message:   getField('message').value.trim(),
-        };
-
-        /* If GHL webhook is not configured yet, show success immediately */
-        if (!GHL_WEBHOOK_URL || GHL_WEBHOOK_URL === 'YOUR_GHL_WEBHOOK_URL_HERE') {
-          form.style.display = 'none';
-          success.classList.add('visible');
-          return;
-        }
 
         fetch(GHL_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify({
+            first_name: firstName,
+            last_name:  lastName,
+            email:      email,
+            phone:      getField('phone').value.trim(),
+            service:    getField('service').value,
+            message:    getField('message').value.trim(),
+          }),
         })
         .then(function (res) {
           if (res.ok) {
             form.style.display = 'none';
             success.classList.add('visible');
           } else {
-            throw new Error('Server error');
+            throw new Error('non-ok');
           }
         })
         .catch(function () {
           submit.disabled = false;
           submit.textContent = 'Send Message';
-          alert('Something went wrong. Please try again or email us directly at jon@origo.ooo');
+          const errEl = form.querySelector('.contact-form__submit-error');
+          if (errEl) errEl.style.display = 'block';
         });
       });
     })();
