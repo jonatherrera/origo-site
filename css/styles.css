@@ -1166,6 +1166,25 @@ p {
   max-width: 200px;
 }
 
+.footer__socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  color: rgba(255,255,255,0.3);
+  transition: color 0.2s ease;
+}
+
+.footer__social-link:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.footer__social-link svg { display: block; }
+
 .footer__col-title {
   font-family: var(--font-head);
   font-weight: 500;
