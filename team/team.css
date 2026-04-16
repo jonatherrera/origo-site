@@ -276,6 +276,14 @@
   opacity: 0.7;
 }
 
+.team-card__bio {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
 .team-card__bio-placeholder {
   border: 1px dashed rgba(0,0,0,0.15);
   border-radius: 4px;
