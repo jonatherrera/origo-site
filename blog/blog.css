@@ -177,11 +177,11 @@
    Individual Post Page
    ------------------------------------------------------------ */
 
-/* Category hero banner — acts as featured image placeholder */
+/* Category hero banner — sits flush under fixed nav, full bleed */
 .post-hero__banner {
-  height: 220px;
+  height: 260px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-top: 68px; /* clear the fixed nav */
   position: relative;
   overflow: hidden;
 }
@@ -222,7 +222,7 @@
 }
 
 .post-hero {
-  padding-top: calc(68px + 72px);
+  padding-top: 48px;
   padding-bottom: 56px;
   border-bottom: 1px solid var(--color-border);
 }
@@ -603,8 +603,12 @@
     padding-bottom: 40px;
   }
 
+  .post-hero__banner {
+    height: 180px;
+  }
+
   .post-hero {
-    padding-top: calc(68px + 48px);
+    padding-top: 32px;
     padding-bottom: 40px;
   }
 
