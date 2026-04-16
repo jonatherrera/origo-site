@@ -77,6 +77,26 @@
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+/* Category accent strip on cards */
+.blog-card__banner {
+  height: 6px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.blog-card__banner--web-design    { background: linear-gradient(90deg, #0066FF, #0047B3); }
+.blog-card__banner--seo           { background: linear-gradient(90deg, #059669, #034D36); }
+.blog-card__banner--branding      { background: linear-gradient(90deg, #7C3AED, #4C1D95); }
+.blog-card__banner--maintenance   { background: linear-gradient(90deg, #EA580C, #9A3412); }
+.blog-card__banner--cybersecurity { background: linear-gradient(90deg, #DC2626, #7F1D1D); }
+.blog-card__banner--announcement  { background: linear-gradient(90deg, #374151, #111827); }
+.blog-card__banner--growth        { background: linear-gradient(90deg, #0891B2, #0E5A70); }
+
+/* Hidden cards when filtered */
+.blog-card[data-category].hidden {
+  display: none;
+}
+
 .blog-card:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.08);
   transform: translateY(-2px);
@@ -157,6 +177,50 @@
    Individual Post Page
    ------------------------------------------------------------ */
 
+/* Category hero banner — acts as featured image placeholder */
+.post-hero__banner {
+  height: 220px;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-hero__banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+
+.post-hero__banner--web-design {
+  background: linear-gradient(135deg, #0066FF 0%, #0047B3 100%);
+}
+
+.post-hero__banner--seo {
+  background: linear-gradient(135deg, #059669 0%, #034D36 100%);
+}
+
+.post-hero__banner--branding {
+  background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+}
+
+.post-hero__banner--maintenance {
+  background: linear-gradient(135deg, #EA580C 0%, #9A3412 100%);
+}
+
+.post-hero__banner--cybersecurity {
+  background: linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%);
+}
+
+.post-hero__banner--announcement {
+  background: linear-gradient(135deg, #374151 0%, #111827 100%);
+}
+
+.post-hero__banner--growth {
+  background: linear-gradient(135deg, #0891B2 0%, #0E5A70 100%);
+}
+
 .post-hero {
   padding-top: calc(68px + 72px);
   padding-bottom: 56px;
@@ -176,6 +240,12 @@
   text-transform: uppercase;
   color: var(--color-blue);
   margin-bottom: 16px;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.post-hero__category:hover {
+  opacity: 0.7;
 }
 
 .post-hero__title {
