@@ -195,9 +195,9 @@
 
 .member__photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   border-radius: var(--radius);
   display: block;
 }
