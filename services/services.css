@@ -1099,3 +1099,247 @@
     align-items: flex-start;
   }
 }
+
+/* ============================================================
+   Results Strip — stats row (SEO/AEO page)
+   ============================================================ */
+.sp-results-strip {
+  background: var(--color-black);
+  padding: 80px 0;
+}
+
+.sp-results-strip__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.sp-results-strip__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-blue);
+  margin-bottom: 12px;
+}
+
+.sp-results-strip__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.sp-results-strip__sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+}
+
+.sp-results-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sp-results-stat {
+  background: var(--color-black);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.sp-results-stat__number {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--color-blue);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.sp-results-stat__label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.sp-results-stat__sub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Case Study — client spotlight card (SEO/AEO page)
+   ============================================================ */
+.sp-case-study {
+  background: #F5F5F5;
+  padding: 80px 0;
+}
+
+.sp-case-study__inner {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 56px 64px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+}
+
+.sp-case-study__header {
+  margin-bottom: 48px;
+}
+
+.sp-case-study__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-blue);
+  margin-bottom: 10px;
+}
+
+.sp-case-study__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--color-black);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.sp-case-study__location {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(0,0,0,0.45);
+  margin-bottom: 20px;
+}
+
+.sp-case-study__context {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-dark);
+  max-width: 760px;
+}
+
+.sp-case-study__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #E8E8E8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.sp-case-study__metric {
+  background: var(--color-white);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.sp-case-study__metric-num {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 40px);
+  color: var(--color-black);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.sp-case-study__metric-label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.sp-case-study__metric-delta {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #1A7F37;
+  font-weight: 500;
+}
+
+.sp-case-study__quote {
+  border-top: 1px solid #E8E8E8;
+  padding-top: 40px;
+  margin: 0;
+}
+
+.sp-case-study__quote > p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-dark);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.sp-case-study__quote footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sp-case-study__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sp-case-study__quote-name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-black);
+  margin-bottom: 2px;
+}
+
+.sp-case-study__quote-title {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(0,0,0,0.45);
+}
+
+/* Responsive — results strip & case study */
+@media (max-width: 768px) {
+  .sp-results-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sp-case-study__inner {
+    padding: 40px 24px;
+  }
+
+  .sp-case-study__metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sp-case-study__quote {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .sp-results-strip__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sp-case-study__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
