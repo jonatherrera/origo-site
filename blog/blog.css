@@ -177,52 +177,8 @@
    Individual Post Page
    ------------------------------------------------------------ */
 
-/* Category hero banner — sits flush under fixed nav, full bleed */
-.post-hero__banner {
-  height: 260px;
-  width: 100%;
-  margin-top: 68px; /* clear the fixed nav */
-  position: relative;
-  overflow: hidden;
-}
-
-.post-hero__banner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-}
-
-.post-hero__banner--web-design {
-  background: linear-gradient(135deg, #0066FF 0%, #0047B3 100%);
-}
-
-.post-hero__banner--seo {
-  background: linear-gradient(135deg, #059669 0%, #034D36 100%);
-}
-
-.post-hero__banner--branding {
-  background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
-}
-
-.post-hero__banner--maintenance {
-  background: linear-gradient(135deg, #EA580C 0%, #9A3412 100%);
-}
-
-.post-hero__banner--cybersecurity {
-  background: linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%);
-}
-
-.post-hero__banner--announcement {
-  background: linear-gradient(135deg, #374151 0%, #111827 100%);
-}
-
-.post-hero__banner--growth {
-  background: linear-gradient(135deg, #0891B2 0%, #0E5A70 100%);
-}
-
 .post-hero {
-  padding-top: 48px;
+  padding-top: calc(68px + 72px);
   padding-bottom: 56px;
   border-bottom: 1px solid var(--color-border);
 }
@@ -603,12 +559,8 @@
     padding-bottom: 40px;
   }
 
-  .post-hero__banner {
-    height: 180px;
-  }
-
   .post-hero {
-    padding-top: 32px;
+    padding-top: calc(68px + 48px);
     padding-bottom: 40px;
   }
 
