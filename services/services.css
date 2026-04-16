@@ -601,6 +601,19 @@
   max-width: 520px;
 }
 
+.sp-portfolio__view-all {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.sp-portfolio__view-all:hover { opacity: 0.7; }
+
 .sp-portfolio__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
