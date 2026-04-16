@@ -1508,3 +1508,176 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ------------------------------------------------------------
+   App Development — CSS Device Frame
+   ------------------------------------------------------------ */
+
+.app-device-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.app-phone {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.app-phone__frame {
+  background: #0A0A0A;
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.app-phone__notch {
+  width: 72px;
+  height: 10px;
+  background: #0A0A0A;
+  border-radius: 100px;
+  margin: 0 auto 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.app-phone__screen {
+  background: #F7F7F7;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+/* Abstract UI */
+.app-ui {
+  padding: 16px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-ui__topbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-ui__topbar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0066FF;
+  flex-shrink: 0;
+}
+
+.app-ui__topbar-title {
+  flex: 1;
+  height: 8px;
+  background: #0A0A0A;
+  border-radius: 4px;
+  opacity: 0.15;
+}
+
+.app-ui__topbar-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(0,102,255,0.12);
+  flex-shrink: 0;
+}
+
+.app-ui__hero-card {
+  background: #0066FF;
+  border-radius: 14px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.app-ui__hero-label {
+  height: 7px;
+  width: 60%;
+  background: rgba(255,255,255,0.5);
+  border-radius: 4px;
+}
+
+.app-ui__hero-value {
+  height: 18px;
+  width: 45%;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.app-ui__hero-sub {
+  height: 7px;
+  width: 75%;
+  background: rgba(255,255,255,0.35);
+  border-radius: 4px;
+}
+
+.app-ui__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.app-ui__stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.app-ui__stat-num {
+  height: 14px;
+  width: 55%;
+  background: #0A0A0A;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.app-ui__stat-lbl {
+  height: 7px;
+  width: 80%;
+  background: #0A0A0A;
+  border-radius: 4px;
+  opacity: 0.15;
+}
+
+.app-ui__list-item {
+  height: 36px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.app-ui__list-item--short {
+  width: 75%;
+}
+
+.app-ui__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.app-ui__nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0A0A0A;
+  opacity: 0.15;
+}
+
+.app-ui__nav-dot--active {
+  background: #0066FF;
+  opacity: 1;
+  width: 18px;
+  border-radius: 4px;
+}
