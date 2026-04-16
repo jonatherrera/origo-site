@@ -620,6 +620,10 @@
   gap: 24px;
 }
 
+.sp-portfolio__grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .sp-portfolio-card {
   background: var(--color-white);
   border-radius: 12px;
