@@ -755,6 +755,22 @@
   margin-bottom: 20px;
 }
 
+.sp-testi__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sp-testi__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border: 2px solid #EEEEEE;
+}
+
 .sp-testi__name {
   font-family: var(--font-head);
   font-weight: 600;
