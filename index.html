@@ -23,29 +23,116 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Schema.org: Organization + LocalBusiness -->
+  <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness"],
+    "@type": "ProfessionalService",
+    "@id": "https://origo.ooo/#organization",
     "name": "Origo",
     "url": "https://origo.ooo",
     "logo": "https://origo.ooo/images/logo-horizontal-black.svg",
-    "description": "Boutique digital presence agency for established, owner-operated businesses. We build brand, website, search visibility, and copy that earns trust.",
-    "telephone": "(512) 971-5789",
-    "email": "jon@origo.ooo",
+    "image": "https://origo.ooo/images/logo-horizontal-black.svg",
+    "description": "Origo is a boutique digital presence agency based in Texas helping established, owner-operated businesses build trust online through branding, web design, SEO, AEO, copywriting, and ongoing website management.",
+    "slogan": "Build trust. Own your presence.",
+    "foundingDate": "2018",
+    "founder": [
+      { "@type": "Person", "name": "Jon", "jobTitle": "Head Creative & Co-Founder" },
+      { "@type": "Person", "name": "Emily", "jobTitle": "Quality Assurance & Co-Owner" }
+    ],
+    "employee": [
+      { "@type": "Person", "name": "Kadimay", "jobTitle": "SEO Specialist" },
+      { "@type": "Person", "name": "Daniel", "jobTitle": "Multimedia Specialist" },
+      { "@type": "Person", "name": "Valentina", "jobTitle": "Digital Operations Assistant" }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "TX",
       "addressCountry": "US"
     },
-    "areaServed": "US",
-    "sameAs": [],
-    "founder": {
-      "@type": "Person",
-      "name": "Jon Herrera"
-    },
-    "serviceType": ["Branding", "Web Design", "SEO", "AEO", "Copywriting", "Website Maintenance", "App Development"]
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "telephone": "(512) 971-5789",
+    "email": "jon@origo.ooo",
+    "priceRange": "$$$",
+    "knowsAbout": [
+      "Digital Presence", "Branding", "Web Design",
+      "Search Engine Optimization", "Answer Engine Optimization",
+      "Copywriting", "Website Management", "App Development"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Origo Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding", "url": "https://origo.ooo/services/branding" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design", "url": "https://origo.ooo/services/web-design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & AEO", "url": "https://origo.ooo/services/seo-aeo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Copywriting", "url": "https://origo.ooo/services/copywriting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Concierge", "url": "https://origo.ooo/services/website-concierge" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "url": "https://origo.ooo/services/app-development" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org: Homepage FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://origo.ooo/#homepage-faq",
+    "url": "https://origo.ooo/",
+    "dateModified": "2026-04-16",
+    "isPartOf": { "@id": "https://origo.ooo/#organization" },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Origo do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Origo is a boutique digital presence agency that helps established, owner-operated businesses build trust online. We provide branding, web design, SEO, copywriting, ongoing website management, and app development — all from a small senior team based in Texas, serving clients nationwide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who does Origo work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work with established, owner-operated businesses that are relationship-centered rather than transactional — companies with a real reputation to protect and a desire for their digital presence to match the quality of their work. Past clients include collision shops, seafood wholesalers, roofing companies, and churches."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Origo located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Origo is based in Texas and serves clients across the United States. We work with businesses nationwide regardless of region."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does working with Origo cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the service: websites typically start in the high four figures and run into the low five figures, branding and SEO are scoped per project, and Website Concierge is offered in three monthly tiers. We provide custom proposals after a free discovery call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Origo different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Origo is built around a single value: trust. We stay small enough that the founders are personally involved in every project, we use AI as a quality differentiator rather than a shortcut, and we believe every business should fully own its website — which is why our contracts state that you do."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with Origo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Book a free 1-hour discovery call through our website. There's no obligation, and it's the fastest way to find out if we're a fit."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -589,6 +676,71 @@
     </section>
 
   </main>
+
+
+  <!-- ========================================================
+       HOMEPAGE FAQ
+  ======================================================== -->
+  <section class="homepage-faq" aria-labelledby="faq-title">
+    <div class="container">
+
+      <div class="homepage-faq__header">
+        <span class="homepage-faq__label">Common Questions</span>
+        <h2 class="homepage-faq__title" id="faq-title">Frequently Asked Questions</h2>
+        <p class="homepage-faq__sub">Honest answers about who we are, what we do, and how we work.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>What does Origo do?</summary>
+          <div class="faq-item__answer">
+            <p>Origo is a boutique <a href="/glossary#digital-presence-agency">digital presence agency</a> that helps established, owner-operated businesses build trust online. We provide <a href="/services/branding">branding</a>, <a href="/services/web-design">web design</a>, <a href="/services/seo-aeo">SEO &amp; AEO</a>, <a href="/services/copywriting">copywriting</a>, <a href="/services/website-concierge">ongoing website management</a>, and <a href="/services/app-development">app development</a> — all from a small senior team based in Texas, serving clients nationwide.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Who does Origo work with?</summary>
+          <div class="faq-item__answer">
+            <p>We work with established, owner-operated businesses that are relationship-centered rather than transactional — companies with a real reputation to protect and a desire for their digital presence to match the quality of their work. Past clients include collision shops, seafood wholesalers, roofing companies, and churches.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where is Origo located?</summary>
+          <div class="faq-item__answer">
+            <p>Origo is based in Texas and serves clients across the United States. We work with businesses nationwide regardless of region.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much does working with Origo cost?</summary>
+          <div class="faq-item__answer">
+            <p>Pricing depends on the service: websites typically start in the high four figures and run into the low five figures, <a href="/services/branding">branding</a> and <a href="/services/seo-aeo">SEO</a> are scoped per project, and <a href="/services/website-concierge">Website Concierge</a> is offered in three monthly tiers. We provide custom proposals after a free discovery call.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What makes Origo different?</summary>
+          <div class="faq-item__answer">
+            <p>Origo is built around a single value: trust. We stay small enough that the founders are personally involved in every project, we use AI as a quality differentiator rather than a shortcut, and we believe every business should fully own its website — which is why our contracts state that you do.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I get started with Origo?</summary>
+          <div class="faq-item__answer">
+            <p>Book a free 1-hour discovery call through our website. There's no obligation, and it's the fastest way to find out if we're a fit.</p>
+            <p><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" target="_blank" rel="noopener">Book your discovery call →</a></p>
+          </div>
+        </details>
+
+        <p class="faq-updated">Last updated: April 16, 2026 &nbsp;·&nbsp; <a href="/faq">See all frequently asked questions →</a></p>
+
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- ========================================================
