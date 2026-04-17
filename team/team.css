@@ -402,6 +402,21 @@
 /* ============================================================
    Dark Mode Overrides
    ============================================================ */
+
+/* Keep dark sections dark (var(--color-black) flips to near-white in dark mode) */
+[data-theme="dark"] .team-section--dark {
+  background: #161618;
+}
+[data-theme="dark"] .team-cta {
+  background: #161618;
+}
+[data-theme="dark"] .team-cta__headline {
+  color: #F5F5F7;
+}
+[data-theme="dark"] .member__name--dark {
+  color: #F5F5F7;
+}
+
 [data-theme="dark"] .team-section--gray {
   background: var(--color-gray-light);
 }

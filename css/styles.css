@@ -1488,6 +1488,34 @@ body:not(.preload) *::after {
   align-items: center;
 }
 
+/* Keep intentionally-dark sections dark in dark mode
+   (they use background: var(--color-black) which flips to near-white) */
+[data-theme="dark"] .section--dark,
+[data-theme="dark"] .closing-cta {
+  background: #161618;
+}
+[data-theme="dark"] .closing-cta__headline {
+  color: #F5F5F7;
+}
+
+/* Footer stays dark */
+[data-theme="dark"] .footer {
+  background: #0A0A0A;
+}
+
+/* Work cards stay dark */
+[data-theme="dark"] .work-card {
+  background: #1a1a1c;
+}
+[data-theme="dark"] .work-card__name {
+  color: #F5F5F7;
+}
+
+/* Primary button — white text on blue stays white */
+[data-theme="dark"] .btn--primary {
+  color: #FFFFFF;
+}
+
 /* ============================================================
    FAQ Accordion — homepage and service pages
    ============================================================ */

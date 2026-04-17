@@ -1685,6 +1685,30 @@
 /* ============================================================
    Dark Mode Overrides
    ============================================================ */
+
+/* Keep dark sections dark (var(--color-black) flips to near-white in dark mode) */
+[data-theme="dark"] .svc-section--dark,
+[data-theme="dark"] .svc-better,
+[data-theme="dark"] .sp-problem,
+[data-theme="dark"] .sp-fit,
+[data-theme="dark"] .sp-cta,
+[data-theme="dark"] .sp-aeo,
+[data-theme="dark"] .sp-results-strip,
+[data-theme="dark"] .sp-results-stat {
+  background: #161618;
+}
+
+/* Keep white text white inside these dark sections */
+[data-theme="dark"] .svc-better__headline,
+[data-theme="dark"] .sp-problem__headline,
+[data-theme="dark"] .sp-fit__headline,
+[data-theme="dark"] .sp-cta__headline,
+[data-theme="dark"] .sp-aeo__headline,
+[data-theme="dark"] .sp-results-strip__headline,
+[data-theme="dark"] .sp-results-stat__label {
+  color: #F5F5F7;
+}
+
 [data-theme="dark"] .svc-section--gray,
 [data-theme="dark"] .svc-notsure,
 [data-theme="dark"] .sp-included,
