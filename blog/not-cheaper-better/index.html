@@ -9,8 +9,7 @@
   <script>
     (function(){
       var saved = localStorage.getItem('origo-theme');
-      var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', saved || preferred);
+      document.documentElement.setAttribute('data-theme', saved || 'light');
     })();
   </script>
 

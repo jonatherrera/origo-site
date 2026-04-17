@@ -329,3 +329,26 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Dark Mode Overrides
+   ============================================================ */
+[data-theme="dark"] .contact-col__sub,
+[data-theme="dark"] .form-field label,
+[data-theme="dark"] .contact-hero__sub {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .form-field input,
+[data-theme="dark"] .form-field select,
+[data-theme="dark"] .form-field textarea {
+  background: var(--color-gray-light);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-black);
+}
+
+[data-theme="dark"] .form-field input:focus,
+[data-theme="dark"] .form-field select:focus,
+[data-theme="dark"] .form-field textarea:focus {
+  border-color: var(--color-blue);
+}

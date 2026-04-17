@@ -398,3 +398,60 @@
     text-align: center;
   }
 }
+
+/* ============================================================
+   Dark Mode Overrides
+   ============================================================ */
+[data-theme="dark"] .team-section--gray {
+  background: var(--color-gray-light);
+}
+
+[data-theme="dark"] .team-hero {
+  background: var(--color-white);
+}
+
+[data-theme="dark"] .team-hero__sub {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .member__bio {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .member__otc-label {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .member__otc-body {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .member__photo-placeholder {
+  background: #2a2a2c;
+}
+
+[data-theme="dark"] .member__photo-placeholder-text {
+  color: #888888;
+}
+
+[data-theme="dark"] .team-card {
+  background: var(--color-gray-light);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .team-card__bio {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .team-card__photo-placeholder {
+  background: #2a2a2c;
+}
+
+[data-theme="dark"] .team-card__photo-text {
+  color: #888888;
+}
+
+[data-theme="dark"] .team-card__bio-placeholder {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-gray-dark);
+}

@@ -365,3 +365,14 @@
     text-align: center;
   }
 }
+
+/* ============================================================
+   Dark Mode Overrides
+   ============================================================ */
+[data-theme="dark"] .about-photo-placeholder__label {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .about-values-section {
+  background: var(--color-gray-light);
+}

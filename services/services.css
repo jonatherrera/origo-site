@@ -1681,3 +1681,116 @@
   width: 18px;
   border-radius: 4px;
 }
+
+/* ============================================================
+   Dark Mode Overrides
+   ============================================================ */
+[data-theme="dark"] .svc-section--gray,
+[data-theme="dark"] .svc-notsure,
+[data-theme="dark"] .sp-included,
+[data-theme="dark"] .sp-portfolio,
+[data-theme="dark"] .sp-case-study {
+  background: var(--color-gray-light);
+}
+
+[data-theme="dark"] .svc-overview-hero__sub,
+[data-theme="dark"] .sp-hero__sub,
+[data-theme="dark"] .sp-hero__breadcrumb,
+[data-theme="dark"] .sp-hero__breadcrumb a,
+[data-theme="dark"] .sp-solution__body,
+[data-theme="dark"] .sp-included__sub,
+[data-theme="dark"] .sp-process__sub,
+[data-theme="dark"] .sp-step__desc,
+[data-theme="dark"] .sp-portfolio__sub,
+[data-theme="dark"] .sp-portfolio-card__desc,
+[data-theme="dark"] .svc-notsure__body,
+[data-theme="dark"] .svc-card__desc,
+[data-theme="dark"] .sp-deliverable__desc,
+[data-theme="dark"] .sp-plan__price span,
+[data-theme="dark"] .sp-plan__desc,
+[data-theme="dark"] .sp-testi__title,
+[data-theme="dark"] .sp-testi-placeholder p {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .svc-card,
+[data-theme="dark"] .sp-deliverable,
+[data-theme="dark"] .sp-plan,
+[data-theme="dark"] .sp-portfolio-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .sp-portfolio-card__img-wrap,
+[data-theme="dark"] .sp-portfolio-card__img-wrap--empty {
+  background: #2a2a2c;
+}
+
+[data-theme="dark"] .sp-testi {
+  background: var(--color-gray-light);
+}
+
+[data-theme="dark"] .sp-testi__quote {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .sp-testi__avatar {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .sp-testi-placeholder {
+  background: var(--color-gray-light);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .sp-plan__list li {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .sp-case-study__inner {
+  background: #1c1c1e;
+}
+
+[data-theme="dark"] .sp-case-study__metrics {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sp-case-study__metric {
+  background: #1c1c1e;
+}
+
+[data-theme="dark"] .sp-case-study__quote {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .sp-concierge-callout {
+  background: rgba(0, 102, 255, 0.06);
+  border-color: rgba(0, 102, 255, 0.2);
+}
+
+[data-theme="dark"] .sp-concierge-callout__text {
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .cw-sample {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .cw-sample__col--before {
+  background: #2a2a2c;
+}
+
+[data-theme="dark"] .cw-sample__col--after {
+  background: rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="dark"] .sp-process-steps {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sp-process-step {
+  background: var(--color-white);
+}
+
+[data-theme="dark"] .sp-process-step__desc {
+  color: var(--color-gray-dark);
+}
