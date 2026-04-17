@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citations Are the New Clicks: How AI Search Changed Visibility</title>
-  <meta name="description" content="For 25 years, online visibility meant clicks. AI search changed the rules. Now visibility means citations — and most businesses haven't noticed yet.">
-  <meta name="keywords" content="AI search visibility, ChatGPT citations, AI assistant recommendations, AEO results, getting cited by AI">
+  <title>How to Tell If Your Business Is AI-Visible</title>
+  <meta name="description" content="Three tests you can run in five minutes to find out whether ChatGPT, Claude, and Gemini are recommending your business — or your competitors.">
+  <meta name="keywords" content="AI visibility test, ChatGPT business citation, AI search audit, am I being cited by AI, AEO test">
   <!-- Dark mode: apply theme before first paint (prevents flash) -->
   <script>
     (function(){
@@ -14,11 +14,11 @@
     })();
   </script>
 
-  <link rel="canonical" href="https://origo.ooo/blog/citations-are-the-new-clicks" />
+  <link rel="canonical" href="https://origo.ooo/blog/how-to-tell-if-youre-ai-visible" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Citations Are the New Clicks: How AI Search Changed Visibility" />
-  <meta property="og:description" content="For 25 years, online visibility meant clicks. AI search changed the rules. Now visibility means citations — and most businesses haven't noticed yet." />
-  <meta property="og:url" content="https://origo.ooo/blog/citations-are-the-new-clicks" />
+  <meta property="og:title" content="How to Tell If Your Business Is AI-Visible" />
+  <meta property="og:description" content="Three tests you can run in five minutes to find out whether ChatGPT, Claude, and Gemini are recommending your business — or your competitors." />
+  <meta property="og:url" content="https://origo.ooo/blog/how-to-tell-if-youre-ai-visible" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -27,6 +27,107 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/blog/blog.css" />
+
+  <style>
+    /* Test section headings */
+    .test-heading {
+      color: var(--color-blue) !important;
+    }
+
+    /* Test example box */
+    .test-box {
+      background: #F4F8FF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0 28px;
+    }
+    .test-box__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .test-box__item {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-gray-dark);
+      margin-bottom: 8px;
+    }
+    .test-box__item:last-child {
+      margin-bottom: 0;
+    }
+    .test-box__label {
+      font-family: var(--font-head);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-blue);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    /* Single-prompt boxes (Tests 2 & 3) */
+    .test-box__prompt {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--color-gray-dark);
+      margin-bottom: 8px;
+    }
+    .test-box__prompt:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Outcome list (Test 2 results) */
+    .outcome-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 28px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .outcome-list__item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--color-gray-dark);
+    }
+    .outcome-list__item:last-child {
+      border-bottom: none;
+    }
+    .outcome-list__icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .outcome-list__text strong {
+      font-family: var(--font-head);
+      font-weight: 600;
+      color: var(--color-black);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Dark mode overrides */
+    [data-theme="dark"] .test-box {
+      background: rgba(0, 102, 255, 0.07);
+      border-color: rgba(0, 102, 255, 0.2);
+    }
+    [data-theme="dark"] .outcome-list {
+      border-color: rgba(255,255,255,0.1);
+    }
+    [data-theme="dark"] .outcome-list__item {
+      border-color: rgba(255,255,255,0.08);
+    }
+  </style>
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -84,11 +185,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://origo.ooo/blog/citations-are-the-new-clicks#article",
-    "headline": "Citations Are the New Clicks: How AI Search Changed Visibility",
-    "url": "https://origo.ooo/blog/citations-are-the-new-clicks",
-    "datePublished": "2026-04-21",
-    "dateModified": "2026-04-21",
+    "@id": "https://origo.ooo/blog/how-to-tell-if-youre-ai-visible#article",
+    "headline": "How to Tell If Your Business Is AI-Visible",
+    "url": "https://origo.ooo/blog/how-to-tell-if-youre-ai-visible",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
     "author": {
       "@type": "Person",
       "name": "Jon",
@@ -96,10 +197,41 @@
       "worksFor": { "@id": "https://origo.ooo/#organization" }
     },
     "publisher": { "@id": "https://origo.ooo/#organization" },
-    "mainEntityOfPage": "https://origo.ooo/blog/citations-are-the-new-clicks",
-    "wordCount": 800,
+    "mainEntityOfPage": "https://origo.ooo/blog/how-to-tell-if-youre-ai-visible",
+    "wordCount": 850,
     "articleSection": "Digital Strategy",
     "isPartOf": { "@id": "https://origo.ooo/blog/what-is-aeo#article" }
+  }
+  </script>
+
+  <!-- Schema.org: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Test If Your Business Is AI-Visible",
+    "description": "A 5-minute, 3-test process to determine whether AI assistants like ChatGPT, Claude, and Gemini recognize and recommend your business.",
+    "totalTime": "PT5M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Run the recommendation test",
+        "text": "Open ChatGPT, Claude, or Gemini and ask for the best businesses in your category and area, the way a customer would. Read the answer to see if your business is named."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Run the about test",
+        "text": "Ask the AI directly about your business by name. The AI's answer reveals whether it has accurate, vague, or no information about your business."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Run the competitor test",
+        "text": "Ask the AI about your top competitors by name. Compare the descriptions to identify visibility gaps in your category."
+      }
+    ]
   }
   </script>
 </head>
@@ -182,10 +314,10 @@
       <div class="container">
         <div class="post-hero__inner">
           <a href="/blog/?filter=digital-strategy" class="post-hero__category">Digital Strategy</a>
-          <h1 class="post-hero__title">Citations Are the New Clicks</h1>
-          <p class="post-hero__subtitle">Why visibility online doesn't mean what it used to.</p>
+          <h1 class="post-hero__title">How to Tell If You're AI-Visible</h1>
+          <p class="post-hero__subtitle">Three tests you can run in five minutes to find out where you actually stand.</p>
           <div class="post-hero__meta">
-            <span>April 21, 2026</span>
+            <span>April 22, 2026</span>
             <span class="post-hero__author"><img src="/images/jon-headshot.jpg" alt="Jon Herrera" class="post-hero__author-avatar"><a href="/blog">Jon Herrera</a></span>
             <span>5 min read</span>
           </div>
@@ -199,49 +331,86 @@
           <article class="post-content">
             <div class="prose">
 
-              <p>For about 25 years, online visibility meant one thing: getting the click.</p>
+              <p>Most business owners I talk to assume they have at least some AI visibility. They've been around for years. They have a website. They've done some SEO. Surely ChatGPT and the other AI assistants know they exist.</p>
 
-              <p>You optimized your website. You built backlinks. You wrote content. You did everything you could to rank for the queries your customers were typing into Google. And if you ranked well, traffic followed. If traffic followed, business followed. The whole logic of getting found online was built around a single moment — the moment a customer saw your link in a list of search results and decided to click it.</p>
+              <p>Most of them are wrong.</p>
 
-              <p>That logic is breaking down.</p>
+              <p>The hard part is they have no way of knowing it. <a href="/blog/citations-are-the-new-clicks">Citations</a> don't show up in any dashboard they're watching. Their analytics still look the same as last year. The visibility loss is invisible to the systems they're checking — until they actually run the test.</p>
 
-              <p>More and more of the searches your customers are running don't end in a click anymore. They end in an answer. Someone asks ChatGPT for the best collision shop in their area, and ChatGPT names a few. Someone asks Claude how to vet a wholesale supplier, and Claude walks them through it. Someone asks Google's AI Overview which agency they should consider, and Google's AI hands them three names without ever showing the ten blue links underneath.</p>
-
-              <p>In every one of those cases, no link gets clicked. The customer gets what they came for. And the only businesses that registered as visible were the ones the AI cited by name.</p>
+              <p>Here's how to run the test. It takes about five minutes, costs nothing, and tells you exactly where your business stands in the new search landscape.</p>
 
               <blockquote>
-                <p>If the AI doesn't mention you, you might as well not exist for that query.</p>
+                <p>If your business doesn't show up in any of the three tests, you're not AI-visible — and you're losing customers you'll never even know about.</p>
               </blockquote>
 
-              <p>This is the part most businesses haven't fully reckoned with. The metric that defined online visibility for a generation — clicks — is being quietly replaced by a different metric entirely.</p>
+              <h2 class="test-heading">Test 1: The recommendation test</h2>
 
-              <p>Citations.</p>
+              <p>Open ChatGPT, Claude, or Gemini. Ask the AI for the best businesses in your category and your area, the way a customer would. Use natural language, not search keywords.</p>
 
-              <p>A citation is when an AI assistant names your business in its answer. Sometimes the citation links back to your website. Often it doesn't. Either way, the customer hears about you, gets your name, and forms an impression of your business — all without you ever appearing in a traditional search result, and all without any click being recorded in your analytics.</p>
+              <div class="test-box">
+                <ul class="test-box__list">
+                  <li class="test-box__item"><span class="test-box__label">Collision shop</span> "What are the best collision repair shops in [your city]?"</li>
+                  <li class="test-box__item"><span class="test-box__label">Wholesale supplier</span> "Who are the top wholesale [product] suppliers in [your region]?"</li>
+                  <li class="test-box__item"><span class="test-box__label">Professional service</span> "Recommend a few [your service] firms in [your area]."</li>
+                  <li class="test-box__item"><span class="test-box__label">Restaurant</span> "What's a good [cuisine] restaurant in [neighborhood/city]?"</li>
+                </ul>
+              </div>
 
-              <p>Citations don't show up in Google Analytics. They don't fire a pixel. They don't trigger any of the events businesses have been tracking for years. They just happen, quietly, in conversations between your potential customers and the AI assistants increasingly mediating those decisions.</p>
+              <p>Read the answer carefully. Is your business named? If yes, where in the list does it appear? If no, which competitors are named instead?</p>
 
-              <p>That changes the question businesses should be asking. The old question was: am I ranking? The new question is: am I being cited?</p>
+              <p>This is the most direct measure of AI visibility you can run. If your business doesn't show up here, the AI doesn't know to recommend you — and customers asking this question are choosing one of the competitors it does name.</p>
 
-              <p>These are not the same thing. A business can rank #1 on Google for a query and never get cited by ChatGPT for the same query. A business that doesn't rank at all on Google can show up first in Claude's answer. The two systems use overlapping but different signals to decide what's authoritative, what's relevant, and what's worth pointing customers toward. Optimizing for one doesn't automatically optimize for the other.</p>
+              <h2 class="test-heading">Test 2: The about test</h2>
 
-              <p>Earlier this year, our work with <a href="/work#360-collision">360 Collision</a> in San Antonio earned them a #7 ranking inside ChatGPT for the query "top collision shops in San Antonio." That citation didn't show up in any traffic report. No analytics dashboard logged it. But every time someone in the San Antonio area asks ChatGPT for collision shop recommendations, 360 Collision now gets named alongside the other top shops in the city — and the customers hearing those names are choosing where to take their cars based on the recommendation.</p>
+              <p>Now ask the AI directly about your business by name. Use a question a curious prospect might actually ask.</p>
 
-              <p>That's the new visibility. It's invisible to the old measurement systems and undeniable in the actual outcomes.</p>
+              <div class="test-box">
+                <p class="test-box__prompt">"What can you tell me about [your business name]?"</p>
+                <p class="test-box__prompt">"Is [your business name] reputable?"</p>
+                <p class="test-box__prompt">"What does [your business name] specialize in?"</p>
+              </div>
 
-              <p>The hard part is that businesses are still measuring the old metric. They're still watching their Google rankings, still counting their organic clicks, still optimizing for a paradigm that's slowly being replaced. The dashboards look the same as they always did. The reality underneath the dashboards is changing fast.</p>
+              <p>This test reveals whether the AI knows you exist at all, and if it does, what it actually knows. There are three possible outcomes:</p>
 
-              <p>Eventually the dashboards will catch up — measurement tools for AI citation visibility are emerging, and they'll get better quickly. But by the time the average business is tracking citations the way they currently track rankings, the businesses that started building citation visibility years earlier will be deeply entrenched. AI models tend to keep recommending the businesses they already know to recommend. First-mover advantage in this category is going to be enormous.</p>
+              <ul class="outcome-list">
+                <li class="outcome-list__item">
+                  <span class="outcome-list__icon">✅</span>
+                  <span class="outcome-list__text"><strong>Accurate, specific description</strong> You have real entity recognition and you're showing up correctly.</span>
+                </li>
+                <li class="outcome-list__item">
+                  <span class="outcome-list__icon">⚠️</span>
+                  <span class="outcome-list__text"><strong>Vague or partially wrong description</strong> The AI knows of you but doesn't have enough structured information to describe you accurately.</span>
+                </li>
+                <li class="outcome-list__item">
+                  <span class="outcome-list__icon">✗</span>
+                  <span class="outcome-list__text"><strong>No information</strong> You're effectively invisible to the AI as a recognized entity.</span>
+                </li>
+              </ul>
 
-              <p>The shift from clicks to citations isn't coming. It's already here. The only question is whether your business is being cited yet — and if not, when you're going to start doing the work that makes you citable.</p>
+              <p>The third outcome is the most common, and the most expensive. If the AI doesn't recognize your business as a distinct entity, it can't recommend you in any context.</p>
 
-              <blockquote>
-                <p>The old question was: am I ranking? The new question is: am I being cited?</p>
-              </blockquote>
+              <h2 class="test-heading">Test 3: The competitor test</h2>
 
-              <hr>
+              <p>Finally, ask the AI about your top competitors by name. Use the same question structure as Test 2.</p>
 
-              <p>Read the next essay: <a href="/blog/how-to-tell-if-youre-ai-visible">How to Tell If You're AI-Visible →</a></p>
+              <div class="test-box">
+                <p class="test-box__prompt">"What can you tell me about [competitor business name]?"</p>
+                <p class="test-box__prompt">"How does [competitor] compare to other businesses in the same category?"</p>
+              </div>
+
+              <p>This test gives you the calibration. If your competitors come back with rich, accurate descriptions while your business gets a shrug, you have a clear visibility gap to close. If your competitors are also invisible, you have an opportunity — the AI hasn't yet decided which businesses in your category are authoritative, and the first one to do the work usually wins the position.</p>
+
+              <p>Either way, you now have a real measurement of where you stand.</p>
+
+              <h2>What to do with the results</h2>
+
+              <p>Almost every business that runs these tests for the first time is surprised by what they find. Either they're more invisible than they thought, or their competitors are more visible than they realized, or both.</p>
+
+              <p>The good news is that none of it is permanent. <a href="/blog/what-is-aeo">AI visibility</a> is a function of structured, authoritative content — schema markup, defined entities, citation-ready answers, the kind of content clusters that AI models actually understand. All of those are buildable. Most businesses just haven't started the work yet, which means there's still a window for early movers to claim authority before the position gets harder to win.</p>
+
+              <p>The bad news is that the window is closing. AI models tend to keep recommending the businesses they already know to recommend. The longer you wait to start showing up in these tests, the harder it gets to displace the competitors who already are.</p>
+
+              <p>Run the tests. Look at the results honestly. Then decide whether the gap you're seeing is acceptable — or whether it's time to start doing the work that closes it.</p>
 
               <hr>
 
@@ -267,9 +436,9 @@
 
           <aside class="post-sidebar">
             <div class="post-sidebar__card">
-              <span class="post-sidebar__label">Citations are the new clicks.</span>
-              <p class="post-sidebar__cta-title">Is your business being cited by AI?</p>
-              <p class="post-sidebar__cta-text">Most businesses are still tracking rankings. We help you build the kind of presence that gets your business named when AI answers the questions your customers are asking.</p>
+              <span class="post-sidebar__label">Run the test on yourself</span>
+              <p class="post-sidebar__cta-title">Find out where your business stands in AI search.</p>
+              <p class="post-sidebar__cta-text">Run the three tests. Then book a call with us to walk through what you found and what it would take to close the gap.</p>
               <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a free call</a>
             </div>
             <div class="post-sidebar__card">
@@ -289,8 +458,8 @@
       <div class="container">
         <div class="post-cta__inner">
           <span class="label post-cta__label">Work with Origo</span>
-          <h2 class="post-cta__title">Start building the kind of presence AI wants to cite.</h2>
-          <p class="post-cta__sub">Most businesses are still optimizing for clicks. We help established, owner-operated businesses build the digital presence that earns citations — on Google, ChatGPT, Claude, and every AI assistant your customers are using. Let's talk.</p>
+          <h2 class="post-cta__title">Know your gap. Close it.</h2>
+          <p class="post-cta__sub">Every business we work with runs these tests before we start. We help you understand what the results mean — and we build the presence that makes AI assistants name you when your customers ask. Let's talk about where you stand.</p>
           <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a free discovery call</a>
         </div>
       </div>
