@@ -248,6 +248,22 @@
               <textarea id="message" name="message" rows="4" placeholder="What do you do, who do you serve, and where are you hoping to take things?"></textarea>
             </div>
 
+            <div class="form-field form-field--consent">
+              <label class="form-checkbox">
+                <input type="checkbox" id="sms-consent-marketing" name="smsConsentMarketing" />
+                <span>I consent to receive marketing text messages about special offers, discounts, and service updates from Origo Solutions LLC at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+              </label>
+            </div>
+
+            <div class="form-field form-field--consent">
+              <label class="form-checkbox">
+                <input type="checkbox" id="sms-consent-transactional" name="smsConsentTransactional" />
+                <span>I consent to receive non-marketing text messages from Origo Solutions LLC about project updates, appointment reminders, and service notifications. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+              </label>
+            </div>
+
+            <p class="form-consent-links">By submitting, you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms &amp; Conditions</a>.</p>
+
             <button type="submit" class="contact-form__submit" id="form-submit">Send Message</button>
             <p class="contact-form__note">We respond to every inquiry personally — usually within one business day.</p>
             <p class="contact-form__submit-error" style="display:none;font-size:12px;color:#CC0000;text-align:center;margin-top:8px;">Something went wrong. Please try again or email us at <a href="mailto:jon@origo.ooo">jon@origo.ooo</a></p>
@@ -357,7 +373,7 @@
       </div>
       <div class="footer__bottom">
         <p class="footer__copy">&copy; <span id="year"></span> Origo Solutions LLC. All rights reserved. &nbsp;·&nbsp; We practice what we preach — designed, built, and hosted in-house.</p>
-        <div class="footer__bottom-links"><a href="/privacy">Privacy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a></div>
+        <div class="footer__bottom-links"><a href="/privacy">Privacy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a><a href="/accessibility">Accessibility</a></div>
       </div>
     </div>
   </footer>
@@ -429,6 +445,8 @@
           phone:      getField('phone').value.trim(),
           service:    getField('service').value,
           message:    getField('message').value.trim(),
+          sms_consent_marketing:     document.getElementById('sms-consent-marketing').checked,
+          sms_consent_transactional: document.getElementById('sms-consent-transactional').checked,
         };
 
         console.log('[Contact Form] Submitting to:', GHL_WEBHOOK_URL);

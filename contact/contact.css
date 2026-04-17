@@ -330,6 +330,44 @@
   }
 }
 
+/* SMS consent checkboxes */
+.form-field--consent {
+  margin-bottom: 10px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888888;
+}
+
+.form-checkbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--color-blue);
+  cursor: pointer;
+}
+
+.form-consent-links {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #AAAAAA;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.form-consent-links a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
 /* ============================================================
    Dark Mode Overrides
    ============================================================ */
