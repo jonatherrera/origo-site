@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms &amp; Conditions | Origo</title>
-  <meta name="description" content="Terms and conditions for Origo Solutions LLC (origo.ooo) — a boutique digital presence agency based in Texas.">
-  <meta name="robots" content="noindex">
+  <title>AI Policy — How We Use AI at Origo</title>
+  <meta name="description" content="An honest account of how Origo uses AI in our work — what AI does, what it doesn't do, and what that means for our clients.">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://origo.ooo/terms-and-conditions">
+  <link rel="canonical" href="https://origo.ooo/ai-policy">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Policy — How We Use AI at Origo">
+  <meta property="og:description" content="An honest account of how Origo uses AI in our work — what AI does, what it doesn't do, and what that means for our clients.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://origo.ooo/ai-policy">
 
   <!-- Dark mode: apply theme before first paint (prevents flash) -->
   <script>
@@ -36,13 +41,21 @@
       font-size: clamp(32px, 5vw, 52px);
       font-weight: 700;
       color: var(--color-black);
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       line-height: 1.15;
     }
-    .legal-hero p {
+    .legal-hero__subtitle {
       font-family: var(--font-body);
-      font-size: 15px;
+      font-size: 18px;
+      color: var(--color-blue);
+      font-style: italic;
+      margin: 0 0 14px;
+    }
+    .legal-hero__date {
+      font-family: var(--font-body);
+      font-size: 13px;
       color: var(--color-gray-dark);
+      font-style: italic;
       margin: 0;
     }
     .legal-body {
@@ -77,7 +90,7 @@
       padding-left: 24px;
     }
     .legal-prose ul li {
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
     .legal-prose a {
       color: var(--color-blue);
@@ -85,26 +98,86 @@
     }
     .legal-prose strong {
       color: var(--color-black);
+      font-weight: 600;
     }
-    .legal-highlight {
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-blue);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      margin: 0 0 40px;
-      background: var(--color-gray-light);
+    /* Pull quote — same treatment as blog essays */
+    .legal-prose blockquote {
+      border-left: 3px solid var(--color-blue);
+      margin: 32px 0;
+      padding: 4px 0 4px 24px;
     }
-    .legal-highlight p {
-      margin: 0 0 10px;
-      font-size: 15px !important;
-      color: var(--color-black) !important;
-      font-weight: 500;
-      line-height: 1.7 !important;
-    }
-    .legal-highlight p:last-child {
+    .legal-prose blockquote p {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--color-blue);
+      line-height: 1.6;
       margin: 0;
     }
+    /* Intro paragraphs before first H2 */
+    .legal-prose .intro-block {
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 48px;
+    }
+    /* Signature block */
+    .ai-policy-sig {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--color-border);
+    }
+    .ai-policy-sig__name {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-black);
+      margin: 0 0 4px;
+    }
+    .ai-policy-sig__title {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-gray-dark);
+      font-style: italic;
+      margin: 0 0 20px;
+    }
+    .ai-policy-sig__contact {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-gray-dark);
+      margin: 0 0 16px;
+    }
+    .ai-policy-sig__contact a {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
   </style>
+
+  <!-- JSON-LD: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://origo.ooo/ai-policy#webpage",
+    "url": "https://origo.ooo/ai-policy",
+    "name": "AI Policy — How We Use AI at Origo",
+    "description": "An honest account of how Origo uses AI in our work — what AI does, what it doesn't do, and what that means for our clients.",
+    "datePublished": "2026-04-16",
+    "dateModified": "2026-04-16",
+    "isPartOf": { "@id": "https://origo.ooo/#website" },
+    "about": {
+      "@type": "DefinedTerm",
+      "name": "Human-Led Agency",
+      "@id": "https://origo.ooo/glossary#human-led-agency"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Jon",
+      "jobTitle": "Head Creative & Co-Founder",
+      "worksFor": { "@id": "https://origo.ooo/#organization" }
+    },
+    "publisher": { "@id": "https://origo.ooo/#organization" }
+  }
+  </script>
 </head>
 
 <body class="preload">
@@ -120,7 +193,7 @@
         <a href="/" class="nav__logo" aria-label="Origo — Home">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 1000 2230 540" aria-hidden="true">
             <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
-            <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+            <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
             <path fill="#0b0b0b" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
             <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#0b0b0b;" transform="translate(706.62 1434.44)">ORIGO</text>
           </svg>
@@ -182,81 +255,82 @@
 
   <main>
 
+    <!-- Hero -->
     <section class="legal-hero">
       <div class="container">
-        <h1>Terms &amp; Conditions</h1>
-        <p>Origo Solutions LLC &nbsp;·&nbsp; Effective date: April 2026</p>
+        <h1>How We Use AI at Origo</h1>
+        <p class="legal-hero__subtitle">An honest account of what AI does and doesn't do in our work.</p>
+        <p class="legal-hero__date">Last updated: April 2026</p>
       </div>
     </section>
 
+    <!-- Body -->
     <section class="legal-body">
       <div class="container">
         <div class="legal-prose">
 
-          <h2>About Origo Solutions LLC</h2>
-          <p>These Terms &amp; Conditions govern your use of <a href="https://origo.ooo">origo.ooo</a> and any services provided by Origo Solutions LLC. Origo Solutions LLC operates as Origo, a boutique digital presence agency based in Texas providing branding, web design, SEO &amp; AEO, copywriting, website concierge, and app development services to established, owner-operated businesses. By using this website or engaging Origo for services, you agree to these terms.</p>
-          <p>Questions regarding these terms may be directed to <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>.</p>
-
-          <h2>SMS Messaging</h2>
-          <div class="legal-highlight">
-            <p>You can cancel the SMS service at any time. Just text STOP to opt out. After sending STOP you will receive one confirmation message and no further SMS.</p>
-            <p>Text HELP for assistance or email <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>.</p>
-            <p>Message and data rates may apply. Message frequency varies based on your interaction with Origo.</p>
-            <p>Carriers are not liable for delayed or undelivered messages.</p>
+          <!-- Intro -->
+          <div class="intro-block">
+            <p>AI tools are part of how we work. We believe the businesses we serve deserve to know how we use them, what we use them for, and — just as importantly — what we don't. This page explains all three.</p>
+            <p>If you ever have a question about anything on this page, or about how AI has been used on a specific project, ask me directly. I'd rather have that conversation than let it go unasked.</p>
+            <blockquote>
+              <p>AI makes our humans sharper. It doesn't replace them.</p>
+            </blockquote>
           </div>
 
-          <h2>Services</h2>
-          <p>All work performed by Origo Solutions LLC is custom and project-specific. The scope, deliverables, timeline, and pricing for each engagement are defined in a separate proposal or project agreement provided to the client prior to work beginning. Nothing on this website constitutes an offer or guarantee of specific results.</p>
-          <p>Origo reserves the right to decline any project or engagement at its sole discretion.</p>
+          <!-- Section 1 -->
+          <h2>What we believe about AI</h2>
+          <p>Used well, AI is one of the most useful tools a creative team has ever had access to. Used poorly, AI hollows out the work and quietly erodes the trust a business is trying to build with its customers.</p>
+          <p>Origo is a human-led agency. Every creative deliverable we produce is authored, shaped, and approved by a real person on our team. AI accelerates our process and helps us do better work. It is not the author of anything we hand to a client.</p>
+          <p>This isn't a marketing position. It's how we structure our actual work, and we wrote this page so that position is public and specific enough to be checked.</p>
 
-          <h2>Payment Terms</h2>
-          <p>A deposit is required before work begins on any project. The deposit amount and payment schedule will be specified in the project proposal or agreement. By approving a proposal and submitting a deposit, the client authorizes Origo Solutions LLC to begin work on the agreed scope.</p>
-          <p>All sales are final on completed and approved work. Refunds on completed work are not available except where expressly agreed in writing. Clients who discontinue a project mid-engagement remain responsible for payment for all work completed to that point per the terms of their project agreement.</p>
+          <!-- Section 2 -->
+          <h2>How we use AI</h2>
+          <p>AI shows up throughout our process in specific, bounded ways.</p>
+          <p><strong>Research.</strong> AI helps us survey competitive landscapes, summarize industry information, gather reference examples, and cross-check facts quickly. This means we show up to the actual creative work better prepared, not that we skip the preparation.</p>
+          <p><strong>Iteration.</strong> AI is genuinely good at producing variations — different headlines, different angles, different structures. We use it to explore more options than we could alone, then apply our own judgment to decide which direction is right for a particular client and a particular goal.</p>
+          <p><strong>Drafting assistance.</strong> A person on our team writes the core of every deliverable — copy, strategy, design direction, brand language. AI may be used to accelerate parts of that drafting: working out initial structures, suggesting phrasings, helping with mechanical sections. The final piece is always rewritten, shaped, and approved by the human whose name is on the work.</p>
+          <p><strong>Optimization.</strong> AI helps us catch things — spelling, grammar, SEO, schema markup, accessibility issues — in seconds. That time gets redirected into the parts of the work that actually require creative judgment.</p>
+          <p><strong>Second opinions.</strong> We sometimes paste drafts into AI tools and ask "what am I missing?" The AI often surfaces considerations we didn't think of. We treat this as a conversation partner, not as the author of the final work.</p>
 
-          <h2>Revisions</h2>
-          <p>The number of revision rounds included in a project is defined in the project proposal or agreement. Revision requests that fall within the agreed scope are included. Requests that exceed the agreed scope — including changes to direction, copy, or structure after approval — are considered additional work and will be billed at Origo's standard hourly rate.</p>
-
-          <h2>Client Responsibilities</h2>
-          <p>Clients are responsible for providing accurate content, timely approvals, and necessary feedback at each project stage. Origo's ability to deliver on schedule depends on the client's participation. Delays caused by the client — including late content delivery, missed approval windows, or prolonged feedback periods — do not extend Origo's liability or alter agreed project timelines.</p>
-
-          <h2>Project Abandonment</h2>
-          <p>If a client is unresponsive for 30 or more consecutive days without prior written notice, the project may be closed at Origo's discretion. In this case, the deposit is forfeited and no refund will be issued for work completed. Restarting a closed project requires a new proposal and a new deposit.</p>
-
-          <h2>Intellectual Property</h2>
-          <p>Origo Solutions LLC retains ownership of all work product — including designs, copy, code, and other deliverables — until full payment is received. Upon receipt of full payment, the client receives full ownership of all final deliverables produced specifically for that engagement.</p>
-          <p>Origo Solutions LLC retains ownership of all preliminary concepts, unused design directions, internal processes, tools, templates, and proprietary frameworks. These are not transferred to the client.</p>
-          <p>Origo Solutions LLC reserves the right to display completed client work in its portfolio and marketing materials. Clients who wish to restrict portfolio use must submit a written request to <a href="mailto:jon@origo.ooo">jon@origo.ooo</a> within 30 days of project completion.</p>
-
-          <h2>Limitation of Liability</h2>
-          <p>Origo Solutions LLC's total liability to any client for any claim arising out of or related to our services shall not exceed the total amount paid by that client for the specific project giving rise to the claim. Origo Solutions LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of our website or services, even if Origo has been advised of the possibility of such damages.</p>
-
-          <h2>Force Majeure</h2>
-          <p>Neither party shall be liable for delays or failures in performance caused by circumstances beyond their reasonable control, including but not limited to natural disasters, government actions, labor disputes, internet outages, or other events outside either party's reasonable ability to anticipate or prevent.</p>
-
-          <h2>Website Use</h2>
-          <p>The content on origo.ooo — including text, images, graphics, and other materials — is the property of Origo Solutions LLC and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or use any content from this site without prior written permission.</p>
-          <p>We are not responsible for the content or practices of any third-party websites linked from our site.</p>
-
-          <h2>Accessibility</h2>
-          <p>Origo Solutions LLC is committed to WCAG 2.1 AA accessibility standards in all web deliverables. Clients or site visitors who experience accessibility barriers may contact us at <a href="mailto:jon@origo.ooo">jon@origo.ooo</a> and we will make reasonable efforts to provide the information or service in an accessible format. See our full <a href="/accessibility">Accessibility Statement</a>.</p>
-
-          <h2>Privacy</h2>
-          <p>Your use of this website and our services is also governed by our <a href="/privacy">Privacy Policy</a>, which is incorporated into these Terms &amp; Conditions by reference.</p>
-
-          <h2>Governing Law</h2>
-          <p>These Terms &amp; Conditions and any disputes arising out of or related to them or to our services shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions.</p>
-
-          <h2>Changes to These Terms</h2>
-          <p>Origo Solutions LLC may update these Terms &amp; Conditions from time to time. When we do, we will revise the effective date at the top of this page. Your continued use of our website after any changes constitutes acceptance of the updated terms.</p>
-
-          <h2>Contact</h2>
-          <p>Questions about these Terms &amp; Conditions? Contact Origo Solutions LLC at:</p>
+          <!-- Section 3 -->
+          <h2>What AI doesn't do at Origo</h2>
+          <p>Equally important — here's what AI is not allowed to do in our process.</p>
           <ul>
-            <li>Email: <a href="mailto:jon@origo.ooo">jon@origo.ooo</a></li>
-            <li>Phone: <a href="tel:+15129715789">(512) 971-5789</a></li>
-            <li>Website: <a href="https://origo.ooo">origo.ooo</a></li>
+            <li><strong>AI is not the author of client deliverables.</strong> A real person on our team authors every piece of copy, every design, every strategy document. The human whose name is on the work actually made the decisions.</li>
+            <li><strong>AI is not the strategist.</strong> The thinking behind how we approach a brand, a website, a campaign, or any other engagement comes from people on our team who have studied your business, talked with you, and formed judgments based on experience. No AI system chooses your positioning.</li>
+            <li><strong>AI is not a substitute for human specificity.</strong> When we write about your business, the specifics — your clients' real names, your actual numbers, your particular story — come from real conversations with you, not from AI hallucination or generalization.</li>
+            <li><strong>AI is not a pricing shortcut.</strong> If AI makes our work more efficient, we invest the gained time into higher-quality deliverables, not into lower prices. We don't use AI to deliver less while charging the same.</li>
           </ul>
-          <p>See also: <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/accessibility">Accessibility Statement</a></p>
+
+          <!-- Section 4 -->
+          <h2>What this means for you as a client</h2>
+          <p>When you work with Origo, you're paying for the time, judgment, and experience of real people on our team — aided by AI tools that make them sharper. You should expect a few specific things:</p>
+          <ul>
+            <li><strong>Every deliverable is authored by a person.</strong> Jon personally writes most of the copy. Senior team members shape design, strategy, and decision-making on every project.</li>
+            <li><strong>The person on your account can explain every choice.</strong> Ask why a headline is worded a specific way, why a design goes in a particular direction, why certain options were rejected. The explanations will be specific to your business, not generic.</li>
+            <li><strong>The work will reflect your actual business, not a template.</strong> Real specifics. Real clients. Real numbers. Real context drawn from real conversations with you.</li>
+            <li><strong>Our pricing reflects human work, not AI-replaced work.</strong> We charge what honest human-led work costs, which is generally more than AI-dependent agencies charge and less than traditional agency overhead.</li>
+          </ul>
+
+          <!-- Section 5 -->
+          <h2>Our commitment to transparency</h2>
+          <p>Three commitments we make to every client.</p>
+          <p>First, this policy is public. You don't have to ask for it — it lives at origo.ooo/ai-policy, updated as our practices evolve. If we change how we use AI, this page changes, and the update date at the top reflects the change.</p>
+          <p>Second, we'll answer any specific question you have about a specific project. If you ever wonder whether a particular piece of work was authored by a person or drafted with AI assistance, ask. You'll get a direct answer, not marketing language.</p>
+          <p>Third, this is an ongoing conversation. The tools are changing quickly, and so is the industry's relationship with them. If our policy needs to evolve, we'll evolve it openly and explain why. We'd rather be honest about how our practice is changing than pretend it isn't.</p>
+
+          <!-- Section 6 -->
+          <h2>A final note</h2>
+          <p>We wrote this policy because we think it's the right thing to do, and because the alternative — using AI quietly while telling clients "we use human expertise" — is the exact kind of trust erosion we help our clients protect themselves from.</p>
+          <p>If you've read our writing on the human-led agency and wondered whether we actually live by it, this page is part of the answer. The rest is in the work itself.</p>
+
+          <!-- Signature -->
+          <div class="ai-policy-sig">
+            <p class="ai-policy-sig__name">— Jon</p>
+            <p class="ai-policy-sig__title">Head Creative &amp; Co-Founder, Origo</p>
+            <p class="ai-policy-sig__contact">Questions about this policy? Email <a href="mailto:jon@origo.ooo">jon@origo.ooo</a> or <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" target="_blank" rel="noopener">book a free discovery call</a>.</p>
+          </div>
 
         </div>
       </div>
