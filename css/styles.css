@@ -1204,6 +1204,12 @@ p {
   margin-bottom: 16px;
 }
 
+.footer__col-title--stacked {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
 .footer__col ul {
   display: flex;
   flex-direction: column;
