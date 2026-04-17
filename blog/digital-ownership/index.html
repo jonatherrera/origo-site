@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Ownership: Why Your Business Should Own It</title>
+  <meta name="description" content="Most businesses don't actually own their websites, email lists, or customer data. Here's what digital ownership means and why it matters for your business.">
+  <meta name="keywords" content="digital ownership, own your website, own your email list, business digital assets, website ownership rights, digital property">
+  <!-- Dark mode: apply theme before first paint (prevents flash) -->
+  <script>
+    (function(){
+      var saved = localStorage.getItem('origo-theme');
+      document.documentElement.setAttribute('data-theme', saved || 'light');
+    })();
+  </script>
+
+  <link rel="canonical" href="https://origo.ooo/blog/digital-ownership" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Digital Ownership: Why Your Business Should Own It" />
+  <meta property="og:description" content="Most businesses don't actually own their websites, email lists, or customer data. Here's what digital ownership means and why it matters for your business." />
+  <meta property="og:image" content="https://origo.ooo/assets/blog/digital-ownership-og.jpg" />
+  <meta property="og:url" content="https://origo.ooo/blog/digital-ownership" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/blog/blog.css" />
+
+  <style>
+    /* Owned vs. Rented comparison table */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 32px 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+    }
+    .ownership-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-body);
+      font-size: 14px;
+    }
+    .ownership-table th {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 13px;
+      text-align: left;
+      padding: 14px 20px;
+    }
+    .ownership-table th:first-child {
+      background: var(--color-black);
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+      min-width: 130px;
+    }
+    .ownership-table th.th-owned {
+      background: #1a3a1a;
+      color: #7ecb7e;
+    }
+    .ownership-table th.th-rented {
+      background: #2b2b2b;
+      color: rgba(255,255,255,0.45);
+    }
+    .ownership-table td {
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-gray-dark);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+    .ownership-table td:first-child {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--color-black);
+      background: var(--color-gray-light);
+      white-space: nowrap;
+    }
+    .ownership-table td.td-owned {
+      background: rgba(34,139,34,0.04);
+    }
+    .ownership-table td.td-rented {
+      background: transparent;
+      color: rgba(0,0,0,0.45);
+    }
+    .ownership-table tr:last-child td {
+      border-bottom: none;
+    }
+    [data-theme="dark"] .ownership-table td.td-owned {
+      background: rgba(34,139,34,0.07);
+    }
+    [data-theme="dark"] .ownership-table th.th-owned {
+      background: #162416;
+      color: #7ecb7e;
+    }
+    [data-theme="dark"] .ownership-table th.th-rented {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.35);
+    }
+    @media (max-width: 600px) {
+      .ownership-table th,
+      .ownership-table td {
+        padding: 10px 14px;
+      }
+      .ownership-table td:first-child {
+        white-space: normal;
+      }
+    }
+    /* In this guide nav */
+    .guide-nav {
+      background: rgba(0,102,255,0.04);
+      border: 1px solid rgba(0,102,255,0.12);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 28px 0 40px;
+    }
+    .guide-nav__label {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-blue);
+      margin-bottom: 12px;
+    }
+    .guide-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      columns: 2;
+      column-gap: 32px;
+    }
+    .guide-nav li {
+      margin-bottom: 6px;
+    }
+    .guide-nav a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-gray-dark);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .guide-nav a:hover { color: var(--color-blue); }
+    @media (max-width: 600px) {
+      .guide-nav ul { columns: 1; }
+    }
+    /* Asset headings — blue set */
+    .asset-heading {
+      color: var(--color-blue) !important;
+    }
+    /* Audit question items — checklist style */
+    .audit-section {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 20px 0 28px;
+    }
+    .audit-section__header {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--color-black);
+      background: var(--color-gray-light);
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .audit-section__questions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .audit-section__questions li {
+      display: flex;
+      gap: 12px;
+      padding: 11px 20px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 14px;
+      color: var(--color-gray-dark);
+      line-height: 1.5;
+    }
+    .audit-section__questions li:last-child {
+      border-bottom: none;
+    }
+    .audit-section__questions li::before {
+      content: "□";
+      font-size: 16px;
+      color: var(--color-blue);
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+    [data-theme="dark"] .audit-section__header {
+      background: rgba(255,255,255,0.04);
+    }
+  </style>
+
+  <!-- Schema.org: Organization / ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://origo.ooo/#organization",
+    "name": "Origo",
+    "url": "https://origo.ooo",
+    "logo": "https://origo.ooo/images/logo-horizontal-black.svg",
+    "image": "https://origo.ooo/images/logo-horizontal-black.svg",
+    "description": "Origo is a boutique digital presence agency based in Texas helping established, owner-operated businesses build trust online through branding, web design, SEO, AEO, copywriting, and ongoing website management.",
+    "slogan": "Build trust. Own your presence.",
+    "foundingDate": "2018",
+    "founder": [
+      { "@type": "Person", "name": "Jon", "jobTitle": "Head Creative & Co-Founder" },
+      { "@type": "Person", "name": "Emily", "jobTitle": "Quality Assurance & Co-Owner" }
+    ],
+    "employee": [
+      { "@type": "Person", "name": "Kadimay", "jobTitle": "SEO Specialist" },
+      { "@type": "Person", "name": "Daniel", "jobTitle": "Multimedia Specialist" },
+      { "@type": "Person", "name": "Valentina", "jobTitle": "Digital Operations Assistant" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "telephone": "(512) 971-5789",
+    "email": "jon@origo.ooo",
+    "priceRange": "$$$",
+    "knowsAbout": [
+      "Digital Presence", "Branding", "Web Design",
+      "Search Engine Optimization", "Answer Engine Optimization",
+      "Copywriting", "Website Management", "App Development"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Origo Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding", "url": "https://origo.ooo/services/branding" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design", "url": "https://origo.ooo/services/web-design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & AEO", "url": "https://origo.ooo/services/seo-aeo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Copywriting", "url": "https://origo.ooo/services/copywriting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Concierge", "url": "https://origo.ooo/services/website-concierge" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "url": "https://origo.ooo/services/app-development" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://origo.ooo/blog/digital-ownership#article",
+    "headline": "Digital Ownership: Why Your Business Should Own What It Builds Online",
+    "url": "https://origo.ooo/blog/digital-ownership",
+    "datePublished": "2026-04-24",
+    "dateModified": "2026-04-24",
+    "author": {
+      "@type": "Person",
+      "name": "Jon",
+      "jobTitle": "Head Creative & Co-Founder",
+      "worksFor": { "@id": "https://origo.ooo/#organization" }
+    },
+    "publisher": { "@id": "https://origo.ooo/#organization" },
+    "image": "https://origo.ooo/assets/blog/digital-ownership-og.jpg",
+    "about": {
+      "@type": "DefinedTerm",
+      "name": "Digital Ownership",
+      "@id": "https://origo.ooo/glossary#digital-ownership"
+    },
+    "mainEntityOfPage": "https://origo.ooo/blog/digital-ownership",
+    "wordCount": 3200,
+    "articleSection": "Digital Strategy",
+    "isRelatedTo": [
+      { "@id": "https://origo.ooo/blog/what-is-a-digital-presence-agency#article" },
+      { "@id": "https://origo.ooo/blog/what-is-aeo#article" }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://origo.ooo/blog/digital-ownership#faqpage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does it mean to own a digital asset?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Owning a digital asset means holding full legal control (you have the title, trademark, or contractual right), full practical control (you can access, export, and use the asset without depending on a third party), and durable control (the asset's existence doesn't depend on a vendor's pricing or terms-of-service decisions). All three conditions need to be true for genuine ownership."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why can't I just use Squarespace or Wix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can — and many businesses do. Closed platforms work fine when convenience is more valuable to you than control. The trade-off is that you don't own what you build on them, which means every dollar you invest accumulates equity for the platform rather than your business, and you're vulnerable to whatever decisions the platform makes about pricing, features, or terms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Doesn't custom-built mean more expensive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upfront, yes. Over time, often not. A custom website costs more to build but stops requiring monthly platform fees once it exists. A typical business renting a platform for ten years pays significantly more in cumulative subscription costs than they would have paid for a custom build."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about WordPress — is that owned or rented?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WordPress is open-source software you install on hosting you control, which makes it owned. WordPress.com (a hosted service) is closer to rented because your site lives on their infrastructure under their terms. WordPress.org installations on your own hosting are genuinely owned; WordPress.com sites are not."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my email list really mine if it's in Mailchimp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Partially. You have ownership of the data in the sense that you can export it, but the relationship with your subscribers is mediated through Mailchimp's infrastructure. Genuine email ownership means storing your list in a system you control, even if you also use Mailchimp or another service for sending."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I can't afford to move everything to owned?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You don't have to. Move the highest-stakes asset first (usually the website), then work down the list as resources allow. Even moving one or two assets to owned status meaningfully improves your business's long-term position. The goal isn't perfection — it's progress."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if my agency owns my brand files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check your contract. If it doesn't explicitly assign full ownership of the brand assets to your business — including source files — then ownership is likely with the agency by default. If you're not sure, ask. A reputable agency will clarify ownership terms in writing on request."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: DefinedTerm (claims authority over Digital Ownership definition) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": "https://origo.ooo/glossary#digital-ownership",
+    "name": "Digital Ownership",
+    "description": "Digital ownership is the principle that a business should hold full legal and practical control over the digital assets it depends on, including the right to keep them, modify them, move them, and protect them from external interference. Genuine digital ownership requires legal ownership, practical access and exportability, and durable independence from vendor decisions.",
+    "url": "https://origo.ooo/blog/digital-ownership",
+    "inDefinedTermSet": { "@id": "https://origo.ooo/glossary#termset" }
+  }
+  </script>
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://origo.ooo/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://origo.ooo/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Digital Ownership", "item": "https://origo.ooo/blog/digital-ownership" }
+    ]
+  }
+  </script>
+</head>
+<body class="preload">
+  <header class="nav" id="nav" role="banner">
+    <div class="container"><div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Origo — Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 1000 2230 540" aria-hidden="true">
+          <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+          <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+          <path fill="#0b0b0b" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
+          <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#0b0b0b;" transform="translate(706.62 1434.44)">ORIGO</text>
+        </svg>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="/about">About</a>
+        <a href="/team">Team</a>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">Services <span class="chevron" aria-hidden="true">▾</span></span>
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="/services/branding" role="menuitem">Branding</a>
+            <a href="/services/web-design" role="menuitem">Web Design</a>
+            <a href="/services/seo-aeo" role="menuitem">SEO &amp; AEO</a>
+            <a href="/services/copywriting" role="menuitem">Copywriting</a>
+            <a href="/services/website-concierge" role="menuitem">Website Concierge</a>
+            <a href="/services/app-development" role="menuitem">App Development</a>
+          </div>
+        </div>
+        <a href="/blog" class="nav__active">Blog</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="nav__cta"><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a call</a></div>
+      <!-- Dark mode toggle -->
+      <div class="nav__theme-wrap">
+        <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div></div>
+  </header>
+  <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <nav>
+      <a href="/about">About</a><a href="/team">Team</a><a href="/services">Services</a>
+      <a href="/services/branding" style="padding-left:16px;font-size:15px;opacity:0.6;">Branding</a>
+      <a href="/services/web-design" style="padding-left:16px;font-size:15px;opacity:0.6;">Web Design</a>
+      <a href="/services/seo-aeo" style="padding-left:16px;font-size:15px;opacity:0.6;">SEO &amp; AEO</a>
+      <a href="/services/copywriting" style="padding-left:16px;font-size:15px;opacity:0.6;">Copywriting</a>
+      <a href="/services/website-concierge" style="padding-left:16px;font-size:15px;opacity:0.6;">Website Concierge</a>
+      <a href="/services/app-development" style="padding-left:16px;font-size:15px;opacity:0.6;">App Development</a>
+      <a href="/blog">Blog</a><a href="/faq">FAQ</a><a href="/contact">Contact</a>
+    </nav>
+    <div style="margin-bottom:16px;">
+      <button class="theme-toggle" aria-label="Switch to dark mode" type="button" style="width:100%;border-radius:8px;height:44px;gap:10px;font-family:var(--font-head);font-weight:500;font-size:14px;color:var(--color-black);border:1px solid var(--color-border);justify-content:center;">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="icon-moon">Dark mode</span>
+        <span class="icon-sun">Light mode</span>
+      </button>
+    </div>
+    <div class="nav__mobile-cta"><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Book a discovery call</a></div>
+  </div>
+
+  <main>
+    <div class="post-back container">
+      <a href="/blog" class="post-back__link">← Back to Blog</a>
+    </div>
+
+    <section class="post-hero">
+      <div class="container">
+        <div class="post-hero__inner">
+          <a href="/blog/?filter=digital-strategy" class="post-hero__category">Digital Strategy</a>
+          <h1 class="post-hero__title">Digital Ownership: Why Your Business Should Own What It Builds Online</h1>
+          <p class="post-hero__subtitle">What digital ownership actually means, why it matters more than businesses realize, and how to start building on what you own.</p>
+          <div class="post-hero__meta">
+            <span>April 24, 2026</span>
+            <span class="post-hero__author"><img src="/images/jon-headshot.jpg" alt="Jon Herrera" class="post-hero__author-avatar"><a href="/blog">Jon Herrera</a></span>
+            <span>12 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-wrap">
+      <div class="container">
+        <div class="post-layout">
+          <article class="post-content">
+            <div class="prose">
+
+              <p>This is the third foundational guide in a series on digital presence. The first defined <a href="/blog/what-is-a-digital-presence-agency">what a digital presence agency is</a> and why integrated work matters. The second explained <a href="/blog/what-is-aeo">AEO</a> and how AI search is reshaping visibility. This one tackles a question that runs underneath both: who actually owns the digital assets your business is building?</p>
+
+              <p>Most business owners would answer that question without hesitation: "I do." Most are wrong, in ways they don't realize until something forces them to find out.</p>
+
+              <p>The website built on a closed platform. The email list locked inside a vendor's system. The content published only to social media. The customer data held in a booking app. The brand designed by an agency that quietly kept the source files. Each of these is a <a href="/glossary#digital-asset">digital asset</a> most businesses assume they own — and most businesses don't.</p>
+
+              <p>This guide explains what <a href="/glossary#digital-ownership">digital ownership</a> actually means, why it matters more than most businesses realize, and how to start building your business on assets you actually control.</p>
+
+              <p><em>Estimated reading time: 12 minutes</em></p>
+
+              <div class="guide-nav">
+                <div class="guide-nav__label">In this guide</div>
+                <ul>
+                  <li><a href="#what-it-means">What digital ownership actually means</a></li>
+                  <li><a href="#why-it-matters">Why ownership matters more than you realize</a></li>
+                  <li><a href="#six-assets">The six digital assets to own</a></li>
+                  <li><a href="#owned-vs-rented">Owned vs. rented: how to tell</a></li>
+                  <li><a href="#hidden-costs">The hidden costs of rented land</a></li>
+                  <li><a href="#evaluate">How to evaluate what you own now</a></li>
+                  <li><a href="#transition">How to transition to owned</a></li>
+                  <li><a href="#faq">Common questions</a></li>
+                  <li><a href="#origo-approach">How Origo approaches ownership</a></li>
+                  <li><a href="#bottom-line">The bottom line</a></li>
+                </ul>
+              </div>
+
+              <h2 id="what-it-means">What digital ownership actually means</h2>
+
+              <p><a href="/glossary#digital-ownership">Digital ownership</a> is the principle that a business should hold full legal and practical control over the digital assets it depends on — including the right to keep them, modify them, move them, and protect them from external interference.</p>
+
+              <p>The word "ownership" carries a specific meaning. It means the asset is yours <strong>legally</strong> (you have the title, the trademark, the registration, or the contractual right). It means the asset is yours <strong>practically</strong> (you can access it, export it, and use it without depending on a third party's permission). And it means the asset is yours <strong>durably</strong> (its existence doesn't depend on a vendor's pricing decisions, terms-of-service changes, or business continuity).</p>
+
+              <p>Most digital assets fail at least one of these tests. A website built on Squarespace is yours legally — you have the right to use it — but it isn't yours practically (you can't export the source code) or durably (Squarespace can change pricing, features, or terms at any time). An email list in Mailchimp is yours legally and exportable practically, but if Mailchimp ever shuts down or restricts your account, you have very limited recourse. A blog post on LinkedIn is technically yours but it lives on infrastructure you don't control, optimized for an algorithm you can't see.</p>
+
+              <p>Real digital ownership requires all three conditions to be true at the same time. Most businesses have very few assets that pass all three tests — and most have never thought about it that way.</p>
+
+              <h2 id="why-it-matters">Why ownership matters more than businesses realize</h2>
+
+              <p>Ownership of physical assets is intuitive. No reasonable business owner would invest tens of thousands of dollars improving a building they didn't own. Nobody builds their headquarters on land they're renting month-to-month. Nobody puts their best equipment on lease when they have the capital to buy.</p>
+
+              <p>The same principles apply online — but somehow they don't get applied online. Businesses routinely invest substantial money into websites, content libraries, email lists, and customer relationships built on platforms they don't control. They make those investments without thinking about what happens if the platform changes the deal.</p>
+
+              <blockquote>
+                <p>If you wouldn't build a custom home on land you didn't own, why would you build your business's digital presence on land you don't own?</p>
+              </blockquote>
+
+              <p>The reason most businesses get away with this for years is that platforms usually don't change the deal aggressively. Squarespace doesn't randomly delete your site. Mailchimp doesn't usually lock you out for no reason. Most of the time, the rented arrangement just continues, and the business never has to confront the underlying ownership question.</p>
+
+              <p>But "most of the time" isn't the same as "always." Platforms get acquired. Pricing gets restructured. Features get cut. Terms of service change. Companies pivot, sunset products, or disappear. When any of that happens, the businesses that built on rented land have to scramble — and the scramble is always more expensive than building on owned land would have been from the start.</p>
+
+              <p>More importantly, the costs of rented infrastructure compound silently in the meantime. A business renting its <a href="/services/web-design">website</a> pays monthly fees forever instead of building equity in an owned asset. A business with its email list trapped in a vendor's system pays for migration costs every time the vendor's pricing becomes unsustainable. A business that publishes only on social media gets visibility now but builds zero indexed authority that compounds in search.</p>
+
+              <p>The cost of renting isn't just the dramatic moments when platforms change the rules. It's the slow erosion of what you could have been building if you'd been building on something you owned.</p>
+
+              <h2 id="six-assets">The six digital assets every business needs to own</h2>
+
+              <p>Digital ownership applies across multiple categories of asset. Most businesses focus on one (usually the website) and ignore the others. A complete picture of <a href="/glossary#digital-ownership">digital ownership</a> includes six interconnected assets.</p>
+
+              <h3 class="asset-heading">1. Your website</h3>
+
+              <p>The website is the central digital asset. Owned ownership means custom code or open-source software on hosting you control, with full source-code access and the right to take the entire site to a different host at any time. Rented ownership means a closed platform like Squarespace, Wix, Webflow, or GoHighLevel, where you have a working site but can't access or move the underlying code. We built this website on custom HTML/CSS/JS on hosting Origo controls — and every site we build for clients is owned by the client, not by us.</p>
+
+              <h3 class="asset-heading">2. Your email list</h3>
+
+              <p>The email list is the highest-leverage marketing asset most businesses have. Owned ownership means storing your subscriber list in a system you can export from completely — names, addresses, segmentation tags, and engagement history — and the right to use that list with any email service provider. Rented ownership means being locked into a single vendor's ecosystem with limited export options or features that only work inside their platform.</p>
+
+              <h3 class="asset-heading">3. Your content</h3>
+
+              <p>Content includes blog posts, articles, videos, podcasts, and any long-form material your business produces. Owned ownership means publishing it first on your own domain, where it gets indexed, cited, and accumulates authority over time. Rented ownership means publishing it primarily to social media platforms, where the platform owns the distribution, the algorithm decides who sees it, and the content disappears from useful search visibility within hours. This also directly affects <a href="/blog/what-is-aeo">AEO visibility</a> — AI models cite content published on owned domains, not social media posts.</p>
+
+              <h3 class="asset-heading">4. Your customer data</h3>
+
+              <p>Customer data — names, contact information, purchase history, communication records, preferences — is one of the most valuable assets in your business. Owned ownership means this data lives in your CRM or database with full export rights. Rented ownership means it lives in a booking platform, marketplace, scheduling tool, or other third-party system that holds your relationships at arm's length from you.</p>
+
+              <h3 class="asset-heading">5. Your brand</h3>
+
+              <p>Brand ownership has two layers: legal and practical. Legal ownership means trademarking your business name and logo where applicable. Practical ownership means holding the source files for your visual identity — the editable logo files, the color specifications, the typography system, the brand guidelines — not just the exported PDFs an agency sent you. Without source files, you can't extend the brand to new applications without going back to the original agency. At Origo, every brand engagement delivers full editable source files to the client.</p>
+
+              <h3 class="asset-heading">6. Your domain</h3>
+
+              <p>This one is small but consequential. Your domain name should be registered to your business, on a registrar you have direct access to, with auto-renewal enabled and renewal reminders going to a permanent business email address. A surprising number of businesses discover during a transition that their domain was registered by an old developer or agency under their own account — meaning the business doesn't actually own its own web address.</p>
+
+              <h2 id="owned-vs-rented">Owned vs. rented: how to tell the difference</h2>
+
+              <p>The line between owned and rented can be subtle. The following table makes it concrete.</p>
+
+              <div class="table-wrap">
+                <table class="ownership-table" aria-label="Owned vs. rented digital assets comparison">
+                  <thead>
+                    <tr>
+                      <th>Asset</th>
+                      <th class="th-owned">Owned looks like</th>
+                      <th class="th-rented">Rented looks like</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Website</td>
+                      <td class="td-owned">Custom build, source code in your control, your hosting choice</td>
+                      <td class="td-rented">Squarespace, Wix, Webflow, GoHighLevel — locked into a platform</td>
+                    </tr>
+                    <tr>
+                      <td>Email list</td>
+                      <td class="td-owned">Stored in your CRM or database, exportable anytime</td>
+                      <td class="td-rented">Locked into Mailchimp, ConvertKit, or another provider's system</td>
+                    </tr>
+                    <tr>
+                      <td>Content</td>
+                      <td class="td-owned">Published on your domain first, syndicated elsewhere</td>
+                      <td class="td-rented">Posted only to social media or third-party platforms</td>
+                    </tr>
+                    <tr>
+                      <td>Customer data</td>
+                      <td class="td-owned">In your CRM, with full export rights</td>
+                      <td class="td-rented">Held in a booking platform, marketplace, or scheduling tool</td>
+                    </tr>
+                    <tr>
+                      <td>Brand</td>
+                      <td class="td-owned">Trademarked, with source files held by you, applied consistently</td>
+                      <td class="td-rented">Designed by an agency that retains the source files</td>
+                    </tr>
+                    <tr>
+                      <td>Domain</td>
+                      <td class="td-owned">Registered to your business, on a registrar you control</td>
+                      <td class="td-rented">Owned by an agency, developer, or platform provider</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>If you look at this table and realize most of your assets sit in the right column, you're not unusual. Most businesses do. The point isn't to feel bad about it — it's to start moving them, asset by asset, to the left.</p>
+
+              <h2 id="hidden-costs">The hidden costs of building on rented land</h2>
+
+              <p>Rented infrastructure has obvious benefits — convenience, lower upfront cost, faster setup, predictable monthly fees. The costs are less obvious because they accumulate slowly and don't show up on any invoice.</p>
+
+              <h3>Compounding rent payments</h3>
+
+              <p>A business paying $40 a month for a website platform pays $480 a year, $4,800 over a decade, and never builds equity in an asset they own. A custom website costs more upfront but stops costing money once it exists, except for hosting that you can change anytime.</p>
+
+              <h3>Migration costs</h3>
+
+              <p>When a rented platform's pricing or terms become unsustainable, the cost of moving off it is rarely just the migration itself. It's the lost SEO authority during the transition. The retraining of staff. The risk of broken integrations. The customer-facing disruption. Migration costs are typically 3–5x what businesses initially estimate.</p>
+
+              <h3>Limited optionality</h3>
+
+              <p>A website on a custom platform can be redesigned, restructured, integrated with anything, and optimized for any search behavior. A website on Squarespace can be designed within Squarespace's templates and integrated with Squarespace's approved tools. The optionality difference looks small until you need to do something the platform doesn't support.</p>
+
+              <h3>Lost compounding</h3>
+
+              <p>This is the biggest hidden cost. Owned assets compound. A blog post published to your domain gets indexed, accumulates backlinks, builds topical authority, and contributes to your <a href="/blog/what-is-aeo">AEO visibility</a> years after it's published. The same blog post published only to LinkedIn gets a brief moment of visibility and then disappears from useful search. The same hour of work, dramatically different long-term value, depending on whether you published on owned or rented land.</p>
+
+              <h3>Vulnerability to platform decisions</h3>
+
+              <p>Every business on a rented platform is one decision away from disruption. The platform can raise prices, change features, modify terms, restrict accounts, get acquired, or shut down. None of these are likely on any given day. Over years, some of them become inevitable. Businesses building on owned infrastructure aren't immune to industry shifts, but they have far more control over how they respond.</p>
+
+              <h2 id="evaluate">How to evaluate what you actually own right now</h2>
+
+              <p>Before deciding what to change, it's worth taking a clear inventory of where your business stands today. Run through these questions for each of your major <a href="/glossary#digital-asset">digital assets</a>.</p>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your website</div>
+                <ul class="audit-section__questions">
+                  <li>Can you access the source code right now?</li>
+                  <li>Can you take the entire site to a different host this week if you needed to?</li>
+                  <li>Do you own the domain it sits on?</li>
+                  <li>If you stopped paying your current platform, would the site continue to exist?</li>
+                </ul>
+              </div>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your email list</div>
+                <ul class="audit-section__questions">
+                  <li>Can you export every subscriber's email address, name, segmentation tags, and engagement history with one click?</li>
+                  <li>Can you use this exported list with a different email provider tomorrow?</li>
+                </ul>
+              </div>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your content</div>
+                <ul class="audit-section__questions">
+                  <li>Where does each piece of content live first — your domain, or someone else's platform?</li>
+                  <li>If you stopped using a particular social platform tomorrow, would your content survive in any meaningful way?</li>
+                </ul>
+              </div>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your customer data</div>
+                <ul class="audit-section__questions">
+                  <li>Where do your customer relationships actually live — in a CRM you control, or in a booking platform?</li>
+                  <li>If a third-party platform shut down tomorrow, would you still have your customers' contact information?</li>
+                </ul>
+              </div>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your brand</div>
+                <ul class="audit-section__questions">
+                  <li>Do you have the editable source files for every brand asset you use — logos, color specs, typography, brand guidelines?</li>
+                  <li>Are your trademarks registered?</li>
+                  <li>Could you hand all of this to a new vendor and have them produce on-brand work without contacting your original agency?</li>
+                </ul>
+              </div>
+
+              <div class="audit-section">
+                <div class="audit-section__header">For your domain</div>
+                <ul class="audit-section__questions">
+                  <li>What account is your domain registered under — yours or someone else's?</li>
+                  <li>Do you have direct login credentials to your registrar?</li>
+                  <li>Are renewal reminders going to a permanent business email?</li>
+                </ul>
+              </div>
+
+              <p>Most businesses running this audit for the first time discover at least one or two assets they don't actually own. That's not a crisis — it's information. Knowing where you stand is the first step toward ownership.</p>
+
+              <h2 id="transition">How to transition from rented to owned</h2>
+
+              <p>Moving from rented to owned doesn't have to happen all at once. The smart approach is sequential — handle the assets that carry the highest cost of being rented first, then work down to the lower-stakes ones.</p>
+
+              <h3>Start with the highest-leverage asset</h3>
+
+              <p>For most businesses, the <a href="/services/web-design">website</a> is the highest-stakes asset to own. It's where most digital trust is built, where most search authority compounds, and where lock-in costs the most when platforms change. If you're going to move only one asset to owned status, this is usually the right one.</p>
+
+              <h3>Capture your customer relationships next</h3>
+
+              <p>If your customer data lives in a third-party platform, prioritize getting it into a CRM you own. This doesn't necessarily mean abandoning the platform — it means setting up systematic exports so the data exists in your control regardless of what happens to the platform.</p>
+
+              <h3>Move your content publishing onto your own land</h3>
+
+              <p>Stop publishing primarily to social media. Publish to your own blog or content library first, then syndicate to social. This single change converts every piece of future content from a rented asset into an owned one. The compounding kicks in immediately. The essay <a href="/blog/build-on-your-own-land">Build on Your Own Land</a> goes deeper on why this matters specifically for websites.</p>
+
+              <h3>Consolidate your domain ownership</h3>
+
+              <p>If your domain is registered under someone else's account, transfer it to a registrar account you control. This is usually a quick and inexpensive move that closes one of the biggest hidden vulnerabilities most businesses have.</p>
+
+              <h3>Reclaim your brand source files</h3>
+
+              <p>Request editable source files from any agency that holds them. If your contract didn't address this originally, the request might require negotiation — but most agencies will hand over files when asked. Going forward, make source-file ownership a contract requirement on every brand engagement.</p>
+
+              <h2 id="faq">Common questions about digital ownership</h2>
+
+              <h3>What does it mean to "own" a digital asset?</h3>
+              <p>Owning a digital asset means holding full legal control (you have the title, trademark, or contractual right), full practical control (you can access, export, and use the asset without depending on a third party), and durable control (the asset's existence doesn't depend on a vendor's pricing or terms-of-service decisions). All three conditions need to be true for genuine ownership.</p>
+
+              <h3>Why can't I just use Squarespace or Wix?</h3>
+              <p>You can — and many businesses do. Closed platforms work fine when convenience is more valuable to you than control. The trade-off is that you don't own what you build on them, which means every dollar you invest accumulates equity for the platform rather than your business, and you're vulnerable to whatever decisions the platform makes about pricing, features, or terms.</p>
+
+              <h3>Doesn't custom-built mean more expensive?</h3>
+              <p>Upfront, yes. Over time, often not. A custom website costs more to build but stops requiring monthly platform fees once it exists. A typical business renting a platform for ten years pays significantly more in cumulative subscription costs than they would have paid for a custom build. The math gets even more favorable when you factor in lost SEO equity, migration costs when platforms change, and the compounding value of an owned asset.</p>
+
+              <h3>What about WordPress — is that owned or rented?</h3>
+              <p>WordPress is open-source software you install on hosting you control, which makes it owned. WordPress.com (a hosted service) is closer to rented because your site lives on their infrastructure under their terms. The distinction matters: WordPress.org installations on your own hosting are genuinely owned; WordPress.com sites are not.</p>
+
+              <h3>Is my email list really mine if it's in Mailchimp?</h3>
+              <p>Partially. You have ownership of the data in the sense that you can export it, but the relationship with your subscribers is mediated through Mailchimp's infrastructure. If Mailchimp ever shuts down, restricts your account, or significantly raises prices, you'd need to migrate everything — and the migration is harder if you've built workflows that only work inside Mailchimp's system. Genuine email ownership means storing your list in a system you control, even if you also use Mailchimp or another service for sending.</p>
+
+              <h3>What if I can't afford to move everything to owned?</h3>
+              <p>You don't have to. Move the highest-stakes asset first (usually the website), then work down the list as resources allow. Even moving one or two assets to owned status meaningfully improves your business's long-term position. The goal isn't perfection — it's progress.</p>
+
+              <h3>How do I know if my agency owns my brand files?</h3>
+              <p>Check your contract. If it doesn't explicitly assign full ownership of the brand assets to your business — including source files — then ownership is likely with the agency by default. If you're not sure, ask. A reputable agency will clarify ownership terms in writing on request.</p>
+
+              <h2 id="origo-approach">How we approach digital ownership at Origo</h2>
+
+              <p>Everything above defines the principle. This last part is about how we, specifically, work with it.</p>
+
+              <p><a href="/glossary#digital-ownership">Digital ownership</a> is non-negotiable in how we structure client engagements at Origo. Our contracts explicitly assign full ownership of every deliverable to the client — source code, content, design files, brand assets, the right to take everything to a different vendor at any time. We don't retain ownership of work we produce for clients. They do.</p>
+
+              <p>That commitment shapes every other decision we make. It's why we don't build websites on closed platforms — we wouldn't be able to hand a client genuine ownership of something we built on infrastructure they couldn't control. It's why we use open standards wherever possible — open-source software, standard file formats, exportable data structures. It's why our brand engagements deliver editable source files, not just final exports.</p>
+
+              <p>This stance occasionally costs us business. Some clients want the convenience of a managed platform and don't care about the ownership trade-off. We respectfully decline those engagements, because we don't think we'd be doing the client a favor by selling them something we know will quietly cost them more over time.</p>
+
+              <p>For clients who do value ownership, this commitment changes the relationship. The client isn't dependent on us — they could leave at any time and take everything they paid for. That removes the lock-in that most agencies quietly rely on, which means we have to earn the relationship by being genuinely valuable, year after year. We think that's the right way to build.</p>
+
+              <blockquote>
+                <p>Your business should own what it builds. We exist to make sure it does.</p>
+              </blockquote>
+
+              <h2 id="bottom-line">The bottom line</h2>
+
+              <p>Digital ownership is the principle that a business should hold full legal, practical, and durable control over the digital assets it depends on. Most businesses don't own most of their digital assets — and they don't realize it until something forces the question.</p>
+
+              <p>The cost of building on rented infrastructure isn't just the dramatic moments when platforms change the rules. It's the slow erosion of what you could have been building if you'd been building on something you owned: equity in your assets, compounding authority in search, optionality to make your own decisions, freedom from depending on someone else's pricing or terms.</p>
+
+              <p>None of this requires moving everything to owned status overnight. It requires making one move at a time, starting with the highest-stakes asset, and committing to the principle that future investments go into things your business actually owns.</p>
+
+              <hr>
+
+              <div class="callout">
+                <p>If you'd like to talk through what digital ownership looks like for your business specifically — which assets you own, which you're renting, and what it would take to start moving — the next step is a free 1-hour discovery call.</p>
+                <p style="margin-top: 16px;"><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener" style="display:inline-block;">Book a free discovery call →</a></p>
+                <p style="margin-top: 12px; font-size: 14px; color: var(--color-gray-dark);">No obligation, no pitch. Just a real conversation about what your business actually needs.</p>
+              </div>
+
+            </div>
+
+            <!-- Author bio -->
+            <div class="post-author-bio">
+              <img src="/images/jon-headshot.jpg" alt="Jon Herrera" class="post-author-bio__avatar">
+              <div class="post-author-bio__content">
+                <p class="post-author-bio__name">Jon Herrera</p>
+                <p class="post-author-bio__text">Jon is the Head Creative and co-founder of <a href="/about">Origo</a>, a boutique digital presence agency based in Texas. He's spent over a decade in the digital space and the last eight years building Origo to help established, owner-operated businesses build trust online. He writes about business, faith, technology, and digital presence.</p>
+                <a href="https://www.linkedin.com/in/jonathandherrera/" class="post-author-bio__link" target="_blank" rel="noopener">Follow on LinkedIn →</a>
+              </div>
+            </div>
+
+          </article>
+
+          <aside class="post-sidebar">
+            <div class="post-sidebar__card">
+              <span class="post-sidebar__label">Own what you build.</span>
+              <p class="post-sidebar__cta-title">We build websites and brands you actually own.</p>
+              <p class="post-sidebar__cta-text">Source code, content, brand files, and domain — all yours, fully transferable, no lock-in. We're one of the few agencies that will put that in writing before we start.</p>
+              <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a free call</a>
+            </div>
+            <div class="post-sidebar__card">
+              <span class="post-sidebar__label">Category</span>
+              <div class="post-sidebar__tags">
+                <span class="post-sidebar__tag">Digital Strategy</span>
+                <span class="post-sidebar__tag">Digital Ownership</span>
+                <span class="post-sidebar__tag">Web Design</span>
+              </div>
+            </div>
+            <div class="post-sidebar__card">
+              <span class="post-sidebar__label">Also in this series</span>
+              <ul style="list-style:none;padding:0;margin:0;">
+                <li style="margin-bottom:10px;"><a href="/blog/what-is-a-digital-presence-agency" style="font-size:14px;color:var(--color-blue);">What Is a Digital Presence Agency? →</a></li>
+                <li style="margin-bottom:10px;"><a href="/blog/what-is-aeo" style="font-size:14px;color:var(--color-blue);">AEO: How AI Search Is Changing Visibility →</a></li>
+                <li><a href="/blog/build-on-your-own-land" style="font-size:14px;color:var(--color-blue);">Build on Your Own Land →</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-cta">
+      <div class="container">
+        <div class="post-cta__inner">
+          <span class="label post-cta__label">Work with Origo</span>
+          <h2 class="post-cta__title">Your business should own what it builds.</h2>
+          <p class="post-cta__sub">We help established, owner-operated businesses build digital presence on assets they actually control — custom websites, portable brand files, owned content, exportable data. No lock-in. No rented land. Let's talk about what that looks like for your business.</p>
+          <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a free discovery call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="Origo — Home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 1000 2230 540" aria-hidden="true">
+              <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+              <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+              <path fill="#ffffff" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
+              <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#ffffff;" transform="translate(706.62 1434.44)">ORIGO</text>
+            </svg>
+          </a>
+          <p class="footer__tagline">Boutique digital presence agency.<br>Texas-based. Built for growth.</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col"><h4>Services</h4><ul><li><a href="/services/branding">Branding</a></li><li><a href="/services/web-design">Web Design</a></li><li><a href="/services/seo-aeo">SEO &amp; AEO</a></li><li><a href="/services/copywriting">Copywriting</a></li><li><a href="/services/website-concierge">Website Concierge</a></li><li><a href="/services/app-development">App Development</a></li></ul><h4 style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);">Resources</h4><ul><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/glossary">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Company</h4><ul><li><a href="/about">About</a></li><li><a href="/team">Team</a></li><li><a href="/work/case-studies">Case Studies</a></li><li><a href="/contact">Contact</a></li></ul></div>
+          <div class="footer__col"><h4>Connect</h4><ul><li><a href="https://www.instagram.com/origocreative" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/origocreative" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.facebook.com/origocreative" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Origo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
