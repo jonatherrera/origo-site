@@ -260,6 +260,48 @@
 }
 
 /* ------------------------------------------------------------
+   Pull Quotes (philosophical anchor quotes)
+   ------------------------------------------------------------ */
+.about-pullquote {
+  text-align: center;
+  padding: 48px 0 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-pullquote__text {
+  font-family: var(--font-body);
+  font-size: clamp(17px, 2.5vw, 21px);
+  font-style: italic;
+  color: var(--color-blue);
+  line-height: 1.65;
+  max-width: 640px;
+  margin: 0 auto 14px;
+}
+
+.about-pullquote__attr {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-gray-dark);
+  letter-spacing: 0.03em;
+  font-style: normal;
+}
+
+/* Small AI policy reference (inside How We Work section) */
+.about-ai-ref {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-gray-dark);
+  margin-top: 16px;
+  max-width: 520px;
+}
+
+.about-ai-ref a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------
    Section 06 — Closing CTA
    ------------------------------------------------------------ */
 .about-cta {
