@@ -23,6 +23,9 @@
   <url><loc>https://origo.ooo/work/case-studies/groomers-seafood</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://origo.ooo/work/case-studies/redemption-hill</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Legal -->
+  <url><loc>https://origo.ooo/privacy</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
   <!-- AEO / Content -->
   <url><loc>https://origo.ooo/faq</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://origo.ooo/glossary</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
