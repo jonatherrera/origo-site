@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Branding Portfolio | Origo — Boutique Digital Presence Agency</title>
-  <meta name="description" content="A look at the brand identities Origo has built — logos, visual systems, and identity work for businesses and organizations across Texas and beyond.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Branding Portfolio | Origo">
-  <meta property="og:description" content="A look at the brand identities Origo has built — logos, visual systems, and identity work for businesses and organizations across Texas and beyond.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://origo.ooo/work/branding">
+  <title>Terms &amp; Conditions | Origo</title>
+  <meta name="description" content="Terms and conditions for Origo Solutions LLC (origo.ooo) — a boutique digital presence agency based in Texas.">
+  <meta name="robots" content="noindex">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://origo.ooo/work/branding">
+  <link rel="canonical" href="https://origo.ooo/terms-and-conditions">
 
   <!-- Dark mode: apply theme before first paint (prevents flash) -->
   <script>
@@ -22,6 +17,7 @@
       document.documentElement.setAttribute('data-theme', saved || 'light');
     })();
   </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,58 +25,86 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/work/branding/branding.css">
 
-  <!-- Schema.org: Organization / ProfessionalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://origo.ooo/#organization",
-    "name": "Origo",
-    "url": "https://origo.ooo",
-    "logo": "https://origo.ooo/images/logo-horizontal-black.svg",
-    "image": "https://origo.ooo/images/logo-horizontal-black.svg",
-    "description": "Origo is a boutique digital presence agency based in Texas helping established, owner-operated businesses build trust online through branding, web design, SEO, AEO, copywriting, and ongoing website management.",
-    "slogan": "Build trust. Own your presence.",
-    "foundingDate": "2018",
-    "founder": [
-      { "@type": "Person", "name": "Jon", "jobTitle": "Head Creative & Co-Founder" },
-      { "@type": "Person", "name": "Emily", "jobTitle": "Quality Assurance & Co-Owner" }
-    ],
-    "employee": [
-      { "@type": "Person", "name": "Kadimay", "jobTitle": "SEO Specialist" },
-      { "@type": "Person", "name": "Daniel", "jobTitle": "Multimedia Specialist" },
-      { "@type": "Person", "name": "Valentina", "jobTitle": "Digital Operations Assistant" }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "areaServed": { "@type": "Country", "name": "United States" },
-    "telephone": "(512) 971-5789",
-    "email": "jon@origo.ooo",
-    "priceRange": "$$$",
-    "knowsAbout": [
-      "Digital Presence", "Branding", "Web Design",
-      "Search Engine Optimization", "Answer Engine Optimization",
-      "Copywriting", "Website Management", "App Development"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Origo Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding", "url": "https://origo.ooo/services/branding" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design", "url": "https://origo.ooo/services/web-design" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & AEO", "url": "https://origo.ooo/services/seo-aeo" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Copywriting", "url": "https://origo.ooo/services/copywriting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Concierge", "url": "https://origo.ooo/services/website-concierge" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "url": "https://origo.ooo/services/app-development" } }
-      ]
+  <style>
+    .legal-hero {
+      padding: 80px 0 40px;
+      border-bottom: 1px solid var(--color-border);
     }
-  }
-  </script>
+    .legal-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: var(--color-black);
+      margin: 0 0 12px;
+      line-height: 1.15;
+    }
+    .legal-hero p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-gray-dark);
+      margin: 0;
+    }
+    .legal-body {
+      padding: 56px 0 96px;
+    }
+    .legal-prose {
+      max-width: 760px;
+    }
+    .legal-prose h2 {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-black);
+      margin: 48px 0 12px;
+    }
+    .legal-prose h2:first-of-type {
+      margin-top: 0;
+    }
+    .legal-prose p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--color-gray-dark);
+      margin: 0 0 16px;
+    }
+    .legal-prose ul {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--color-gray-dark);
+      margin: 0 0 16px;
+      padding-left: 24px;
+    }
+    .legal-prose ul li {
+      margin-bottom: 6px;
+    }
+    .legal-prose a {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+    .legal-prose strong {
+      color: var(--color-black);
+    }
+    .legal-highlight {
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-blue);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 0 0 40px;
+      background: var(--color-gray-light);
+    }
+    .legal-highlight p {
+      margin: 0 0 10px;
+      font-size: 15px !important;
+      color: var(--color-black) !important;
+      font-weight: 500;
+      line-height: 1.7 !important;
+    }
+    .legal-highlight p:last-child {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body class="preload">
@@ -92,6 +116,7 @@
     <div class="container">
       <div class="nav__inner">
 
+        <!-- Logo -->
         <a href="/" class="nav__logo" aria-label="Origo — Home">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 1000 2230 540" aria-hidden="true">
             <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
@@ -101,9 +126,12 @@
           </svg>
         </a>
 
+        <!-- Desktop Links -->
         <nav class="nav__links" aria-label="Primary navigation">
           <a href="/about">About</a>
           <a href="/team">Team</a>
+
+          <!-- Services dropdown -->
           <div class="nav__dropdown">
             <span class="nav__dropdown-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
               Services <span class="chevron" aria-hidden="true">▾</span>
@@ -117,11 +145,13 @@
               <a href="/services/app-development" role="menuitem">App Development</a>
             </div>
           </div>
+
           <a href="/blog">Blog</a>
           <a href="/faq">FAQ</a>
           <a href="/contact">Contact</a>
         </nav>
 
+        <!-- Desktop CTA -->
         <div class="nav__cta">
           <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar"
              class="btn btn--primary"
@@ -134,11 +164,9 @@
         <!-- Dark mode toggle -->
         <div class="nav__theme-wrap">
           <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
-            <!-- Moon (shown in light mode) -->
             <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
-            <!-- Sun (shown in dark mode) -->
             <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"/>
               <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
@@ -149,8 +177,11 @@
           </button>
         </div>
 
+        <!-- Hamburger -->
         <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
       </div>
@@ -160,138 +191,72 @@
 
   <main>
 
-    <!-- ======================================================
-         HERO
-    ====================================================== -->
-    <section class="bg-hero">
-      <div class="bg-container">
-        <p class="bg-hero__eyebrow reveal">Branding Portfolio</p>
-        <h1 class="bg-hero__headline reveal">Brands we've built.</h1>
-        <p class="bg-hero__sub reveal">Seven brand identities for businesses, churches, and organizations that trusted us to get it right. Click any logo to take a closer look.</p>
+    <section class="legal-hero">
+      <div class="container">
+        <h1>Terms &amp; Conditions</h1>
+        <p>Origo Solutions LLC &nbsp;·&nbsp; Effective date: April 16, 2026</p>
       </div>
     </section>
 
+    <section class="legal-body">
+      <div class="container">
+        <div class="legal-prose">
 
-    <!-- ======================================================
-         GALLERY GRID
-    ====================================================== -->
-    <section class="bg-gallery">
-      <div class="bg-container">
-        <div class="bg-grid">
+          <h2>About Origo Solutions LLC</h2>
+          <p>These Terms &amp; Conditions govern your use of <a href="https://origo.ooo">origo.ooo</a> and any services provided by Origo Solutions LLC. Origo Solutions LLC operates as Origo, a boutique digital presence agency based in Texas. Origo provides branding, web design, SEO &amp; AEO, copywriting, website concierge, and app development services to established, owner-operated businesses. By using this website or engaging Origo for services, you agree to these terms.</p>
+          <p>Questions regarding these terms may be directed to <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>.</p>
 
-          <div class="bg-card reveal" data-index="0">
-            <div class="bg-card__img-wrap">
-              <img src="/images/vangelder-tech-gallery.png" alt="VanGelder Technologies logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">VanGelder Technologies</p>
-            </div>
+          <h2>SMS Messaging</h2>
+          <div class="legal-highlight">
+            <p>You can cancel the SMS service at any time. Just text STOP to opt out. After sending STOP you will receive one final confirmation message and no further SMS messages will be sent.</p>
+            <p>Text HELP for assistance or email <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>.</p>
+            <p>Message and data rates may apply. Message frequency varies based on your interaction with Origo.</p>
+            <p>Carriers are not liable for delayed or undelivered messages.</p>
           </div>
 
-          <div class="bg-card reveal" data-index="1">
-            <div class="bg-card__img-wrap">
-              <img src="/images/staunch-realty-gallery.png" alt="Staunch Realty Group logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">Staunch Realty Group</p>
-            </div>
-          </div>
+          <h2>Services</h2>
+          <p>All work performed by Origo Solutions LLC is custom and project-specific. The scope, deliverables, timeline, and pricing for each engagement are defined in a separate proposal or project agreement provided to the client prior to work beginning. Nothing on this website constitutes an offer or guarantee of specific results.</p>
+          <p>Origo reserves the right to decline any project or engagement at its sole discretion.</p>
 
-          <div class="bg-card reveal" data-index="2">
-            <div class="bg-card__img-wrap">
-              <img src="/images/fbc-nv-gallery.png" alt="First Baptist Church North Vernon logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">First Baptist Church North Vernon</p>
-            </div>
-          </div>
+          <h2>Payment Terms</h2>
+          <p>A deposit is required before work begins on any project. The deposit amount and payment schedule will be specified in the project proposal or agreement. By approving a proposal and submitting a deposit, the client authorizes Origo Solutions LLC to begin work on the agreed scope.</p>
+          <p>All sales are final on completed work and delivered deliverables. Refunds on completed work are not available except where expressly agreed in writing. Clients who discontinue a project mid-engagement remain responsible for payment for all work completed to that point per the terms of their project agreement.</p>
 
-          <div class="bg-card reveal" data-index="3">
-            <div class="bg-card__img-wrap">
-              <img src="/images/redemption-hill-church-gallery.png" alt="Redemption Hill Church logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">Redemption Hill Church</p>
-            </div>
-          </div>
+          <h2>Intellectual Property</h2>
+          <p>Upon receipt of full payment for a project, the client receives full ownership of all final deliverables produced specifically for that engagement, including logo files, website files, written copy, and other custom-created assets. Origo Solutions LLC retains no ownership rights to final client deliverables once payment is complete.</p>
+          <p>Origo Solutions LLC retains ownership of all preliminary concepts, unused design directions, internal processes, tools, templates, and proprietary frameworks used during the project. These are not transferred to the client.</p>
+          <p>Origo Solutions LLC reserves the right to display completed client work in its portfolio and case studies unless the client requests otherwise in writing.</p>
 
-          <div class="bg-card reveal" data-index="4">
-            <div class="bg-card__img-wrap">
-              <img src="/images/jeff-davis-library-gallery.png" alt="Jeff Davis County Library logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">Jeff Davis County Library</p>
-            </div>
-          </div>
+          <h2>Limitation of Liability</h2>
+          <p>To the fullest extent permitted by applicable law, Origo Solutions LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of our website or services, even if Origo has been advised of the possibility of such damages. Our total aggregate liability to any client for any claim arising out of or related to our services shall not exceed the total amount paid by that client to Origo Solutions LLC for the specific project giving rise to the claim.</p>
 
-          <div class="bg-card reveal" data-index="5">
-            <div class="bg-card__img-wrap">
-              <img src="/images/serenity-hospice-gallery.png" alt="Serenity Hospice and Palliative Care logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">Serenity Hospice and Palliative Care</p>
-            </div>
-          </div>
+          <h2>Website Use</h2>
+          <p>The content on origo.ooo — including text, images, graphics, and other materials — is the property of Origo Solutions LLC and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or use any content from this site without prior written permission.</p>
+          <p>We are not responsible for the content or practices of any third-party websites linked from our site.</p>
 
-          <div class="bg-card reveal" data-index="6">
-            <div class="bg-card__img-wrap">
-              <img src="/images/shth-gallery.png" alt="Sell Him The House logo" class="bg-card__img" loading="lazy">
-            </div>
-            <div class="bg-card__body">
-              <p class="bg-card__tag">Brand Identity</p>
-              <p class="bg-card__name">Sell Him The House</p>
-            </div>
-          </div>
+          <h2>Privacy</h2>
+          <p>Your use of this website and our services is also governed by our <a href="/privacy">Privacy Policy</a>, which is incorporated into these Terms &amp; Conditions by reference.</p>
 
-        </div>
-      </div>
-    </section>
+          <h2>Governing Law</h2>
+          <p>These Terms &amp; Conditions and any disputes arising out of or related to them or to our services shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions.</p>
 
+          <h2>Changes to These Terms</h2>
+          <p>Origo Solutions LLC may update these Terms &amp; Conditions from time to time. When we do, we will revise the effective date at the top of this page. Your continued use of our website after any changes constitutes acceptance of the updated terms.</p>
 
-    <!-- ======================================================
-         CTA
-    ====================================================== -->
-    <section class="bg-cta">
-      <div class="bg-cta__inner">
-        <h2 class="bg-cta__headline reveal">Ready to build a brand worth being proud of?</h2>
-        <p class="bg-cta__sub reveal">Book a free discovery call and let's talk about what your brand could look like.</p>
-        <div class="reveal">
-          <a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar"
-             class="btn btn--primary"
-             target="_blank"
-             rel="noopener">
-            Book a Discovery Call
-          </a>
-          <br>
-          <a href="/services/branding" class="bg-cta__secondary">Learn About Our Branding Service</a>
+          <h2>Contact</h2>
+          <p>Questions about these Terms &amp; Conditions? Contact Origo Solutions LLC at:</p>
+          <ul>
+            <li>Email: <a href="mailto:jon@origo.ooo">jon@origo.ooo</a></li>
+            <li>Phone: <a href="tel:+15129715789">(512) 971-5789</a></li>
+            <li>Website: <a href="https://origo.ooo">origo.ooo</a></li>
+          </ul>
+          <p>See also: <a href="/privacy">Privacy Policy</a></p>
+
         </div>
       </div>
     </section>
 
   </main>
-
-
-  <!-- ======================================================
-       LIGHTBOX
-  ====================================================== -->
-  <div class="bg-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="bg-lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
-    <button class="bg-lightbox__prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
-    <button class="bg-lightbox__next" id="lightboxNext" aria-label="Next">&#8250;</button>
-    <div class="bg-lightbox__inner">
-      <div class="bg-lightbox__img-wrap">
-        <img src="" alt="" id="lightboxImg" class="bg-lightbox__img">
-      </div>
-      <p class="bg-lightbox__caption" id="lightboxCaption"></p>
-      <p class="bg-lightbox__tag">Brand Identity · Origo</p>
-    </div>
-  </div>
 
 
   <!-- ========================================================
@@ -301,6 +266,7 @@
     <div class="container">
       <div class="footer__inner">
 
+        <!-- Brand -->
         <div class="footer__brand">
           <a href="/" class="footer__logo" aria-label="Origo — Home">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="560 790 1300 940" aria-hidden="true">
@@ -323,6 +289,7 @@
           </div>
         </div>
 
+        <!-- Pages -->
         <div class="footer__col">
           <p class="footer__col-title">Company</p>
           <ul>
@@ -334,6 +301,7 @@
           </ul>
         </div>
 
+        <!-- Services -->
         <div class="footer__col">
           <p class="footer__col-title">Services</p>
           <ul>
@@ -352,6 +320,7 @@
           </ul>
         </div>
 
+        <!-- Contact -->
         <div class="footer__col footer__contact">
           <p class="footer__col-title">Get in touch</p>
           <p><a href="tel:+15129715789">(512) 971-5789</a></p>
@@ -382,64 +351,6 @@
 
 
   <script src="/js/main.js"></script>
-  <script>
-    // Lightbox
-    const cards = document.querySelectorAll('.bg-card');
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    const lbCaption = document.getElementById('lightboxCaption');
-    const lbClose = document.getElementById('lightboxClose');
-    const lbPrev = document.getElementById('lightboxPrev');
-    const lbNext = document.getElementById('lightboxNext');
-
-    const items = Array.from(cards).map(card => ({
-      src: card.querySelector('.bg-card__img').src,
-      alt: card.querySelector('.bg-card__img').alt,
-      name: card.querySelector('.bg-card__name').textContent
-    }));
-
-    let current = 0;
-
-    function openLightbox(index) {
-      current = index;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCaption.textContent = items[current].name;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function showPrev() {
-      current = (current - 1 + items.length) % items.length;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCaption.textContent = items[current].name;
-    }
-
-    function showNext() {
-      current = (current + 1) % items.length;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCaption.textContent = items[current].name;
-    }
-
-    cards.forEach((card, i) => card.addEventListener('click', () => openLightbox(i)));
-    lbClose.addEventListener('click', closeLightbox);
-    lbPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    lbNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => {
-      if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') showPrev();
-      if (e.key === 'ArrowRight') showNext();
-    });
-  </script>
 
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69e1b1d325604d88f062888e"></script>
 </body>
