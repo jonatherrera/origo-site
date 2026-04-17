@@ -122,7 +122,7 @@ p {
 }
 
 .section--gray { background: var(--color-gray-light); }
-.section--dark { background: var(--color-black); }
+.section--dark { background: #0A0A0A; }
 
 /* ------------------------------------------------------------
    5. Buttons
@@ -805,7 +805,7 @@ p {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--color-black);
+  background: #0A0A0A;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -1147,7 +1147,7 @@ p {
    16. Footer
    ------------------------------------------------------------ */
 .footer {
-  background: var(--color-black);
+  background: #0A0A0A;
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 56px 0 40px;
 }

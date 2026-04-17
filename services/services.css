@@ -16,9 +16,13 @@
   padding: 80px 0;
 }
 
-.svc-section--white { background: var(--color-white); }
-.svc-section--dark  { background: var(--color-black); }
+.svc-section--white { background: #FFFFFF; }
+.svc-section--dark  { background: #0A0A0A; }
 .svc-section--gray  { background: #F5F5F5; }
+
+[data-theme="dark"] .svc-section--white { background: #0A0A0A; }
+[data-theme="dark"] .svc-section--dark  { background: #161618; }
+[data-theme="dark"] .svc-section--gray  { background: #161618; }
 
 /* Active nav link */
 .nav__active {
@@ -165,7 +169,7 @@
    Services overview — Better Together (dark)
    ------------------------------------------------------------ */
 .svc-better {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
 }
 
@@ -284,7 +288,7 @@
    Individual service pages — Problem
    ------------------------------------------------------------ */
 .sp-problem {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
 }
 
@@ -496,7 +500,7 @@
    Individual service pages — Right Fit
    ------------------------------------------------------------ */
 .sp-fit {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
 }
 
@@ -807,7 +811,7 @@
    Individual service pages — Closing CTA
    ------------------------------------------------------------ */
 .sp-cta {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
   text-align: center;
 }
@@ -959,7 +963,7 @@
    SEO page — AEO explainer block
    ------------------------------------------------------------ */
 .sp-aeo {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
 }
 
@@ -1104,7 +1108,7 @@
    Results Strip — stats row (SEO/AEO page)
    ============================================================ */
 .sp-results-strip {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
 }
 
@@ -1150,7 +1154,7 @@
 }
 
 .sp-results-stat {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 40px 32px;
   text-align: center;
 }

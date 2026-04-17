@@ -16,9 +16,13 @@
   padding: 80px 0;
 }
 
-.team-section--white { background: var(--color-white); }
-.team-section--dark  { background: var(--color-black); }
+.team-section--white { background: #FFFFFF; }
+.team-section--dark  { background: #0A0A0A; }
 .team-section--gray  { background: #F5F5F5; }
+
+[data-theme="dark"] .team-section--white { background: #0A0A0A; }
+[data-theme="dark"] .team-section--dark  { background: #161618; }
+[data-theme="dark"] .team-section--gray  { background: #161618; }
 
 /* Active nav link */
 .nav__active {
@@ -316,7 +320,7 @@
    Section 06 — Closing CTA
    ------------------------------------------------------------ */
 .team-cta {
-  background: var(--color-black);
+  background: #0A0A0A;
   padding: 80px 0;
   text-align: center;
 }
