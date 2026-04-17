@@ -1392,6 +1392,103 @@ p {
 }
 
 /* ============================================================
+   Dark Mode
+   ============================================================ */
+
+/* Transition layer — enabled after first paint (preload class removed by JS) */
+body:not(.preload),
+body:not(.preload) *,
+body:not(.preload) *::before,
+body:not(.preload) *::after {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    fill 0.2s ease !important;
+}
+
+/* Override all CSS custom properties */
+[data-theme="dark"] {
+  --color-black:      #F5F5F7;
+  --color-white:      #0A0A0A;
+  --color-gray-light: #161618;
+  --color-gray-dark:  #B5B5BD;
+  --color-border:     rgba(255, 255, 255, 0.08);
+}
+
+/* Nav background is hardcoded rgba — override explicitly */
+[data-theme="dark"] .nav {
+  background: rgba(10, 10, 10, 0.96);
+}
+
+/* Nav logo SVG — hardcoded fill="#0b0b0b" / style fill becomes invisible in dark */
+[data-theme="dark"] .nav__logo svg path[fill="#0b0b0b"],
+[data-theme="dark"] .nav__logo svg path[fill="#0B0B0B"] {
+  fill: #F5F5F7;
+}
+[data-theme="dark"] .nav__logo svg text {
+  fill: #F5F5F7 !important;
+}
+
+/* Service card borders are hardcoded #E2E8F0 */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .service-card__thumb {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Step cards have hardcoded rgba(0,0,0,0.07) border */
+[data-theme="dark"] .step-card {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Testimonial cards have hardcoded rgba(0,0,0,0.1) border */
+[data-theme="dark"] .testimonial-card {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mockup browser bar */
+[data-theme="dark"] .mockup__bar {
+  background: #1e1e20;
+}
+[data-theme="dark"] .mockup__dots span {
+  background: #3a3a3c;
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-black);
+  flex-shrink: 0;
+  padding: 0;
+}
+.theme-toggle:hover {
+  background: var(--color-gray-light);
+}
+.theme-toggle svg {
+  display: block;
+  pointer-events: none;
+}
+/* Sun icon shown in dark mode, moon in light mode */
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Mobile nav toggle placement */
+.nav__theme-wrap {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
    FAQ Accordion — homepage and service pages
    ============================================================ */
 

@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simple SEO Fixes: How to Write Title Tags That Convert — Origo Blog</title>
-  <meta name="description" content="Your title tag is your first pitch to Google and every potential customer. Here's how to write title tags that drive clicks — with real examples and a step-by-step process.">
+  <meta name="description" content="Your title tag is your first pitch to Google and every potential customer. Here's how to write title tags that drive clicks — with real examples and a step-by-step process.">  <!-- Dark mode: apply theme before first paint (prevents flash) -->
+  <script>
+    (function(){
+      var saved = localStorage.getItem('origo-theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || preferred);
+    })();
+  </script>
+
   <link rel="canonical" href="https://origo.ooo/blog/simple-seo-fixes-how-to-write-title-tags-that-convert">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,7 +71,7 @@
   }
   </script>
 </head>
-<body>
+<body class="preload">
   <header class="nav" id="nav" role="banner">
     <div class="container"><div class="nav__inner">
       <a href="/" class="nav__logo" aria-label="Origo — Home">
@@ -93,6 +101,24 @@
         <a href="/contact">Contact</a>
       </nav>
       <div class="nav__cta"><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" target="_blank" rel="noopener">Book a call</a></div>
+        <!-- Dark mode toggle -->
+        <div class="nav__theme-wrap">
+          <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
+            <!-- Moon (shown in light mode) -->
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <!-- Sun (shown in dark mode) -->
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        </div>
+
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div></div>
   </header>
@@ -107,6 +133,14 @@
       <a href="/services/app-development" style="padding-left:16px;font-size:15px;opacity:0.6;">App Development</a>
       <a href="/blog">Blog</a><a href="/faq">FAQ</a><a href="/contact">Contact</a>
     </nav>
+    <div style="margin-bottom:16px;">
+      <button class="theme-toggle" aria-label="Switch to dark mode" type="button" style="width:100%;border-radius:8px;height:44px;gap:10px;font-family:var(--font-head);font-weight:500;font-size:14px;color:var(--color-black);border:1px solid var(--color-border);justify-content:center;">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="icon-moon">Dark mode</span>
+        <span class="icon-sun">Light mode</span>
+      </button>
+    </div>
     <div class="nav__mobile-cta"><a href="https://api.gohighlevelfor19.com/widget/groups/jonathans-calendar" class="btn btn--primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Book a discovery call</a></div>
   </div>
 

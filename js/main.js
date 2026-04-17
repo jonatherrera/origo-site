@@ -1,6 +1,7 @@
 /* ============================================================
    ORIGO — main.js
    Mobile nav · Scroll reveal · Nav scroll state · Footer year
+   Dark mode toggle
    ============================================================ */
 
 (function () {
@@ -128,6 +129,41 @@
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
+  });
+
+
+  /* ----------------------------------------------------------
+     7. Dark mode toggle
+  ---------------------------------------------------------- */
+  // Remove preload class once styles are ready — enables transitions
+  requestAnimationFrame(function () {
+    document.body.classList.remove('preload');
+  });
+
+  var toggleBtns = document.querySelectorAll('.theme-toggle');
+
+  function getTheme() {
+    return document.documentElement.getAttribute('data-theme') || 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('origo-theme', theme);
+    toggleBtns.forEach(function (btn) {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+
+  toggleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
+    });
+  });
+
+  // Set initial aria-label based on current theme
+  var currentTheme = getTheme();
+  toggleBtns.forEach(function (btn) {
+    btn.setAttribute('aria-label', currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   });
 
 })();
