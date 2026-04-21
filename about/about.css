@@ -129,21 +129,13 @@
   border-top: 1px solid var(--color-border);
 }
 
-/* Float layout: photo right, text wraps around and continues below */
-.about-origin__flow::after {
-  content: '';
-  display: table;
-  clear: both;
+/* Photo fills full height of the text column — no white space gap */
+.two-col--stretch {
+  align-items: stretch;
 }
 
-.about-origin__photo-float {
-  float: right;
-  width: 44%;
-  margin: 0 0 32px 48px;
-}
-
-.about-origin__flow .about-body {
-  max-width: 640px;
+.two-col--stretch .about-origin__photo {
+  height: 100%;
 }
 
 /* ------------------------------------------------------------
@@ -400,11 +392,6 @@
     margin-top: 40px;
   }
 
-  .about-origin__photo-float {
-    float: none;
-    width: 100%;
-    margin: 0 0 32px 0;
-  }
 
   .mvv-top {
     grid-template-columns: 1fr;
