@@ -90,6 +90,11 @@
   direction: ltr;
 }
 
+/* No-photo layout: content constrained to readable width */
+.member__content--solo {
+  max-width: 640px;
+}
+
 /* ------------------------------------------------------------
    Member content — shared
    ------------------------------------------------------------ */
