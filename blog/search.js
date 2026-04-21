@@ -9,7 +9,7 @@
   var searchResults = document.getElementById('blog-search-results');
   var searchMeta    = document.getElementById('blog-search-meta');
   var blogGrid      = document.querySelector('.blog-grid');
-  var filterSection = document.querySelector('.blog-filters');
+  var filterSection = document.querySelector('.blog-filter-buttons');
 
   if (!searchInput) return;
 
