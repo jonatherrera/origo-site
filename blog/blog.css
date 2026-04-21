@@ -669,7 +669,17 @@
    BLOG SEARCH
    ============================================================ */
 
-/* Search bar wrapper — sits above the filter buttons */
+/* "or" divider between search bar and filter buttons */
+.blog-filter-divider {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #AAAAAA;
+  padding: 0 4px;
+  user-select: none;
+  align-self: center;
+}
+
+/* Search bar wrapper — full-width row above filter buttons */
 .blog-search-bar {
   width: 100%;
   margin-bottom: 16px;

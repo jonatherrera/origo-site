@@ -4,12 +4,14 @@
   var index = [];
   var debounceTimer;
 
-  var searchInput   = document.getElementById('blog-search-input');
-  var searchClear   = document.getElementById('blog-search-clear');
-  var searchResults = document.getElementById('blog-search-results');
-  var searchMeta    = document.getElementById('blog-search-meta');
-  var blogGrid      = document.querySelector('.blog-grid');
-  var filterSection = document.querySelector('.blog-filter-buttons');
+  var searchInput      = document.getElementById('blog-search-input');
+  var searchClear      = document.getElementById('blog-search-clear');
+  var searchResults    = document.getElementById('blog-search-results');
+  var searchSection    = document.getElementById('blog-search-section');
+  var searchMeta       = document.getElementById('blog-search-meta');
+  var blogGrid         = document.querySelector('.blog-grid');
+  var filterButtons    = document.querySelector('.blog-filter-buttons');
+  var filterDivider    = document.querySelector('.blog-filter-divider');
 
   if (!searchInput) return;
 
@@ -108,20 +110,22 @@
   // ── show / hide ────────────────────────────────────────────
 
   function showSearchUI() {
-    blogGrid.style.display      = 'none';
-    filterSection.style.display = 'none';
-    searchResults.style.display = 'block';
-    searchClear.style.display   = 'flex';
+    blogGrid.style.display         = 'none';
+    filterButtons.style.display    = 'none';
+    if (filterDivider) filterDivider.style.display = 'none';
+    searchSection.style.display    = '';
+    searchClear.style.display      = 'flex';
   }
 
   function hideSearchUI() {
-    blogGrid.style.display      = '';
-    filterSection.style.display = '';
-    searchResults.style.display = 'none';
-    searchClear.style.display   = 'none';
-    searchMeta.textContent      = '';
-    searchInput.value           = '';
-    searchResults.innerHTML     = '';
+    blogGrid.style.display         = '';
+    filterButtons.style.display    = '';
+    if (filterDivider) filterDivider.style.display = '';
+    searchSection.style.display    = 'none';
+    searchClear.style.display      = 'none';
+    searchMeta.textContent         = '';
+    searchInput.value              = '';
+    searchResults.innerHTML        = '';
   }
 
   // ── events ─────────────────────────────────────────────────
