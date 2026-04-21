@@ -261,3 +261,66 @@
     });
   });
 })();
+
+// ============================================================
+// CUSTOM CURSOR
+// ============================================================
+(function () {
+  // Touch / mobile — don't init
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  var dot  = document.createElement('div');
+  var ring = document.createElement('div');
+  dot.className  = 'cursor-dot';
+  ring.className = 'cursor-ring';
+  document.body.appendChild(ring);
+  document.body.appendChild(dot);
+  document.body.classList.add('cursor-custom');
+
+  var mouseX = 0, mouseY = 0;
+  var ringX  = 0, ringY  = 0;
+  var visible = false;
+
+  document.addEventListener('mousemove', function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + 'px';
+    dot.style.top  = mouseY + 'px';
+    if (!visible) {
+      ringX = mouseX;
+      ringY = mouseY;
+      dot.style.opacity  = '1';
+      ring.style.opacity = '1';
+      visible = true;
+    }
+  });
+
+  document.addEventListener('mouseleave', function () {
+    dot.style.opacity  = '0';
+    ring.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', function () {
+    dot.style.opacity  = '1';
+    ring.style.opacity = '1';
+  });
+
+  // Hover state via event delegation
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.closest('a, button, [role="button"], label, input, select, textarea')) {
+      document.body.classList.add('cursor-hover');
+    } else {
+      document.body.classList.remove('cursor-hover');
+    }
+  });
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  (function animateRing() {
+    ringX = lerp(ringX, mouseX, 0.1);
+    ringY = lerp(ringY, mouseY, 0.1);
+    ring.style.left = ringX + 'px';
+    ring.style.top  = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  })();
+})();
