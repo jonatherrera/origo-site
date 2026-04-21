@@ -240,6 +240,63 @@
 })();
 
 // ============================================================
+// SPLIT HEADLINE ANIMATIONS
+// ============================================================
+(function () {
+  var headlines = document.querySelectorAll('.split-headline');
+  if (!headlines.length) return;
+
+  function wrapWord(content) {
+    var line = document.createElement('span');
+    line.className = 'split-line';
+    var word = document.createElement('span');
+    word.className = 'split-word';
+    if (typeof content === 'string') {
+      word.textContent = content;
+    } else {
+      word.appendChild(content);
+    }
+    line.appendChild(word);
+    return line;
+  }
+
+  function splitHeadline(el) {
+    var nodes = Array.from(el.childNodes);
+    el.innerHTML = '';
+    var wordIndex = 0;
+
+    nodes.forEach(function (node) {
+      if (node.nodeType === 3) {
+        // Text node — split by whitespace
+        var parts = node.textContent.split(/(\s+)/);
+        parts.forEach(function (part) {
+          if (/^\s+$/.test(part)) {
+            el.appendChild(document.createTextNode(' '));
+          } else if (part.length) {
+            var wrapped = wrapWord(part);
+            wrapped.querySelector('.split-word').style.transitionDelay = (0.06 + wordIndex * 0.055) + 's';
+            wordIndex++;
+            el.appendChild(wrapped);
+          }
+        });
+      } else if (node.nodeType === 1) {
+        if (node.tagName === 'BR') {
+          el.appendChild(node.cloneNode(true));
+        } else {
+          // Inline element (em, strong, etc.) — treat as one word unit
+          var wrapped = wrapWord(node.cloneNode(true));
+          wrapped.querySelector('.split-word').style.transitionDelay = (0.06 + wordIndex * 0.055) + 's';
+          wordIndex++;
+          el.appendChild(wrapped);
+        }
+      }
+    });
+  }
+
+  headlines.forEach(function (el) { splitHeadline(el); });
+})();
+
+// ============================================================
 // MAGNETIC BUTTONS
 // ============================================================
 (function () {

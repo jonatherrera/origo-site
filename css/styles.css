@@ -1761,6 +1761,33 @@ details.faq-item summary:hover {
 }
 
 /* ============================================================
+   SPLIT HEADLINE ANIMATIONS
+   ============================================================ */
+
+/* Container overrides — the element itself doesn't fade, words do */
+.split-headline.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.split-line {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  line-height: inherit;
+}
+
+.split-word {
+  display: inline-block;
+  transform: translateY(115%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.split-headline.visible .split-word {
+  transform: translateY(0);
+}
+
+/* ============================================================
    MAGNETIC BUTTONS
    ============================================================ */
 .magnetic {
