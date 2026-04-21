@@ -90,9 +90,10 @@
   direction: ltr;
 }
 
-/* No-photo layout: content constrained to readable width */
+/* No-photo layout: centered readable block */
 .member__content--solo {
-  max-width: 640px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* ------------------------------------------------------------
@@ -326,6 +327,7 @@
    ------------------------------------------------------------ */
 .team-cta {
   background: #0A0A0A;
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding: 80px 0;
   text-align: center;
 }
