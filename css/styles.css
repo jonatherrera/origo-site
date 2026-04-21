@@ -1670,3 +1670,65 @@ details.faq-item summary:hover {
   details.faq-item summary { font-size: 15px; padding: 18px 20px; }
   .faq-item__answer { padding: 0 20px 18px; }
 }
+
+/* ============================================================
+   STAT COUNTERS
+   ============================================================ */
+.stats-section {
+  background: var(--color-black);
+  padding: 72px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 40px 24px;
+  position: relative;
+}
+
+.stat-item + .stat-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.stat-item__number {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-blue);
+  margin-bottom: 12px;
+}
+
+.stat-item__label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.45);
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-item:nth-child(3)::before {
+    display: none;
+  }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}

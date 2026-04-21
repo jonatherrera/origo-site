@@ -167,3 +167,45 @@
   });
 
 })();
+
+// ============================================================
+// STAT COUNTERS
+// ============================================================
+(function () {
+  var counters = document.querySelectorAll('.stat-item__number');
+  if (!counters.length) return;
+
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function animateCounter(el) {
+    var target   = parseInt(el.getAttribute('data-target'), 10);
+    var suffix   = el.getAttribute('data-suffix') || '';
+    var duration = 1800;
+    var start    = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      var elapsed  = timestamp - start;
+      var progress = Math.min(elapsed / duration, 1);
+      var value    = Math.floor(easeOutQuart(progress) * target);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target + suffix;
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(function (el) { observer.observe(el); });
+})();
