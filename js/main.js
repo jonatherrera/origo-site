@@ -238,3 +238,26 @@
 
   counters.forEach(function (el) { observer.observe(el); });
 })();
+
+// ============================================================
+// MAGNETIC BUTTONS
+// ============================================================
+(function () {
+  var magnets = document.querySelectorAll('.magnetic');
+  if (!magnets.length) return;
+
+  magnets.forEach(function (el) {
+    el.addEventListener('mousemove', function (e) {
+      var rect = el.getBoundingClientRect();
+      var x = e.clientX - rect.left - rect.width  / 2;
+      var y = e.clientY - rect.top  - rect.height / 2;
+      el.style.transition = 'transform 0s';
+      el.style.transform  = 'translate(' + (x * 0.28) + 'px, ' + (y * 0.28) + 'px)';
+    });
+
+    el.addEventListener('mouseleave', function () {
+      el.style.transition = 'transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      el.style.transform  = '';
+    });
+  });
+})();
