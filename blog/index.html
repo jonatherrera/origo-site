@@ -169,10 +169,21 @@
       </div>
     </section>
 
-    <!-- FILTER BAR -->
+    <!-- SEARCH + FILTER BAR -->
     <section class="blog-filters">
       <div class="container">
         <div class="blog-filters__inner">
+
+          <!-- Search bar -->
+          <div class="blog-search-bar">
+            <div class="blog-search-bar__inner">
+              <svg class="blog-search-bar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="search" id="blog-search-input" placeholder="Search posts…" autocomplete="off" aria-label="Search blog posts" spellcheck="false">
+              <button id="blog-search-clear" aria-label="Clear search">×</button>
+            </div>
+          </div>
+
+          <!-- Category filter buttons -->
           <button class="blog-filter-btn active" data-filter="all">All</button>
           <button class="blog-filter-btn" data-filter="web-design">Website Design</button>
           <button class="blog-filter-btn" data-filter="seo">SEO</button>
@@ -181,6 +192,14 @@
           <button class="blog-filter-btn" data-filter="cybersecurity">Cybersecurity</button>
           <button class="blog-filter-btn" data-filter="announcement">Announcements</button>
         </div>
+      </div>
+    </section>
+
+    <!-- SEARCH RESULTS (shown when search is active) -->
+    <section class="section" style="padding-top:0;" id="blog-search-section">
+      <div class="container">
+        <p class="blog-search-meta" id="blog-search-meta"></p>
+        <div id="blog-search-results"></div>
       </div>
     </section>
 
@@ -798,6 +817,7 @@
   </footer>
 
   <script src="/js/main.js"></script>
+  <script src="/blog/search.js"></script>
   <script>
     (function () {
       var filterBtns = document.querySelectorAll('.blog-filter-btn');
