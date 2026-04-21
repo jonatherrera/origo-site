@@ -267,14 +267,13 @@
 
     nodes.forEach(function (node) {
       if (node.nodeType === 3) {
-        // Text node — split by whitespace
         var parts = node.textContent.split(/(\s+)/);
         parts.forEach(function (part) {
           if (/^\s+$/.test(part)) {
             el.appendChild(document.createTextNode(' '));
           } else if (part.length) {
             var wrapped = wrapWord(part);
-            wrapped.querySelector('.split-word').style.transitionDelay = (0.06 + wordIndex * 0.055) + 's';
+            wrapped.querySelector('.split-word').style.transitionDelay = (wordIndex * 0.055) + 's';
             wordIndex++;
             el.appendChild(wrapped);
           }
@@ -283,9 +282,8 @@
         if (node.tagName === 'BR') {
           el.appendChild(node.cloneNode(true));
         } else {
-          // Inline element (em, strong, etc.) — treat as one word unit
           var wrapped = wrapWord(node.cloneNode(true));
-          wrapped.querySelector('.split-word').style.transitionDelay = (0.06 + wordIndex * 0.055) + 's';
+          wrapped.querySelector('.split-word').style.transitionDelay = (wordIndex * 0.055) + 's';
           wordIndex++;
           el.appendChild(wrapped);
         }
@@ -294,6 +292,18 @@
   }
 
   headlines.forEach(function (el) { splitHeadline(el); });
+
+  // Dedicated observer — independent of the main reveal observer
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('words-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  headlines.forEach(function (el) { observer.observe(el); });
 })();
 
 // ============================================================
