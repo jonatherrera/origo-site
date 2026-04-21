@@ -673,7 +673,7 @@ p {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-white);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: default;
 }
 
@@ -807,7 +807,7 @@ p {
   overflow: hidden;
   background: #0A0A0A;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .work-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
@@ -965,7 +965,7 @@ p {
   border: 0.5px solid rgba(0,0,0,0.1);
   border-radius: var(--radius);
   padding: 28px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }

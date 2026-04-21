@@ -212,7 +212,7 @@
   border-radius: 12px;
   padding: 20px;
   background: var(--color-white);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .value-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }

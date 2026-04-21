@@ -107,7 +107,7 @@
   border-radius: 12px;
   padding: 28px;
   background: var(--color-white);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
 }
@@ -633,7 +633,7 @@
   border-radius: 12px;
   overflow: hidden;
   border: 0.5px solid rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sp-portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
@@ -751,7 +751,7 @@
   background: #F8F8F8;
   border-radius: 10px;
   padding: 28px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sp-testi:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
@@ -886,7 +886,7 @@
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sp-plan:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
