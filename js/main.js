@@ -89,6 +89,33 @@
   /* ----------------------------------------------------------
      5. Scroll reveal — Intersection Observer
   ---------------------------------------------------------- */
+  const staggerGroups = document.querySelectorAll('.stagger-group');
+  const staggeredChildren = new Set();
+
+  if ('IntersectionObserver' in window) {
+    // Stagger group observer — fires on the container
+    const staggerObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const items = entry.target.querySelectorAll('.reveal');
+          items.forEach(function (item, i) {
+            setTimeout(function () {
+              item.classList.add('visible');
+            }, i * 90);
+          });
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    staggerGroups.forEach(function (group) {
+      group.querySelectorAll('.reveal').forEach(function (child) {
+        staggeredChildren.add(child);
+      });
+      staggerObserver.observe(group);
+    });
+  }
+
   const revealEls = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window && revealEls.length) {
@@ -108,10 +135,12 @@
     );
 
     revealEls.forEach(function (el) {
-      observer.observe(el);
+      // Skip children already handled by stagger observer
+      if (!staggeredChildren.has(el)) {
+        observer.observe(el);
+      }
     });
   } else {
-    // Fallback: show all immediately
     revealEls.forEach(function (el) {
       el.classList.add('visible');
     });
