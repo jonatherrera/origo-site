@@ -306,17 +306,38 @@
 
   headlines.forEach(function (el) { splitHeadline(el); });
 
-  // Dedicated observer — independent of the main reveal observer
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('words-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  function trigger(el) {
+    el.classList.add('words-visible');
+  }
 
-  headlines.forEach(function (el) { observer.observe(el); });
+  // Double rAF ensures browser has painted the initial opacity:0 state
+  // before we trigger the transition — avoids the "snap with no animation" bug
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+
+      headlines.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        var inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inView) {
+          // Above fold — fire after a short delay so page has settled
+          setTimeout(function () { trigger(el); }, 120);
+        } else {
+          // Below fold — use IntersectionObserver
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                trigger(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+          obs.observe(el);
+        }
+      });
+
+    });
+  });
 })();
 
 // ============================================================
