@@ -633,7 +633,10 @@
   border-radius: 12px;
   overflow: hidden;
   border: 0.5px solid rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.sp-portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
 
 .sp-portfolio-card--placeholder {
   opacity: 0.45;
@@ -748,7 +751,10 @@
   background: #F8F8F8;
   border-radius: 10px;
   padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.sp-testi:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
 
 .sp-testi__quote {
   font-family: var(--font-body);
@@ -880,7 +886,10 @@
   background: var(--color-white);
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.sp-plan:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
 
 .sp-plan--featured {
   border-color: var(--color-blue);
