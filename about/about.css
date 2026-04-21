@@ -129,13 +129,21 @@
   border-top: 1px solid var(--color-border);
 }
 
-/* Full-width body paragraphs below the two-col photo block */
-.about-origin__body {
-  margin-top: 40px;
+/* Float layout: photo right, text wraps around and continues below */
+.about-origin__flow::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.about-origin__body .about-body {
-  max-width: 720px;
+.about-origin__photo-float {
+  float: right;
+  width: 44%;
+  margin: 0 0 32px 48px;
+}
+
+.about-origin__flow .about-body {
+  max-width: 640px;
 }
 
 /* ------------------------------------------------------------
@@ -390,6 +398,12 @@
 
   .two-col > * + * {
     margin-top: 40px;
+  }
+
+  .about-origin__photo-float {
+    float: none;
+    width: 100%;
+    margin: 0 0 32px 0;
   }
 
   .mvv-top {
