@@ -1775,21 +1775,23 @@ details.faq-item summary:hover {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  line-height: 1.15;
-  padding-bottom: 0.05em;
+  padding-bottom: 0.1em;
+}
+
+@keyframes wordUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .split-word {
   display: inline-block;
   opacity: 0;
-  transform: translateY(60%);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: wordUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-play-state: paused;
 }
 
 .split-headline.words-visible .split-word {
-  opacity: 1;
-  transform: translateY(0);
+  animation-play-state: running;
 }
 
 /* ============================================================
