@@ -243,8 +243,21 @@
 // SPLIT HEADLINE ANIMATIONS
 // ============================================================
 (function () {
-  var headlines = document.querySelectorAll('.split-headline');
-  if (!headlines.length) return;
+  // Target by original classes — resilient to HTML caching
+  // Also picks up any element that already has split-headline in HTML
+  var targets = document.querySelectorAll(
+    '.hero__headline, .problem__headline, .closing-cta__headline, .split-headline'
+  );
+  if (!targets.length) return;
+
+  // De-duplicate (in case split-headline class is already on one of the above)
+  var seen = new Set();
+  var headlines = [];
+  targets.forEach(function (el) {
+    if (!seen.has(el)) { seen.add(el); headlines.push(el); }
+  });
+
+  headlines.forEach(function (el) { el.classList.add('split-headline'); });
 
   function wrapWord(content) {
     var line = document.createElement('span');
