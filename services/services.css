@@ -2149,11 +2149,25 @@
 }
 
 [data-theme="dark"] .cw-sample {
+  background: #1a1a1c;
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .cw-sample__label {
+  color: rgba(255, 255, 255, 0.35);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .cw-sample__col--before {
   background: #2a2a2c;
+}
+
+[data-theme="dark"] .cw-sample__col--before .cw-sample__tag {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] .cw-sample__col--before .cw-sample__text {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 [data-theme="dark"] .cw-sample__col--after {
