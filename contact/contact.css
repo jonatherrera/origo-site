@@ -90,32 +90,14 @@
 }
 
 /* ------------------------------------------------------------
-   System Window — shared terminal cockpit container
+   System Window — clean dark card
    ------------------------------------------------------------ */
 .sys-window {
   background: #0D0D0D;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-/* Gradient border shimmer */
-.sys-window::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius);
-  padding: 1px;
-  background: linear-gradient(140deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 40%, rgba(0,102,255,0.12) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 2;
 }
 
 /* Window body */
@@ -143,39 +125,6 @@
   margin-bottom: 20px;
 }
 
-/* Status bar at bottom of window */
-.sys-window__status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.02);
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.28);
-  position: relative;
-  z-index: 1;
-}
-
-/* Status LED (separate from wc-led to allow different color/timing) */
-.sys-status-led {
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #0066ff;
-  flex-shrink: 0;
-  animation: sys-led-pulse 2.8s ease-in-out infinite;
-}
-
-@keyframes sys-led-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.7); opacity: 1; }
-  50%       { box-shadow: 0 0 0 5px rgba(0, 102, 255, 0); opacity: 0.75; }
-}
 
 /* ------------------------------------------------------------
    GHL iframe
