@@ -271,7 +271,97 @@
           <p class="sp-solution__body reveal">This isn't plug-and-play or automated keyword stuffing. It's strategic, built on your actual business, and designed to compound over time.</p>
         </div>
         <div class="reveal">
-          <img src="/images/360-Collision-Heat-Map.png" alt="Local SEO heatmap showing 1.4 average ranking for 360 Collision — results by Origo" style="width:100%;border-radius:var(--radius);display:block;">
+          <div class="seo-authority-grid" id="seo-ag">
+
+            <!-- Terminal header -->
+            <div class="wc-dash-header">
+              <div class="wc-dash-dots">
+                <span class="wc-dot" style="background:#FF5F57;"></span>
+                <span class="wc-dot" style="background:#FEBC2E;"></span>
+                <span class="wc-dot" style="background:#28C840;"></span>
+              </div>
+              <span class="wc-dash-title">Local &amp; AI Authority</span>
+              <div class="wc-dash-live">
+                <span class="wc-led"></span>
+                <span>Scanning</span>
+              </div>
+            </div>
+
+            <svg class="seo-ag-svg" viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+
+              <!-- 10×10 coordinate grid -->
+              <g stroke="rgba(255,255,255,0.055)" stroke-width="0.5">
+                <line x1="20"  y1="20" x2="20"  y2="340"/>
+                <line x1="60"  y1="20" x2="60"  y2="340"/>
+                <line x1="100" y1="20" x2="100" y2="340"/>
+                <line x1="140" y1="20" x2="140" y2="340"/>
+                <line x1="180" y1="20" x2="180" y2="340"/>
+                <line x1="220" y1="20" x2="220" y2="340"/>
+                <line x1="260" y1="20" x2="260" y2="340"/>
+                <line x1="300" y1="20" x2="300" y2="340"/>
+                <line x1="340" y1="20" x2="340" y2="340"/>
+                <line x1="380" y1="20" x2="380" y2="340"/>
+                <line x1="420" y1="20" x2="420" y2="340"/>
+                <line x1="20" y1="20"  x2="420" y2="20"/>
+                <line x1="20" y1="52"  x2="420" y2="52"/>
+                <line x1="20" y1="84"  x2="420" y2="84"/>
+                <line x1="20" y1="116" x2="420" y2="116"/>
+                <line x1="20" y1="148" x2="420" y2="148"/>
+                <line x1="20" y1="180" x2="420" y2="180"/>
+                <line x1="20" y1="212" x2="420" y2="212"/>
+                <line x1="20" y1="244" x2="420" y2="244"/>
+                <line x1="20" y1="276" x2="420" y2="276"/>
+                <line x1="20" y1="308" x2="420" y2="308"/>
+                <line x1="20" y1="340" x2="420" y2="340"/>
+              </g>
+
+              <!-- Radar pulse rings (3 staggered) -->
+              <circle class="seo-radar seo-radar--1" cx="220" cy="180" r="16" stroke="#0066FF" stroke-width="1"/>
+              <circle class="seo-radar seo-radar--2" cx="220" cy="180" r="16" stroke="#0066FF" stroke-width="0.75"/>
+              <circle class="seo-radar seo-radar--3" cx="220" cy="180" r="16" stroke="#0066FF" stroke-width="0.5"/>
+
+              <!-- Neural connection lines: hub → nodes -->
+              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="52"  stroke="#0066FF" stroke-width="0.75" style="--i:1"/>
+              <line class="seo-line"           x1="220" y1="180" x2="140" y2="84"  stroke="#0066FF" stroke-width="0.75" style="--i:2"/>
+              <line class="seo-line"           x1="220" y1="180" x2="300" y2="52"  stroke="#0066FF" stroke-width="0.75" style="--i:3"/>
+              <line class="seo-line"           x1="220" y1="180" x2="380" y2="116" stroke="#0066FF" stroke-width="0.75" style="--i:4"/>
+              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="148" stroke="#0066FF" stroke-width="0.75" style="--i:5"/>
+              <line class="seo-line"           x1="220" y1="180" x2="140" y2="212" stroke="#0066FF" stroke-width="0.75" style="--i:6"/>
+              <line class="seo-line"           x1="220" y1="180" x2="300" y2="148" stroke="#0066FF" stroke-width="0.75" style="--i:7"/>
+              <line class="seo-line"           x1="220" y1="180" x2="380" y2="212" stroke="#0066FF" stroke-width="0.75" style="--i:8"/>
+              <line class="seo-line seo-line--green" x1="220" y1="180" x2="100" y2="276" stroke="#22c55e" stroke-width="0.75" style="--i:9"/>
+              <line class="seo-line seo-line--green" x1="220" y1="180" x2="220" y2="308" stroke="#22c55e" stroke-width="0.75" style="--i:10"/>
+              <line class="seo-line seo-line--green" x1="220" y1="180" x2="340" y2="276" stroke="#22c55e" stroke-width="0.75" style="--i:11"/>
+              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="308" stroke="#0066FF" stroke-width="0.75" style="--i:12"/>
+              <line class="seo-line"           x1="220" y1="180" x2="380" y2="308" stroke="#0066FF" stroke-width="0.75" style="--i:13"/>
+              <line class="seo-line seo-line--green" x1="220" y1="180" x2="420" y2="180" stroke="#22c55e" stroke-width="0.75" style="--i:14"/>
+              <line class="seo-line"           x1="220" y1="180" x2="180" y2="116" stroke="#0066FF" stroke-width="0.75" style="--i:15"/>
+
+              <!-- Result nodes (blue = search, green = AI/AEO) -->
+              <circle class="seo-node seo-node--blue"  cx="60"  cy="52"  r="5" style="--i:1"/>
+              <circle class="seo-node seo-node--blue"  cx="140" cy="84"  r="5" style="--i:2"/>
+              <circle class="seo-node seo-node--blue"  cx="300" cy="52"  r="5" style="--i:3"/>
+              <circle class="seo-node seo-node--blue"  cx="380" cy="116" r="5" style="--i:4"/>
+              <circle class="seo-node seo-node--blue"  cx="60"  cy="148" r="5" style="--i:5"/>
+              <circle class="seo-node seo-node--blue"  cx="140" cy="212" r="5" style="--i:6"/>
+              <circle class="seo-node seo-node--blue"  cx="300" cy="148" r="5" style="--i:7"/>
+              <circle class="seo-node seo-node--blue"  cx="380" cy="212" r="5" style="--i:8"/>
+              <circle class="seo-node seo-node--green" cx="100" cy="276" r="5" style="--i:9"/>
+              <circle class="seo-node seo-node--green" cx="220" cy="308" r="5" style="--i:10"/>
+              <circle class="seo-node seo-node--green" cx="340" cy="276" r="5" style="--i:11"/>
+              <circle class="seo-node seo-node--blue"  cx="60"  cy="308" r="5" style="--i:12"/>
+              <circle class="seo-node seo-node--blue"  cx="380" cy="308" r="5" style="--i:13"/>
+              <circle class="seo-node seo-node--green" cx="420" cy="180" r="5" style="--i:14"/>
+              <circle class="seo-node seo-node--blue"  cx="180" cy="116" r="5" style="--i:15"/>
+
+              <!-- Brand Hub — center authority node -->
+              <circle class="seo-hub-ring" cx="220" cy="180" r="18" stroke="#0066FF" stroke-width="1" fill="none"/>
+              <circle cx="220" cy="180" r="12" fill="rgba(0,102,255,0.16)" stroke="#0066FF" stroke-width="1.5"/>
+              <circle cx="220" cy="180" r="6"  fill="#0066FF"/>
+              <text x="220" y="183.5" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700" font-size="6.5" fill="white">O</text>
+
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -716,6 +806,17 @@
         caseDone = true;
         runCounters(caseCounters);
       }, { threshold: 0.3 }).observe(caseGrid);
+    }
+
+    /* ── Authority Grid ── */
+    var agEl = document.getElementById('seo-ag');
+    if (agEl) {
+      var agDone = false;
+      new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting || agDone) return;
+        agDone = true;
+        agEl.classList.add('is-active');
+      }, { threshold: 0.25 }).observe(agEl);
     }
   })();
   </script>
