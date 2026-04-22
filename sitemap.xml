@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core pages -->
-  <url><loc>https://origo.ooo/</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://origo.ooo/about</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://origo.ooo/team</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/contact</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://origo.ooo/about</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/team</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/contact</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Services -->
-  <url><loc>https://origo.ooo/services</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://origo.ooo/services/branding</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/services/web-design</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/services/seo-aeo</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/services/copywriting</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/services/website-concierge</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/services/app-development</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/services/branding</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services/web-design</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services/seo-aeo</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services/copywriting</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services/website-concierge</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/services/app-development</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Work -->
-  <url><loc>https://origo.ooo/work</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/work/branding</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/work/case-studies</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://origo.ooo/work/case-studies/groomers-seafood</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/work/case-studies/redemption-hill</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/work</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/work/branding</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/work/case-studies</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/work/case-studies/groomers-seafood</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/work/case-studies/redemption-hill</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Legal -->
-  <url><loc>https://origo.ooo/privacy</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://origo.ooo/terms-and-conditions</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://origo.ooo/accessibility</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://origo.ooo/ai-policy</loc><lastmod>2026-04-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://origo.ooo/privacy</loc><lastmod>2026-04-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://origo.ooo/terms-and-conditions</loc><lastmod>2026-04-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://origo.ooo/accessibility</loc><lastmod>2026-04-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://origo.ooo/ai-policy</loc><lastmod>2026-04-22</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
   <!-- AEO / Content -->
-  <url><loc>https://origo.ooo/faq</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://origo.ooo/glossary</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/faq</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://origo.ooo/glossary</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog -->
-  <url><loc>https://origo.ooo/blog</loc><lastmod>2026-04-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/blog</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://origo.ooo/blog/how-to-tell-if-youre-ai-visible</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://origo.ooo/blog/on-purpose</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://origo.ooo/blog/digital-ownership</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -43,35 +43,35 @@
   <url><loc>https://origo.ooo/blog/six-questions-brand-agency</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://origo.ooo/blog/citations-are-the-new-clicks</loc><lastmod>2026-04-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://origo.ooo/blog/what-is-a-digital-presence-agency</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://origo.ooo/blog/what-is-aeo</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://origo.ooo/blog/what-is-aeo</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://origo.ooo/blog/not-cheaper-better</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/blog/build-on-your-own-land</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/blog/the-website-is-the-symptom</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://origo.ooo/blog/why-your-small-business-website-needs-a-professional-redesign-in-2026</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/why-a-website-redesign-is-the-smartest-investment-for-2025</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/why-web-design-still-matters-in-2023</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/why-hire-a-web-designer</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/which-item-is-most-important-for-a-successful-website-design</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/how-much-does-a-website-really-cost-in-2025</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/how-to-update-your-website-without-starting-over</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/5-website-fixes-that-instantly-make-your-small-business-look-more-professional</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/3-ways-to-update-your-website-before-fall-without-a-full-redesign</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/how-to-get-found-on-google-seo-tips-for-small-business-owner</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/simple-seo-fixes-you-can-do-without-redesigning-your-website</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/simple-seo-fixes-h1-tags-that-help-seo</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-title-tags-that-convert</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-meta-descriptions-that-drive-clicks</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-image-alt-text-that-google-loves-and-people-understand</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/beyond-seasonal-looks-geo-aeo-strategies-for-year-round-visibility</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/mastering-branding-in-2024-how-to-build-a-memorable-and-impactful-brand</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/best-branding-practices-you-need-to-follow-in-2022</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/5-signs-it-might-be-time-to-rebrand-your-small-business</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/know-your-audience-why-cracker-barrels-branding-misstep-matters-to-your-business</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/spring-cleaning-for-your-brand-refreshing-your-business-image-in-2025</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/what-does-website-maintenance-entails</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/top-website-maintenance-tips-to-keep-your-site-ready-for-end-of-year-traffic</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/local-to-nationwide-how-small-businesses-can-scale-their-online-presence</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/google-websites-ends</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://origo.ooo/blog/googles-android-developer-verification-changes-in-2026-what-small-businesses-need-to-know</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/build-on-your-own-land</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/blog/the-website-is-the-symptom</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://origo.ooo/blog/why-your-small-business-website-needs-a-professional-redesign-in-2026</loc><lastmod>2026-03-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/why-a-website-redesign-is-the-smartest-investment-for-2025</loc><lastmod>2025-02-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/why-web-design-still-matters-in-2023</loc><lastmod>2023-01-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/why-hire-a-web-designer</loc><lastmod>2022-12-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/which-item-is-most-important-for-a-successful-website-design</loc><lastmod>2023-01-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/how-much-does-a-website-really-cost-in-2025</loc><lastmod>2025-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/how-to-update-your-website-without-starting-over</loc><lastmod>2025-07-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/5-website-fixes-that-instantly-make-your-small-business-look-more-professional</loc><lastmod>2025-03-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/3-ways-to-update-your-website-before-fall-without-a-full-redesign</loc><lastmod>2025-08-14</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/how-to-get-found-on-google-seo-tips-for-small-business-owner</loc><lastmod>2025-03-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/simple-seo-fixes-you-can-do-without-redesigning-your-website</loc><lastmod>2025-06-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/simple-seo-fixes-h1-tags-that-help-seo</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-title-tags-that-convert</loc><lastmod>2025-09-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-meta-descriptions-that-drive-clicks</loc><lastmod>2025-10-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/simple-seo-fixes-how-to-write-image-alt-text-that-google-loves-and-people-understand</loc><lastmod>2025-10-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/beyond-seasonal-looks-geo-aeo-strategies-for-year-round-visibility</loc><lastmod>2025-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/mastering-branding-in-2024-how-to-build-a-memorable-and-impactful-brand</loc><lastmod>2024-11-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/best-branding-practices-you-need-to-follow-in-2022</loc><lastmod>2022-08-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/5-signs-it-might-be-time-to-rebrand-your-small-business</loc><lastmod>2025-02-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/know-your-audience-why-cracker-barrels-branding-misstep-matters-to-your-business</loc><lastmod>2025-08-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/spring-cleaning-for-your-brand-refreshing-your-business-image-in-2025</loc><lastmod>2025-04-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/what-does-website-maintenance-entails</loc><lastmod>2023-01-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/top-website-maintenance-tips-to-keep-your-site-ready-for-end-of-year-traffic</loc><lastmod>2024-11-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/local-to-nationwide-how-small-businesses-can-scale-their-online-presence</loc><lastmod>2025-08-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/google-websites-ends</loc><lastmod>2024-02-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://origo.ooo/blog/googles-android-developer-verification-changes-in-2026-what-small-businesses-need-to-know</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>
