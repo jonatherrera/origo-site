@@ -416,24 +416,36 @@
       </div>
       <div class="sp-results-strip__grid reveal">
         <div class="sp-results-stat">
-          <p class="sp-results-stat__number">60%</p>
-          <p class="sp-results-stat__label">User Growth</p>
-          <p class="sp-results-stat__sub">Active &amp; new users year over year</p>
+          <p class="sp-results-stat__number seo-counter" data-target="60" data-suffix="%">60%</p>
+          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
+            <polyline class="sp-sparkline__line" points="0,28 22,22 44,16 66,9 88,3"/>
+          </svg>
+          <p class="sp-results-stat__label seo-label">User Growth</p>
+          <p class="sp-results-stat__sub seo-label">Active &amp; new users year over year</p>
         </div>
         <div class="sp-results-stat">
-          <p class="sp-results-stat__number">4,100</p>
-          <p class="sp-results-stat__label">Keywords Ranking</p>
-          <p class="sp-results-stat__sub">↑ 329.8% year over year</p>
+          <p class="sp-results-stat__number seo-counter" data-target="4100" data-formatted="true">4,100</p>
+          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
+            <polyline class="sp-sparkline__line" points="0,28 22,26 44,22 60,14 75,7 88,2"/>
+          </svg>
+          <p class="sp-results-stat__label seo-label">Keywords Ranking</p>
+          <p class="sp-results-stat__sub seo-label">↑ 329.8% year over year</p>
         </div>
         <div class="sp-results-stat">
-          <p class="sp-results-stat__number">#1</p>
-          <p class="sp-results-stat__label">Lead Driver</p>
-          <p class="sp-results-stat__sub">Google Business Profile — dominant all year</p>
+          <p class="sp-results-stat__number seo-rank">#1</p>
+          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
+            <polyline class="sp-sparkline__line" points="0,26 22,18 44,10 66,4 88,4"/>
+          </svg>
+          <p class="sp-results-stat__label seo-label">Lead Driver</p>
+          <p class="sp-results-stat__sub seo-label">Google Business Profile — dominant all year</p>
         </div>
         <div class="sp-results-stat">
-          <p class="sp-results-stat__number">#7</p>
-          <p class="sp-results-stat__label">ChatGPT Ranking</p>
-          <p class="sp-results-stat__sub">Top collision shops in San Antonio</p>
+          <p class="sp-results-stat__number seo-rank">#7</p>
+          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
+            <polyline class="sp-sparkline__line" points="0,28 22,25 44,20 66,14 88,8"/>
+          </svg>
+          <p class="sp-results-stat__label seo-label">ChatGPT Ranking</p>
+          <p class="sp-results-stat__sub seo-label">Top collision shops in San Antonio</p>
         </div>
       </div>
     </div>
@@ -451,24 +463,24 @@
         </div>
         <div class="sp-case-study__metrics">
           <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num">19,504</p>
+            <p class="sp-case-study__metric-num seo-case-counter" data-target="19504">19,504</p>
             <p class="sp-case-study__metric-label">GBP Impressions</p>
-            <p class="sp-case-study__metric-delta">↑ 238.4% YoY</p>
+            <p class="sp-case-study__metric-delta">↑ 238%</p>
           </div>
           <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num">1,213</p>
+            <p class="sp-case-study__metric-num seo-case-counter" data-target="1213">1,213</p>
             <p class="sp-case-study__metric-label">Call Clicks</p>
-            <p class="sp-case-study__metric-delta">↑ 215.9% YoY</p>
+            <p class="sp-case-study__metric-delta">↑ 216%</p>
           </div>
           <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num">608</p>
+            <p class="sp-case-study__metric-num seo-case-counter" data-target="608">608</p>
             <p class="sp-case-study__metric-label">Organic Clicks</p>
-            <p class="sp-case-study__metric-delta">↑ 294.8% YoY</p>
+            <p class="sp-case-study__metric-delta">↑ 295%</p>
           </div>
           <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num">2,551</p>
+            <p class="sp-case-study__metric-num seo-case-counter" data-target="2551">2,551</p>
             <p class="sp-case-study__metric-label">Direction Requests</p>
-            <p class="sp-case-study__metric-delta">↑ 46.6% YoY</p>
+            <p class="sp-case-study__metric-delta">↑ 47%</p>
           </div>
         </div>
         <blockquote class="sp-case-study__quote">
@@ -625,6 +637,88 @@
   </footer>
 
   <script src="/js/main.js?v=6"></script>
+  <script>
+  (function () {
+    var DURATION = 1800;
+
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function fmtNum(n, formatted) {
+      if (formatted) return Math.round(n).toLocaleString('en-US');
+      return Math.round(n).toString();
+    }
+
+    function runCounters(counters, onDone) {
+      if (!counters.length) return;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var p = Math.min((ts - startTime) / DURATION, 1);
+        var e = easeOut(p);
+        counters.forEach(function (c) {
+          if (!c.el) return;
+          c.el.textContent = fmtNum(c.target * e, c.formatted) + (c.suffix || '');
+        });
+        if (p < 1) {
+          requestAnimationFrame(step);
+        } else if (onDone) {
+          onDone();
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    /* ── Results Strip ── */
+    var stripGrid = document.querySelector('.sp-results-strip__grid');
+    if (stripGrid) {
+      var stripCounters = [
+        { el: stripGrid.querySelector('[data-target="60"]'),   target: 60,   suffix: '%' },
+        { el: stripGrid.querySelector('[data-target="4100"]'), target: 4100, formatted: true }
+      ];
+
+      stripGrid.querySelectorAll('.seo-label').forEach(function (el) {
+        el.style.opacity = '0';
+      });
+
+      var stripDone = false;
+      new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting || stripDone) return;
+        stripDone = true;
+
+        runCounters(stripCounters, function () {
+          stripGrid.querySelectorAll('.seo-label').forEach(function (el) {
+            el.style.opacity = '1';
+          });
+        });
+
+        setTimeout(function () {
+          stripGrid.querySelectorAll('.sp-sparkline').forEach(function (svg) {
+            svg.classList.add('sp-sparkline--active');
+          });
+          stripGrid.querySelectorAll('.seo-rank').forEach(function (el) {
+            el.classList.add('seo-rank-active');
+          });
+        }, 250);
+
+      }, { threshold: 0.3 }).observe(stripGrid);
+    }
+
+    /* ── Case Study Metrics ── */
+    var caseGrid = document.querySelector('.sp-case-study__metrics');
+    if (caseGrid) {
+      var caseCounters = Array.from(caseGrid.querySelectorAll('.seo-case-counter')).map(function (el) {
+        return { el: el, target: parseInt(el.dataset.target, 10), formatted: true };
+      });
+
+      var caseDone = false;
+      new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting || caseDone) return;
+        caseDone = true;
+        runCounters(caseCounters);
+      }, { threshold: 0.3 }).observe(caseGrid);
+    }
+  })();
+  </script>
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69e1b1d325604d88f062888e"></script>
 </body>
 </html>
