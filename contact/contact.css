@@ -25,7 +25,7 @@
    SECTION 01 — HERO
    ------------------------------------------------------------ */
 .contact-hero {
-  padding: 120px 0 64px;
+  padding: 120px 0 80px;
   background: var(--color-white);
 }
 
@@ -63,7 +63,7 @@
    SECTION 02 — CALENDAR
    ------------------------------------------------------------ */
 .contact-calendar-section {
-  padding: 64px 0;
+  padding: 80px 0;
   background: var(--color-white);
   border-top: 1px solid var(--color-border);
 }
@@ -98,7 +98,7 @@
    SECTION 03 — FORM
    ------------------------------------------------------------ */
 .contact-form-section {
-  padding: 64px 0;
+  padding: 80px 0;
   background: var(--color-white);
   border-top: 1px solid var(--color-border);
 }
@@ -302,7 +302,7 @@
    ------------------------------------------------------------ */
 .contact-info {
   background: var(--color-black);
-  padding: 64px 0;
+  padding: 80px 0;
 }
 
 .contact-info__heading {
