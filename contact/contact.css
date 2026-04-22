@@ -67,11 +67,26 @@
   background: #0A0A0A;
 }
 
-.contact-main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contact-main-stack {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-  align-items: start;
+}
+
+/* Calendar window — full width, generous iframe height */
+.contact-main-stack .sys-window:first-child .sys-window__iframe-wrap iframe {
+  min-height: 760px;
+}
+
+/* Form window — constrained width so it doesn't feel too wide */
+.contact-main-stack .sys-window:last-child .sys-window__body {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-main-stack .sys-window:last-child .contact-form {
+  max-width: 860px;
 }
 
 /* ------------------------------------------------------------
@@ -451,9 +466,6 @@
    Responsive
    ------------------------------------------------------------ */
 @media (max-width: 1023px) {
-  .contact-main-grid {
-    grid-template-columns: 1fr;
-  }
   .contact-info-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -470,7 +482,7 @@
     padding: 20px 16px 18px;
   }
   .sys-window__iframe-wrap iframe {
-    min-height: 580px;
+    min-height: 640px;
   }
 }
 
