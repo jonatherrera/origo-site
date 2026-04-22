@@ -63,7 +63,7 @@
    SECTION 02 — CALENDAR
    ------------------------------------------------------------ */
 .contact-calendar-section {
-  padding: 72px 0 64px;
+  padding: 64px 0;
   background: var(--color-white);
   border-top: 1px solid var(--color-border);
 }
@@ -97,7 +97,7 @@
    SECTION 03 — FORM
    ------------------------------------------------------------ */
 .contact-form-section {
-  padding: 72px 0 80px;
+  padding: 64px 0;
   background: var(--color-white);
   border-top: 1px solid var(--color-border);
 }
