@@ -2,10 +2,6 @@ Options -Indexes
 
 RewriteEngine On
 
-# Force HTTPS (Cloudways terminates SSL at load balancer — check X-Forwarded-Proto)
-RewriteCond %{HTTP:X-Forwarded-Proto} =http
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
 # Force non-www (canonical: origo.ooo)
 RewriteCond %{HTTP_HOST} ^www\.origo\.ooo$ [NC]
 RewriteRule ^ https://origo.ooo%{REQUEST_URI} [R=301,L]
