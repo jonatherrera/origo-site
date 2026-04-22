@@ -211,7 +211,7 @@
   function animateCounter(el) {
     var target   = parseInt(el.getAttribute('data-target'), 10);
     var suffix   = el.getAttribute('data-suffix') || '';
-    var duration = 1800;
+    var duration = 850;
     var start    = null;
 
     function step(timestamp) {

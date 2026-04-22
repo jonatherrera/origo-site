@@ -388,23 +388,51 @@
     ====================================================== -->
     <section class="section stats-section" aria-label="By the numbers">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item reveal">
-            <p class="stat-item__number" data-target="8" data-suffix="+">0</p>
-            <p class="stat-item__label">Years in business</p>
+        <div class="stats-monitor">
+
+          <!-- Terminal chrome -->
+          <div class="wc-dash-header">
+            <div class="wc-dash-dots">
+              <span class="wc-dot" style="background:#ff5f57"></span>
+              <span class="wc-dot" style="background:#febc2e"></span>
+              <span class="wc-dot" style="background:#28c840"></span>
+            </div>
+            <span class="wc-dash-title">success_monitor.live</span>
+            <div class="wc-dash-live">
+              <span class="wc-led"></span>
+              <span>LIVE</span>
+            </div>
           </div>
-          <div class="stat-item reveal">
-            <p class="stat-item__number" data-target="100" data-suffix="+">0</p>
-            <p class="stat-item__label">Clients served</p>
+
+          <!-- Radar sweep -->
+          <svg class="stats-radar-svg" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <circle class="stats-radar stats-radar--1" cx="400" cy="90" r="1"/>
+            <circle class="stats-radar stats-radar--2" cx="400" cy="90" r="1"/>
+            <circle class="stats-radar stats-radar--3" cx="400" cy="90" r="1"/>
+          </svg>
+
+          <!-- Stats -->
+          <div class="stats-grid">
+            <div class="stat-item reveal">
+              <p class="stat-item__number" data-target="8" data-suffix="+">0</p>
+              <p class="stat-item__label">Years in business</p>
+            </div>
+            <div class="stat-item reveal">
+              <p class="stat-item__number" data-target="100" data-suffix="+">0</p>
+              <p class="stat-item__label">Clients served</p>
+            </div>
+            <div class="stat-item reveal">
+              <p class="stat-item__number" data-target="6" data-suffix="">0</p>
+              <p class="stat-item__label">Services offered</p>
+            </div>
+            <div class="stat-item reveal">
+              <p class="stat-item__number" data-target="100" data-suffix="%">0</p>
+              <p class="stat-item__label stat-item__label--led">
+                <span class="stats-ownership-led"></span>Client site ownership
+              </p>
+            </div>
           </div>
-          <div class="stat-item reveal">
-            <p class="stat-item__number" data-target="6" data-suffix="">0</p>
-            <p class="stat-item__label">Services offered</p>
-          </div>
-          <div class="stat-item reveal">
-            <p class="stat-item__number" data-target="100" data-suffix="%">0</p>
-            <p class="stat-item__label">Client site ownership</p>
-          </div>
+
         </div>
       </div>
     </section>
