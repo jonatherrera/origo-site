@@ -60,50 +60,126 @@
 }
 
 /* ------------------------------------------------------------
-   SECTION 02 — CALENDAR + FORM
+   SECTION 02 — COMMAND CENTER
    ------------------------------------------------------------ */
 .contact-main {
-  padding: 72px 0;
-  background: var(--color-white);
-  border-top: 1px solid var(--color-border);
+  padding: 72px 0 80px;
+  background: #0A0A0A;
 }
 
 .contact-main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 24px;
   align-items: start;
 }
 
-/* Column headings */
-.contact-col__heading {
+/* ------------------------------------------------------------
+   System Window — shared terminal cockpit container
+   ------------------------------------------------------------ */
+.sys-window {
+  background: #0D0D0D;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Gradient border shimmer */
+.sys-window::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 40%, rgba(0,102,255,0.12) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Window body */
+.sys-window__body {
+  padding: 28px 28px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings & sub inside windows — always white */
+.sys-window__heading {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 22px;
-  color: var(--color-black);
-  margin-bottom: 8px;
-  line-height: 1.2;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.25;
 }
 
-.contact-col__sub {
+.sys-window__sub {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.65;
-  color: #888888;
-  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
 }
 
-/* Calendar embed */
-.contact-calendar iframe {
-  width: 100%;
-  min-height: 420px;
-  border: none;
-  border-radius: 8px;
+/* Status bar at bottom of window */
+.sys-window__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  position: relative;
+  z-index: 1;
+}
+
+/* Status LED (separate from wc-led to allow different color/timing) */
+.sys-status-led {
   display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0066ff;
+  flex-shrink: 0;
+  animation: sys-led-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes sys-led-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.7); opacity: 1; }
+  50%       { box-shadow: 0 0 0 5px rgba(0, 102, 255, 0); opacity: 0.75; }
 }
 
 /* ------------------------------------------------------------
-   Contact form
+   GHL iframe — no double scrollbars
+   ------------------------------------------------------------ */
+.sys-window__iframe-wrap {
+  overflow: hidden;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.sys-window__iframe-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: none;
+}
+
+/* ------------------------------------------------------------
+   Contact form — dark field styling
    ------------------------------------------------------------ */
 .contact-form {
   display: flex;
@@ -125,71 +201,89 @@
   margin-bottom: 12px;
 }
 
-.form-field--full {
-  grid-column: 1 / -1;
-}
-
 .form-field label {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #888888;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-label-opt {
+  opacity: 0.45;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .form-field input,
 .form-field select,
 .form-field textarea {
-  height: 36px;
-  background: #F8F8F8;
-  border: 0.5px solid #DDDDE0;
-  border-radius: 4px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
   padding: 0 12px;
   font-family: var(--font-body);
   font-size: 13px;
-  color: var(--color-black);
+  color: #ffffff;
   outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   -webkit-appearance: none;
   appearance: none;
 }
 
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Select dropdown arrow — white version */
 .form-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
+  background-color: rgba(255, 255, 255, 0.05);
   padding-right: 32px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.form-field select option {
+  background: #1a1a1c;
+  color: #ffffff;
 }
 
 .form-field textarea {
   height: auto;
-  min-height: 88px;
+  min-height: 92px;
   padding: 10px 12px;
   resize: vertical;
   line-height: 1.55;
 }
 
+/* Focus — blue border + glow */
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
-  background: var(--color-white);
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.18);
+  background: rgba(0, 102, 255, 0.06);
 }
 
+/* Error state */
 .form-field input.field-error,
 .form-field select.field-error,
 .form-field textarea.field-error {
-  border-color: #CC0000;
+  border-color: #f87171;
   box-shadow: none;
 }
 
 .form-field__error {
   font-family: var(--font-body);
   font-size: 11px;
-  color: #CC0000;
+  color: #f87171;
   display: none;
   margin-top: 2px;
 }
@@ -198,34 +292,43 @@
   display: block;
 }
 
+/* Submit button — high-gloss blue */
 .contact-form__submit {
   width: 100%;
-  background: var(--color-blue);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #1a7aff 0%, #0052cc 100%);
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 13px;
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s ease;
   margin-top: 4px;
+  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .contact-form__submit:hover {
-  background: var(--color-blue-hover);
+  box-shadow: 0 6px 28px rgba(0, 102, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.contact-form__submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 102, 255, 0.3);
 }
 
 .contact-form__submit:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
+  transform: none;
 }
 
 .contact-form__note {
   font-family: var(--font-body);
   font-size: 11px;
-  color: #AAAAAA;
+  color: rgba(255, 255, 255, 0.25);
   font-style: italic;
   text-align: center;
   margin-top: 10px;
@@ -235,7 +338,7 @@
 .contact-form__success {
   display: none;
   text-align: center;
-  padding: 40px 24px;
+  padding: 48px 24px;
 }
 
 .contact-form__success.visible {
@@ -246,8 +349,46 @@
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 18px;
-  color: var(--color-black);
+  color: #ffffff;
   line-height: 1.4;
+}
+
+/* SMS consent */
+.form-field--consent {
+  margin-bottom: 8px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.form-checkbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  accent-color: var(--color-blue);
+  cursor: pointer;
+}
+
+.form-consent-links {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.form-consent-links a {
+  color: rgba(0, 102, 255, 0.85);
+  text-decoration: underline;
 }
 
 /* ------------------------------------------------------------
@@ -256,6 +397,7 @@
 .contact-info {
   background: var(--color-black);
   padding: 64px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .contact-info__heading {
@@ -297,7 +439,7 @@
 }
 
 .contact-info-card__value a {
-  color: #4D94FF;
+  color: #4d94ff;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -311,10 +453,7 @@
    ------------------------------------------------------------ */
 @media (max-width: 1023px) {
   .contact-main-grid {
-    display: block;
-  }
-  .contact-main-grid > * + * {
-    margin-top: 56px;
+    grid-template-columns: 1fr;
   }
   .contact-info-grid {
     grid-template-columns: 1fr 1fr;
@@ -328,65 +467,25 @@
   .form-row {
     grid-template-columns: 1fr;
   }
+  .sys-window__body {
+    padding: 20px 16px 18px;
+  }
+  .sys-window__iframe-wrap iframe {
+    height: 580px;
+  }
 }
 
-/* SMS consent checkboxes */
-.form-field--consent {
-  margin-bottom: 10px;
+/* ------------------------------------------------------------
+   Dark mode — hero / info adjustments (windows are always dark)
+   ------------------------------------------------------------ */
+[data-theme="dark"] .contact-hero {
+  background: var(--color-black);
 }
 
-.form-checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.6;
-  color: #888888;
+[data-theme="dark"] .contact-hero__headline {
+  color: var(--color-white);
 }
 
-.form-checkbox input[type="checkbox"] {
-  flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
-  accent-color: var(--color-blue);
-  cursor: pointer;
-}
-
-.form-consent-links {
-  font-family: var(--font-body);
-  font-size: 11px;
-  color: #AAAAAA;
-  margin-top: 6px;
-  margin-bottom: 10px;
-}
-
-.form-consent-links a {
-  color: var(--color-blue);
-  text-decoration: underline;
-}
-
-/* ============================================================
-   Dark Mode Overrides
-   ============================================================ */
-[data-theme="dark"] .contact-col__sub,
-[data-theme="dark"] .form-field label,
 [data-theme="dark"] .contact-hero__sub {
   color: var(--color-gray-dark);
-}
-
-[data-theme="dark"] .form-field input,
-[data-theme="dark"] .form-field select,
-[data-theme="dark"] .form-field textarea {
-  background: var(--color-gray-light);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: var(--color-black);
-}
-
-[data-theme="dark"] .form-field input:focus,
-[data-theme="dark"] .form-field select:focus,
-[data-theme="dark"] .form-field textarea:focus {
-  border-color: var(--color-blue);
 }
