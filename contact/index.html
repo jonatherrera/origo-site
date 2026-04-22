@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=4" />
-  <link rel="stylesheet" href="/contact/contact.css?v=5" />
+  <link rel="stylesheet" href="/contact/contact.css?v=6" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -400,8 +400,8 @@
         var d = e.data;
         if (typeof d === 'string') { try { d = JSON.parse(d); } catch (_) {} }
         var h = (d && (d.height || (d.data && d.data.height)));
-        if (h && h > 100) {
-          calIframe.style.height = (parseInt(h) + 20) + 'px';
+        if (h && parseInt(h) > 200) {
+          calIframe.style.height = (parseInt(h) + 40) + 'px';
         }
       });
     })();
