@@ -60,89 +60,54 @@
 }
 
 /* ------------------------------------------------------------
-   SECTION 02 — COMMAND CENTER
+   SECTION 02 — CALENDAR
    ------------------------------------------------------------ */
-.contact-main {
-  padding: 72px 0 80px;
-  background: #0A0A0A;
+.contact-calendar-section {
+  padding: 72px 0 64px;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
 }
 
-.contact-main-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Calendar window — full width, generous iframe height */
-.contact-main-stack .sys-window:first-child .sys-window__iframe-wrap iframe {
-  min-height: 760px;
-}
-
-/* Form window — constrained width so it doesn't feel too wide */
-.contact-main-stack .sys-window:last-child .sys-window__body {
-  max-width: 860px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.contact-main-stack .sys-window:last-child .contact-form {
-  max-width: 860px;
-}
-
-/* ------------------------------------------------------------
-   System Window — clean dark card
-   ------------------------------------------------------------ */
-.sys-window {
-  background: #0D0D0D;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius);
-  overflow: hidden;
-  position: relative;
-}
-
-/* Window body */
-.sys-window__body {
-  padding: 28px 28px 24px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Headings & sub inside windows — always white */
-.sys-window__heading {
+.contact-col__heading {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 20px;
-  color: #ffffff;
-  margin-bottom: 6px;
-  line-height: 1.25;
+  font-size: 22px;
+  color: var(--color-black);
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
-.sys-window__sub {
+.contact-col__sub {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 20px;
+  color: #888888;
+  margin-bottom: 28px;
+  max-width: 560px;
 }
 
-
-/* ------------------------------------------------------------
-   GHL iframe
-   ------------------------------------------------------------ */
-.sys-window__iframe-wrap {
-  border-radius: 6px;
-  background: transparent;
-}
-
-.sys-window__iframe-wrap iframe {
+.contact-iframe-wrap iframe {
   display: block;
   width: 100%;
-  min-height: 660px;
+  min-height: 760px;
   border: none;
 }
 
 /* ------------------------------------------------------------
-   Contact form — dark field styling
+   SECTION 03 — FORM
+   ------------------------------------------------------------ */
+.contact-form-section {
+  padding: 72px 0 80px;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-form-inner {
+  max-width: 720px;
+}
+
+/* ------------------------------------------------------------
+   Contact form
    ------------------------------------------------------------ */
 .contact-form {
   display: flex;
@@ -167,14 +132,14 @@
 .form-field label {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+  color: #888888;
 }
 
 .form-label-opt {
-  opacity: 0.45;
+  opacity: 0.6;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
@@ -184,38 +149,26 @@
 .form-field select,
 .form-field textarea {
   height: 38px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  background: #F8F8F8;
+  border: 0.5px solid #DDDDE0;
+  border-radius: 4px;
   padding: 0 12px;
   font-family: var(--font-body);
   font-size: 13px;
-  color: #ffffff;
+  color: var(--color-black);
   outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.2);
-}
-
-/* Select dropdown arrow — white version */
 .form-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #F8F8F8;
   padding-right: 32px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.form-field select option {
-  background: #1a1a1c;
-  color: #ffffff;
 }
 
 .form-field textarea {
@@ -226,27 +179,25 @@
   line-height: 1.55;
 }
 
-/* Focus — blue border + glow */
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  border-color: #0066ff;
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.18);
-  background: rgba(0, 102, 255, 0.06);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  background: var(--color-white);
 }
 
-/* Error state */
 .form-field input.field-error,
 .form-field select.field-error,
 .form-field textarea.field-error {
-  border-color: #f87171;
+  border-color: #CC0000;
   box-shadow: none;
 }
 
 .form-field__error {
   font-family: var(--font-body);
   font-size: 11px;
-  color: #f87171;
+  color: #CC0000;
   display: none;
   margin-top: 2px;
 }
@@ -255,43 +206,34 @@
   display: block;
 }
 
-/* Submit button — high-gloss blue */
 .contact-form__submit {
   width: 100%;
-  background: linear-gradient(135deg, #1a7aff 0%, #0052cc 100%);
+  background: var(--color-blue);
   color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 13px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   margin-top: 4px;
-  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-form__submit:hover {
-  box-shadow: 0 6px 28px rgba(0, 102, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-.contact-form__submit:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 10px rgba(0, 102, 255, 0.3);
+  background: var(--color-blue-hover);
 }
 
 .contact-form__submit:disabled {
-  opacity: 0.55;
+  opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
 }
 
 .contact-form__note {
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.25);
+  color: #AAAAAA;
   font-style: italic;
   text-align: center;
   margin-top: 10px;
@@ -312,7 +254,7 @@
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 18px;
-  color: #ffffff;
+  color: var(--color-black);
   line-height: 1.4;
 }
 
@@ -327,9 +269,9 @@
   gap: 10px;
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.28);
+  color: #888888;
 }
 
 .form-checkbox input[type="checkbox"] {
@@ -344,23 +286,22 @@
 .form-consent-links {
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.25);
+  color: #AAAAAA;
   margin-top: 6px;
   margin-bottom: 10px;
 }
 
 .form-consent-links a {
-  color: rgba(0, 102, 255, 0.85);
+  color: var(--color-blue);
   text-decoration: underline;
 }
 
 /* ------------------------------------------------------------
-   SECTION 03 — CONTACT INFO (dark)
+   SECTION 04 — CONTACT INFO (dark)
    ------------------------------------------------------------ */
 .contact-info {
   background: var(--color-black);
   padding: 64px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .contact-info__heading {
@@ -427,25 +368,82 @@
   .form-row {
     grid-template-columns: 1fr;
   }
-  .sys-window__body {
-    padding: 20px 16px 18px;
-  }
-  .sys-window__iframe-wrap iframe {
+  .contact-iframe-wrap iframe {
     min-height: 640px;
   }
 }
 
 /* ------------------------------------------------------------
-   Dark mode — hero / info adjustments (windows are always dark)
+   Dark Mode
    ------------------------------------------------------------ */
-[data-theme="dark"] .contact-hero {
+[data-theme="dark"] .contact-hero,
+[data-theme="dark"] .contact-calendar-section,
+[data-theme="dark"] .contact-form-section {
   background: var(--color-black);
+  border-top-color: rgba(255, 255, 255, 0.08);
 }
 
-[data-theme="dark"] .contact-hero__headline {
+[data-theme="dark"] .contact-hero__headline,
+[data-theme="dark"] .contact-col__heading {
   color: var(--color-white);
 }
 
-[data-theme="dark"] .contact-hero__sub {
+[data-theme="dark"] .contact-hero__sub,
+[data-theme="dark"] .contact-col__sub {
   color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .form-field label {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="dark"] .form-field input,
+[data-theme="dark"] .form-field select,
+[data-theme="dark"] .form-field textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .form-field input::placeholder,
+[data-theme="dark"] .form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .form-field select option {
+  background: #1a1a1c;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .form-field input:focus,
+[data-theme="dark"] .form-field select:focus,
+[data-theme="dark"] .form-field textarea:focus {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.18);
+  background: rgba(0, 102, 255, 0.06);
+}
+
+[data-theme="dark"] .form-checkbox {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="dark"] .form-consent-links {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .contact-form__note {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .contact-form__success p {
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .contact-form__submit-error a {
+  color: #f87171;
 }
