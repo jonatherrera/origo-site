@@ -12,6 +12,7 @@
   <meta property="og:description" content="Monthly website management starting at $147/mo. Origo handles updates, performance, security, and content so you never have to worry about your site again.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://origo.ooo/services/website-concierge">
+  <meta property="og:site_name" content="Origo">
   <script>
     (function(){
       var saved = localStorage.getItem('origo-theme');
@@ -73,6 +74,24 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "url": "https://origo.ooo/services/app-development" } }
       ]
     }
+  }
+  </script>
+
+  <!-- Schema.org: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://origo.ooo/services/website-concierge#service",
+    "name": "Website Concierge — Ongoing Website Management",
+    "alternateName": "Website Concierge",
+    "url": "https://origo.ooo/services/website-concierge",
+    "description": "Monthly website management starting at $147/mo. Origo handles updates, performance, security, and content so you never have to worry about your site again.",
+    "provider": { "@id": "https://origo.ooo/#organization" },
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "serviceType": "Website Management and Maintenance",
+    "offers": { "@type": "Offer", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "147", "priceCurrency": "USD", "unitText": "MONTH" } },
+    "audience": { "@type": "Audience", "audienceType": "Established small businesses and owner-operated businesses" }
   }
   </script>
 

@@ -12,6 +12,7 @@
   <meta property="og:description" content="Origo writes website copy, brand messaging, and content that sounds like you — clear, trust-building, and written by a human whose name is on it.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://origo.ooo/services/copywriting">
+  <meta property="og:site_name" content="Origo">
   <script>
     (function(){
       var saved = localStorage.getItem('origo-theme');
@@ -73,6 +74,23 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "url": "https://origo.ooo/services/app-development" } }
       ]
     }
+  }
+  </script>
+
+  <!-- Schema.org: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://origo.ooo/services/copywriting#service",
+    "name": "Website Copywriting",
+    "alternateName": "Copywriting",
+    "url": "https://origo.ooo/services/copywriting",
+    "description": "Origo writes website copy, brand messaging, and content that sounds like you — clear, trust-building, and written by a human whose name is on it.",
+    "provider": { "@id": "https://origo.ooo/#organization" },
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "serviceType": "Website Copywriting and Brand Messaging",
+    "audience": { "@type": "Audience", "audienceType": "Established small businesses and owner-operated businesses" }
   }
   </script>
 
