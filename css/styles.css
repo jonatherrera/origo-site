@@ -997,6 +997,47 @@ p {
 .testimonials__label { margin-bottom: 12px; }
 .testimonials__headline { margin-bottom: 48px; }
 
+.testimonials__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonials__cta-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888888;
+  margin-bottom: 14px;
+}
+
+.testimonials__cta-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.testimonials__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 0.5px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-black);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.testimonials__cta-btn:hover {
+  border-color: #BBBBBB;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 .testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
