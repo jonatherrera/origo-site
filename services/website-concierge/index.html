@@ -266,23 +266,59 @@
           <p class="sp-solution__body reveal">On a Concierge plan, Origo handles everything your website needs to stay healthy, fast, secure, and up to date. Monthly maintenance, content updates, monitoring, backups — all handled proactively.</p>
           <p class="sp-solution__body reveal">You get a dedicated point of contact who knows your site, responds fast, and treats your business like it's their own. No tickets, no queues, no runaround.</p>
         </div>
-        <div class="reveal wc-stat-block">
-          <div class="wc-stat-row">
-            <span class="wc-stat-row__number">99.9%</span>
-            <span class="wc-stat-row__label">Uptime SLA</span>
+        <div class="reveal wc-dashboard">
+
+          <!-- Window chrome -->
+          <div class="wc-dash-header">
+            <div class="wc-dash-dots">
+              <span class="wc-dot" style="background:#FF5F57;"></span>
+              <span class="wc-dot" style="background:#FEBC2E;"></span>
+              <span class="wc-dot" style="background:#28C840;"></span>
+            </div>
+            <span class="wc-dash-title">Origo Site Monitor</span>
+            <div class="wc-dash-live">
+              <span class="wc-led"></span>
+              <span>Live</span>
+            </div>
           </div>
-          <div class="wc-stat-row">
-            <span class="wc-stat-row__number">Daily</span>
-            <span class="wc-stat-row__label">Automated backups</span>
+
+          <!-- 99.9% Uptime with ring -->
+          <div class="wc-dash-row">
+            <div class="wc-uptime">
+              <div class="wc-uptime__ring">
+                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle class="wc-ring-track" cx="26" cy="26" r="22"/>
+                  <circle class="wc-ring-fill" cx="26" cy="26" r="22" id="wc-ring-fill"/>
+                </svg>
+              </div>
+              <span class="wc-dash-number wc-counter" data-target="99.9">0%</span>
+              <span class="wc-led wc-led--sm"></span>
+            </div>
+            <span class="wc-dash-label">Uptime SLA</span>
           </div>
-          <div class="wc-stat-row">
-            <span class="wc-stat-row__number">24/7</span>
-            <span class="wc-stat-row__label">Security monitoring</span>
+
+          <!-- Daily backups -->
+          <div class="wc-dash-row">
+            <span class="wc-dash-number">Daily</span>
+            <span class="wc-dash-label">Automated backups</span>
           </div>
-          <div class="wc-stat-row">
-            <span class="wc-stat-row__number">SSL</span>
-            <span class="wc-stat-row__label">Always encrypted</span>
+
+          <!-- 24/7 with radar sweep -->
+          <div class="wc-dash-row">
+            <div class="wc-monitoring">
+              <div class="wc-radar"><div class="wc-radar__sweep"></div></div>
+              <span class="wc-dash-number">24/7</span>
+              <span class="wc-led wc-led--sm"></span>
+            </div>
+            <span class="wc-dash-label">Security monitoring</span>
           </div>
+
+          <!-- SSL -->
+          <div class="wc-dash-row">
+            <span class="wc-dash-number">SSL</span>
+            <span class="wc-dash-label">Always encrypted</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -537,6 +573,48 @@
   </footer>
 
   <script src="/js/main.js?v=6"></script>
+  <script>
+  (function () {
+    var counter = document.querySelector('.wc-counter');
+    var ringFill = document.getElementById('wc-ring-fill');
+    if (!counter || !ringFill) return;
+
+    var r = 22;
+    var circumference = 2 * Math.PI * r; // ≈ 138.2
+    ringFill.style.strokeDasharray = circumference;
+    ringFill.style.strokeDashoffset = circumference;
+
+    var target = 99.9;
+    var duration = 2200;
+    var started = false;
+
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animate() {
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = easeOutCubic(progress);
+        var current = target * eased;
+        counter.textContent = current.toFixed(1) + '%';
+        ringFill.style.strokeDashoffset = circumference * (1 - current / 100);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        animate();
+        observer.disconnect();
+      }
+    }, { threshold: 0.4 });
+
+    observer.observe(counter);
+  })();
+  </script>
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69e1b1d325604d88f062888e"></script>
 </body>
 </html>
