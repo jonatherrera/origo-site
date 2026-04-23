@@ -425,6 +425,60 @@ p {
   margin-top: 24px;
 }
 
+.mobile-nav__services {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav__services summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 14px 0;
+  cursor: pointer;
+  color: var(--color-black);
+  list-style: none;
+}
+
+.mobile-nav__services summary::-webkit-details-marker { display: none; }
+
+.mobile-nav__services summary::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  margin-top: -4px;
+}
+
+.mobile-nav__services[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.mobile-nav__services-list {
+  padding-bottom: 8px;
+}
+
+.mobile-nav__services-list a {
+  font-size: 15px !important;
+  padding: 10px 0 10px 16px !important;
+  border-bottom: none !important;
+  opacity: 0.65;
+}
+
+.mobile-nav__services-list a:first-child {
+  opacity: 1;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .mobile-nav__services summary { color: var(--color-white); }
+
 /* ------------------------------------------------------------
    8. Hero — Section 01
    ------------------------------------------------------------ */
