@@ -411,7 +411,7 @@ p {
 
 .nav__mobile.open { display: block; }
 
-.nav__mobile a {
+.nav__mobile a:not(.btn) {
   display: block;
   font-family: var(--font-head);
   font-weight: 500;
@@ -430,6 +430,15 @@ p {
   width: 100%;
   justify-content: center;
   text-align: center;
+  color: var(--color-white);
+  background: var(--color-blue);
+  border-bottom: none;
+  padding: var(--btn-padding-v) var(--btn-padding-h);
+}
+
+.nav__mobile-cta .btn--primary:hover {
+  background: var(--color-blue-hover);
+  transform: translateY(-1px);
 }
 
 .mobile-nav__services {
