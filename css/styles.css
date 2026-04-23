@@ -445,20 +445,17 @@ p {
 .mobile-nav__services summary::-webkit-details-marker { display: none; }
 
 .mobile-nav__services summary::after {
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--color-blue);
-  border-bottom: 2px solid var(--color-blue);
-  transform: rotate(45deg);
+  content: '+';
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-blue);
+  flex-shrink: 0;
   transition: transform 0.25s ease;
-  margin-top: -4px;
+  line-height: 1;
 }
 
 .mobile-nav__services[open] summary::after {
-  transform: rotate(-135deg);
-  margin-top: 4px;
+  transform: rotate(45deg);
 }
 
 .mobile-nav__services-list {
