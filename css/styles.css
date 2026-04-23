@@ -425,6 +425,13 @@ p {
   margin-top: 24px;
 }
 
+.nav__mobile-cta .btn--primary {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
 .mobile-nav__services {
   border-bottom: 1px solid var(--color-border);
 }
