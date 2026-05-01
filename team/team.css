@@ -236,88 +236,6 @@
 }
 
 /* ------------------------------------------------------------
-   Founder feature layout (Jon, Emily)
-   Oversized name anchors the section, photo sits in a 60/40 grid
-   below with an offset Electric Blue accent block.
-   ------------------------------------------------------------ */
-.member-feature__header {
-  max-width: 900px;
-  margin-bottom: 56px;
-}
-
-.member-feature__role {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-blue);
-  margin-bottom: 16px;
-}
-
-.member-feature__role--dark { color: #4D94FF; }
-
-.member-feature__name {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: clamp(56px, 9vw, 112px);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-  color: var(--color-black);
-  margin: 0;
-}
-
-.member-feature__name--dark { color: var(--color-white); }
-
-.member-feature__body {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 72px;
-  align-items: start;
-}
-
-.member-feature__body.flip {
-  grid-template-columns: 1fr 1.2fr;
-  direction: rtl;
-}
-
-.member-feature__body.flip > * { direction: ltr; }
-
-.member-feature__photo-wrap {
-  position: relative;
-  isolation: isolate;
-}
-
-.member-feature__photo-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 32px -32px -32px 32px;
-  background: var(--color-blue);
-  border-radius: var(--radius);
-  z-index: -1;
-}
-
-.member-feature__body.flip .member-feature__photo-wrap::before {
-  inset: 32px 32px -32px -32px;
-}
-
-.member-feature__photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: var(--radius);
-  display: block;
-}
-
-/* ------------------------------------------------------------
-   Specialist photo aspect variants
-   Keeps alternating two-column layout, varies the crop.
-   ------------------------------------------------------------ */
-.member__photo--square { aspect-ratio: 1 / 1; }
-.member__photo--tall   { aspect-ratio: 3 / 4; }
-
-/* ------------------------------------------------------------
    Section 05 — Daniel & Valentina dual cards
    ------------------------------------------------------------ */
 .dual-card-grid {
@@ -475,34 +393,8 @@
     margin-top: 40px;
   }
 
-  .member-feature__body,
-  .member-feature__body.flip {
-    display: block;
-    direction: ltr;
-    grid-template-columns: none;
-  }
-
-  .member-feature__body > * + * {
-    margin-top: 48px;
-  }
-
-  .member-feature__photo-wrap::before,
-  .member-feature__body.flip .member-feature__photo-wrap::before {
-    inset: 16px -16px -16px 16px;
-  }
-
-  .member-feature__header {
-    margin-bottom: 40px;
-  }
-
   .dual-card-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .member-feature__photo-wrap::before {
-    display: none;
   }
 }
 
