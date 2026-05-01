@@ -15,21 +15,48 @@
 
 
   /* ----------------------------------------------------------
-     2. Nav scroll state
+     2. Nav scroll state — adaptive blur + hide-on-scroll-down
   ---------------------------------------------------------- */
   const nav = document.getElementById('nav') || document.getElementById('site-nav');
 
+  const HIDE_AFTER       = 120;   // px scrolled before hide kicks in
+  const SCROLL_THRESHOLD = 6;     // px of movement needed to flip direction
+  const SCROLLED_AT      = 20;    // px to add adaptive blur class
+
+  let lastY      = window.scrollY;
+  let ticking    = false;
+  let mobileOpen = false;
+
+  function updateNav() {
+    if (!nav) { ticking = false; return; }
+    const y    = Math.max(0, window.scrollY); // clamp iOS rubber-band
+    const diff = y - lastY;
+
+    nav.classList.toggle('scrolled', y > SCROLLED_AT);
+
+    if (mobileOpen) {
+      nav.classList.remove('nav--hidden');
+    } else if (Math.abs(diff) > SCROLL_THRESHOLD) {
+      if (diff > 0 && y > HIDE_AFTER) {
+        nav.classList.add('nav--hidden');     // scrolling down past threshold
+      } else if (diff < 0) {
+        nav.classList.remove('nav--hidden');  // any upward motion reveals
+      }
+      lastY = y;
+    }
+
+    ticking = false;
+  }
+
   function onScroll() {
-    if (!nav) return;
-    if (window.scrollY > 20) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
+    if (!ticking) {
+      requestAnimationFrame(updateNav);
+      ticking = true;
     }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run on load
+  updateNav(); // run on load
 
 
   /* ----------------------------------------------------------
@@ -38,31 +65,30 @@
   const hamburger = document.getElementById('hamburger') || document.getElementById('nav-hamburger');
   const mobileNav = document.getElementById('mobile-nav') || document.getElementById('nav-links');
 
+  function setMobileNav(open) {
+    if (!hamburger || !mobileNav) return;
+    hamburger.classList.toggle('open', open);
+    mobileNav.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    mobileOpen = open;
+    if (open && nav) nav.classList.remove('nav--hidden');
+  }
+
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', function () {
-      const isOpen = hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      setMobileNav(!hamburger.classList.contains('open'));
     });
 
     // Close on mobile nav link click
     mobileNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', function () { setMobileNav(false); });
     });
 
     // Close on Escape
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        setMobileNav(false);
       }
     });
   }
