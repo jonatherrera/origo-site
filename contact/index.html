@@ -89,6 +89,8 @@
   <header class="nav" id="nav" role="banner">
     <div class="container">
       <div class="nav__inner">
+
+        <!-- Logo -->
         <a href="/" class="nav__logo" aria-label="Origo: Home">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 1000 2270 540" aria-hidden="true">
             <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
@@ -97,9 +99,12 @@
             <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#0b0b0b;" transform="translate(706.62 1434.44)">ORIGO</text>
           </svg>
         </a>
+
+        <!-- Desktop Links -->
         <nav class="nav__links" aria-label="Primary navigation">
-                <a href="/about">About</a>
-      <a href="/team">Team</a>
+          <a href="/about">About</a>
+          <a href="/team">Team</a>
+
           <div class="nav__dropdown">
             <span class="nav__dropdown-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
               Services <span class="chevron" aria-hidden="true">&#9662;</span>
@@ -113,6 +118,66 @@
               <a href="/services/app-development" role="menuitem">App Development</a>
             </div>
           </div>
+
+          <a href="/blog">Blog</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="nav__cta">
+          <a href="https://go.origo.ooo/call"
+             class="btn btn--primary"
+             target="_blank"
+             rel="noopener">
+            Book a call
+          </a>
+        </div>
+
+        <!-- Dark mode toggle -->
+        <div class="nav__theme-wrap">
+          <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <nav>
+      <a href="/about">About</a>
+      <a href="/team">Team</a>
+      <details class="mobile-nav__services">
+        <summary>Services</summary>
+        <div class="mobile-nav__services-list">
+          <a href="/services">All Services</a>
+          <a href="/services/branding">Branding</a>
+          <a href="/services/web-design">Web Design</a>
+          <a href="/services/seo-aeo">SEO &amp; AEO</a>
+          <a href="/services/copywriting">Copywriting</a>
+          <a href="/services/website-concierge">Website Concierge</a>
+          <a href="/services/app-development">App Development</a>
+        </div>
+      </details>
       <a href="/blog">Blog</a>
       <a href="/faq">FAQ</a>
       <a href="/contact">Contact</a>
@@ -126,7 +191,13 @@
       </button>
     </div>
     <div class="nav__mobile-cta">
-      <a href="https://go.origo.ooo/call" class="btn btn--primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Book a discovery call <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="https://go.origo.ooo/call"
+         class="btn btn--primary"
+         style="width:100%;justify-content:center;"
+         target="_blank"
+         rel="noopener">
+        Book a discovery call <span class="arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 
