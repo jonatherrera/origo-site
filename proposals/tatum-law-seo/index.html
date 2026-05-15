@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO & AEO Proposal | Tatum Law | Origo</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0066FF;
+    --blue-dark: #0052CC;
+    --blue-light: #E5F0FF;
+    --dark: #2B2B2B;
+    --dark-2: #1A1A1A;
+    --white: #FFFFFF;
+    --light: #F7F7F7;
+    --gray-100: #F0F0F0;
+    --gray-200: #E8E8E8;
+    --gray-400: #AAAAAA;
+    --gray-600: #666666;
+    --red: #CC0000;
+    --red-light: #FFF3F3;
+    --red-border: #FFCCCC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.7;
+    cursor: default;
+  }
+
+  /* ===================== STICKY NAV ===================== */
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(27,27,27,0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 14px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .sticky-nav.visible { transform: translateY(0); }
+
+  .sticky-wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sticky-wordmark span { color: var(--blue); }
+
+  .sticky-prices {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .sticky-price-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .sticky-price-item strong {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .sticky-price-item .sticky-badge {
+    background: var(--blue);
+    color: var(--white);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .sticky-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* ===================== COVER ===================== */
+  .cover {
+    background: var(--dark-2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--blue);
+  }
+
+  .cover-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,102,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,102,255,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  .cover-glow {
+    position: absolute;
+    bottom: -200px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,102,255,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .origo-wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .origo-wordmark span { color: var(--blue); }
+
+  .proposal-tag {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid rgba(0,102,255,0.4);
+    padding: 6px 16px;
+    border-radius: 2px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .cover-body {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s 0.2s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .cover-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--blue);
+  }
+
+  .cover-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.0;
+    margin-bottom: 28px;
+    max-width: 780px;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 0.8s 0.35s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .cover-title em {
+    font-style: normal;
+    color: var(--blue);
+  }
+
+  .cover-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 300;
+    max-width: 540px;
+    margin-bottom: 64px;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 56px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.6s 0.65s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .cover-meta-item label {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .cover-meta-item p { color: var(--white); font-size: 15px; }
+
+  .cover-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    opacity: 0;
+    animation: fadeIn 0.6s 0.9s ease forwards;
+  }
+
+  .cover-bottom-note { font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.04em; }
+
+  .validity-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(0,102,255,0.3);
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  /* ===================== PAGE ===================== */
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px;
+  }
+
+  /* ===================== SECTION HEADERS ===================== */
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-200);
+  }
+
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 14px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .section-intro {
+    font-size: 16px;
+    color: var(--gray-600);
+    max-width: 640px;
+    margin-bottom: 48px;
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  /* ===================== SCROLL REVEAL ===================== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ===================== AI CHAT SECTION ===================== */
+  .aeo-section {
+    margin-bottom: 72px;
+  }
+
+  .chat-window {
+    background: #111214;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 24px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+  }
+
+  .chat-titlebar {
+    background: #1C1E21;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .chat-dots { display: flex; gap: 6px; }
+  .chat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .chat-dot.red { background: #FF5F57; }
+  .chat-dot.yellow { background: #FEBC2E; }
+  .chat-dot.green { background: #28C840; }
+
+  .chat-title-text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.06em;
+    margin-left: 4px;
+  }
+
+  .chat-live-badge {
+    margin-left: auto;
+    background: rgba(0,200,100,0.15);
+    border: 1px solid rgba(0,200,100,0.3);
+    color: #00C864;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .chat-live-dot {
+    width: 5px;
+    height: 5px;
+    background: #00C864;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  .chat-body { padding: 28px 28px 8px; }
+
+  .chat-message {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .chat-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .chat-avatar.user {
+    background: rgba(0,102,255,0.2);
+    color: var(--blue);
+    border: 1px solid rgba(0,102,255,0.3);
+    font-size: 10px;
+  }
+
+  .chat-avatar.ai {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    font-size: 10px;
+  }
+
+  .chat-content { flex: 1; }
+
+  .chat-sender {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .chat-bubble-user {
+    background: rgba(0,102,255,0.15);
+    border: 1px solid rgba(0,102,255,0.2);
+    border-radius: 0 10px 10px 10px;
+    padding: 12px 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+    display: inline-block;
+    max-width: 520px;
+  }
+
+  .chat-bubble-ai {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 0 10px 10px 10px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  .chat-result-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .chat-result-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.14);
+  }
+
+  .chat-result-card:last-child { margin-bottom: 0; }
+
+  .chat-result-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 4px;
+  }
+
+  .chat-result-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .chat-missing {
+    background: rgba(204,0,0,0.1);
+    border: 1px solid rgba(204,0,0,0.25);
+    border-radius: 8px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .chat-missing-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .chat-missing-text {
+    font-size: 13px;
+    color: rgba(255,100,100,0.9);
+    font-weight: 500;
+  }
+
+  .chat-input-bar {
+    background: #1C1E21;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chat-input-mock {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .chat-input-send {
+    width: 32px;
+    height: 32px;
+    background: var(--blue);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+  }
+
+  .chat-input-send svg {
+    width: 14px;
+    height: 14px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* AEO ARGUMENT CALLOUT */
+  .aeo-callout {
+    background: var(--dark-2);
+    border-radius: 8px;
+    padding: 40px 48px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .aeo-callout p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+
+  .aeo-callout p:last-child { margin-bottom: 0; }
+  .aeo-callout p strong { color: var(--white); font-weight: 600; }
+
+  /* ===================== PACKAGES ===================== */
+  .packages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .package-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    border-color: var(--gray-400);
+  }
+
+  .package-card.featured {
+    border-color: var(--blue);
+    box-shadow: 0 8px 40px rgba(0,102,255,0.14);
+  }
+
+  .package-card.featured:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 56px rgba(0,102,255,0.22);
+    border-color: var(--blue);
+  }
+
+  .recommended-tag {
+    background: var(--blue);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .package-header { background: var(--dark); padding: 36px 36px 32px; }
+  .package-card.featured .package-header { background: var(--blue); }
+
+  .package-name {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .package-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .package-price sup { font-size: 24px; vertical-align: super; font-weight: 500; }
+  .package-price-label { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 300; }
+
+  .package-body { padding: 36px; flex: 1; display: flex; flex-direction: column; }
+
+  .package-description {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-bottom: 28px;
+    line-height: 1.75;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 300;
+  }
+
+  .package-features-label {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--gray-400);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .package-features { list-style: none; flex: 1; }
+
+  .package-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--dark);
+    padding: 9px 0;
+    border-bottom: 1px solid var(--light);
+    line-height: 1.5;
+    transition: color 0.2s ease;
+  }
+
+  .package-features li:last-child { border-bottom: none; }
+
+  .package-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .package-features li.bonus { font-weight: 500; }
+
+  .bonus-tag {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-light);
+    padding: 2px 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  /* ===================== SERVICES ===================== */
+  .services-section { margin-bottom: 72px; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-item {
+    background: var(--white);
+    padding: 32px 36px;
+    transition: background 0.25s ease;
+  }
+
+  .service-item:hover { background: #FAFCFF; }
+
+  .service-icon-wrap {
+    width: 38px;
+    height: 38px;
+    background: var(--blue-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+
+  .service-item:hover .service-icon-wrap {
+    background: var(--blue);
+    transform: scale(1.05);
+  }
+
+  .service-icon-wrap svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--blue);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.25s ease;
+  }
+
+  .service-item:hover .service-icon-wrap svg { stroke: var(--white); }
+
+  .service-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .service-desc { font-size: 13px; color: var(--gray-600); line-height: 1.75; font-weight: 300; }
+
+  .service-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-top: 12px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .tag-both { background: var(--light); color: var(--gray-600); }
+  .tag-premium { background: var(--blue-light); color: var(--blue); }
+
+  /* ===================== TERMS ===================== */
+  .terms-section {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 48px 56px;
+    margin-bottom: 72px;
+    border: 1px solid var(--gray-200);
+  }
+
+  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 56px; margin-top: 36px; }
+
+  .term-item label {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .term-item p { font-size: 14px; color: var(--dark); line-height: 1.75; font-weight: 300; }
+  .term-divider { grid-column: 1 / -1; height: 1px; background: var(--gray-200); }
+
+  /* ===================== NEXT STEPS ===================== */
+  .next-steps {
+    background: var(--dark-2);
+    border-radius: 8px;
+    padding: 48px 56px;
+    margin-bottom: 72px;
+    border-top: 4px solid var(--blue);
+  }
+
+  .next-steps-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .next-steps-text {
+    font-size: 15px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+    margin-bottom: 36px;
+    font-weight: 300;
+    max-width: 560px;
+  }
+
+  .steps-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .steps-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 18px 20px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  .steps-list li:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  .step-num {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--blue);
+    background: rgba(0,102,255,0.12);
+    border: 1px solid rgba(0,102,255,0.25);
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .step-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+    font-weight: 300;
+    padding-top: 4px;
+  }
+
+  /* ===================== SIGNATURE ===================== */
+  .signature-section {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 48px 56px;
+    margin-bottom: 48px;
+    border: 1px solid var(--gray-200);
+  }
+
+  .signature-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .signature-note { font-size: 14px; color: var(--gray-600); margin-bottom: 40px; font-weight: 300; }
+
+  .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+  .sig-block label {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .sig-block .sig-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+
+  .sig-block .sig-title { font-size: 13px; color: var(--gray-600); margin-bottom: 28px; font-weight: 300; }
+  .sig-line { border-bottom: 1.5px solid var(--gray-200); height: 48px; margin-bottom: 8px; }
+  .sig-line-label { font-size: 11px; color: var(--gray-400); font-family: 'Roboto Mono', monospace; }
+
+  /* ===================== FOOTER ===================== */
+  .proposal-footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.06em;
+    border-top: 1px solid var(--gray-200);
+    background: var(--white);
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .proposal-footer strong { color: var(--dark); font-weight: 600; }
+
+  /* ===================== ANIMATIONS ===================== */
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ===================== PRINT ===================== */
+  @media print {
+    .sticky-nav { display: none; }
+    .print-btn { display: none; }
+    .reveal { opacity: 1; transform: none; }
+    .page { padding: 40px; }
+
+    .cover {
+      min-height: auto;
+      padding: 48px;
+      background: #1A1A1A !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cover-grid-bg, .cover-glow { display: none; }
+
+    .chat-window {
+      background: #111214 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      box-shadow: none;
+    }
+
+    .chat-titlebar {
+      background: #1C1E21 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .chat-body {
+      background: #111214 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .chat-bubble-ai {
+      background: rgba(255,255,255,0.04) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .chat-result-card {
+      background: rgba(255,255,255,0.05) !important;
+      border: 1px solid rgba(255,255,255,0.09) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .chat-missing {
+      background: rgba(204,0,0,0.1) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .chat-input-bar {
+      background: #1C1E21 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .aeo-callout {
+      background: #1A1A1A !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .package-header {
+      background: #2B2B2B !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .package-card.featured .package-header {
+      background: #0066FF !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .recommended-tag {
+      background: #0066FF !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .next-steps {
+      background: #1A1A1A !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .steps-list li {
+      background: rgba(255,255,255,0.03) !important;
+      border: 1px solid rgba(255,255,255,0.06) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .service-icon-wrap {
+      background: #E5F0FF !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" id="stickyNav">
+  <div class="sticky-wordmark">ORIGO<span>.</span></div>
+  <div style="font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; font-style: italic;">Build trust. Own your presence.</div>
+</nav>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-grid-bg"></div>
+  <div class="cover-glow"></div>
+
+  <div class="cover-top">
+    <div class="origo-wordmark">ORIGO<span>.</span></div>
+    <div class="proposal-tag">SEO &amp; AEO Proposal</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-eyebrow">Prepared for Tatum Law</div>
+    <h1 class="cover-title">Search &amp; AI<br><em>Visibility</em><br>Proposal</h1>
+    <p class="cover-subtitle">A complete SEO and Answer Engine Optimization engagement designed to put Tatum Law in front of the right clients across every search environment.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <label>Prepared for</label>
+        <p>LM Tatum PLLC / Tatum Law</p>
+      </div>
+      <div class="cover-meta-item">
+        <label>Prepared by</label>
+        <p>Origo Solutions LLC</p>
+      </div>
+      <div class="cover-meta-item">
+        <label>Date</label>
+        <p>May 14, 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-bottom-note">Origo Solutions LLC &nbsp;|&nbsp; origo.ooo &nbsp;|&nbsp; Texas, serving clients nationwide</div>
+    <div class="validity-badge">Valid for 30 days</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="page">
+
+  <!-- OVERVIEW HEADER -->
+  <div style="margin-bottom: 48px; padding-top: 16px;" class="reveal">
+    <div class="section-eyebrow">The Problem</div>
+    <h2 class="section-title">Your competitors are showing up<br>where you are not.</h2>
+    <p class="section-intro">When a potential client asks an AI tool to recommend a business attorney in San Antonio, four firms come up by name. Tatum Law is not one of them. This is not a reflection of your practice. It is a solvable problem.</p>
+  </div>
+
+  <!-- AI CHAT SECTION -->
+  <div class="aeo-section reveal reveal-delay-1">
+
+    <div class="chat-window">
+      <div class="chat-titlebar">
+        <div class="chat-dots">
+          <div class="chat-dot red"></div>
+          <div class="chat-dot yellow"></div>
+          <div class="chat-dot green"></div>
+        </div>
+        <div class="chat-title-text">AI Assistant &nbsp;/&nbsp; New Conversation</div>
+        <div class="chat-live-badge">
+          <div class="chat-live-dot"></div>
+          Live Result
+        </div>
+      </div>
+
+      <div class="chat-body">
+        <div class="chat-message">
+          <div class="chat-avatar user">JH</div>
+          <div class="chat-content">
+            <div class="chat-sender">Jon Herrera</div>
+            <div class="chat-bubble-user">What are the best B2B law offices in San Antonio?</div>
+          </div>
+        </div>
+
+        <div class="chat-message">
+          <div class="chat-avatar ai">AI</div>
+          <div class="chat-content">
+            <div class="chat-sender">AI Assistant</div>
+            <div class="chat-bubble-ai">Here are some of the top business law firms in San Antonio worth considering, depending on your needs:</div>
+
+            <div class="chat-result-card">
+              <div class="chat-result-name">Langley &amp; Banack</div>
+              <div class="chat-result-desc">Recommended for serious litigation and high-stakes disputes. One of the most decorated firms in San Antonio for commercial litigation. Practice group co-chair Peter Kilpatrick is Board Certified in Civil Trial Law by the Texas Board of Legal Specialization.</div>
+            </div>
+
+            <div class="chat-result-card">
+              <div class="chat-result-name">The Morales Firm, P.C.</div>
+              <div class="chat-result-desc">A solid mid-size option with more than 70 years of combined courtroom experience. Focuses specifically on breach of contract, breach of fiduciary duty, business fraud, noncompete and NDA agreements, and construction disputes.</div>
+            </div>
+
+            <div class="chat-result-card">
+              <div class="chat-result-name">Clausewitz Reyes</div>
+              <div class="chat-result-desc">A strong choice for small to mid-size businesses. As a small business themselves, they emphasize accessibility and availability as priorities. Attorney Tiffanie Clausewitz has received multiple top lawyer awards.</div>
+            </div>
+
+            <div class="chat-result-card">
+              <div class="chat-result-name">South Texas Business Lawyers (Matt Duke)</div>
+              <div class="chat-result-desc">Licensed since 2008, with experience from large firms and companies. Offers affordable membership programs that make legal counsel accessible for companies at any budget level.</div>
+            </div>
+
+            <div class="chat-missing">
+              <div class="chat-missing-dot"></div>
+              <div class="chat-missing-text">Tatum Law did not appear in these results.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-bar">
+        <div class="chat-input-mock">Ask a follow-up question...</div>
+        <div class="chat-input-send">
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="aeo-callout">
+      <p>This is not a reflection of the quality of Lisa Tatum's practice. She is a former State Bar President, a former prosecutor, and one of the most credentialed attorneys in San Antonio. <strong>The firms that appeared above are not more qualified. They are better positioned in the places where AI tools go to find answers.</strong></p>
+      <p>Search has changed. A growing number of clients are skipping Google entirely and asking AI assistants directly for recommendations. ChatGPT, Perplexity, Google's AI Overview, and Claude are answering those questions right now, every day, with or without your input. This proposal covers both traditional SEO and Answer Engine Optimization so that the next time someone asks an AI tool for a business attorney in San Antonio, Tatum Law is in the answer.</p>
+    </div>
+
+  </div>
+
+  <!-- SERVICES BREAKDOWN -->
+  <div class="services-section reveal">
+    <div class="section-eyebrow">Scope of Work</div>
+    <h2 class="section-title">What we do and why it matters</h2>
+    <p class="section-intro">Every service in this proposal connects directly to getting Tatum Law found by the clients who need you most.</p>
+
+    <div class="services-grid">
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="service-name">On-Page SEO</div>
+        <p class="service-desc">Every page on the Tatum Law site gets optimized: titles, meta descriptions, headings, internal links, and image alt text. This is the foundation that everything else builds on.</p>
+        <span class="service-tag tag-both">Both packages</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+        </div>
+        <div class="service-name">Local SEO</div>
+        <p class="service-desc">San Antonio clients searching for a business attorney need to find you first. We manage your Google Business Profile, build local citations, and optimize for the map pack.</p>
+        <span class="service-tag tag-both">Both packages</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="service-name">Technical SEO</div>
+        <p class="service-desc">Site speed, crawlability, mobile performance, and Core Web Vitals. We monitor the technical health of your site so Google can access and rank your content without friction.</p>
+        <span class="service-tag tag-both">Both packages</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="service-name">Rank Tracking and Reporting</div>
+        <p class="service-desc">Monthly keyword rank tracking across your core practice areas, paired with a clear written report that tells you what moved, what is working, and what comes next.</p>
+        <span class="service-tag tag-both">Both packages</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <div class="service-name">AEO and AI Search Optimization</div>
+        <p class="service-desc">Google's AI Overview, ChatGPT, Perplexity, and Gemini are answering legal questions directly. We optimize your content and structure so Tatum Law gets cited in those answers.</p>
+        <span class="service-tag tag-premium">Premium only</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div class="service-name">Content Strategy and Writing</div>
+        <p class="service-desc">Two long-form articles and two Google Business Profile posts per month, researched, written, and published by Origo. Built around your practice areas and the questions your ideal clients are already searching.</p>
+        <span class="service-tag tag-premium">Premium only</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="reveal" style="margin-bottom: 16px; margin-top: 72px;">
+    <div class="section-eyebrow">Investment Options</div>
+    <h2 class="section-title">Choose your package</h2>
+    <p class="section-intro">Both packages are ongoing monthly engagements with a 12-month minimum commitment. Setup costs are rolled into the first month. No separate onboarding fee.</p>
+  </div>
+
+  <div class="packages-grid" style="margin-bottom: 72px;">
+
+    <div class="package-card reveal reveal-delay-1">
+      <div class="package-header">
+        <div class="package-name">Essentials</div>
+        <div class="package-price"><sup>$</sup>1,597</div>
+        <div class="package-price-label">per month &nbsp;/&nbsp; 12-month minimum</div>
+      </div>
+      <div class="package-body">
+        <p class="package-description">The full SEO foundation your site needs to rank in San Antonio, attract the right clients, and build search authority that compounds over time.</p>
+        <div class="package-features-label">What is included</div>
+        <ul class="package-features">
+          <li>On-page SEO: meta titles, descriptions, and heading structure</li>
+          <li>Local SEO and Google Business Profile management</li>
+          <li>Technical SEO monitoring: Core Web Vitals, crawlability, and site speed</li>
+          <li>Schema markup implementation</li>
+          <li>Keyword research and monthly rank tracking</li>
+          <li>Monthly written SEO performance report</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="package-card featured reveal reveal-delay-2">
+      <div class="recommended-tag">Recommended</div>
+      <div class="package-header">
+        <div class="package-name">Premium</div>
+        <div class="package-price"><sup>$</sup>2,497</div>
+        <div class="package-price-label">per month &nbsp;/&nbsp; 12-month minimum</div>
+      </div>
+      <div class="package-body">
+        <p class="package-description">Everything in Essentials, plus AEO and AI search optimization, content written and published monthly, and expanded tracking to stay ahead of your competition.</p>
+        <div class="package-features-label">Everything in Essentials, plus</div>
+        <ul class="package-features">
+          <li>AEO optimization: Google AI Overview, ChatGPT, and Perplexity</li>
+          <li>Two long-form blog articles written and published by Origo each month</li>
+          <li>Two Google Business Profile posts written and published each month</li>
+          <li>Competitor rank tracking and gap analysis</li>
+          <li>Advanced schema and entity optimization</li>
+          <li>Quarterly strategy and performance review call</li>
+          <li class="bonus">Live client performance dashboard <span class="bonus-tag">Bonus</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TERMS -->
+  <div class="terms-section reveal">
+    <div class="section-eyebrow">Agreement Terms</div>
+    <h2 class="section-title" style="font-size:28px;">Terms and conditions</h2>
+    <div class="terms-grid">
+
+      <div class="term-item">
+        <label>Commitment</label>
+        <p>Both packages require a 12-month minimum term. After the initial term, the agreement renews month to month with 30 days written notice required to cancel.</p>
+      </div>
+
+      <div class="term-item">
+        <label>Ownership</label>
+        <p>All content, reports, and materials produced under this agreement are owned by the client upon full payment of each monthly invoice.</p>
+      </div>
+
+      <div class="term-divider"></div>
+
+      <div class="term-item">
+        <label>Results Disclaimer</label>
+        <p>Origo applies industry best practices and proven methodology. Specific ranking positions and traffic levels cannot be guaranteed, as search algorithms are outside our control.</p>
+      </div>
+
+      <div class="term-item">
+        <label>Confidentiality</label>
+        <p>Origo treats all client information, strategy, and materials as confidential and will not share with third parties without written consent.</p>
+      </div>
+
+      <div class="term-divider"></div>
+
+      <div class="term-item">
+        <label>Proposal Validity</label>
+        <p>This proposal is valid for 30 days from the date of issue. Pricing and terms are subject to change after that period.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NEXT STEPS -->
+  <div class="next-steps reveal">
+    <h3 class="next-steps-title">Ready to move forward?</h3>
+    <p class="next-steps-text">Getting started is straightforward. Once you select your package and sign the agreement, we begin onboarding immediately and work starts in the first week.</p>
+    <ul class="steps-list">
+      <li>
+        <div class="step-num">01</div>
+        <div class="step-text">Select your package and sign the agreement below</div>
+      </li>
+      <li>
+        <div class="step-num">02</div>
+        <div class="step-text">First invoice issued on your start date. No separate setup charge</div>
+      </li>
+      <li>
+        <div class="step-num">03</div>
+        <div class="step-text">Origo completes onboarding and access setup within 3 business days</div>
+      </li>
+      <li>
+        <div class="step-num">04</div>
+        <div class="step-text">Work begins. First monthly report delivered at the 30-day mark</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="signature-section reveal">
+    <div class="section-eyebrow">Authorization</div>
+    <h3 class="signature-title">Client Agreement</h3>
+    <p class="signature-note">By signing below, both parties agree to the scope, pricing, and terms outlined in this proposal.</p>
+
+    <div class="signature-grid">
+      <div class="sig-block">
+        <label>Client</label>
+        <div class="sig-name">Lisa Tatum</div>
+        <div class="sig-title">LM Tatum PLLC / Tatum Law</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+      </div>
+      <div class="sig-block">
+        <label>Provider</label>
+        <div class="sig-name">Jonathan Herrera</div>
+        <div class="sig-title">Origo Solutions LLC</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="proposal-footer">
+  <strong>Origo Solutions LLC</strong> &nbsp;|&nbsp; origo.ooo &nbsp;|&nbsp; Texas, serving clients nationwide &nbsp;|&nbsp; Proposal v1.0 &nbsp;|&nbsp; May 14, 2026
+</div>
+
+<style>
+  .print-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 200;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 14px 22px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 24px rgba(0,102,255,0.35);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .print-btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,102,255,0.45);
+  }
+
+  .print-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media print {
+    .print-btn { display: none; }
+  }
+</style>
+
+<button class="print-btn" onclick="window.print()">
+  <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+  Save as PDF
+</button>
+
+<script>
+  // STICKY NAV
+  const nav = document.getElementById('stickyNav');
+  const cover = document.getElementById('cover');
+
+  const navObserver = new IntersectionObserver(([entry]) => {
+    nav.classList.toggle('visible', !entry.isIntersecting);
+  }, { threshold: 0.1 });
+
+  navObserver.observe(cover);
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+  reveals.forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
