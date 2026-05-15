@@ -1459,6 +1459,22 @@ p {
 
 .footer__contact a:hover { color: var(--color-white); }
 
+.footer__partner-meta {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+.footer__disclosure {
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+}
+
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding-top: 24px;
