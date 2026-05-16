@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SEO & AEO Proposal | Absolute Auto & Transmission | Origo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0066FF;
+      --dark: #2B2B2B;
+      --dark2: #1A1A1A;
+      --white: #FFFFFF;
+      --light: #F7F7F7;
+      --blue-light: #E5F0FF;
+      --gray200: #E8E8E8;
+      --gray400: #AAAAAA;
+      --gray600: #666666;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: var(--dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; }
+
+    .eyebrow {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* —— STICKY NAV —— */
+    .sticky-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26,26,26,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,102,255,0.2);
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+    .sticky-nav.visible { transform: translateY(0); }
+    .nav-wordmark {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+    .nav-wordmark span { color: var(--blue); }
+    .nav-tagline {
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: var(--gray400);
+    }
+
+    /* —— COVER —— */
+    .cover {
+      min-height: 100vh;
+      background: var(--dark2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border-top: 4px solid var(--blue);
+    }
+    .cover-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,102,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,102,255,0.045) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .cover-glow {
+      position: absolute;
+      bottom: -120px; right: -120px;
+      width: 680px; height: 680px;
+      background: radial-gradient(circle, rgba(0,102,255,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cover-content {
+      position: relative;
+      z-index: 2;
+      padding: 5rem;
+      max-width: 920px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(26px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .cover-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.2s forwards;
+    }
+    .cover-title {
+      font-weight: 800;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.06;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.4s forwards;
+    }
+    .cover-title span { color: var(--blue); }
+    .cover-divider {
+      width: 60px; height: 3px;
+      background: var(--blue);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.55s forwards;
+    }
+    .cover-subtitle {
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: var(--gray400);
+      margin-bottom: 3.5rem;
+      line-height: 1.78;
+      max-width: 700px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.65s forwards;
+    }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.85s forwards;
+    }
+    .cover-meta-item label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray600);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .cover-meta-item span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+
+    /* —— SECTIONS —— */
+    section { padding: 6rem 5rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+
+    /* —— PROBLEM —— */
+    .problem-section { background: var(--white); }
+    .problem-section h2 {
+      font-size: clamp(1.75rem, 3vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--dark2);
+      margin-bottom: 1.5rem;
+    }
+    .problem-section p {
+      font-size: 1.05rem;
+      line-height: 1.82;
+      color: var(--gray600);
+      max-width: 740px;
+    }
+
+    /* —— CHAT SECTION —— */
+    .chat-section { background: var(--light); }
+    .chat-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 0.75rem;
+    }
+    .chat-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray600);
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 0;
+    }
+
+    /* —— CLAUDE-STYLE CHAT WINDOW —— */
+    .chat-window {
+      max-width: 760px;
+      margin: 2.5rem auto 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Title bar: macOS chrome + Claude branding */
+    .chat-titlebar {
+      background: #1C1C1C;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0.75rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .traffic-lights { display: flex; gap: 6px; flex-shrink: 0; }
+    .traffic-lights span { width: 12px; height: 12px; border-radius: 50%; }
+    .tl-red    { background: #FF5F57; }
+    .tl-yellow { background: #FEBC2E; }
+    .tl-green  { background: #28C840; }
+
+    .claude-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+      justify-content: center;
+    }
+    .claude-logo-mark {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+    }
+    .claude-name {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #e0e0e0;
+    }
+    .claude-model-badge {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.62rem;
+      color: #888;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.62rem;
+      color: #28C840;
+      flex-shrink: 0;
+    }
+    .live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #28C840;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
+    /* Chat body: Claude's dark theme */
+    .chat-body {
+      background: #1A1A1A;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* User message row */
+    .chat-message {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+    }
+    .chat-message.user {
+      justify-content: flex-end;
+      padding: 1.25rem 1.5rem 0.75rem;
+    }
+    .chat-message.ai-row {
+      padding: 1.25rem 1.5rem 0.5rem;
+      gap: 0.85rem;
+    }
+
+    /* User bubble: pill style like Claude.ai */
+    .user-bubble {
+      background: #2E2E2E;
+      color: #E8E8E8;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      padding: 0.75rem 1.1rem;
+      border-radius: 18px 18px 4px 18px;
+      max-width: 72%;
+    }
+
+    /* Claude logo mark avatar */
+    .claude-avatar {
+      width: 28px; height: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Claude response: no bubble, just text */
+    .claude-response {
+      flex: 1;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #D0D0D0;
+    }
+    .claude-response-intro {
+      margin-bottom: 0.9rem;
+    }
+
+    /* Competitor result cards inside Claude response */
+    .competitor-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 0.75rem;
+    }
+    .competitor-card {
+      background: #252525;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 0.7rem 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .competitor-num {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #CF7A55;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    .competitor-info strong {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: #F0F0F0;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .competitor-info p {
+      font-size: 0.77rem;
+      color: #888;
+      line-height: 1.45;
+    }
+    .top-pick-badge {
+      font-size: 0.65rem;
+      color: #f59e0b;
+      font-weight: 400;
+    }
+
+    /* Red "did not appear" callout */
+    .chat-callout-red {
+      background: rgba(220,38,38,0.12);
+      border: 1px solid rgba(220,38,38,0.32);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin: 0 1.5rem 1.25rem;
+    }
+    .callout-icon { font-size: 0.95rem; flex-shrink: 0; margin-top: 2px; }
+    .callout-text {
+      font-size: 0.82rem;
+      color: #f87171;
+      line-height: 1.55;
+    }
+    .callout-text strong { color: #fca5a5; }
+
+    /* —— AEO CALLOUT —— */
+    .aeo-callout {
+      background: var(--dark2);
+      padding: 6rem 5rem;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .aeo-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      border-left: 4px solid var(--blue);
+      padding-left: 2.5rem;
+    }
+    .aeo-inner h2 {
+      font-weight: 700;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+    .aeo-inner p {
+      font-size: 1rem;
+      line-height: 1.87;
+      color: var(--gray400);
+      max-width: 720px;
+      margin-bottom: 1.25rem;
+    }
+    .aeo-inner p:last-of-type { margin-bottom: 0; }
+    .aeo-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.75rem 0 1.5rem;
+    }
+    .aeo-stat-col {
+      background: rgba(0,102,255,0.07);
+      border: 1px solid rgba(0,102,255,0.18);
+      border-radius: 10px;
+      padding: 1.25rem 1.1rem;
+    }
+    .aeo-stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.9rem;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .aeo-stat-num span {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.6;
+    }
+    .aeo-stat-desc {
+      font-size: 0.78rem;
+      color: var(--gray400);
+      line-height: 1.45;
+    }
+
+    .aeo-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(0,102,255,0.12);
+      border: 1px solid rgba(0,102,255,0.25);
+      border-radius: 5px;
+      padding: 0.3rem 0.8rem;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.78rem;
+      color: #7BB8FF;
+      margin: 0 2px;
+    }
+
+    /* —— CASE STUDY —— */
+    .case-study-section { background: var(--light); }
+    .case-study-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 0.6rem;
+    }
+    .case-study-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray600);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+
+    .case-study-card {
+      background: var(--dark2);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,102,255,0.2);
+      max-width: 960px;
+      margin: 2.5rem auto 0;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .case-study-header {
+      background: linear-gradient(135deg, #1A1A1A 0%, #0d1a33 100%);
+      border-bottom: 1px solid rgba(0,102,255,0.2);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .case-study-header h3 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+    .case-study-header .cs-loc {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--blue);
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+    .cs-tag {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(0,102,255,0.12);
+      border: 1px solid rgba(0,102,255,0.25);
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      white-space: nowrap;
+    }
+
+    .case-study-body { padding: 2.5rem; }
+    .cs-narrative {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .cs-block h4 {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+    .cs-block p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--gray400);
+    }
+
+    .cs-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: rgba(0,102,255,0.07);
+      border-radius: 10px;
+      border: 1px solid rgba(0,102,255,0.15);
+    }
+    .cs-stat { text-align: center; }
+    .cs-stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.35rem, 2vw, 1.9rem);
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .cs-stat-label {
+      font-size: 0.73rem;
+      color: var(--gray600);
+      line-height: 1.35;
+    }
+
+    .cs-quote {
+      border-left: 3px solid var(--blue);
+      padding-left: 1.5rem;
+    }
+    .cs-quote p {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--gray400);
+      line-height: 1.72;
+      margin-bottom: 0.5rem;
+    }
+    .cs-quote cite {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--blue);
+      font-style: normal;
+      letter-spacing: 0.05em;
+    }
+
+    /* —— SCOPE —— */
+    .scope-section { background: var(--white); }
+    .scope-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 0.75rem;
+    }
+    .scope-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray600);
+      margin-bottom: 3rem;
+      line-height: 1.75;
+      max-width: 620px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .service-tile {
+      background: var(--light);
+      border: 1px solid var(--gray200);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .service-tile:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 22px rgba(0,102,255,0.09);
+    }
+    .service-icon {
+      width: 42px; height: 42px;
+      border-radius: 8px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .service-tile:hover .service-icon { background: var(--blue); }
+    .service-icon svg {
+      width: 20px; height: 20px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.2s;
+    }
+    .service-tile:hover .service-icon svg { stroke: white; }
+    .service-info h4 {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--dark2);
+      margin-bottom: 0.25rem;
+    }
+    .service-info p {
+      font-size: 0.81rem;
+      color: var(--gray600);
+      line-height: 1.55;
+    }
+    .service-tag {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    .service-tag.both {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+    .service-tag.premium {
+      background: rgba(0,102,255,0.08);
+      color: var(--blue);
+      border: 1px solid rgba(0,102,255,0.2);
+    }
+
+    /* —— PACKAGES —— */
+    .packages-section { background: var(--light); }
+    .packages-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 0.75rem;
+    }
+    .packages-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray600);
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .package-card {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .package-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+    .package-header { padding: 2rem 2rem 1.75rem; }
+    .package-header.essentials { background: var(--dark); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .package-header.premium {
+      background: var(--blue);
+      position: relative;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .recommended-banner {
+      position: absolute;
+      top: 0; right: 0;
+      background: rgba(255,255,255,0.18);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: white;
+      padding: 0.3rem 0.9rem;
+      border-bottom-left-radius: 8px;
+    }
+    .package-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .package-price {
+      font-weight: 800;
+      font-size: 2.2rem;
+      color: white;
+      line-height: 1;
+    }
+    .package-price span {
+      font-size: 0.92rem;
+      font-weight: 400;
+      opacity: 0.75;
+    }
+    .package-term {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.4rem;
+    }
+    .package-body {
+      background: white;
+      padding: 2rem;
+    }
+    .package-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .package-body ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.865rem;
+      color: var(--dark);
+      line-height: 1.45;
+    }
+    .package-body ul li::before {
+      content: '';
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      flex-shrink: 0;
+      margin-top: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230066FF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: 11px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .package-body ul li.bonus {
+      color: var(--blue);
+      font-weight: 500;
+    }
+    .package-body ul li.bonus::before {
+      background-color: var(--blue);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    }
+    .package-divider {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray400);
+      margin: 1rem 0 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--gray200);
+    }
+
+    /* —— TERMS —— */
+    .terms-section { background: var(--white); }
+    .terms-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 3rem;
+    }
+    .terms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+    .term-block {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      border-top: 3px solid var(--blue);
+    }
+    .term-block h4 {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--dark2);
+      margin-bottom: 0.6rem;
+    }
+    .term-block p {
+      font-size: 0.845rem;
+      color: var(--gray600);
+      line-height: 1.68;
+    }
+
+    /* —— NEXT STEPS —— */
+    .next-steps-section {
+      background: var(--dark2);
+      padding: 6rem 5rem;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .next-steps-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .next-steps-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray400);
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    .step-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .step-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,102,255,0.35);
+    }
+    .step-num {
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+    .step-card h4 {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .step-card p {
+      font-size: 0.82rem;
+      color: var(--gray400);
+      line-height: 1.62;
+    }
+
+    /* —— SIGNATURE —— */
+    .signature-section { background: var(--white); }
+    .signature-section h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 0.75rem;
+    }
+    .signature-section > .section-inner > p {
+      font-size: 1rem;
+      color: var(--gray600);
+      margin-bottom: 3rem;
+      line-height: 1.75;
+      max-width: 640px;
+    }
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .signature-block {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      border: 1px solid var(--gray200);
+    }
+    .signature-block h4 {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1.25rem;
+    }
+    .sig-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--dark2);
+      margin-bottom: 0.2rem;
+    }
+    .sig-company {
+      font-size: 0.84rem;
+      color: var(--gray600);
+      margin-bottom: 2rem;
+    }
+    .sig-line-wrap { margin-bottom: 1.25rem; }
+    .sig-line {
+      display: block;
+      width: 100%;
+      height: 38px;
+      border: none;
+      border-bottom: 1px solid var(--gray200);
+      background: transparent;
+      margin-bottom: 0.25rem;
+    }
+    .sig-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--gray400);
+      letter-spacing: 0.08em;
+    }
+
+    /* —— FOOTER —— */
+    footer {
+      background: var(--dark2);
+      padding: 2rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .footer-wordmark {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+    }
+    .footer-wordmark span { color: var(--blue); }
+    .footer-right {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--gray600);
+      text-align: right;
+      line-height: 1.65;
+    }
+
+    /* —— PDF BUTTON —— */
+    .pdf-btn {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 999;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 0.85rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(0,102,255,0.42);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .pdf-btn:hover { background: #0055DD; transform: translateY(-2px); }
+    .pdf-btn svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* —— SCROLL REVEAL —— */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* —— PRINT —— */
+    @media print {
+      .sticky-nav, .pdf-btn { display: none !important; }
+
+      body, * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <nav class="sticky-nav" id="stickyNav">
+    <div class="nav-wordmark">ORIGO<span>.</span></div>
+    <div class="nav-tagline">Build trust. Own your presence.</div>
+  </nav>
+
+  <!-- COVER -->
+  <section class="cover" id="cover">
+    <div class="cover-grid"></div>
+    <div class="cover-glow"></div>
+    <div class="cover-content">
+      <div class="cover-label">SEO &amp; AEO Proposal &middot; May 15, 2026</div>
+      <h1 class="cover-title">Your shop does great work.<br>The internet doesn't know it <span>yet</span>.</h1>
+      <div class="cover-divider"></div>
+      <p class="cover-subtitle">A 12-month strategy to make Absolute Auto &amp; Transmission the most visible, most trusted auto repair shop in San Antonio, across Google, Google Business Profile, and the AI platforms that are reshaping how customers find businesses like yours.</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <label>Prepared for</label>
+          <span>Josh Elmer / Absolute Auto</span>
+        </div>
+        <div class="cover-meta-item">
+          <label>Prepared by</label>
+          <span>Origo Solutions LLC</span>
+        </div>
+        <div class="cover-meta-item">
+          <label>Valid through</label>
+          <span>June 15, 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">The Problem</span>
+      <h2 class="reveal reveal-delay-1">In San Antonio, when someone needs auto repair, you're not in the conversation.</h2>
+      <p class="reveal reveal-delay-2">When a driver in San Antonio has an oil leak, a brake problem, or a transmission issue, their first move is a search. Not just Google anymore. They're asking AI. They're typing into ChatGPT, Gemini, and Google's AI Overviews, expecting a trusted recommendation in seconds. Right now, Absolute Auto &amp; Transmission has zero visibility across all three of those platforms. Zero out of twenty opportunities. That's not a ranking problem. It's an invisibility problem. And every day it goes unaddressed, someone else gets the job.</p>
+      <p class="reveal reveal-delay-3">It goes deeper than visibility too. The blog posts already on your site have no categories, no tags, and no calls to action. Someone finds an article, reads it, and hits a dead end. No next step. No way to book. No connection to the services you actually offer. Good content that does nothing is just wasted effort.</p>
+    </div>
+  </section>
+
+  <!-- AI CHAT INTERFACE -->
+  <section class="chat-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">The Evidence</span>
+      <h2 class="reveal reveal-delay-1">Here's what a customer sees when they ask AI for help.</h2>
+      <p class="reveal reveal-delay-2">This is the actual response Claude returned when asked: "My car is in need of repairs, I think we have an oil leak, who is the most trusted auto repair shop in San Antonio Texas?" Five shops were recommended. Absolute Auto was not one of them.</p>
+
+      <div class="chat-window reveal reveal-delay-3">
+
+        <!-- Title bar: macOS chrome + Claude branding -->
+        <div class="chat-titlebar">
+          <div class="traffic-lights">
+            <span class="tl-red"></span>
+            <span class="tl-yellow"></span>
+            <span class="tl-green"></span>
+          </div>
+          <div class="claude-brand">
+            <!-- Claude logo mark (orange asterisk/starburst) -->
+            <svg class="claude-logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4 L22.5 17.5 L35 12 L25.5 22 L38 26 L24.5 26.5 L28 39 L20 28 L12 39 L15.5 26.5 L2 26 L14.5 22 L5 12 L17.5 17.5 Z" fill="#CF7A55"/>
+            </svg>
+            <span class="claude-name">Claude</span>
+            <span class="claude-model-badge">claude-sonnet-4-6</span>
+          </div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            Live Result
+          </div>
+        </div>
+
+        <!-- Chat body -->
+        <div class="chat-body">
+
+          <!-- User message -->
+          <div class="chat-message user">
+            <div class="user-bubble">My car is in need of repairs, I think we have an oil leak, who is the most trusted auto repair shop in San Antonio Texas?</div>
+          </div>
+
+          <!-- Claude response -->
+          <div class="chat-message ai-row">
+            <svg class="claude-avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4 L22.5 17.5 L35 12 L25.5 22 L38 26 L24.5 26.5 L28 39 L20 28 L12 39 L15.5 26.5 L2 26 L14.5 22 L5 12 L17.5 17.5 Z" fill="#CF7A55"/>
+            </svg>
+            <div class="claude-response">
+              <div class="claude-response-intro">Here are the most trusted auto repair shops in San Antonio for an oil leak:</div>
+              <div class="competitor-cards">
+                <div class="competitor-card">
+                  <span class="competitor-num">01</span>
+                  <div class="competitor-info">
+                    <strong>Cambridge Auto Center <span class="top-pick-badge">&#9733; Top Pick</span></strong>
+                    <p>San Antonio has depended on Cambridge Auto Center for over 35 years. ASE Master Technicians, 23 repair bays, voted best auto shop in San Antonio.</p>
+                  </div>
+                </div>
+                <div class="competitor-card">
+                  <span class="competitor-num">02</span>
+                  <div class="competitor-info">
+                    <strong>Auto Service Experts</strong>
+                    <p>Family-owned, ASE Master Mechanics, 25+ years experience, AAA Approved, BBB A+ rated, 3-year/36,000-mile warranty.</p>
+                  </div>
+                </div>
+                <div class="competitor-card">
+                  <span class="competitor-num">03</span>
+                  <div class="competitor-info">
+                    <strong>AutoWorks</strong>
+                    <p>Operating since 1983, ASE-Certified, 36-month/36,000-mile warranty. Specifically mentions oil leaks. After-hours drop-off available.</p>
+                  </div>
+                </div>
+                <div class="competitor-card">
+                  <span class="competitor-num">04</span>
+                  <div class="competitor-info">
+                    <strong>Seymour's Garage</strong>
+                    <p>5.0 rating from 206 verified reviews. Customers describe service as "honest, efficient, and trustworthy."</p>
+                  </div>
+                </div>
+                <div class="competitor-card">
+                  <span class="competitor-num">05</span>
+                  <div class="competitor-info">
+                    <strong>Christian Brothers Automotive</strong>
+                    <p>Multiple San Antonio locations, AAA Approved, known nationwide for honest, transparent service.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Red callout outside the response row -->
+          <div class="chat-callout-red">
+            <span class="callout-icon">&#9888;</span>
+            <div class="callout-text"><strong>Absolute Auto &amp; Transmission did not appear.</strong> Five competitors were recommended to a ready-to-buy customer. Your business was not mentioned once.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO ARGUMENT -->
+  <section class="aeo-callout">
+    <div class="aeo-inner reveal">
+      <span class="eyebrow">Why This Matters</span>
+      <h2>AI isn't the future of search. It's the present. And right now, it doesn't know you exist.</h2>
+      <p>Every one of those five shops, Cambridge Auto Center, Auto Service Experts, AutoWorks, Seymour's Garage, and Christian Brothers Automotive, is getting recommended to people who are ready to spend money. That's not just search traffic. That's booked appointments. Those shops aren't winning because they're better at their craft. They're winning because they've built a digital presence that AI can read, trust, and cite.</p>
+      <div class="aeo-stats-grid">
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">0<span>/20</span></div>
+          <div class="aeo-stat-desc">AI mentions across ChatGPT, Gemini, and Google AI Mode</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">5<span>/100</span></div>
+          <div class="aeo-stat-desc">Domain authority score</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">30<span>/100</span></div>
+          <div class="aeo-stat-desc">Content health score</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">4<span>/mo</span></div>
+          <div class="aeo-stat-desc">Website visits while a direct competitor pulls 118</div>
+        </div>
+      </div>
+      <p>These aren't vanity metrics. They're the reason the phone isn't ringing from the internet.</p>
+      <p>AEO, Answer Engine Optimization, is the discipline of making your business legible to AI. It's building the structured content, trust signals, and authority that cause AI platforms to cite you instead of your competition. It takes expertise, consistency, and a plan. That's what this proposal is.</p>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="case-study-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Proof of Work</span>
+      <h2 class="reveal reveal-delay-1">We've done this before. In San Antonio. In automotive.</h2>
+      <p class="reveal reveal-delay-2">360 Collision came to Origo in a similar position: a quality shop with a reputation that their online presence wasn't reflecting. Here's what happened over twelve months.</p>
+
+      <div class="case-study-card reveal reveal-delay-3">
+        <div class="case-study-header">
+          <div>
+            <h3>360 Collision</h3>
+            <div class="cs-loc">Auto Body Shop &middot; San Antonio, TX</div>
+          </div>
+          <div class="cs-tag">Origo Client &middot; 2025</div>
+        </div>
+        <div class="case-study-body">
+          <div class="cs-narrative">
+            <div class="cs-block">
+              <h4>Before Origo</h4>
+              <p>360 Collision had strong community trust and quality workmanship, but almost no organic search presence. Their website wasn't ranking for meaningful local terms, their Google Business Profile wasn't optimized, and AI platforms didn't know they existed.</p>
+            </div>
+            <div class="cs-block">
+              <h4>What Origo Did</h4>
+              <p>Origo built a full SEO and GBP strategy from the ground up. That meant optimizing their Google Business Profile, publishing timely blog content tied to hailstorms and seasonal events, targeting high-intent local keywords, and building the consistent, trustworthy presence that both Google and AI platforms cite with confidence.</p>
+            </div>
+          </div>
+          <div class="cs-stats">
+            <div class="cs-stat">
+              <div class="cs-stat-num">329.8%</div>
+              <div class="cs-stat-label">Increase in keyword rankings</div>
+            </div>
+            <div class="cs-stat">
+              <div class="cs-stat-num">215.9%</div>
+              <div class="cs-stat-label">Increase in call clicks from GBP</div>
+            </div>
+            <div class="cs-stat">
+              <div class="cs-stat-num">238.4%</div>
+              <div class="cs-stat-label">Increase in GBP impressions</div>
+            </div>
+            <div class="cs-stat">
+              <div class="cs-stat-num">#7</div>
+              <div class="cs-stat-label">ChatGPT ranking: top shops in San Antonio</div>
+            </div>
+          </div>
+          <div class="cs-quote">
+            <p>"Fantastic business! Very creative, in touch with the current markets, and they have done a great job helping us grow our online presence."</p>
+            <cite>Kelly Rabedeau, Owner &middot; 360 Collision</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE OF WORK -->
+  <section class="scope-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Scope of Work</span>
+      <h2 class="reveal reveal-delay-1">Everything we'll build for you.</h2>
+      <p class="reveal reveal-delay-2">Every service below is tied directly to a gap the audit identified. Nothing here is boilerplate. This is the specific work Absolute Auto needs.</p>
+
+      <div class="service-grid">
+
+        <div class="service-tile reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Google Business Profile Optimization</h4>
+            <p>Full audit, optimization, and ongoing management of your GBP. For 360 Collision, GBP became the single most powerful lead driver in the business.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Review Monitoring &amp; Response Templates</h4>
+            <p>AI platforms rank businesses with strong, consistent reviews. We monitor incoming reviews and arm you with professional response language that builds trust publicly.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>On-Page SEO Optimization</h4>
+            <p>Your existing pages get a full technical and content overhaul: meta titles, descriptions, header structure, internal linking, and schema. The foundation everything else builds on.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="3"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>New Service Landing Pages</h4>
+            <p>Dedicated pages for Oil Change, Brake Repair, AC Repair, Suspension Repair, Engine Diagnostics, and Detailed Inspections, each built around Brian's keyword research with FAQ schema, EEAT blocks, and booking CTAs.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Local Citation Cleanup</h4>
+            <p>Your name, address, and phone number across local directories gets audited and corrected. Inconsistent citations hurt your local rankings and confuse AI platforms.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Schema Markup Implementation</h4>
+            <p>Structured data that tells search engines and AI platforms exactly who you are, what you do, and why you're trustworthy. A critical layer for AEO visibility.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Monthly Keyword Tracking &amp; Reporting</h4>
+            <p>A clear monthly report on keyword movement, traffic trends, and what's working. You'll always know exactly where you stand.</p>
+            <span class="service-tag both">Both packages</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>4 GBP Posts Per Month</h4>
+            <p>Consistent GBP posting keeps your profile active and signals trust to Google. Timely posts tied to real events drove significant traffic spikes for 360 Collision.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>AEO Content Buildout</h4>
+            <p>Structured About Us, Team, and Service content written so AI platforms can read, understand, and cite your business. This is the core of your invisibility problem, and the core of the fix.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>CARFAX &amp; RepairPal Listing Setup</h4>
+            <p>The audit flagged zero presence in these trust ecosystems. AI platforms heavily cite CARFAX Top-Rated and RepairPal certified shops. We'll get you in.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>Authority Backlink Building</h4>
+            <p>3 to 5 high-quality placements per month from real, relevant sources. Your current authority score is 0 out of 100. This is what changes that.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>2 Blog Posts Per Month</h4>
+            <p>Timely content tied to local events, seasonal trends, and customer questions. This is what drove the biggest organic spikes for 360 Collision, and it works the same for general auto repair.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>San Antonio Local Hub &amp; Homepage Optimization</h4>
+            <p>A dedicated San Antonio landing page with map embed, services list, and LocalBusiness schema to unlock 3-pack rankings. Paired with a full homepage rewrite: new H1/H2, EEAT block, FAQ schema, and keyword targeting.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>FAQ Page Buildout</h4>
+            <p>A dedicated FAQ page written to match how real customers search and ask questions, optimized for AI and voice search. One of the highest-performing content formats for AEO visibility.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+        <div class="service-tile reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="service-info">
+            <h4>AI Visibility Monitoring</h4>
+            <p>Monthly tracking of your mention rate across ChatGPT, Gemini, and Google AI Mode. You'll know exactly how your AI presence is growing and what needs adjustment.</p>
+            <span class="service-tag premium">Premium only</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Choose Your Package</span>
+      <h2 class="reveal reveal-delay-1">Two paths to the same destination.</h2>
+      <p class="reveal reveal-delay-2">Both packages build the foundation. Premium accelerates the timeline and adds the AEO layer that gets you in front of AI-driven searches. Both require a 12-month minimum commitment.</p>
+
+      <div class="package-grid">
+        <div class="package-card reveal">
+          <div class="package-header essentials">
+            <div class="package-name">Essentials</div>
+            <div class="package-price">$1,597<span>/mo</span></div>
+            <div class="package-term">12-month minimum &middot; then month-to-month</div>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Google Business Profile optimization &amp; management</li>
+              <li>Review monitoring &amp; response templates</li>
+              <li>On-page SEO optimization (existing pages)</li>
+              <li>New service landing pages: Oil Change, Brake Repair, AC Repair, Suspension Repair, Engine Diagnostics, and Detailed Inspections</li>
+              <li>Local citation cleanup &amp; consistency</li>
+              <li>Schema markup implementation</li>
+              <li>Monthly keyword tracking &amp; performance report</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="package-card reveal reveal-delay-2">
+          <div class="package-header premium">
+            <div class="recommended-banner">Recommended</div>
+            <div class="package-name">Premium</div>
+            <div class="package-price">$2,497<span>/mo</span></div>
+            <div class="package-term">12-month minimum &middot; then month-to-month</div>
+          </div>
+          <div class="package-body">
+            <div class="package-divider">Everything in Essentials, plus:</div>
+            <ul>
+              <li>4 GBP posts per month</li>
+              <li>AEO content buildout (About, Team, Services written for AI citation)</li>
+              <li>CARFAX &amp; RepairPal listing setup and optimization</li>
+              <li>Authority backlink building (3 to 5 quality placements/month)</li>
+              <li>2 blog posts per month tied to local events and seasonal demand</li>
+              <li>San Antonio local hub page and homepage optimization</li>
+              <li>FAQ page buildout optimized for AI and voice search</li>
+              <li>AI visibility monitoring across ChatGPT, Gemini, and Google AI Mode</li>
+              <li class="bonus">Live client performance dashboard (Bonus)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS -->
+  <section class="terms-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Agreement Terms</span>
+      <h2 class="reveal reveal-delay-1">What you're agreeing to. No surprises.</h2>
+      <div class="terms-grid">
+        <div class="term-block reveal">
+          <h4>Commitment</h4>
+          <p>Both packages require a 12-month minimum term. After the initial term, the agreement renews month to month with 30 days written notice required to cancel.</p>
+        </div>
+        <div class="term-block reveal reveal-delay-1">
+          <h4>Ownership</h4>
+          <p>All content, reports, and materials produced under this agreement are owned by the client upon full payment of each monthly invoice.</p>
+        </div>
+        <div class="term-block reveal reveal-delay-2">
+          <h4>Results Disclaimer</h4>
+          <p>Origo applies industry best practices and proven methodology. Specific ranking positions and traffic levels cannot be guaranteed, as search algorithms are outside our control.</p>
+        </div>
+        <div class="term-block reveal reveal-delay-3">
+          <h4>Confidentiality</h4>
+          <p>Origo treats all client information, strategy, and materials as confidential and will not share with third parties without written consent.</p>
+        </div>
+        <div class="term-block reveal">
+          <h4>Proposal Validity</h4>
+          <p>This proposal is valid for 30 days from the date of issue. Pricing and terms are subject to change after that period.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="next-steps-section">
+    <div class="section-inner">
+      <span class="eyebrow">What Happens Next</span>
+      <h2 class="reveal reveal-delay-1">Four steps from invisible to indispensable.</h2>
+      <p class="reveal reveal-delay-2">Once you sign, here's exactly what happens and when.</p>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num">01</div>
+          <h4>Sign the Agreement</h4>
+          <p>Review and sign this proposal. We'll send a formal agreement through our e-sign platform for your records.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <h4>Onboarding Call</h4>
+          <p>We schedule a 60-minute kickoff to align on priorities, gather access credentials, and confirm the strategy before we begin.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <h4>We Get to Work</h4>
+          <p>Origo begins execution. GBP optimization, on-page work, service pages, and citations get addressed in the first 30 days.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <h4>Monthly Reporting</h4>
+          <p>You receive a clear performance report each month: rankings, traffic, GBP activity, and AI visibility, all in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE -->
+  <section class="signature-section">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Client Agreement</span>
+      <h2 class="reveal reveal-delay-1">Ready to own your presence?</h2>
+      <p class="reveal reveal-delay-2">By signing below, both parties agree to the scope of work, pricing, and terms outlined in this proposal. A formal agreement will follow via e-sign for binding execution.</p>
+      <div class="signature-grid">
+        <div class="signature-block reveal">
+          <h4>Client</h4>
+          <div class="sig-name">Josh Elmer</div>
+          <div class="sig-company">Absolute Auto &amp; Transmission</div>
+          <div class="sig-line-wrap">
+            <div class="sig-line"></div>
+            <div class="sig-label">Signature</div>
+          </div>
+          <div class="sig-line-wrap">
+            <div class="sig-line"></div>
+            <div class="sig-label">Date</div>
+          </div>
+          <div class="sig-line-wrap">
+            <div class="sig-line"></div>
+            <div class="sig-label">Package Selected</div>
+          </div>
+        </div>
+        <div class="signature-block reveal reveal-delay-2">
+          <h4>Origo Solutions LLC</h4>
+          <div class="sig-name">Jonathan Herrera</div>
+          <div class="sig-company">Origo Solutions LLC</div>
+          <div class="sig-line-wrap">
+            <div class="sig-line"></div>
+            <div class="sig-label">Signature</div>
+          </div>
+          <div class="sig-line-wrap">
+            <div class="sig-line"></div>
+            <div class="sig-label">Date</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wordmark">ORIGO<span>.</span></div>
+    <div class="footer-right">
+      Origo Solutions LLC &nbsp;|&nbsp; origo.ooo &nbsp;|&nbsp; Texas, serving clients nationwide<br>
+      Proposal v1.0 &nbsp;|&nbsp; May 15, 2026
+    </div>
+  </footer>
+
+  <!-- FLOATING PDF BUTTON -->
+  <button class="pdf-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Save as PDF
+  </button>
+
+  <script>
+    // Sticky nav: show after cover leaves viewport
+    const nav = document.getElementById('stickyNav');
+    const cover = document.getElementById('cover');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          nav.classList.add('visible');
+        } else {
+          nav.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.05 });
+    navObserver.observe(cover);
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>

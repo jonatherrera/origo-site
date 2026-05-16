@@ -1,0 +1,16 @@
+# Basic Auth via mod_rewrite (self-contained — no .htpasswd file required)
+# Credentials: josh / s64MgqctRq6Z^U
+# Base64 of "josh:s64MgqctRq6Z^U" = am9zaDpzNjRNZ3FjdFJxNlpeVQ==
+
+RewriteEngine On
+
+# If the Authorization header doesn't match the expected Basic credentials, return 401
+RewriteCond %{HTTP:Authorization} !^Basic\ am9zaDpzNjRNZ3FjdFJxNlpeVQ==$
+RewriteRule .* - [R=401,L]
+
+# Send the WWW-Authenticate header on 401 so browsers show the password prompt
+<IfModule mod_headers.c>
+  Header always set WWW-Authenticate 'Basic realm="Absolute Auto Proposal"' "expr=%{REQUEST_STATUS} == 401"
+</IfModule>
+
+ErrorDocument 401 "Authentication required to view this proposal."
