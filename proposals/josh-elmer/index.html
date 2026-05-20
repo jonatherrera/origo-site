@@ -45,7 +45,7 @@
       display: block;
     }
 
-    /* —— STICKY NAV —— */
+    /* -- STICKY NAV -- */
     .sticky-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -77,7 +77,7 @@
       color: var(--gray400);
     }
 
-    /* —— COVER —— */
+    /* -- COVER -- */
     .cover {
       min-height: 100vh;
       background: var(--dark2);
@@ -175,11 +175,11 @@
       color: var(--white);
     }
 
-    /* —— SECTIONS —— */
+    /* -- SECTIONS -- */
     section { padding: 6rem 5rem; }
     .section-inner { max-width: 960px; margin: 0 auto; }
 
-    /* —— PROBLEM —— */
+    /* -- PROBLEM -- */
     .problem-section { background: var(--white); }
     .problem-section h2 {
       font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -195,7 +195,7 @@
       max-width: 740px;
     }
 
-    /* —— CHAT SECTION —— */
+    /* -- CHAT SECTION -- */
     .chat-section { background: var(--light); }
     .chat-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -211,7 +211,7 @@
       margin-bottom: 0;
     }
 
-    /* —— CLAUDE-STYLE CHAT WINDOW —— */
+    /* -- CLAUDE-STYLE CHAT WINDOW -- */
     .chat-window {
       max-width: 760px;
       margin: 2.5rem auto 0;
@@ -399,7 +399,7 @@
     }
     .callout-text strong { color: #fca5a5; }
 
-    /* —— AEO CALLOUT —— */
+    /* -- AEO CALLOUT -- */
     .aeo-callout {
       background: var(--dark2);
       padding: 6rem 5rem;
@@ -472,7 +472,7 @@
       margin: 0 2px;
     }
 
-    /* —— CASE STUDY —— */
+    /* -- CASE STUDY -- */
     .case-study-section { background: var(--light); }
     .case-study-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -597,7 +597,7 @@
       letter-spacing: 0.05em;
     }
 
-    /* —— SCOPE —— */
+    /* -- SCOPE -- */
     .scope-section { background: var(--white); }
     .scope-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -684,7 +684,7 @@
       border: 1px solid rgba(0,102,255,0.2);
     }
 
-    /* —— PACKAGES —— */
+    /* -- PACKAGES -- */
     .packages-section { background: var(--light); }
     .packages-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -807,7 +807,7 @@
       border-top: 1px solid var(--gray200);
     }
 
-    /* —— TERMS —— */
+    /* -- TERMS -- */
     .terms-section { background: var(--white); }
     .terms-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -838,7 +838,7 @@
       line-height: 1.68;
     }
 
-    /* —— NEXT STEPS —— */
+    /* -- NEXT STEPS -- */
     .next-steps-section {
       background: var(--dark2);
       padding: 6rem 5rem;
@@ -893,7 +893,7 @@
       line-height: 1.62;
     }
 
-    /* —— SIGNATURE —— */
+    /* -- SIGNATURE -- */
     .signature-section { background: var(--white); }
     .signature-section h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
@@ -955,7 +955,7 @@
       letter-spacing: 0.08em;
     }
 
-    /* —— FOOTER —— */
+    /* -- FOOTER -- */
     footer {
       background: var(--dark2);
       padding: 2rem 5rem;
@@ -981,7 +981,7 @@
       line-height: 1.65;
     }
 
-    /* —— PDF BUTTON —— */
+    /* -- PDF BUTTON -- */
     .pdf-btn {
       position: fixed;
       bottom: 2rem; right: 2rem;
@@ -1004,7 +1004,7 @@
     .pdf-btn:hover { background: #0055DD; transform: translateY(-2px); }
     .pdf-btn svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-    /* —— SCROLL REVEAL —— */
+    /* -- SCROLL REVEAL -- */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -1016,7 +1016,7 @@
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* —— PRINT —— */
+    /* -- PRINT -- */
     @media print {
       .sticky-nav, .pdf-btn { display: none !important; }
 
@@ -1196,6 +1196,18 @@
         <div class="aeo-stat-col">
           <div class="aeo-stat-num">4<span>/mo</span></div>
           <div class="aeo-stat-desc">Website visits while a direct competitor pulls 118</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">2,400</div>
+          <div class="aeo-stat-desc">Monthly searches for "auto repair San Antonio" you're not showing up for</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">118<span>x</span></div>
+          <div class="aeo-stat-desc">More website visits a direct local competitor gets every month</div>
+        </div>
+        <div class="aeo-stat-col">
+          <div class="aeo-stat-num">29</div>
+          <div class="aeo-stat-desc">Total backlinks on your site, most from low-quality directories</div>
         </div>
       </div>
       <p>These aren't vanity metrics. They're the reason the phone isn't ringing from the internet.</p>
@@ -1568,7 +1580,9 @@
             <div class="sig-label">Date</div>
           </div>
           <div class="sig-line-wrap">
-            <div class="sig-line"></div>
+            <div style="height:38px; display:flex; align-items:center; border-bottom:1px solid var(--gray200); margin-bottom:0.25rem;">
+              <span style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.88rem; color:var(--blue);">Premium: $2,497/month</span>
+            </div>
             <div class="sig-label">Package Selected</div>
           </div>
         </div>
