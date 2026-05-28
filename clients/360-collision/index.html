@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>360 Collision Performance Review | Origo Client Portal</title>
+  <meta name="description" content="Private client performance review for 360 Collision, prepared by Origo Solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-auth="false">
+
+  <!--
+    LOGIN SCREEN
+    Visible until the credentials match. See app.js AUTH config.
+  -->
+  <section class="login-screen" aria-label="Client portal login">
+    <div class="login-card">
+      <div class="brand-mark brand-mark--login" role="img" aria-label="Origo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 1000 2270 540" aria-hidden="true">
+          <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+          <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+          <path fill="#0b0b0b" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
+          <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#0b0b0b;" transform="translate(706.62 1434.44)">ORIGO</text>
+        </svg>
+      </div>
+      <p class="login-sub">Client Portal</p>
+
+      <form id="login-form" class="login-form" autocomplete="on" novalidate>
+        <label class="field">
+          <span class="field-label">Username</span>
+          <input type="text" name="username" id="username" autocomplete="username" required>
+        </label>
+        <label class="field">
+          <span class="field-label">Password</span>
+          <input type="password" name="password" id="password" autocomplete="current-password" required>
+        </label>
+        <div id="login-error" class="login-error" role="alert" aria-live="polite"></div>
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      </form>
+
+      <p class="login-footer">Prepared for 360 Collision. Origo Solutions.</p>
+    </div>
+  </section>
+
+  <!--
+    REPORT
+    Hidden via CSS until authenticated (body[data-auth="true"]).
+  -->
+  <div class="report" aria-hidden="true">
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <div class="brand-mark" role="img" aria-label="Origo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 1000 2270 540" aria-hidden="true">
+              <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+              <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+              <path fill="#0b0b0b" d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
+              <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;fill:#0b0b0b;" transform="translate(706.62 1434.44)">ORIGO</text>
+            </svg>
+          </div>
+          <div class="topbar-title">360 Collision Performance Review</div>
+        </div>
+        <div class="topbar-right">
+          <button type="button" id="print-btn" class="btn btn-ghost" aria-label="Print or save as PDF">Print or save as PDF</button>
+          <button type="button" id="logout-btn" class="btn btn-ghost" aria-label="Log out">Log out</button>
+        </div>
+      </div>
+      <nav class="jumpnav" aria-label="Report sections">
+        <div class="jumpnav-inner">
+          <a href="#summary" class="jumpnav-link">Summary</a>
+          <a href="#leads" class="jumpnav-link">Leads</a>
+          <a href="#sources" class="jumpnav-link">Sources</a>
+          <a href="#local" class="jumpnav-link">Local Search</a>
+          <a href="#growth" class="jumpnav-link">Growth</a>
+          <a href="#health" class="jumpnav-link">Health</a>
+          <a href="#content" class="jumpnav-link">Content &amp; AEO</a>
+          <a href="#status" class="jumpnav-link">Status</a>
+          <a href="#roadmap" class="jumpnav-link">Roadmap</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="report-main">
+
+      <header class="report-header reveal">
+        <p class="eyebrow">PERFORMANCE REVIEW</p>
+        <h1 class="report-title">360 Collision</h1>
+        <p class="report-subtitle">SEO and AEO Review. April 2026 and Year to Date.</p>
+        <p class="report-meta">Prepared by Origo Solutions for Kelly Rabedeau. San Antonio, TX.</p>
+      </header>
+
+      <section id="summary" class="section reveal">
+        <h2 class="section-title">Executive Summary</h2>
+        <div class="section-rule"></div>
+        <p><strong>April was 360 Collision's strongest lead generation month to date.</strong> The shop captured 288.5 tracked leads (exceeding target), powered by high intent towing and estimate calls. Local visibility kept expanding, with 14 top three green zone map placements across the San Antonio metro and a 4.9 star Google rating reinforcing the profile that drives the majority of inbound calls.</p>
+        <p>Year to date, the site's visibility in Google is up across the board: <strong>visits +20.1%, times shown in search +14.9%, and average ranking improved nearly six spots</strong>, with mobile rankings now on the doorstep of page one. The first five months of 2026 built a strong technical foundation and a complete content plan. The next phase moves from building that foundation to using it: publishing content, getting more people to click, and turning the 88,000 plus times the site appears in search each month into real visits and booked jobs.</p>
+        <p><strong>Most importantly, the lead engine is working.</strong> Across the year so far, CallRail has tracked 1,613 inbound calls producing 734.5 leads, and 78% of them trace directly back to the Google Business Profile we manage, confirming that the local search investment is exactly what makes the phone ring.</p>
+      </section>
+
+      <section id="leads" class="section reveal">
+        <h2 class="section-title">Lead Generation and Conversion</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">This is the bottom line, the calls that turn into work. All lead data is sourced from CallRail, which independently tracks and attributes every inbound call. Towing and Estimate calls remain the highest intent drivers for the business.</p>
+
+        <h3 class="subhead">April 2026 snapshot</h3>
+        <div class="stat-grid stat-grid--4">
+          <div class="stat-card">
+            <div class="stat-label">TOTAL LEADS</div>
+            <div class="stat-number">288.5</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">QUALIFIED</div>
+            <div class="stat-number">58</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">TOWING CALLS</div>
+            <div class="stat-number">101</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">ESTIMATES</div>
+            <div class="stat-number">73</div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Google Business Profile, the number one lead driver</h3>
+        <div class="stat-grid stat-grid--4">
+          <div class="stat-card">
+            <div class="stat-label">PROFILE VIEWS</div>
+            <div class="stat-number">1,394</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">SEARCH APPEARANCES</div>
+            <div class="stat-number">842</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">WEBSITE CLICKS</div>
+            <div class="stat-number">156</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">AVG RATING</div>
+            <div class="stat-number">4.9</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" class="section reveal">
+        <h2 class="section-title">Where the Leads Came From (Year to Date, Jan 1 to May 27)</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">Across the year so far, CallRail tracked 1,613 inbound calls that produced 734.5 leads. The picture is clear: the Google Business Profile we manage drives the overwhelming majority of 360 Collision's phone calls.</p>
+
+        <div class="stat-grid stat-grid--3">
+          <div class="stat-card">
+            <div class="stat-label">FROM GOOGLE PROFILE</div>
+            <div class="stat-number">78%</div>
+            <div class="stat-caption">572.5 of 734.5 leads</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">TOTAL LEADS (YTD)</div>
+            <div class="stat-number">734.5</div>
+            <div class="stat-caption">Jan 1 to May 27</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">CALLS TRACKED (YTD)</div>
+            <div class="stat-number">1,613</div>
+            <div class="stat-caption">all inbound calls</div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Leads by source (year to date)</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Source</th>
+                <th scope="col" class="num">Leads</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-total"><th scope="row">All sources (total)</th><td class="num">734.5</td></tr>
+              <tr class="row-highlight"><th scope="row">Google Business Profile</th><td class="num">572.5</td></tr>
+              <tr><th scope="row">Direct</th><td class="num">33</td></tr>
+              <tr><th scope="row">Google Ads</th><td class="num">22</td></tr>
+              <tr><th scope="row">Google Organic</th><td class="num">11</td></tr>
+              <tr><th scope="row">Facebook Organic</th><td class="num">4</td></tr>
+              <tr><th scope="row">Bing Organic</th><td class="num">3</td></tr>
+              <tr><th scope="row">ChatGPT (chatgpt.com)</th><td class="num">2</td></tr>
+              <tr><th scope="row">All other sources</th><td class="num">87</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>The takeaway:</strong> the Google Business Profile is, by a wide margin, the single biggest source of leads for the shop, with Direct, Google Ads, and Google Organic making up most of the rest. This is exactly why the local search work has been the top priority.</p>
+        <p><strong>Where the next growth comes from:</strong> the smaller channels are modest today but point straight at the plan ahead. Organic search, Facebook, YouTube, and even AI assistants (ChatGPT already shows up as a source sending people to 360 Collision) are exactly the channels the content and social work is built to grow.</p>
+      </section>
+
+      <section id="local" class="section reveal">
+        <h2 class="section-title">Local Search Dominance</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">When customers search 'collision repair San Antonio' from different points around the city, here is where 360 Collision shows up on the map. Each tile is a spot in the metro. The number is the shop's ranking there.</p>
+
+        <div class="heatmap" role="img" aria-label="3 by 3 ranking heatmap. Row 1: 1, 1, 2. Row 2: 3, 4, 5. Row 3: 6, 7, 8.">
+          <div class="heatmap-tile heatmap-green">1</div>
+          <div class="heatmap-tile heatmap-green">1</div>
+          <div class="heatmap-tile heatmap-green">2</div>
+          <div class="heatmap-tile heatmap-green">3</div>
+          <div class="heatmap-tile heatmap-amber">4</div>
+          <div class="heatmap-tile heatmap-amber">5</div>
+          <div class="heatmap-tile heatmap-amber">6</div>
+          <div class="heatmap-tile heatmap-amber">7</div>
+          <div class="heatmap-tile heatmap-amber">8</div>
+        </div>
+
+        <p class="legend">Green is a top 3 finish. Amber is spots 4 to 8, where the shop is closing in.</p>
+
+        <p>The shop holds a <strong>7.0 average local ranking</strong> with <strong>14 top three green zone placements</strong> across the San Antonio metro this month, keeping 360 Collision highly visible to nearby customers right when they are searching. This map visibility is exactly what feeds the Google Business Profile calls shown above.</p>
+      </section>
+
+      <section id="growth" class="section reveal">
+        <h2 class="section-title">Year to Date Organic Growth</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">Comparing the first five months of 2026 against the end of 2025, organic search visibility is up across the board, with the largest gains on mobile, where most customers search.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col" class="num">Start of Year</th>
+                <th scope="col" class="num">Current</th>
+                <th scope="col" class="num">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Visits from Google</th><td class="num">274</td><td class="num">329</td><td class="num"><span class="change-up"><span class="tri" aria-hidden="true">&#9650;</span> +20.1%</span></td></tr>
+              <tr><th scope="row">Times shown in search</th><td class="num">76,669</td><td class="num">88,061</td><td class="num"><span class="change-up"><span class="tri" aria-hidden="true">&#9650;</span> +14.9%</span></td></tr>
+              <tr><th scope="row">Average ranking</th><td class="num">21.9</td><td class="num">16.1</td><td class="num"><span class="change-up"><span class="tri" aria-hidden="true">&#9650;</span> +5.85 spots</span></td></tr>
+              <tr><th scope="row">Average ranking (mobile)</th><td class="num">20.4</td><td class="num">12.1</td><td class="num"><span class="change-up"><span class="tri" aria-hidden="true">&#9650;</span> +8.3 spots</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Mobile is the headline win:</strong> the site's average ranking on phones jumped from 20.4 to 12.1, putting it on the doorstep of page one for most customers. The number of search terms the site shows up for also surged early in the year (from 1,108 in January to 1,707 in February), and traffic peaked in March at 314 visits.</p>
+
+        <h3 class="subhead">The spring dip and the opportunity</h3>
+        <p>In April the site dipped in the number of search terms it ranks for. This lines up with a Google algorithm update, not a loss of the site's standing, and in fact the quality links pointing to the site grew 41% over the same period. The cleanup we completed this year is exactly what makes this easy to recover, and turning it back around is the focus of the next phase.</p>
+
+        <p><strong>The clearest quick win is getting more people to click.</strong> The site shows up in Google over 88,000 times a month, but only about 1.46% of the people who see it actually click through. Getting that to a normal 3% would <strong>more than double the traffic, without ranking for anything new</strong>.</p>
+      </section>
+
+      <section id="health" class="section reveal">
+        <h2 class="section-title">Website Health and Technical Foundation</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">The website's foundation has been significantly strengthened this year through a mix of automated and hands on cleanup. The site now runs on automatic weekly maintenance with zero broken links or errors that block Google, a clean and healthy base for the content push ahead.</p>
+
+        <div class="stat-grid stat-grid--4">
+          <div class="stat-card">
+            <div class="stat-label">SITE HEALTH SCORE</div>
+            <div class="stat-number">92</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">TOTAL FIXES</div>
+            <div class="stat-number">1,349</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">PAGES UPDATED</div>
+            <div class="stat-number">267</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">LISTINGS IMPROVED</div>
+            <div class="stat-number">228</div>
+          </div>
+        </div>
+
+        <h3 class="subhead">What we improved this period</h3>
+        <ul class="bullets">
+          <li>267 pages updated to target the search terms customers actually use</li>
+          <li>228 search listing descriptions rewritten so more people click</li>
+          <li>160 page headings reorganized for a clearer, easier to read structure</li>
+          <li>132 image labels added so the photos show up in search and the site is more accessible</li>
+          <li>Core tools connected and working together: the website's SEO system, Google Search Console, and Google Business Profile</li>
+        </ul>
+      </section>
+
+      <section id="content" class="section reveal">
+        <h2 class="section-title">Content and AI Search (AEO)</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">The plan and content to win both regular Google searches and the new AI assistants (like ChatGPT) are mapped out and ready. This is what the next phase puts into motion.</p>
+
+        <ul class="bullets">
+          <li><strong>Content plan built:</strong> a 193 article plan covering 34 service areas (Collision Repair, Paint Repair, Hail Damage, ADAS Calibration, and more), designed to make 360 Collision the go to name for 'collision repair San Antonio'.</li>
+          <li><strong>Lead article ready:</strong> 'Insurance Claim Process: What to Expect After a Car Accident in San Antonio' (1,710 words), written to answer the questions customers actually search for and being finalized for publishing.</li>
+          <li><strong>Behind the scenes setup underway:</strong> special code that helps Google and AI assistants understand the site (called schema) is partly in place, with 253 more pieces mapped to add. This is what helps 360 Collision show up in AI answers and Google's highlighted results.</li>
+        </ul>
+      </section>
+
+      <section id="status" class="section reveal">
+        <h2 class="section-title">Where We Stand, Done versus In Progress</h2>
+        <div class="section-rule"></div>
+
+        <div class="status-grid">
+          <div class="status-col">
+            <h3 class="status-head"><span class="status-icon status-icon--done" aria-hidden="true">&#10003;</span> Done</h3>
+            <ul class="bullets">
+              <li>Full technical cleanup of the website (1,349 fixes)</li>
+              <li>Connected Google Search Console and Google Business Profile</li>
+              <li>Researched the search terms customers actually use</li>
+              <li>Mapped a 193 article content plan across all services</li>
+              <li>Set up automatic weekly site maintenance</li>
+            </ul>
+          </div>
+          <div class="status-col">
+            <h3 class="status-head"><span class="status-icon status-icon--progress" aria-hidden="true">&#8987;</span> In Progress, Next Phase</h3>
+            <ul class="bullets">
+              <li>Writing and publishing the 193 planned articles</li>
+              <li>Adding the behind the scenes code for Google and AI (253 pieces)</li>
+              <li>Building the site's reputation with quality links and press</li>
+              <li>Improving search listings so more people click</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section reveal">
+        <h2 class="section-title">June 2026 Growth Roadmap</h2>
+        <div class="section-rule"></div>
+        <p class="section-intro">Our focus shifts from fixing the foundation to publishing on top of it, turning the groundwork into traffic, calls, and booked jobs. Four priorities for the month ahead.</p>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <h3 class="roadmap-title">CAPTURE EMERGENCY CALLS</h3>
+            <p>Launch dedicated 'Towing' and 'Emergency Repair' pages to capture the high volume of emergency callers the April data surfaced.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3 class="roadmap-title">PUBLISH THE CONTENT</h3>
+            <p>Finalize and publish the 1,710 word insurance claim guide, then begin rolling out the 193 article plan to capture more top of search traffic.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3 class="roadmap-title">EXPAND LOCAL VISIBILITY</h3>
+            <p>Build citations and reviews to push the 10 'almost there' amber map pins into the top three green zone across the San Antonio metro.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3 class="roadmap-title">WIN MORE CLICKS</h3>
+            <p>Refresh the search listings for the 56 terms sitting on page two of Google to drive a roughly 20% lift in clicks, with no new rankings needed.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside class="bottom-line reveal" aria-label="Bottom line">
+        <p><strong class="bottom-line-lead">Bottom line:</strong> the year opened with a 20% plus jump in visibility on a strong new foundation. The groundwork is done, the next phase is publishing, and that is where the next wave of leads comes from.</p>
+      </aside>
+
+      <footer class="report-footer">
+        <p>Origo Solutions. Build trust. Own your presence. Prepared for 360 Collision, June 2026.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
