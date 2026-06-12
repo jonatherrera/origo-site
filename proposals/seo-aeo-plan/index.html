@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>360 Collision · Growth Plan · Origo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0A;
+    --ink-2:#161618;
+    --blue:#0066FF;
+    --blue-deep:#0052CC;
+    --blue-tint:rgba(0,102,255,.08);
+    --steel-deep:#2B2B2B;
+    --paper:#F7F7F7;
+    --line:rgba(0,0,0,.08);
+    --white:#FFFFFF;
+    --shadow:0 18px 50px -24px rgba(10,10,10,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Poppins",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  .logo{height:1em;width:auto;vertical-align:-.16em;fill:currentColor}
+
+  /* ---- Hero ---- */
+  .hero{background:var(--ink);color:var(--white);padding:72px 0 92px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-160px;top:-180px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle at center,rgba(0,102,255,.30),transparent 64%)}
+  .hero .wrap{position:relative;z-index:1}
+  .brandbar{display:inline-flex;align-items:center;gap:10px;color:var(--white)}
+  .brandbar .logo{height:64px;width:auto}
+  .kicker{margin-top:30px;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:.15em;text-transform:uppercase;font-size:12.5px}
+  .hero h1{font-size:clamp(34px,5.6vw,62px);font-weight:700;margin:14px 0 0;max-width:17ch;letter-spacing:-.01em;line-height:1.07}
+  .hero h1 .accent{color:var(--blue)}
+  .hero .sub{color:rgba(255,255,255,.72);font-size:clamp(16px,2vw,19px);max-width:56ch;margin-top:20px}
+  .badge{display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:var(--ink-2);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:10px 16px;font-size:14px;color:var(--white)}
+  .badge b{color:var(--blue);font-weight:700}
+
+  section{padding:70px 0}
+  .eyebrow{color:var(--blue);font-weight:600;letter-spacing:.15em;text-transform:uppercase;font-size:12.5px}
+  .sec-title{font-size:clamp(25px,3.3vw,36px);font-weight:700;margin:12px 0 0;letter-spacing:-.01em}
+  .lead{font-size:17px;color:var(--steel-deep);max-width:60ch;margin-top:16px}
+
+  /* ---- Transformation rows ---- */
+  .rows{margin-top:40px;display:flex;flex-direction:column;gap:14px}
+  .row{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto 1.25fr;align-items:stretch;overflow:hidden}
+  .row .label{grid-column:1 / -1;background:var(--ink);color:var(--white);font-weight:600;font-size:14px;padding:12px 22px}
+  .cell{padding:20px 22px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+  .cell .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+  .today .tag{color:var(--steel-deep)}
+  .growth .tag{color:var(--blue)}
+  .cell p{font-size:15.5px;line-height:1.5}
+  .today{background:var(--paper)}
+  .today p{color:var(--steel-deep)}
+  .growth{background:var(--blue-tint)}
+  .growth p{color:var(--ink);font-weight:500}
+  .arrow{display:flex;align-items:center;justify-content:center;background:var(--paper);color:var(--blue);padding:0 8px;font-size:22px}
+  .price{font-size:26px;font-weight:700}
+  .growth .price{color:var(--blue)}
+  .today .price{font-size:20px;color:var(--steel-deep);font-weight:600}
+  .row.invest .label{background:var(--blue)}
+
+  /* ---- Why ---- */
+  .why{background:var(--ink);color:var(--white)}
+  .why .eyebrow{color:var(--blue)}
+  .why .sec-title{color:var(--white)}
+  .cards{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcard{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:26px}
+  .pcard .num{color:var(--blue);font-weight:700;font-size:15px}
+  .pcard h3{font-size:19px;margin:12px 0 10px;font-weight:600}
+  .pcard p{color:rgba(255,255,255,.65);font-size:15px}
+
+  /* ---- Invest band ---- */
+  .invest-band{background:var(--blue)}
+  .invest-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;color:var(--white)}
+  .invest-band .amt{font-size:clamp(34px,5vw,52px);font-weight:700;line-height:1}
+  .invest-band .amt small{display:block;font-size:15px;font-weight:500;opacity:.92;margin-top:10px}
+  .invest-band .note{max-width:42ch;font-size:16px}
+  .invest-band .cta{background:var(--white);color:var(--blue);font-weight:600;text-decoration:none;padding:15px 26px;border-radius:12px;font-size:16px;white-space:nowrap}
+
+  footer{padding:48px 0 56px;text-align:center;color:var(--steel-deep);font-size:13px}
+  footer .wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+  footer .logo{height:48px;width:auto;color:var(--ink);vertical-align:initial}
+  footer p{margin:0}
+  footer b{color:var(--ink)}
+
+  /* Scroll progress bar at top of viewport */
+  #scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--blue);z-index:60;transition:width .08s ease-out;pointer-events:none}
+
+  /* Hero "#7" accent: slow Electric Blue glow that breathes */
+  .hero h1 .accent{animation:accentGlow 3.2s ease-in-out infinite}
+  @keyframes accentGlow{
+    0%,100%{text-shadow:0 0 12px rgba(0,102,255,.35)}
+    50%    {text-shadow:0 0 28px rgba(0,102,255,.75)}
+  }
+
+  /* Why upgrade cards: hover lift + shadow */
+  .pcard{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .pcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.16);box-shadow:0 14px 36px rgba(0,0,0,.28)}
+
+  /* Reveal animation (queue orchestrated by JS for sequential cascade) */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .hero h1 .accent{animation:none;text-shadow:0 0 20px rgba(0,102,255,.5)}
+    #scroll-progress{transition:none}
+  }
+
+  @media (max-width:720px){
+    .row{grid-template-columns:1fr}
+    .today{order:1}.arrow{order:2;padding:6px 0;transform:rotate(90deg)}.growth{order:3}
+    .cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Reusable logo symbol (horizontal lockup, matches the main site nav).
+       Separator and wordmark have no fill attribute, so they inherit
+       currentColor from the parent SVG (white on dark hero, dark on
+       light footer). -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="origo" viewBox="100 1000 2270 540">
+      <path fill="#0066FF" d="M414.51,1312.18c20.6,0,38.17-7.57,52.67-22.71,14.51-15.14,21.76-36.8,21.76-64.98,0-13.41-1.62-25.33-4.81-35.79-.33-1.03-.66-2.06-1-3.09-3.51-10.17-8.61-18.89-15.32-26.1-14.09-15.14-31.44-22.71-52.04-22.71s-38.48,7.47-52.36,22.39c-4.51,4.85-8.27,10.44-11.32,16.73,3.51,2.65,6.86,5.68,10.05,9.09,14.09,15.14,21.13,36.81,21.13,64.98,0,19.29-3.4,35.53-10.21,48.7,11.75,8.98,25.57,13.47,41.44,13.47Z"/>
+      <path fill="#0066FF" d="M321.46,1383.46c-27.55-14.72-49.2-35.74-64.98-63.08-15.77-27.33-23.66-59.3-23.66-95.89s7.98-68.02,23.97-95.57c14.76-25.43,34.55-45.39,59.35-59.89-2.01-.05-4.02-.08-6.05-.08-34.49,0-65.61,7.36-93.36,22.08-27.76,14.73-49.63,35.86-65.61,63.4-15.99,27.55-23.97,59.41-23.97,95.57s7.89,68.55,23.66,95.89c15.77,27.34,37.43,48.37,64.98,63.08,27.54,14.73,58.56,22.08,93.05,22.08s65.7-7.35,93.68-22.08c2.14-1.12,4.23-2.3,6.3-3.5-32.22-.77-61.34-8.1-87.35-22.01Z"/>
+      <path d="M613.7,1070.84c25.82,96.07,25.81,238.45,5.58,335.92-1.59,7.46-3.34,14.93-5.58,22.39-2.24-7.46-3.98-14.93-5.58-22.39-20.22-97.33-20.26-239.83,5.58-335.92h0Z"/>
+      <text style="font-family:Poppins,sans-serif;font-size:503.25px;font-weight:700;" transform="translate(706.62 1434.44)">ORIGO</text>
+    </symbol>
+  </svg>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="brandbar"><svg class="logo"><use href="#origo"/></svg></div>
+      <div class="kicker">360 Collision · Search &amp; AI Visibility</div>
+      <h1>You are the <span class="accent">#7</span> shop ChatGPT recommends in San Antonio.</h1>
+      <p class="sub">That ranking was earned through the AEO work already running on your account. Here is where we take it next, side by side with what you have today.</p>
+      <div class="badge"><b>&#9733;</b> Ranked #7 on ChatGPT for San Antonio collision repair</div>
+    </div>
+  </header>
+
+  <!-- Comparison -->
+  <section>
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Today vs the Growth Plan</div>
+        <h2 class="sec-title">The before and after</h2>
+        <p class="lead">Everything you have today keeps running. The Growth Plan adds output and AI ownership on top of a foundation that is already working.</p>
+      </div>
+      <div class="rows">
+        <div class="row reveal"><div class="label">Blog content</div>
+          <div class="cell today"><span class="tag">Today</span><p>2 posts per month</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>4 posts per month</p></div></div>
+
+        <div class="row reveal"><div class="label">Google Business posts</div>
+          <div class="cell today"><span class="tag">Today</span><p>2 posts per month</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>4 posts per month</p></div></div>
+
+        <div class="row reveal"><div class="label">AI search presence</div>
+          <div class="cell today"><span class="tag">Today</span><p>Ranked #7 on ChatGPT, earned through our AEO work</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>We push past #7 and expand your presence into Google AI Overviews and Perplexity</p></div></div>
+
+        <div class="row reveal"><div class="label">FAQ answer pages for AI</div>
+          <div class="cell today"><span class="tag">Today</span><p>Not yet built</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>A growing library of FAQ pages built around real customer questions, added every month, so AI keeps citing 360 Collision</p></div></div>
+
+        <div class="row reveal"><div class="label">AI visibility tracking</div>
+          <div class="cell today"><span class="tag">Today</span><p>Tracked and reported monthly</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>Focused monthly reporting on ChatGPT, Google AI Overviews, and Perplexity</p></div></div>
+
+        <div class="row reveal"><div class="label">Google reviews</div>
+          <div class="cell today"><span class="tag">Today</span><p>Ongoing review generation</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>A structured campaign with milestone goals: 50, then 100, then 250</p></div></div>
+
+        <div class="row reveal"><div class="label">Website &amp; technical foundation</div>
+          <div class="cell today"><span class="tag">Today</span><p>Included</p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p>Everything you have today, unchanged</p></div></div>
+
+        <div class="row invest reveal"><div class="label">Investment</div>
+          <div class="cell today"><span class="tag">Today</span><p class="price"><span class="ticker" data-target="1200">$0</span><span style="font-size:14px;font-weight:500"> / mo</span></p></div>
+          <div class="arrow">&#8594;</div>
+          <div class="cell growth"><span class="tag">Growth Plan</span><p class="price"><span class="ticker" data-target="1579">$0</span><span style="font-size:14px;font-weight:500"> / mo</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="why">
+    <div class="wrap">
+      <div class="reveal"><div class="eyebrow">Why upgrade</div><h2 class="sec-title">Three reasons it pays off</h2></div>
+      <div class="cards">
+        <div class="pcard reveal"><div class="num">01</div><h3>Twice the content</h3><p>Double the blog and Google Business posts means a hail storm or accident post can go out the moment it matters, without slowing down everything else.</p></div>
+        <div class="pcard reveal"><div class="num">02</div><h3>Build on your #7 ranking</h3><p>Our AEO work already made 360 Collision the shop ChatGPT recommends. The Growth Plan pushes past #7 and into Google AI Overviews and Perplexity, with a growing FAQ library so you stay the answer.</p></div>
+        <div class="pcard reveal"><div class="num">03</div><h3>More of what works</h3><p>Google Business is your top source of calls. The plan doubles activity on it and runs a real review campaign, the two things that drive your phone to ring.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Invest band -->
+  <section class="invest-band">
+    <div class="wrap">
+      <div class="amt"><span class="ticker" data-target="1579">$0</span><small>per month</small></div>
+      <p class="note">Everything you have today keeps running. The Growth Plan adds output and AI ownership on top of it.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <svg class="logo" aria-hidden="true"><use href="#origo"/></svg>
+      <p>Prepared for <b>360 Collision</b> by Origo Solutions · San Antonio, TX</p>
+    </div>
+  </footer>
+
+<script>
+  // Server-side Basic Auth handles access (see .htaccess).
+  // This script powers five walk-through effects: scroll progress bar,
+  // sequential reveal cascade, price count-up tickers, plus respect
+  // for prefers-reduced-motion.
+
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1) Scroll progress bar
+  (function(){
+    var bar = document.getElementById('scroll-progress');
+    if (!bar) return;
+    var ticking = false;
+    function update(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if (!ticking){ requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  })();
+
+  // 2) Sequential reveal queue: guarantees a minimum gap between
+  //    successive reveals so multiple rows entering view together
+  //    cascade instead of flashing in at once.
+  (function(){
+    if (reducedMotion){
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var queue = [], revealing = false;
+    function next(){
+      if (revealing || !queue.length) return;
+      revealing = true;
+      queue.shift().classList.add('in');
+      setTimeout(function(){ revealing = false; next(); }, 100);
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          queue.push(e.target);
+          io.unobserve(e.target);
+          next();
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+
+  // 3) Price count-up tickers ($1,200 / $1,579) using easeOutQuart
+  (function(){
+    var tickers = document.querySelectorAll('.ticker');
+    if (!tickers.length) return;
+    function fmt(n){ return '$' + n.toLocaleString('en-US'); }
+    if (reducedMotion){
+      tickers.forEach(function(el){
+        var t = parseInt(el.getAttribute('data-target'), 10);
+        el.textContent = fmt(t);
+      });
+      return;
+    }
+    function easeOutQuart(t){ return 1 - Math.pow(1 - t, 4); }
+    function animate(el){
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 950, start = null;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / duration, 1);
+        el.textContent = fmt(Math.floor(easeOutQuart(p) * target));
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = fmt(target);
+      }
+      requestAnimationFrame(step);
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          animate(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    tickers.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
