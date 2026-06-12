@@ -191,9 +191,11 @@
   <div class="gate-card">
     <div class="mono">Private pricing</div>
     <h1>Welcome to Origo</h1>
-    <p>Tressa at TRR Solutions sent you. Enter the password she shared to see your pricing.</p>
+    <p>Sign in to view the TRR Solutions partner program.</p>
+    <label for="user">Username</label>
+    <input id="user" type="text" autocomplete="username" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Enter username" style="margin-bottom:14px">
     <label for="pw">Password</label>
-    <input id="pw" type="password" autocomplete="off" placeholder="Enter password">
+    <input id="pw" type="password" autocomplete="current-password" placeholder="Enter password">
     <button id="unlock">Unlock</button>
     <div id="gate-error"></div>
   </div>
@@ -559,10 +561,12 @@
 </main>
 
 <script>
-  // ===== Access password =====
+  // ===== Access credentials =====
+  // Current username: tressa  (case-insensitive, trimmed)
   // Current password: TRR-Origo-2026
-  // To change it, run this in any terminal and paste the new hash below:
+  // To change the password, run this in any terminal and paste the new hash below:
   //   python3 -c "import hashlib; print(hashlib.sha256('NEW-PASSWORD'.encode()).hexdigest())"
+  var AUTH_USERNAME = "tressa";
   var PASS_HASH = "50574798fbc5554d0107c691421248f5703a6712165a8a11c10556afad7295c2";
 
   // ===== GHL endpoint =====
@@ -572,6 +576,7 @@
 
   var gate = document.getElementById('gate');
   var content = document.getElementById('content');
+  var user = document.getElementById('user');
   var pw = document.getElementById('pw');
   var gateError = document.getElementById('gate-error');
 
@@ -591,22 +596,29 @@
 
   async function tryUnlock(){
     gateError.textContent = '';
-    var entered = pw.value.trim();
-    if (!entered){ gateError.textContent = 'Enter the password to continue.'; return; }
-    var hash = await sha256Hex(entered);
-    if (hash === PASS_HASH){
+    var enteredUser = user.value.trim().toLowerCase();
+    var enteredPw = pw.value;
+    if (!enteredUser || !enteredPw){
+      gateError.textContent = 'Enter your username and password to continue.';
+      return;
+    }
+    var userOk = enteredUser === AUTH_USERNAME.toLowerCase();
+    var hash = await sha256Hex(enteredPw);
+    var pwOk = hash === PASS_HASH;
+    if (userOk && pwOk){
       try { sessionStorage.setItem('trr_unlocked','1'); } catch(e){}
       openContent();
     } else {
-      gateError.textContent = 'That password is not correct. Check it and try again.';
+      gateError.textContent = 'That username or password is not correct. Check them and try again.';
       pw.value = '';
-      pw.focus();
+      (userOk ? pw : user).focus();
     }
   }
 
   document.getElementById('unlock').addEventListener('click', tryUnlock);
+  user.addEventListener('keydown', function(e){ if (e.key === 'Enter') tryUnlock(); });
   pw.addEventListener('keydown', function(e){ if (e.key === 'Enter') tryUnlock(); });
-  pw.focus();
+  user.focus();
 
   // ===== Intake form =====
   var form = document.getElementById('intake');
