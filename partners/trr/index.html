@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Origo and TRR Solutions Partner Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0A0A0A;
+    --dark:#1A1A1A;
+    --ink:#2B2B2B;
+    --white:#FFFFFF;
+    --blue:#0066FF;
+    --blue-pale:#E5F0FF;
+    --gray-bg:#F7F7F7;
+    --border:#E8E8E8;
+    --muted:#666666;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Roboto',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;color:var(--black);line-height:1.15}
+  a{color:var(--blue);text-decoration:none}
+  .mono{font-family:'Roboto Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:0.72rem;color:var(--muted)}
+
+  /* Gate */
+  #gate{
+    position:fixed;inset:0;z-index:50;
+    background:var(--black);
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .gate-card{width:100%;max-width:380px;text-align:left}
+  .gate-card .mono{color:var(--blue)}
+  .gate-card h1{color:var(--white);font-size:1.7rem;font-weight:700;margin:14px 0 8px}
+  .gate-card p{color:#AAAAAA;font-size:0.95rem;margin-bottom:26px}
+  .gate-card label{display:block;color:#DDDDDD;font-size:0.85rem;margin-bottom:8px}
+  .gate-card input{
+    width:100%;padding:14px 16px;border-radius:10px;border:1px solid #2B2B2B;
+    background:#101010;color:var(--white);font-family:'Roboto',sans-serif;font-size:1rem;
+  }
+  .gate-card input:focus{outline:none;border-color:var(--blue)}
+  .gate-card button{
+    width:100%;margin-top:14px;padding:14px 16px;border:none;border-radius:10px;
+    background:var(--blue);color:var(--white);font-family:'Poppins',sans-serif;font-weight:600;
+    font-size:1rem;cursor:pointer;transition:opacity .15s;
+  }
+  .gate-card button:hover{opacity:.9}
+  #gate-error{color:#FF6B6B;font-size:0.85rem;margin-top:14px;min-height:1.2em}
+
+  #content{display:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+
+  /* Hero */
+  .hero{padding:88px 0 56px;border-bottom:1px solid var(--border)}
+  .hero .mono{color:var(--blue)}
+  .hero .greeting{font-family:'Poppins',sans-serif;color:var(--blue);font-weight:600;font-size:1.05rem;margin-top:18px}
+  .hero h1{font-size:2.9rem;font-weight:800;max-width:22ch;margin:10px 0 20px;letter-spacing:-0.01em}
+  .hero p{font-size:1.12rem;color:var(--ink);max-width:62ch}
+  .hero .meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 28px}
+  .hero .meta span{font-size:0.9rem;color:var(--muted)}
+  .hero .meta b{color:var(--black);font-weight:500}
+
+  section.block{padding:64px 0;border-bottom:1px solid var(--border)}
+  .section-head{margin-bottom:36px;max-width:64ch}
+  .section-head h2{font-size:1.9rem;font-weight:700;letter-spacing:-0.01em}
+  .section-head p{margin-top:12px;color:var(--muted);font-size:1.02rem}
+
+  /* Build packages */
+  .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pkg{
+    border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;
+    display:flex;flex-direction:column;background:var(--white);
+  }
+  .pkg.feature{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+  .pkg .tag{font-family:'Roboto Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  .pkg h3{font-size:1.35rem;font-weight:700;margin-bottom:6px}
+  .pkg .price{font-family:'Poppins',sans-serif;font-size:2rem;font-weight:800;color:var(--black);margin:10px 0 2px}
+  .pkg .compare{font-size:0.85rem;color:var(--muted);margin-bottom:18px}
+  .pkg .compare s{color:#AAAAAA}
+  .pkg .save{display:inline-block;background:var(--blue-pale);color:var(--blue);font-weight:600;font-size:0.82rem;padding:3px 10px;border-radius:20px;margin-bottom:18px;width:fit-content}
+  .pkg ul{list-style:none;margin-top:auto}
+  .pkg li{font-size:0.92rem;padding:7px 0 7px 22px;position:relative;color:var(--ink);border-top:1px solid var(--gray-bg)}
+  .pkg li:before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:50%;background:var(--blue)}
+
+  /* Plan */
+  .plan{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:6px}
+  .step{padding-top:18px;border-top:2px solid var(--blue)}
+  .step .n{font-family:'Roboto Mono',monospace;font-size:0.78rem;color:var(--blue);font-weight:500;letter-spacing:0.06em;text-transform:uppercase}
+  .step h3{font-size:1.18rem;font-weight:600;margin:8px 0 6px}
+  .step p{font-size:0.95rem;color:var(--ink)}
+
+  /* Tables */
+  .rate-table{width:100%;border-collapse:collapse;margin-top:8px}
+  .rate-table caption{font-family:'Poppins',sans-serif;font-weight:600;text-align:left;color:var(--black);font-size:1.05rem;padding:24px 0 12px}
+  .rate-table th,.rate-table td{text-align:left;padding:14px 16px;font-size:0.95rem;border-bottom:1px solid var(--border)}
+  .rate-table th{font-family:'Roboto Mono',monospace;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.04em;color:var(--muted);font-weight:500}
+  .rate-table td:first-child{color:var(--black);font-weight:500}
+  .rate-table td.std{color:var(--muted)}
+  .rate-table td.std s{color:#BBBBBB}
+  .rate-table td.partner{color:var(--blue);font-weight:600;font-family:'Poppins',sans-serif}
+  .rate-table tr.same td.partner{color:var(--ink);font-weight:500}
+
+  .note{background:var(--gray-bg);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:18px 22px;margin-top:28px;font-size:0.94rem;color:var(--ink)}
+  .note b{color:var(--black)}
+
+  /* Scope details */
+  details.scope{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
+  details.scope summary{
+    list-style:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;
+    font-family:'Poppins',sans-serif;font-weight:600;color:var(--black);font-size:1.08rem;
+  }
+  details.scope summary::-webkit-details-marker{display:none}
+  details.scope summary .plus{color:var(--blue);font-size:1.5rem;font-weight:400;line-height:1;transition:transform .2s}
+  details.scope[open] summary .plus{transform:rotate(45deg)}
+  details.scope summary .pr{font-family:'Roboto Mono',monospace;font-size:0.8rem;color:var(--muted);font-weight:400;margin-left:auto;margin-right:18px}
+  .scope-body{padding:4px 24px 26px;border-top:1px solid var(--gray-bg)}
+  .scope-body h4{font-size:0.95rem;margin:18px 0 8px;color:var(--black)}
+  .scope-body p{font-size:0.94rem;color:var(--ink);margin-bottom:8px}
+  .scope-body ul{margin:8px 0 8px 2px;list-style:none}
+  .scope-body li{font-size:0.93rem;padding:5px 0 5px 20px;position:relative;color:var(--ink)}
+  .scope-body li:before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .scope-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:0.88rem}
+  .scope-table th,.scope-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  .scope-table th{font-family:'Roboto Mono',monospace;text-transform:uppercase;font-size:0.66rem;letter-spacing:0.03em;color:var(--muted);font-weight:500}
+  .scope-table td:first-child{color:var(--black);font-weight:500;white-space:nowrap}
+
+  /* Form */
+  .form-intro{max-width:60ch;margin-bottom:32px;color:var(--muted)}
+  form#intake{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+  .field{display:flex;flex-direction:column}
+  .field.full{grid-column:1 / -1}
+  .field label{font-size:0.85rem;color:var(--ink);margin-bottom:7px;font-weight:500}
+  .field label .req{color:var(--blue)}
+  .field input,.field textarea{
+    padding:12px 14px;border:1px solid var(--border);border-radius:10px;
+    font-family:'Roboto',sans-serif;font-size:0.97rem;color:var(--ink);background:var(--white);
+  }
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+  .field textarea{resize:vertical;min-height:96px}
+  fieldset.pkgs{grid-column:1 / -1;border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px}
+  fieldset.pkgs legend{font-size:0.85rem;color:var(--ink);font-weight:500;padding:0 8px}
+  .pkg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;margin-top:6px}
+  .check{display:flex;align-items:flex-start;gap:10px;font-size:0.93rem;color:var(--ink);cursor:pointer}
+  .check input{margin-top:3px;width:16px;height:16px;accent-color:var(--blue);cursor:pointer}
+  button.submit{
+    grid-column:1 / -1;justify-self:start;margin-top:4px;
+    padding:15px 34px;border:none;border-radius:10px;background:var(--blue);color:var(--white);
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;transition:opacity .15s;
+  }
+  button.submit:hover{opacity:.9}
+  button.submit:disabled{opacity:.55;cursor:default}
+  #form-status{grid-column:1 / -1;font-size:0.95rem;margin-top:4px;min-height:1.2em}
+  #form-status.ok{color:#0F7B43}
+  #form-status.err{color:#C0392B}
+  .success-panel{display:none;background:var(--blue-pale);border-radius:var(--radius);padding:34px 30px;text-align:left}
+  .success-panel h3{font-size:1.3rem;margin-bottom:8px}
+  .success-panel p{color:var(--ink)}
+
+  footer{padding:50px 0 64px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+  footer .brand{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;color:var(--black);letter-spacing:0.04em}
+  footer .brand span{color:var(--blue)}
+  footer .contact{font-size:0.9rem;color:var(--muted)}
+  footer .contact a{color:var(--ink)}
+  footer .confidential{font-size:0.78rem;color:#AAAAAA;margin-top:6px}
+
+  @media (max-width:860px){
+    .packages{grid-template-columns:1fr}
+    .plan{grid-template-columns:1fr;gap:20px}
+    .hero h1{font-size:2.1rem}
+    form#intake{grid-template-columns:1fr}
+    .pkg-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="mono">Private pricing</div>
+    <h1>Welcome to Origo</h1>
+    <p>Tressa at TRR Solutions sent you. Enter the password she shared to see your pricing.</p>
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="off" placeholder="Enter password">
+    <button id="unlock">Unlock</button>
+    <div id="gate-error"></div>
+  </div>
+</div>
+
+<main id="content">
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="mono">Private pricing</div>
+      <p class="greeting">Tressa at TRR Solutions sent you.</p>
+      <h1>You've earned your reputation. Let's make sure your presence proves it.</h1>
+      <p>Tressa brought you to us, and that carries weight. Because you came through TRR Solutions, everything here is at our partner rate. Look through what fits, and when you're ready, tell us about your business.</p>
+      <div class="meta">
+        <span><b>Partner pricing</b> because Tressa sent you</span>
+        <span><b>You own</b> everything we build</span>
+        <span><b>One team</b> for brand, web, and search</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>You've done the hard part. Your presence should show it.</h2>
+        <p>You've put in the years, and the work is good. Online though, your presence might be telling a different story: a website that doesn't reflect you, competitors showing up where you don't, and a steady leak of clients who would have chosen you if they could find you. That gap is the reason Tressa pointed you our way. Origo is a small senior team that closes it. We did it for businesses like yours, where the right work turned search into the single biggest source of new customers they have. And everything we build, you own outright.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How this works</h2>
+        <p>Three steps, and most of the work is ours.</p>
+      </div>
+      <div class="plan">
+        <div class="step">
+          <div class="n">Step one</div>
+          <h3>See what fits</h3>
+          <p>Look through the packages and pricing below, all at your partner rate.</p>
+        </div>
+        <div class="step">
+          <div class="n">Step two</div>
+          <h3>Tell us about your business</h3>
+          <p>Fill in the short form at the bottom with what you're interested in.</p>
+        </div>
+        <div class="step">
+          <div class="n">Step three</div>
+          <h3>We build your presence</h3>
+          <p>We get to work, and you're involved the whole way through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What you can walk away with</h2>
+        <p>Each package brings your brand, your message, and your website together, built as one system instead of bolted on. Every price here is your partner rate, lower because Tressa sent you.</p>
+      </div>
+      <div class="packages">
+
+        <div class="pkg">
+          <div class="tag">Entry build</div>
+          <h3>Essential Presence</h3>
+          <div class="price">$14,797</div>
+          <div class="compare">Standard a la carte <s>$17,391</s></div>
+          <span class="save">Saves $2,594</span>
+          <ul>
+            <li>Branding, 2 logo concepts</li>
+            <li>Messaging Foundation and 5 pages of website copy</li>
+            <li>Web Design Essential, 5 pages</li>
+            <li>Full and perpetual ownership</li>
+          </ul>
+        </div>
+
+        <div class="pkg feature">
+          <div class="tag">Most chosen</div>
+          <h3>Growth Presence</h3>
+          <div class="price">$19,097</div>
+          <div class="compare">Standard a la carte <s>$22,191</s></div>
+          <span class="save">Saves $3,094</span>
+          <ul>
+            <li>Branding, 2 logo concepts</li>
+            <li>Messaging Foundation and 8 pages of website copy</li>
+            <li>Web Design Premium, 8 pages</li>
+            <li>Full and perpetual ownership</li>
+          </ul>
+        </div>
+
+        <div class="pkg">
+          <div class="tag">Full build</div>
+          <h3>Full Presence</h3>
+          <div class="price">$24,397</div>
+          <div class="compare">Standard a la carte <s>$27,991</s></div>
+          <span class="save">Saves $3,594</span>
+          <ul>
+            <li>Branding, 2 logo concepts</li>
+            <li>Messaging Foundation and 13 pages of website copy</li>
+            <li>Web Design Full System, 13 pages with a blog</li>
+            <li>3 launch blog posts written and ready</li>
+            <li>Full and perpetual ownership</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Partner rates, a la carte</h2>
+        <p>For when you need a single piece rather than a full build. What's included in each is just below.</p>
+      </div>
+
+      <table class="rate-table">
+        <caption>One-time projects</caption>
+        <thead>
+          <tr><th>Service</th><th>Standard</th><th>Partner rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Branding</td><td class="std"><s>$5,797</s></td><td class="partner">$5,197</td></tr>
+          <tr><td>Branding and Copywriting</td><td class="std"><s>$8,497</s></td><td class="partner">$7,597</td></tr>
+          <tr><td>Web Design Essential</td><td class="std"><s>$7,997</s></td><td class="partner">$7,197</td></tr>
+          <tr><td>Web Design Premium</td><td class="std"><s>$12,797</s></td><td class="partner">$11,497</td></tr>
+          <tr><td>Web Design Full System</td><td class="std"><s>$18,597</s></td><td class="partner">$16,797</td></tr>
+        </tbody>
+      </table>
+
+      <table class="rate-table">
+        <caption>Monthly retainers, 12-month term</caption>
+        <thead>
+          <tr><th>Service</th><th>Standard</th><th>Partner rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SEO Essentials</td><td class="std"><s>$1,597/mo</s></td><td class="partner">$1,497/mo</td></tr>
+          <tr><td>SEO and AEO Premium</td><td class="std"><s>$2,497/mo</s></td><td class="partner">$2,297/mo</td></tr>
+          <tr class="same"><td>Website Concierge Essential</td><td class="std">$197/mo</td><td class="partner">$197/mo</td></tr>
+          <tr class="same"><td>Website Concierge Growth</td><td class="std">$297/mo</td><td class="partner">$297/mo</td></tr>
+          <tr class="same"><td>Website Concierge Premium</td><td class="std">$597/mo</td><td class="partner">$597/mo</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <b>A few notes.</b> Website Concierge runs at standard rates, no partner discount. SEO and AEO can scale with national scope or exclusivity, which lift the rate up to a $4,797 ceiling. Copywriting is included inside the Branding and Copywriting line, not sold on its own. Every project includes full and perpetual ownership, you own it all.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What is included</h2>
+        <p>Exactly what you get in each, so there are no surprises.</p>
+      </div>
+
+      <details class="scope">
+        <summary>Branding <span class="pr">Partner $5,197</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>2 logo concepts and 2 revision rounds. Extra concepts or pages at $250 each.</p>
+          <h4>Logo suite</h4>
+          <p>Primary, horizontal, stacked, icon or mark only, and reverse versions. Delivered in PNG, JPG, SVG, EPS, and PDF.</p>
+          <h4>Brand style guide</h4>
+          <p>Logo usage and clear-space specs, color palette in HEX, RGB, CMYK, and Pantone, the typography system, brand voice and messaging notes, and usage dos and don'ts.</p>
+          <h4>Brand collateral</h4>
+          <p>Business card front and back, letterhead, a stationery suite, and an email signature template.</p>
+          <h4>Ownership</h4>
+          <p>Full and perpetual, no licensing. The client owns everything.</p>
+        </div>
+      </details>
+
+      <details class="scope">
+        <summary>Copywriting <span class="pr">Inside Branding and Copywriting</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>Copywriting rides with a build so the words and the design are made together. Every page is written to the BrandScript and delivered ready to publish. One revision round on the copy. Full ownership. Extra pages at $247 each.</p>
+          <h4>Messaging Foundation, every tier</h4>
+          <p>A complete BrandScript, the core one-liner, and the brand messaging the whole site runs on.</p>
+          <h4>Website copy, scaling with the web tier</h4>
+          <ul>
+            <li>Essential, 5 pages: Home, About, Services, Work, Contact</li>
+            <li>Growth, 8 pages: Home, About, Services overview, up to 3 service pages, Work, Contact</li>
+            <li>Full Presence, 13 pages: Home, About, Services overview, up to 6 service pages, Work, FAQ, Contact, Blog, plus 3 launch blog posts</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="scope">
+        <summary>Web Design <span class="pr">Partner $7,197 to $16,797</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>Three tiers. Mobile responsiveness and accessibility come on every tier. Builds embed your existing GHL calendar and forms. Day-one SEO and AEO ready the site at launch, the ongoing work lives in the SEO and AEO retainer.</p>
+          <table class="scope-table">
+            <thead>
+              <tr><th></th><th>Essential</th><th>Premium</th><th>Full System</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pages</td><td>5</td><td>8</td><td>13 with blog</td></tr>
+              <tr><td>Design depth</td><td>Refined systemized layout</td><td>Custom art-directed key pages</td><td>Fully custom throughout</td></tr>
+              <tr><td>Motion</td><td>Subtle scroll and hover</td><td>Custom motion on key sections</td><td>Signature motion system</td></tr>
+              <tr><td>Visual assets</td><td>Standard icons, curated imagery</td><td>Custom icons, select graphics</td><td>Full custom direction</td></tr>
+              <tr><td>Lead capture</td><td>Contact form</td><td>Multi-step or intake form</td><td>Advanced lead capture</td></tr>
+              <tr><td>SEO, day one</td><td>Technical foundation</td><td>Foundation and on-page</td><td>Full on-page, all pages</td></tr>
+              <tr><td>AEO, day one</td><td>Not included</td><td>AEO-ready structure</td><td>Full AEO build-out</td></tr>
+              <tr><td>Analytics</td><td>Analytics and Search Console</td><td>Plus conversion tracking</td><td>Plus event tracking</td></tr>
+              <tr><td>Revisions</td><td>2 rounds</td><td>3 rounds</td><td>4 rounds</td></tr>
+              <tr><td>Post-launch support</td><td>14-day warranty</td><td>30-day warranty</td><td>30-day warranty</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="scope">
+        <summary>SEO Essentials <span class="pr">Partner $1,497/mo</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>The full SEO engagement at a local focus, on a 12-month term. No AEO, no FAQ builds, and reviews are not included at this tier.</p>
+          <ul>
+            <li>Technical SEO audit</li>
+            <li>Keyword strategy</li>
+            <li>On-page optimization with schema and internal linking</li>
+            <li>Google Business Profile and local optimization, profile kept accurate and current with photos refreshed</li>
+            <li>2 blog posts per month</li>
+            <li>Weekly Google Business Profile posting</li>
+            <li>Monthly reporting</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="scope">
+        <summary>SEO and AEO Premium <span class="pr">Partner $2,297/mo</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>Everything in SEO Essentials, plus the AEO layer and the full review engine, on a 12-month term.</p>
+          <h4>Added content and reviews</h4>
+          <ul>
+            <li>4 blog posts per month</li>
+            <li>Review responses, review generation, and review monitoring</li>
+            <li>Q&amp;A seeding and management</li>
+            <li>Category and attribute optimization</li>
+            <li>Monthly Google Business Profile performance breakdown</li>
+            <li>FAQ builds</li>
+            <li>Quarterly strategy review</li>
+          </ul>
+          <h4>AEO layer</h4>
+          <p>Structured data, direct-answer content, entity consistency, and authority signals, with monitoring across ChatGPT, Perplexity, Google AI Overview, Claude, Gemini, and Copilot.</p>
+        </div>
+      </details>
+
+      <details class="scope">
+        <summary>Website Concierge <span class="pr">Standard $197 to $597/mo</span><span class="plus">+</span></summary>
+        <div class="scope-body">
+          <p>Ongoing website management on a 12-month term, at standard rates. Three tiers, each building on the one before.</p>
+          <h4>Essential, $197/mo</h4>
+          <ul>
+            <li>Platform, theme, and dependency updates</li>
+            <li>Weekly automated backups</li>
+            <li>Uptime monitoring</li>
+            <li>Monthly performance report</li>
+            <li>1 hour of content edits per month</li>
+          </ul>
+          <h4>Growth, $297/mo</h4>
+          <ul>
+            <li>Everything in Essential</li>
+            <li>Daily backups</li>
+            <li>Security monitoring and hardening</li>
+            <li>Quarterly speed optimization</li>
+            <li>3 hours of content edits per month</li>
+            <li>Same business day priority response</li>
+          </ul>
+          <h4>Premium, $597/mo</h4>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>Real-time backups</li>
+            <li>Quarterly conversion rate review</li>
+            <li>8 hours of content edits per month</li>
+            <li>4-hour response SLA</li>
+            <li>Dedicated Slack channel</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="block" id="submit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ready to get started?</h2>
+        <p>Every week your presence sits unfinished is business going to someone easier to find. Tell us about your company and what you're interested in, and we'll lay out exactly what it takes to get you there.</p>
+      </div>
+      <p class="form-intro">Because you came through TRR Solutions, your partner pricing is already locked in.</p>
+
+      <form id="intake">
+        <div class="field">
+          <label for="first">First name <span class="req">*</span></label>
+          <input id="first" name="first_name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="last">Last name <span class="req">*</span></label>
+          <input id="last" name="last_name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="business">Business name <span class="req">*</span></label>
+          <input id="business" name="business_name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel">
+        </div>
+        <div class="field">
+          <label for="website">Current website</label>
+          <input id="website" name="website" type="text" placeholder="optional">
+        </div>
+
+        <fieldset class="pkgs">
+          <legend>Interested in</legend>
+          <div class="pkg-grid">
+            <label class="check"><input type="checkbox" name="packages" value="Essential Presence">Essential Presence</label>
+            <label class="check"><input type="checkbox" name="packages" value="Growth Presence">Growth Presence</label>
+            <label class="check"><input type="checkbox" name="packages" value="Full Presence">Full Presence</label>
+            <label class="check"><input type="checkbox" name="packages" value="Branding">Branding</label>
+            <label class="check"><input type="checkbox" name="packages" value="Branding and Copywriting">Branding and Copywriting</label>
+            <label class="check"><input type="checkbox" name="packages" value="Web Design">Web Design</label>
+            <label class="check"><input type="checkbox" name="packages" value="SEO Essentials">SEO Essentials</label>
+            <label class="check"><input type="checkbox" name="packages" value="SEO and AEO Premium">SEO and AEO Premium</label>
+            <label class="check"><input type="checkbox" name="packages" value="Website Concierge">Website Concierge</label>
+            <label class="check"><input type="checkbox" name="packages" value="Not sure yet">Not sure yet</label>
+          </div>
+        </fieldset>
+
+        <div class="field full">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Anything we should know about your business"></textarea>
+        </div>
+
+        <button type="submit" class="submit" id="submitBtn">Get started</button>
+        <div id="form-status"></div>
+      </form>
+
+      <div class="success-panel" id="successPanel">
+        <h3>Got it. Thanks.</h3>
+        <p>We've got your details and we'll reach out shortly to map out what's next. Talk soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <div class="brand">ORIGO<span>.</span></div>
+        <div class="confidential">Private pricing, shared with you through TRR Solutions.</div>
+      </div>
+      <div class="contact">
+        Questions? <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // ===== Access password =====
+  // Current password: TRR-Origo-2026
+  // To change it, run this in any terminal and paste the new hash below:
+  //   python3 -c "import hashlib; print(hashlib.sha256('NEW-PASSWORD'.encode()).hexdigest())"
+  var PASS_HASH = "50574798fbc5554d0107c691421248f5703a6712165a8a11c10556afad7295c2";
+
+  // ===== GHL endpoint =====
+  // Paste the inbound webhook URL from the TRR partner workflow in GHL.
+  // Leave this empty and the form will hold the data and show an error asking to try again.
+  var TRR_WEBHOOK_URL = "";
+
+  var gate = document.getElementById('gate');
+  var content = document.getElementById('content');
+  var pw = document.getElementById('pw');
+  var gateError = document.getElementById('gate-error');
+
+  async function sha256Hex(str){
+    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+  }
+
+  function openContent(){
+    gate.style.display = 'none';
+    content.style.display = 'block';
+  }
+
+  try {
+    if (sessionStorage.getItem('trr_unlocked') === '1') { openContent(); }
+  } catch(e){}
+
+  async function tryUnlock(){
+    gateError.textContent = '';
+    var entered = pw.value.trim();
+    if (!entered){ gateError.textContent = 'Enter the password to continue.'; return; }
+    var hash = await sha256Hex(entered);
+    if (hash === PASS_HASH){
+      try { sessionStorage.setItem('trr_unlocked','1'); } catch(e){}
+      openContent();
+    } else {
+      gateError.textContent = 'That password is not correct. Check it and try again.';
+      pw.value = '';
+      pw.focus();
+    }
+  }
+
+  document.getElementById('unlock').addEventListener('click', tryUnlock);
+  pw.addEventListener('keydown', function(e){ if (e.key === 'Enter') tryUnlock(); });
+  pw.focus();
+
+  // ===== Intake form =====
+  var form = document.getElementById('intake');
+  var statusEl = document.getElementById('form-status');
+  var submitBtn = document.getElementById('submitBtn');
+  var successPanel = document.getElementById('successPanel');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    statusEl.textContent = '';
+    statusEl.className = '';
+
+    var packages = Array.prototype.map.call(
+      form.querySelectorAll('input[name="packages"]:checked'),
+      function(c){ return c.value; }
+    );
+
+    var data = {
+      first_name: form.first_name.value.trim(),
+      last_name: form.last_name.value.trim(),
+      full_name: (form.first_name.value.trim() + ' ' + form.last_name.value.trim()).trim(),
+      business_name: form.business_name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      website: form.website.value.trim(),
+      packages: packages,
+      packages_text: packages.join(', '),
+      notes: form.notes.value.trim(),
+      source: "TRR Partner Program",
+      partner: "TRR Solutions"
+    };
+
+    if (!TRR_WEBHOOK_URL){
+      statusEl.className = 'err';
+      statusEl.textContent = 'This form is not connected yet. Please try again shortly.';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending';
+
+    try {
+      var res = await fetch(TRR_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error('bad response');
+      form.style.display = 'none';
+      successPanel.style.display = 'block';
+      successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch(err){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get started';
+      statusEl.className = 'err';
+      statusEl.textContent = 'That did not go through. Check the connection and try again.';
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,13 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /partners/trr/
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /partners/trr/
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /partners/trr/
 
 User-agent: LinkedInBot
 Allow: /
+Disallow: /partners/trr/
 
 Sitemap: https://origo.ooo/sitemap.xml
