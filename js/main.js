@@ -239,12 +239,16 @@
     var suffix   = el.getAttribute('data-suffix') || '';
     var duration = 850;
     var start    = null;
+    // Progressive enhancement: the real value is already in the HTML, so the
+    // animation only runs the final stretch (from ~80% of target) instead of
+    // counting up from 0. If JS never runs, the real number stays visible.
+    var from     = Math.floor(target * 0.8);
 
     function step(timestamp) {
       if (!start) start = timestamp;
       var elapsed  = timestamp - start;
       var progress = Math.min(elapsed / duration, 1);
-      var value    = Math.floor(easeOutQuart(progress) * target);
+      var value    = from + Math.floor(easeOutQuart(progress) * (target - from));
       el.textContent = value + suffix;
       if (progress < 1) requestAnimationFrame(step);
       else el.textContent = target + suffix;
