@@ -14,4 +14,17 @@ User-agent: LinkedInBot
 Allow: /
 Disallow: /partners/trr/
 
+# AI crawlers: explicitly allowed
+User-agent: GPTBot
+Allow: /
+Disallow: /partners/trr/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /partners/trr/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /partners/trr/
+
 Sitemap: https://origo.ooo/sitemap.xml
