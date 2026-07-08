@@ -2,6 +2,20 @@ Options -Indexes
 
 RewriteEngine On
 
-# Force non-www (canonical: origo.ooo)
+# Canonical scheme + host: https://origo.ooo
+# Cloudways terminates SSL upstream, so Apache sees requests as HTTP and
+# %{HTTPS} is always "off". Use the proxy's X-Forwarded-Proto header as the
+# source of truth to avoid redirect loops.
+
+# 1. Force HTTPS and strip www in a single 301 hop.
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
 RewriteCond %{HTTP_HOST} ^www\.origo\.ooo$ [NC]
 RewriteRule ^ https://origo.ooo%{REQUEST_URI} [R=301,L]
+
+# 2. Add the directory trailing slash over HTTPS ourselves, so Apache's mod_dir
+#    does not emit an insecure http:// redirect (which currently downgrades
+#    https back to http on directory URLs like /faq).
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.+[^/])$ https://origo.ooo/$1/ [R=301,L]
