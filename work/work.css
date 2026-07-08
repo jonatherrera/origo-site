@@ -1,0 +1,42 @@
+/* ============================================================
+   WORK LANDING PAGE
+   Reuses the global .work-card component in an even 4-up grid.
+   ============================================================ */
+
+.work-page__sub {
+  max-width: 640px;
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+}
+
+[data-theme="dark"] .work-page__sub {
+  color: #B5B5BD;
+}
+
+.work-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.work-page__grid .work-card {
+  scroll-margin-top: 96px;
+}
+
+.work-page__grid .work-card__visual {
+  min-height: 340px;
+}
+
+.work-page__more {
+  margin-top: 32px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .work-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
