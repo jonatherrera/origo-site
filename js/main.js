@@ -447,3 +447,20 @@
     requestAnimationFrame(animateRing);
   })();
 })();
+
+// ============================================================
+// GA4: OUTBOUND CLICK TRACKING (go.origo.ooo)
+// ============================================================
+(function () {
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (href.indexOf('go.origo.ooo') === -1) return;
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'outbound_click', {
+      link_url: link.href,
+      link_domain: 'go.origo.ooo'
+    });
+  }, true);
+})();
