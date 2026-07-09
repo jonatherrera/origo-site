@@ -42,6 +42,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=29" />
   <link rel="stylesheet" href="/services/services.css" />
+  <link rel="stylesheet" href="/services/seo-aeo/seo-aeo.css?v=2" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -126,37 +127,32 @@
       {
         "@type": "Question",
         "name": "What's the difference between SEO and AEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "SEO (Search Engine Optimization) focuses on ranking your business in traditional search engines like Google. AEO (Answer Engine Optimization) focuses on getting your business cited by AI assistants like ChatGPT, Claude, Gemini, Grok, and Google AI Overviews. Origo does both, and we'll recommend the right mix for your business." }
+        "acceptedAnswer": { "@type": "Answer", "text": "SEO gets you ranking in traditional search results like Google. AEO, answer engine optimization, gets you recognized and cited by AI answer engines like ChatGPT, Perplexity, and Google's AI Overviews. They overlap, but the newer one needs its own strategy." }
       },
       {
         "@type": "Question",
         "name": "How does Origo's SEO process work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We start with a full audit of your current site and competitive landscape, then build a roadmap covering technical fixes, on-page optimization, content strategy, and AEO structuring. From there we execute monthly with transparent reporting on what we did and what it produced." }
+        "acceptedAnswer": { "@type": "Answer", "text": "We start with a full audit, then build a prioritized roadmap. We fix the technical foundation first, then publish content and optimize your pages and profile, and report on progress every month. You'll always know what's happening." }
       },
       {
         "@type": "Question",
         "name": "How long does SEO take to show results?",
-        "acceptedAnswer": { "@type": "Answer", "text": "SEO typically starts showing real results around the 6-month mark, with stronger compounding gains in the months that follow. Our work with 360 Collision produced a 329.8% increase in keyword rankings, and Groomer's Seafood saw a 423.1% increase in active users." }
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on your market and starting point, but meaningful movement usually takes a few months, and compounds from there. 360 Collision's biggest gains came across a full year. Anyone promising instant results isn't being honest." }
       },
       {
         "@type": "Question",
         "name": "Do I need a new website to do SEO with Origo?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Not always. We can work with your existing site if the foundation is solid, or recommend a rebuild if it's actively holding back your rankings. The audit makes that call clear." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Not always. If your current site can be updated and its foundation is sound, we work with it. If it's holding you back in ways that can't be fixed, we'll tell you honestly and talk through options." }
       },
       {
         "@type": "Question",
         "name": "Will Origo guarantee a #1 ranking?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No reputable SEO agency guarantees rankings, because no one controls Google's algorithm. What we do guarantee is a transparent process, monthly reporting, and proven methodology, and our case studies show the kind of results that consistent work produces." }
+        "acceptedAnswer": { "@type": "Answer", "text": "No, and you should be wary of anyone who does. Rankings depend on factors outside anyone's control. What we do commit to is honest, sustained work and clear reporting, the things that actually move rankings over time." }
       },
       {
         "@type": "Question",
         "name": "Does Origo do local SEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Local SEO is a core part of what we do, including Google Business Profile optimization, local citations, review strategy, and location-specific content. Many of our clients serve specific cities or regions." }
-      },
-      {
-        "@type": "Question",
-        "name": "How is AEO different from regular SEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AEO requires structuring content so AI models can extract clear, citable answers, direct phrasing, defined entities, structured data, and authoritative formatting. Traditional SEO still matters, but AEO is becoming critical as more searches happen through AI assistants." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, and for owner-operated businesses it's often the biggest lever. Google Business Profile was 360 Collision's single largest lead driver. We manage local presence so nearby searches turn into calls and directions." }
       }
     ]
   }
@@ -266,416 +262,347 @@
     </div>
   </div>
 
+  <main class="seo-v2">
+
   <!-- SECTION 01 — HERO -->
   <section class="sp-hero">
     <div class="svc-container">
-      <p class="sp-hero__breadcrumb reveal"><a href="/services">Services</a> <span>/</span> SEO &amp; AEO</p>
-      <p class="sp-hero__label reveal">SEO &amp; AEO</p>
-      <h1 class="sp-hero__headline reveal">Rank on Google. Get cited by AI.</h1>
-      <p class="sp-hero__sub reveal">Search is changing fast. We optimize for traditional search engines, AI answer engines, or the right mix of both for your business.</p>
+      <p class="sp-hero__label reveal"><span class="seo-mark" aria-hidden="true"></span> Services · SEO &amp; AEO</p>
+      <h1 class="sp-hero__headline reveal">Rank on Google.<br>Get cited by AI.</h1>
+      <p class="sp-hero__sub reveal">Search is changing fast. We optimize for the search engines your clients already use and the new answer engines they're starting to trust, so the businesses that have earned their reputation are the ones people actually find.</p>
       <div class="sp-hero__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="btn btn--ghost">All Services</a>
+        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="/work" class="btn btn--ghost">See our work</a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 02 — PROBLEM (DARK) -->
+  <!-- SECTION 02 — PROBLEM (the single dark charcoal band, crescent-arc top) -->
   <section class="sp-problem">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
-      <h2 class="sp-problem__headline reveal">You can't be found if you're not visible, on Google or in AI.</h2>
-      <p class="sp-problem__body reveal">Most small businesses are invisible online. They're not on page one. They're not being cited by ChatGPT or Perplexity. And they have no idea why, or what to do about it.</p>
-      <ul class="sp-problem__list reveal">
-        <li>You're buried on page 3 or worse, no traffic, no leads</li>
-        <li>Competitors consistently outrank you for the searches that matter</li>
-        <li>Your site has never been technically optimized for search</li>
-        <li>You have zero strategy for how AI tools describe your business</li>
-        <li>You've tried SEO before and seen nothing, because it wasn't done right</li>
-      </ul>
+    <svg class="sp-problem__divider" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,110 L0,64 Q720,-24 1440,64 L1440,110 Z" fill="#2B2B2B"></path>
+    </svg>
+    <div class="sp-problem__band">
+      <span class="sp-problem__ghost" aria-hidden="true"></span>
+      <div class="svc-container">
+        <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
+        <h2 class="sp-problem__headline reveal">You can't be found if you're not visible, on Google or in AI.</h2>
+        <p class="sp-problem__body reveal">Most established businesses have earned a great reputation. But if your site was never built for search, and the AI answer engines don't know you exist, your future clients are quietly finding someone else.</p>
+        <ul class="sp-problem__list reveal">
+          <li>Your site was never technically built for search, so it doesn't rank no matter how good your work is.</li>
+          <li>You have no strategy for how ChatGPT, Perplexity, and Google's AI answers describe your business.</li>
+          <li>You tried SEO before and saw nothing, because it wasn't done right and nobody stayed with it.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 03 — SOLUTION -->
-  <section class="sp-solution">
+  <!-- SECTION 03 — OUR APPROACH -->
+  <section class="sp-approach">
     <div class="svc-container">
-      <div class="svc-two-col">
+      <div class="sp-approach__grid">
         <div>
           <p class="svc-eyebrow reveal">Our Approach</p>
-          <h2 class="sp-solution__headline reveal">SEO that earns rankings. AEO that earns citations.</h2>
-          <p class="sp-solution__body reveal">Our work spans traditional search optimization (technical SEO, on-page content, local rankings) and Answer Engine Optimization, so AI assistants cite your business when someone asks about your industry. We recommend the right mix for your goals.</p>
-          <p class="sp-solution__body reveal">This isn't plug-and-play or automated keyword stuffing. It's strategic, built on your actual business, and designed to compound over time.</p>
+          <h2 class="sp-approach__headline reveal">SEO that earns rankings. AEO that earns citations.</h2>
+          <p class="sp-approach__body reveal">We do the traditional work well, technical SEO, on-page content, and local optimization, and we build for the answer engines at the same time. This isn't plug-and-play or automated keyword stuffing. It's strategic, built on your real business, and designed to compound over time.</p>
         </div>
-        <div class="reveal">
-          <div class="seo-authority-grid" id="seo-ag">
+        <div class="sp-approach__cards">
+          <div class="approach-card approach-card--gray reveal">
+            <p class="approach-card__label">Search Engines</p>
+            <h3 class="approach-card__title">Google still sends the leads.</h3>
+            <p class="approach-card__desc">Clean technical foundations, pages built to rank, and a Google Business Profile that turns local searches into calls and directions.</p>
+          </div>
+          <div class="approach-card approach-card--blue reveal">
+            <p class="approach-card__label">Answer Engines</p>
+            <h3 class="approach-card__title">AI has to know you're credible.</h3>
+            <p class="approach-card__desc">We structure your presence so ChatGPT, Perplexity, and AI Overviews can recognize you as a real, trustworthy answer and cite you by name.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Terminal header -->
-            <div class="wc-dash-header">
-              <div class="wc-dash-dots">
-                <span class="wc-dot" style="background:#FF5F57;"></span>
-                <span class="wc-dot" style="background:#FEBC2E;"></span>
-                <span class="wc-dot" style="background:#28C840;"></span>
-              </div>
-              <span class="wc-dash-title">Local &amp; AI Authority</span>
-              <div class="wc-dash-live">
-                <span class="wc-led"></span>
-                <span>Scanning</span>
-              </div>
+  <!-- SECTION 04 — PROVEN RESULTS · Live Results Dashboard (signature section) -->
+  <section class="sp-results">
+    <div class="svc-container">
+      <p class="sp-results__eyebrow reveal">Proven Results</p>
+      <h2 class="sp-results__headline reveal">One year of SEO, one real business.</h2>
+      <p class="sp-results__sub reveal">360 Collision is an owner-operated auto body shop in San Antonio. Here's what a full year of technical SEO, content, and Google Business Profile work actually did, pulled straight from their end-of-year report.</p>
+
+      <div class="dash reveal" id="seo-dash">
+        <div class="dash__bar">
+          <div class="dash__dots"><span style="background:#E0736B"></span><span style="background:#E6B24A"></span><span style="background:#5BB56E"></span></div>
+          <span class="dash__title"><span class="seo-mark" aria-hidden="true"></span> 360 Collision · SEO Performance · 2025</span>
+          <span class="dash__meta">Year over year</span>
+        </div>
+
+        <!-- Top grid: keywords panel (spans 2 rows) + two stats + AI card -->
+        <div class="dash__body">
+          <div class="dcard dcard--dark dcard--keywords">
+            <p class="dcard__label">Ranking Keywords</p>
+            <div class="dcard__row">
+              <span class="dcard__big" data-count="4100" data-format="comma">4,100</span>
+              <span class="delta">&#9650; 329.8%</span>
             </div>
-
-            <svg class="seo-ag-svg" viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
-
-              <!-- 10×10 coordinate grid -->
-              <g stroke="rgba(255,255,255,0.055)" stroke-width="0.5">
-                <line x1="20"  y1="20" x2="20"  y2="340"/>
-                <line x1="60"  y1="20" x2="60"  y2="340"/>
-                <line x1="100" y1="20" x2="100" y2="340"/>
-                <line x1="140" y1="20" x2="140" y2="340"/>
-                <line x1="180" y1="20" x2="180" y2="340"/>
-                <line x1="220" y1="20" x2="220" y2="340"/>
-                <line x1="260" y1="20" x2="260" y2="340"/>
-                <line x1="300" y1="20" x2="300" y2="340"/>
-                <line x1="340" y1="20" x2="340" y2="340"/>
-                <line x1="380" y1="20" x2="380" y2="340"/>
-                <line x1="420" y1="20" x2="420" y2="340"/>
-                <line x1="20" y1="20"  x2="420" y2="20"/>
-                <line x1="20" y1="52"  x2="420" y2="52"/>
-                <line x1="20" y1="84"  x2="420" y2="84"/>
-                <line x1="20" y1="116" x2="420" y2="116"/>
-                <line x1="20" y1="148" x2="420" y2="148"/>
-                <line x1="20" y1="180" x2="420" y2="180"/>
-                <line x1="20" y1="212" x2="420" y2="212"/>
-                <line x1="20" y1="244" x2="420" y2="244"/>
-                <line x1="20" y1="276" x2="420" y2="276"/>
-                <line x1="20" y1="308" x2="420" y2="308"/>
-                <line x1="20" y1="340" x2="420" y2="340"/>
-              </g>
-
-              <!-- Radar pulse rings (3 staggered) -->
-              <circle class="seo-radar seo-radar--1" cx="220" cy="180" r="16" stroke="#1E68D9" stroke-width="1"/>
-              <circle class="seo-radar seo-radar--2" cx="220" cy="180" r="16" stroke="#1E68D9" stroke-width="0.75"/>
-              <circle class="seo-radar seo-radar--3" cx="220" cy="180" r="16" stroke="#1E68D9" stroke-width="0.5"/>
-
-              <!-- Neural connection lines: hub → nodes -->
-              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="52"  stroke="#1E68D9" stroke-width="0.75" style="--i:1"/>
-              <line class="seo-line"           x1="220" y1="180" x2="140" y2="84"  stroke="#1E68D9" stroke-width="0.75" style="--i:2"/>
-              <line class="seo-line"           x1="220" y1="180" x2="300" y2="52"  stroke="#1E68D9" stroke-width="0.75" style="--i:3"/>
-              <line class="seo-line"           x1="220" y1="180" x2="380" y2="116" stroke="#1E68D9" stroke-width="0.75" style="--i:4"/>
-              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="148" stroke="#1E68D9" stroke-width="0.75" style="--i:5"/>
-              <line class="seo-line"           x1="220" y1="180" x2="140" y2="212" stroke="#1E68D9" stroke-width="0.75" style="--i:6"/>
-              <line class="seo-line"           x1="220" y1="180" x2="300" y2="148" stroke="#1E68D9" stroke-width="0.75" style="--i:7"/>
-              <line class="seo-line"           x1="220" y1="180" x2="380" y2="212" stroke="#1E68D9" stroke-width="0.75" style="--i:8"/>
-              <line class="seo-line seo-line--green" x1="220" y1="180" x2="100" y2="276" stroke="#22c55e" stroke-width="0.75" style="--i:9"/>
-              <line class="seo-line seo-line--green" x1="220" y1="180" x2="220" y2="308" stroke="#22c55e" stroke-width="0.75" style="--i:10"/>
-              <line class="seo-line seo-line--green" x1="220" y1="180" x2="340" y2="276" stroke="#22c55e" stroke-width="0.75" style="--i:11"/>
-              <line class="seo-line"           x1="220" y1="180" x2="60"  y2="308" stroke="#1E68D9" stroke-width="0.75" style="--i:12"/>
-              <line class="seo-line"           x1="220" y1="180" x2="380" y2="308" stroke="#1E68D9" stroke-width="0.75" style="--i:13"/>
-              <line class="seo-line seo-line--green" x1="220" y1="180" x2="420" y2="180" stroke="#22c55e" stroke-width="0.75" style="--i:14"/>
-              <line class="seo-line"           x1="220" y1="180" x2="180" y2="116" stroke="#1E68D9" stroke-width="0.75" style="--i:15"/>
-
-              <!-- Result nodes (blue = search, green = AI/AEO) -->
-              <circle class="seo-node seo-node--blue"  cx="60"  cy="52"  r="5" style="--i:1"/>
-              <circle class="seo-node seo-node--blue"  cx="140" cy="84"  r="5" style="--i:2"/>
-              <circle class="seo-node seo-node--blue"  cx="300" cy="52"  r="5" style="--i:3"/>
-              <circle class="seo-node seo-node--blue"  cx="380" cy="116" r="5" style="--i:4"/>
-              <circle class="seo-node seo-node--blue"  cx="60"  cy="148" r="5" style="--i:5"/>
-              <circle class="seo-node seo-node--blue"  cx="140" cy="212" r="5" style="--i:6"/>
-              <circle class="seo-node seo-node--blue"  cx="300" cy="148" r="5" style="--i:7"/>
-              <circle class="seo-node seo-node--blue"  cx="380" cy="212" r="5" style="--i:8"/>
-              <circle class="seo-node seo-node--green" cx="100" cy="276" r="5" style="--i:9"/>
-              <circle class="seo-node seo-node--green" cx="220" cy="308" r="5" style="--i:10"/>
-              <circle class="seo-node seo-node--green" cx="340" cy="276" r="5" style="--i:11"/>
-              <circle class="seo-node seo-node--blue"  cx="60"  cy="308" r="5" style="--i:12"/>
-              <circle class="seo-node seo-node--blue"  cx="380" cy="308" r="5" style="--i:13"/>
-              <circle class="seo-node seo-node--green" cx="420" cy="180" r="5" style="--i:14"/>
-              <circle class="seo-node seo-node--blue"  cx="180" cy="116" r="5" style="--i:15"/>
-
-              <!-- Brand Hub — center authority node -->
-              <circle class="seo-hub-ring" cx="220" cy="180" r="18" stroke="#1E68D9" stroke-width="1" fill="none"/>
-              <circle cx="220" cy="180" r="12" fill="rgba(30, 104, 217,0.16)" stroke="#1E68D9" stroke-width="1.5"/>
-              <circle cx="220" cy="180" r="6"  fill="#1E68D9"/>
-              <text x="220" y="183.5" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700" font-size="6.5" fill="white">O</text>
-
+            <p class="dcard__note">Keywords ranking by year end, up from roughly 950.</p>
+            <svg class="dcard__chart" viewBox="0 0 560 190" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="dashArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1E68D9" stop-opacity="0.5"/>
+                  <stop offset="1" stop-color="#1E68D9" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,168 C90,160 150,150 210,132 C280,112 330,96 400,66 C460,42 510,30 560,18 L560,190 L0,190 Z" fill="url(#dashArea)"/>
+              <path d="M0,168 C90,160 150,150 210,132 C280,112 330,96 400,66 C460,42 510,30 560,18" fill="none" stroke="#4E88E0" stroke-width="3" stroke-linecap="round"/>
             </svg>
           </div>
+
+          <div class="dcard dcard--plain dcard--users">
+            <p class="dcard__label">Active Users</p>
+            <span class="dcard__big" data-count="6400" data-format="comma">6,400</span>
+            <span class="delta">&#9650; 62.7% YoY</span>
+          </div>
+
+          <div class="dcard dcard--plain dcard--clicks">
+            <p class="dcard__label">Search Clicks</p>
+            <span class="dcard__big" data-count="608">608</span>
+            <span class="delta">&#9650; 294.8% YoY</span>
+          </div>
+
+          <div class="dcard dcard--blue dcard--ai">
+            <p class="dcard__label">AI Search Visibility</p>
+            <div class="dcard__row">
+              <span class="dcard__rank">#7</span>
+              <span class="dcard__rank-note">in ChatGPT's "Top 20 San Antonio Collision &amp; Auto Body Shops"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower band: Google Business Profile + traffic split / top terms -->
+        <div class="dash__lower">
+          <div class="dcard dcard--soft dcard--gbp">
+            <div class="dcard__head">
+              <p class="dcard__label">Google Business Profile</p>
+              <span class="dcard__tag">Primary lead driver</span>
+            </div>
+            <div class="gbp-grid">
+              <div class="gbp-metric">
+                <p class="gbp-metric__num" data-count="19504" data-format="comma">19,504</p>
+                <p class="gbp-metric__label">Impressions <span class="delta">&#9650; 238.4%</span></p>
+              </div>
+              <div class="gbp-metric">
+                <p class="gbp-metric__num" data-count="1213" data-format="comma">1,213</p>
+                <p class="gbp-metric__label">Call clicks <span class="delta">&#9650; 215.9%</span></p>
+              </div>
+              <div class="gbp-metric">
+                <p class="gbp-metric__num" data-count="2551" data-format="comma">2,551</p>
+                <p class="gbp-metric__label">Direction requests <span class="delta">&#9650; 46.6%</span></p>
+              </div>
+              <div class="gbp-metric">
+                <p class="gbp-metric__num" data-count="418">418</p>
+                <p class="gbp-metric__label">Website clicks <span class="delta">&#9650; 148.8%</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dcol">
+            <div class="dcard dcard--soft">
+              <p class="dcard__label">Where traffic came from</p>
+              <div class="traffic-bar">
+                <span style="width:58%;background:#14448F"></span>
+                <span style="width:18.1%;background:#1E68D9"></span>
+                <span style="width:12.4%;background:#7FA6E8"></span>
+                <span style="width:7.8%;background:#CBDBF6"></span>
+              </div>
+              <ul class="traffic-legend">
+                <li><i style="background:#14448F"></i> Google CPC 58.0%</li>
+                <li><i style="background:#1E68D9"></i> Direct 18.1%</li>
+                <li><i style="background:#7FA6E8"></i> Organic 12.4%</li>
+                <li><i style="background:#CBDBF6"></i> Referral 7.8%</li>
+              </ul>
+            </div>
+            <div class="dcard dcard--soft">
+              <p class="dcard__label">Top ranking terms</p>
+              <div class="terms">
+                <span>collision repair near me</span>
+                <span>collision repair San Antonio</span>
+                <span>body shops near me</span>
+                <span>auto hail repair near me</span>
+                <span>360 Collision San Antonio</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <p class="sp-results__source reveal">Source: 360 Collision 2025 End of Year SEO Report. Results vary by market, competition, and starting point.</p>
     </div>
   </section>
 
-  <!-- SECTION 04 — AEO EXPLAINER (DARK) -->
-  <section class="sp-aeo">
-    <div class="svc-container">
-      <p class="sp-aeo__label reveal">What Is AEO?</p>
-      <h2 class="sp-aeo__headline reveal">The next generation of search isn't a results page, it's an answer.</h2>
-      <p class="sp-aeo__body reveal">When someone types a question into ChatGPT, Perplexity, or Google's AI Overview, they get a direct answer, not a list of blue links. The businesses that get cited in those answers aren't just lucky. They're optimized for it.</p>
-      <p class="sp-aeo__body reveal">Answer Engine Optimization (AEO) means structuring your content, authority signals, and brand presence so that AI models recognize you as a credible, citable source in your field. It's the new frontier of discoverability, and most businesses don't know it exists.</p>
-      <div class="sp-aeo-engines reveal">
-        <span class="sp-aeo-engine">ChatGPT</span>
-        <span class="sp-aeo-engine">Perplexity</span>
-        <span class="sp-aeo-engine">Google AI Overview</span>
-        <span class="sp-aeo-engine">Claude</span>
-        <span class="sp-aeo-engine">Gemini</span>
-        <span class="sp-aeo-engine">Grok</span>
-        <span class="sp-aeo-engine">Bing Copilot</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05 — WHAT'S INCLUDED -->
+  <!-- SECTION 05 — WHAT WE ACTUALLY DO -->
   <section class="sp-included">
     <div class="svc-container">
-      <p class="svc-eyebrow reveal">What's Included</p>
-      <h2 class="sp-included__headline reveal">What we build in SEO and AEO.</h2>
-      <p class="sp-included__sub reveal">Every engagement starts with a full audit. The right deliverables depend on your business and your package.</p>
-      <div class="sp-deliverables stagger-group">
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Technical SEO Audit</h3>
-          <p class="sp-deliverable__desc">Site speed, crawlability, indexation, and technical errors, identified and fixed.</p>
+      <p class="sp-included__eyebrow reveal">What's Included</p>
+      <h2 class="sp-included__headline reveal">What we actually do.</h2>
+      <p class="sp-included__sub reveal">Every engagement starts with a full audit. The right mix depends on your business and where you're starting.</p>
+
+      <div class="bento">
+        <div class="bcard bcard--audit reveal">
+          <h3 class="bcard__title">Technical SEO audit</h3>
+          <p class="bcard__desc">The foundation everything else stands on. We find what's holding your site back, crawlability, speed, structure, indexing, and fix it first. No point ranking content on a site search engines can't read.</p>
+          <div class="bcard__tags">
+            <span>Site speed</span>
+            <span>Indexing</span>
+            <span>Schema markup</span>
+            <span>Core Web Vitals</span>
+          </div>
         </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Keyword Strategy</h3>
-          <p class="sp-deliverable__desc">Research-backed targeting of high-intent keywords your ideal clients are actually searching.</p>
+        <div class="bcard bcard--dark bcard--aeo reveal">
+          <h3 class="bcard__title">Answer Engine Optimization</h3>
+          <p class="bcard__desc">The new work most agencies aren't doing yet. We structure your content and credibility signals so AI answer engines can recognize you, trust you, and name you when someone asks.</p>
         </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">On-Page Optimization</h3>
-          <p class="sp-deliverable__desc">Meta titles, descriptions, heading structure, internal linking, and schema markup on every page.</p>
+        <div class="bcard bcard--kw reveal">
+          <h3 class="bcard__title">Keyword &amp; content strategy</h3>
+          <p class="bcard__desc">The terms your real clients search, mapped to pages that earn them.</p>
         </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Content Strategy</h3>
-          <p class="sp-deliverable__desc">A plan for creating content that ranks, earns backlinks, and builds topical authority over time.</p>
+        <div class="bcard bcard--onpage reveal">
+          <h3 class="bcard__title">On-page optimization</h3>
+          <p class="bcard__desc">Titles, structure, and copy tuned so each page ranks for what it's about.</p>
         </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">AEO Optimization</h3>
-          <p class="sp-deliverable__desc">Structured data, FAQ content, and authority signals to get your business cited by AI tools.</p>
+        <div class="bcard bcard--blue bcard--local reveal">
+          <h3 class="bcard__title">Google Business Profile</h3>
+          <p class="bcard__desc">The single biggest local lead driver. We manage it so searches turn into calls and directions.</p>
         </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Monthly Reporting</h3>
-          <p class="sp-deliverable__desc">Clear reports showing ranking improvements, traffic trends, and what we're doing next.</p>
+        <div class="bcard bcard--report reveal">
+          <h3 class="bcard__title">Monthly reporting</h3>
+          <p class="bcard__desc">Plain-language reports on what moved and what's next. No black box.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 06 — PROCESS -->
+  <!-- SECTION 06 — HOW IT WORKS -->
   <section class="sp-process">
     <div class="svc-container">
-      <p class="svc-eyebrow reveal">How It Works</p>
+      <p class="sp-process__eyebrow reveal">How It Works</p>
       <h2 class="sp-process__headline reveal">Results take time. Our process makes sure they come.</h2>
-      <p class="sp-process__sub reveal">SEO is a long game, but you'll see movement within 60–90 days when done right.</p>
-      <div class="sp-steps stagger-group">
-        <div class="sp-step reveal">
-          <div class="sp-step__num">1</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Audit &amp; Discovery</h3>
-            <p class="sp-step__desc">We audit your current site, competitors, and keyword landscape to understand where you stand.</p>
-          </div>
+      <p class="sp-process__sub reveal">SEO is a long game. We want to make sure we're heading the right direction from the start, and that you always know where things stand.</p>
+
+      <div class="prail stagger-group">
+        <div class="pstep reveal">
+          <div class="pstep__node"><span class="seo-mark" aria-hidden="true"></span></div>
+          <p class="pstep__num">01</p>
+          <h3 class="pstep__title">Audit &amp; discovery</h3>
+          <p class="pstep__desc">We audit your site, your competitors, and how AI tools describe you today.</p>
         </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">2</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Strategy &amp; Prioritization</h3>
-            <p class="sp-step__desc">We build a prioritized roadmap, quick wins first, long-term authority built in parallel.</p>
-          </div>
+        <div class="pstep reveal">
+          <div class="pstep__node"><span class="seo-mark" aria-hidden="true"></span></div>
+          <p class="pstep__num">02</p>
+          <h3 class="pstep__title">Strategy &amp; prioritization</h3>
+          <p class="pstep__desc">We build a prioritized roadmap, quick wins first, so momentum starts early.</p>
         </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">3</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Technical &amp; On-Page Fixes</h3>
-            <p class="sp-step__desc">We implement all technical and on-page changes directly, no lengthy handoffs.</p>
-          </div>
+        <div class="pstep reveal">
+          <div class="pstep__node"><span class="seo-mark" aria-hidden="true"></span></div>
+          <p class="pstep__num">03</p>
+          <h3 class="pstep__title">Build &amp; optimize</h3>
+          <p class="pstep__desc">We fix the technical foundation, publish content, and tune your profile and pages.</p>
         </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">4</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Content Execution</h3>
-            <p class="sp-step__desc">We create or optimize content for Google rankings, AI citation signals, or both, depending on your engagement.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">5</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Ongoing Monitoring &amp; Reporting</h3>
-            <p class="sp-step__desc">Monthly reports, quarterly strategy reviews, and continuous optimization as the landscape changes.</p>
-          </div>
+        <div class="pstep reveal">
+          <div class="pstep__node"><span class="seo-mark" aria-hidden="true"></span></div>
+          <p class="pstep__num">04</p>
+          <h3 class="pstep__title">Track &amp; refine</h3>
+          <p class="pstep__desc">We report every month and keep refining as rankings and citations grow.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 07 — RIGHT FIT (DARK) -->
+  <!-- SECTION 07 — IS THIS RIGHT FOR YOU -->
   <section class="sp-fit">
     <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">Is This Right for You?</p>
-      <h2 class="sp-fit__headline reveal">This is for you if…</h2>
-      <p class="sp-fit__sub reveal">SEO is a long-term play. We want to make sure we're the right fit before we start.</p>
+      <p class="sp-fit__eyebrow reveal">Is This Right for You?</p>
+      <h2 class="sp-fit__headline reveal">We'd rather be honest up front.</h2>
       <div class="sp-fit-grid">
-        <div class="reveal">
-          <p class="sp-fit-col__label">Good fit</p>
-          <ul class="sp-fit-list sp-fit-list--yes">
-            <li>You want sustainable, organic traffic, not just paid ads</li>
-            <li>You're willing to commit for at least 6 months to see results</li>
-            <li>You understand SEO is an investment, not an instant switch</li>
-            <li>You want to be found on AI tools, not just Google</li>
-            <li>You have a real business with a real service people are searching for</li>
+        <div class="fit-card fit-card--yes reveal">
+          <p class="fit-card__title">This is for you if…</p>
+          <ul class="fit-list fit-list--yes">
+            <li>You want sustainable, organic traffic, not just paid ads.</li>
+            <li>You're willing to commit for at least a few months to see results.</li>
+            <li>You understand SEO is an investment, not an instant switch.</li>
+            <li>You want a real business behind the work, not a keyword robot.</li>
           </ul>
         </div>
-        <div class="reveal">
-          <p class="sp-fit-col__label">Not the right fit</p>
-          <ul class="sp-fit-list sp-fit-list--no">
-            <li>You need leads this week, SEO won't help that fast</li>
-            <li>You want guaranteed #1 rankings (no one can promise that)</li>
-            <li>You're looking for the cheapest option available</li>
-            <li>You don't have a website, or it can't be modified</li>
+        <div class="fit-card fit-card--no reveal">
+          <p class="fit-card__title">It's probably not, if…</p>
+          <ul class="fit-list fit-list--no">
+            <li>You need new leads by next week. SEO won't do that, paid ads might.</li>
+            <li>You want a guaranteed #1 ranking. Nobody honest can promise that.</li>
+            <li>You're looking for the cheapest option available.</li>
+            <li>You don't have a website, or it can't be modified.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 08 — RESULTS STATS STRIP -->
-  <section class="sp-results-strip">
+  <!-- SECTION 08 — TESTIMONIAL -->
+  <section class="sp-testimonial">
     <div class="svc-container">
-      <div class="sp-results-strip__header reveal">
-        <p class="sp-results-strip__eyebrow">Real Results</p>
-        <h2 class="sp-results-strip__headline">What SEO actually does for a business.</h2>
-        <p class="sp-results-strip__sub">From the 2025 Annual SEO Report, 360 Collision · San Antonio, TX</p>
-      </div>
-      <div class="sp-results-strip__grid reveal">
-        <div class="sp-results-stat">
-          <p class="sp-results-stat__number seo-counter" data-target="60" data-suffix="%">60%</p>
-          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
-            <polyline class="sp-sparkline__line" points="0,28 22,22 44,16 66,9 88,3"/>
-          </svg>
-          <p class="sp-results-stat__label seo-label">User Growth</p>
-          <p class="sp-results-stat__sub seo-label">Active &amp; new users year over year</p>
-        </div>
-        <div class="sp-results-stat">
-          <p class="sp-results-stat__number seo-counter" data-target="4100" data-formatted="true">4,100</p>
-          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
-            <polyline class="sp-sparkline__line" points="0,28 22,26 44,22 60,14 75,7 88,2"/>
-          </svg>
-          <p class="sp-results-stat__label seo-label">Keywords Ranking</p>
-          <p class="sp-results-stat__sub seo-label">↑ 329.8% year over year</p>
-        </div>
-        <div class="sp-results-stat">
-          <p class="sp-results-stat__number seo-rank">#1</p>
-          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
-            <polyline class="sp-sparkline__line" points="0,26 22,18 44,10 66,4 88,4"/>
-          </svg>
-          <p class="sp-results-stat__label seo-label">Lead Driver</p>
-          <p class="sp-results-stat__sub seo-label">Google Business Profile, dominant all year</p>
-        </div>
-        <div class="sp-results-stat">
-          <p class="sp-results-stat__number seo-rank">#7</p>
-          <svg class="sp-sparkline" viewBox="0 0 88 32" fill="none" aria-hidden="true">
-            <polyline class="sp-sparkline__line" points="0,28 22,25 44,20 66,14 88,8"/>
-          </svg>
-          <p class="sp-results-stat__label seo-label">ChatGPT Ranking</p>
-          <p class="sp-results-stat__sub seo-label">Top collision shops in San Antonio</p>
+      <div class="sp-testimonial__inner reveal">
+        <span class="seo-mark" aria-hidden="true"></span>
+        <p class="sp-testimonial__quote">"Fantastic business. Very creative, in touch with the current markets, and they have done a great job helping us grow our online presence."</p>
+        <div class="sp-testimonial__author">
+          <img src="/images/kelly-head-shot.jpeg" alt="Kelly Rabedeau" class="sp-testimonial__avatar">
+          <div class="sp-testimonial__meta">
+            <p class="sp-testimonial__name">Kelly Rabedeau</p>
+            <p class="sp-testimonial__role">Owner, 360 Collision · San Antonio, TX</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 09 — 360 COLLISION CASE STUDY -->
-  <section class="sp-case-study">
-    <div class="svc-container">
-      <div class="sp-case-study__inner reveal">
-        <div class="sp-case-study__header">
-          <p class="sp-case-study__eyebrow">Client Spotlight</p>
-          <h2 class="sp-case-study__headline">360 Collision</h2>
-          <p class="sp-case-study__location">San Antonio, TX · Auto Collision &amp; Hail Repair</p>
-          <p class="sp-case-study__context">In 2025, Origo's SEO strategy produced dramatic growth across every metric, turning 360 Collision's Google presence into the single most powerful lead driver in their business. Timely content tied to real events like hailstorms drove measurable traffic spikes, while a fully optimized Google Business Profile generated 1,213 call clicks and 2,551 direction requests over the course of the year.</p>
-        </div>
-        <div class="sp-case-study__metrics">
-          <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num seo-case-counter" data-target="19504">19,504</p>
-            <p class="sp-case-study__metric-label">GBP Impressions</p>
-            <p class="sp-case-study__metric-delta">↑ 238%</p>
-          </div>
-          <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num seo-case-counter" data-target="1213">1,213</p>
-            <p class="sp-case-study__metric-label">Call Clicks</p>
-            <p class="sp-case-study__metric-delta">↑ 216%</p>
-          </div>
-          <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num seo-case-counter" data-target="608">608</p>
-            <p class="sp-case-study__metric-label">Organic Clicks</p>
-            <p class="sp-case-study__metric-delta">↑ 295%</p>
-          </div>
-          <div class="sp-case-study__metric">
-            <p class="sp-case-study__metric-num seo-case-counter" data-target="2551">2,551</p>
-            <p class="sp-case-study__metric-label">Direction Requests</p>
-            <p class="sp-case-study__metric-delta">↑ 47%</p>
-          </div>
-        </div>
-        <blockquote class="sp-case-study__quote">
-          <p>"Fantastic business. Very creative, in touch with the current markets, and they have done a great job helping us grow our online presence."</p>
-          <footer>
-            <img src="/images/kelly-head-shot.jpeg" alt="Kelly Rabedeau" class="sp-case-study__avatar">
-            <div>
-              <p class="sp-case-study__quote-name">Kelly Rabedeau</p>
-              <p class="sp-case-study__quote-title">Owner, 360 Collision, San Antonio, TX</p>
-            </div>
-          </footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10 — CLOSING CTA (DARK) -->
-
-  <!-- ============================================================
-       SERVICE FAQ
-  ============================================================ -->
+  <!-- SECTION 09 — SEO & AEO FAQ -->
   <section class="service-faq">
     <div class="container">
       <div class="service-faq__header">
-        <span class="service-faq__label">SEO & AEO FAQ</span>
-        <h2 class="service-faq__title">SEO & AEO Questions</h2>
+        <span class="service-faq__label">SEO &amp; AEO FAQ</span>
+        <h2 class="service-faq__title">Questions, answered.</h2>
       </div>
       <div class="faq-list">
         <details class="faq-item">
           <summary>What's the difference between SEO and AEO?</summary>
           <div class="faq-item__answer">
-            <p><a href='/glossary#search-engine-optimization-seo'>SEO (Search Engine Optimization)</a> focuses on ranking your business in traditional search engines like Google. <a href='/glossary#answer-engine-optimization-aeo'>AEO (Answer Engine Optimization)</a> focuses on getting your business cited by AI assistants like ChatGPT, Claude, Gemini, Grok, and Google AI Overviews. Origo does both, and we'll recommend the right mix for your business.</p>
+            <p><a href="/glossary#search-engine-optimization-seo">SEO</a> gets you ranking in traditional search results like Google. <a href="/glossary#answer-engine-optimization-aeo">AEO</a>, answer engine optimization, gets you recognized and cited by AI answer engines like ChatGPT, Perplexity, and Google's AI Overviews. They overlap, but the newer one needs its own strategy.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary>How does Origo's SEO process work?</summary>
           <div class="faq-item__answer">
-            <p>We start with a full audit of your current site and competitive landscape, then build a roadmap covering technical fixes, on-page optimization, content strategy, and AEO structuring. From there we execute monthly with transparent reporting on what we did and what it produced.</p>
+            <p>We start with a full audit, then build a prioritized roadmap. We fix the technical foundation first, then publish content and optimize your pages and profile, and report on progress every month. You'll always know what's happening.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary>How long does SEO take to show results?</summary>
           <div class="faq-item__answer">
-            <p>SEO typically starts showing real results around the 6-month mark, with stronger compounding gains in the months that follow. Our work with <a href='/work/case-studies'>360 Collision</a> produced a 329.8% increase in keyword rankings, and Groomer's Seafood saw a 423.1% increase in active users.</p>
+            <p>It depends on your market and starting point, but meaningful movement usually takes a few months, and compounds from there. <a href="/work/case-studies">360 Collision's</a> biggest gains came across a full year. Anyone promising instant results isn't being honest.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary>Do I need a new website to do SEO with Origo?</summary>
           <div class="faq-item__answer">
-            <p>Not always. We can work with your existing <a href='/services/web-design'>site</a> if the foundation is solid, or recommend a rebuild if it's actively holding back your rankings. The audit makes that call clear.</p>
+            <p>Not always. If your current <a href="/services/web-design">site</a> can be updated and its foundation is sound, we work with it. If it's holding you back in ways that can't be fixed, we'll tell you honestly and talk through options.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary>Will Origo guarantee a #1 ranking?</summary>
           <div class="faq-item__answer">
-            <p>No reputable SEO agency guarantees rankings, because no one controls Google's algorithm. What we do guarantee is a transparent process, monthly reporting, and proven methodology, and our <a href='/work/case-studies'>case studies</a> show the kind of results that consistent work produces.</p>
+            <p>No, and you should be wary of anyone who does. Rankings depend on factors outside anyone's control. What we do commit to is honest, sustained work and clear reporting, the things that actually move rankings over time.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary>Does Origo do local SEO?</summary>
           <div class="faq-item__answer">
-            <p>Yes. Local SEO is a core part of what we do, including Google Business Profile optimization, local citations, review strategy, and location-specific content. Many of our clients serve specific cities or regions.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How is AEO different from regular SEO?</summary>
-          <div class="faq-item__answer">
-            <p><a href='/glossary#answer-engine-optimization-aeo'>AEO</a> requires structuring content so AI models can extract clear, citable answers, direct phrasing, defined entities, structured data, and authoritative formatting. Traditional <a href='/glossary#search-engine-optimization-seo'>SEO</a> still matters, but AEO is becoming critical as more searches happen through AI assistants. See our <a href='/faq#ai-trust'>FAQ on AI &amp; Trust</a> for more.</p>
+            <p>Yes, and for owner-operated businesses it's often the biggest lever. Google Business Profile was 360 Collision's single largest lead driver. We manage local presence so nearby searches turn into calls and directions.</p>
           </div>
         </details>
         <p class="faq-updated"><a href="/faq">See all frequently asked questions →</a></p>
@@ -683,16 +610,21 @@
     </div>
   </section>
 
+  <!-- SECTION 10 — CLOSING CTA (flat blue) -->
   <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Start showing up where it matters.</h2>
-      <p class="sp-cta__sub reveal">Book a free discovery call. We'll audit your current visibility and tell you exactly where the opportunity is.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="sp-cta__secondary">View All Services</a>
+    <div class="svc-container">
+      <div class="sp-cta__inner">
+        <h2 class="sp-cta__headline reveal">Start showing up where it matters.</h2>
+        <p class="sp-cta__sub reveal">Book a discovery call. No pitch, no pressure, just an honest conversation about where your business could be found.</p>
+        <div class="sp-cta__buttons reveal">
+          <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="/services" class="sp-cta__secondary">View all services</a>
+        </div>
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container">
@@ -782,95 +714,39 @@
 
   <script src="/js/main.js?v=7"></script>
   <script>
+  /* Live Results Dashboard — count-up on the real client numbers */
   (function () {
-    var DURATION = 1800;
-
+    var DURATION = 1600;
     function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
 
-    function fmtNum(n, formatted) {
-      if (formatted) return Math.round(n).toLocaleString('en-US');
-      return Math.round(n).toString();
+    var dash = document.getElementById('seo-dash');
+    if (!dash) return;
+
+    var nums = Array.prototype.map.call(dash.querySelectorAll('[data-count]'), function (el) {
+      return { el: el, target: parseInt(el.getAttribute('data-count'), 10), comma: el.getAttribute('data-format') === 'comma' };
+    });
+
+    function render(n, comma) {
+      return comma ? Math.round(n).toLocaleString('en-US') : Math.round(n).toString();
     }
 
-    function runCounters(counters, onDone) {
-      if (!counters.length) return;
-      var startTime = null;
+    var done = false;
+    function run() {
+      var start = null;
       function step(ts) {
-        if (!startTime) startTime = ts;
-        var p = Math.min((ts - startTime) / DURATION, 1);
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / DURATION, 1);
         var e = easeOut(p);
-        counters.forEach(function (c) {
-          if (!c.el) return;
-          c.el.textContent = fmtNum(c.target * e, c.formatted) + (c.suffix || '');
-        });
-        if (p < 1) {
-          requestAnimationFrame(step);
-        } else if (onDone) {
-          onDone();
-        }
+        nums.forEach(function (c) { c.el.textContent = render(c.target * e, c.comma); });
+        if (p < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
     }
 
-    /* ── Results Strip ── */
-    var stripGrid = document.querySelector('.sp-results-strip__grid');
-    if (stripGrid) {
-      var stripCounters = [
-        { el: stripGrid.querySelector('[data-target="60"]'),   target: 60,   suffix: '%' },
-        { el: stripGrid.querySelector('[data-target="4100"]'), target: 4100, formatted: true }
-      ];
-
-      stripGrid.querySelectorAll('.seo-label').forEach(function (el) {
-        el.style.opacity = '0';
-      });
-
-      var stripDone = false;
+    if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        if (!entries[0].isIntersecting || stripDone) return;
-        stripDone = true;
-
-        runCounters(stripCounters, function () {
-          stripGrid.querySelectorAll('.seo-label').forEach(function (el) {
-            el.style.opacity = '1';
-          });
-        });
-
-        setTimeout(function () {
-          stripGrid.querySelectorAll('.sp-sparkline').forEach(function (svg) {
-            svg.classList.add('sp-sparkline--active');
-          });
-          stripGrid.querySelectorAll('.seo-rank').forEach(function (el) {
-            el.classList.add('seo-rank-active');
-          });
-        }, 250);
-
-      }, { threshold: 0.3 }).observe(stripGrid);
-    }
-
-    /* ── Case Study Metrics ── */
-    var caseGrid = document.querySelector('.sp-case-study__metrics');
-    if (caseGrid) {
-      var caseCounters = Array.from(caseGrid.querySelectorAll('.seo-case-counter')).map(function (el) {
-        return { el: el, target: parseInt(el.dataset.target, 10), formatted: true };
-      });
-
-      var caseDone = false;
-      new IntersectionObserver(function (entries) {
-        if (!entries[0].isIntersecting || caseDone) return;
-        caseDone = true;
-        runCounters(caseCounters);
-      }, { threshold: 0.3 }).observe(caseGrid);
-    }
-
-    /* ── Authority Grid ── */
-    var agEl = document.getElementById('seo-ag');
-    if (agEl) {
-      var agDone = false;
-      new IntersectionObserver(function (entries) {
-        if (!entries[0].isIntersecting || agDone) return;
-        agDone = true;
-        agEl.classList.add('is-active');
-      }, { threshold: 0.25 }).observe(agEl);
+        if (entries[0].isIntersecting && !done) { done = true; run(); }
+      }, { threshold: 0.3 }).observe(dash);
     }
   })();
   </script>
