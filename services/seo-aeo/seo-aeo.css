@@ -125,7 +125,7 @@
 .seo-v2 .sp-problem__band {
   position: relative;
   background: var(--seo-charcoal);
-  color: var(--color-white);
+  color: #fff;
   padding: 40px 0 104px;
   overflow: hidden;
 }
@@ -156,7 +156,7 @@
   font-size: clamp(30px, 4vw, 46px);
   line-height: 1.08;
   letter-spacing: -0.02em;
-  color: var(--color-white);
+  color: #fff;
   max-width: 760px;
   margin-bottom: 22px;
 }
@@ -264,7 +264,7 @@
   margin-bottom: 6px;
 }
 .seo-v2 .approach-card--gray .approach-card__title { color: var(--seo-ink); }
-.seo-v2 .approach-card--blue .approach-card__title { color: var(--color-white); }
+.seo-v2 .approach-card--blue .approach-card__title { color: #fff; }
 
 .seo-v2 .approach-card__desc {
   font-family: var(--font-body);
@@ -582,8 +582,8 @@
   margin: 0 0 8px;
 }
 .seo-v2 .bcard--audit .bcard__title { font-size: 26px; margin-bottom: 10px; }
-.seo-v2 .bcard--aeo .bcard__title { font-size: 22px; color: var(--color-white); margin-bottom: 14px; }
-.seo-v2 .bcard--local .bcard__title { color: var(--color-white); margin-bottom: 6px; }
+.seo-v2 .bcard--aeo .bcard__title { font-size: 22px; color: #fff; margin-bottom: 14px; }
+.seo-v2 .bcard--local .bcard__title { color: #fff; margin-bottom: 6px; }
 
 .seo-v2 .bcard__desc {
   font-family: var(--font-body);
@@ -887,7 +887,7 @@
   font-size: clamp(32px, 4.4vw, 52px);
   line-height: 1.08;
   letter-spacing: -0.02em;
-  color: var(--color-white);
+  color: #fff;
   margin-bottom: 20px;
 }
 .seo-v2 .sp-cta__sub {
@@ -901,7 +901,7 @@
 .seo-v2 .sp-cta__buttons { gap: 14px; }
 /* white filled primary on blue */
 .seo-v2 .sp-cta .btn--primary {
-  background: var(--color-white);
+  background: #fff;
   color: var(--seo-blue);
 }
 .seo-v2 .sp-cta .btn--primary:hover { background: #EAF0FB; }
@@ -910,7 +910,7 @@
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 15px;
-  color: var(--color-white);
+  color: #fff;
   border: 1.5px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius);
   padding: 14px 28px;
@@ -962,4 +962,48 @@
   .seo-v2 .fit-card { padding: 26px; }
   .seo-v2 .bcard--audit { padding: 28px; }
   .seo-v2 .dcard--keywords .dcard__big { font-size: 44px; }
+}
+
+/* ============================================================
+   DARK MODE
+   ------------------------------------------------------------
+   Flip the page-scoped tokens, then patch the few surfaces that
+   use literal colors (the browser-frame dashboard, the "dark"
+   panels, pills, and the crescent divider's inline fill). Ink
+   that sits on the blue/charcoal bands is already literal #fff,
+   so it never flips. Blue accents (--seo-blue) stay #1E68D9 per
+   brand. Three background tiers: page #0A0A0A (var --color-white
+   flips here) → gray bands #161618 → raised surfaces #1C1C1E.
+   ============================================================ */
+[data-theme="dark"] .seo-v2 {
+  --seo-ink: #F5F5F7;
+  --seo-body: #C6C6CE;
+  --seo-muted: #8A8A93;
+  --seo-gray: #161618;        /* gray section bands + inset cards */
+  --seo-card: #1E1E20;        /* raised surfaces */
+  --seo-charcoal: #1C1C1E;    /* the one feature "dark" band */
+  --seo-line: rgba(255, 255, 255, 0.10);
+}
+
+/* Problem band — recolor the crescent divider to match the band */
+[data-theme="dark"] .seo-v2 .sp-problem__divider path { fill: #1C1C1E; }
+
+/* Results dashboard — browser-window frame + panels */
+[data-theme="dark"] .seo-v2 .dash { background: var(--seo-card); }
+[data-theme="dark"] .seo-v2 .dash__bar { background: #202022; }
+[data-theme="dark"] .seo-v2 .dcard--dark { background: #050506; }
+[data-theme="dark"] .seo-v2 .dcard--plain { background: #0F0F11; }
+[data-theme="dark"] .seo-v2 .terms span { background: rgba(30, 104, 217, 0.18); color: #9FC0F2; }
+
+/* What's Included — outlined tag pills */
+[data-theme="dark"] .seo-v2 .bcard__tags span { background: rgba(255, 255, 255, 0.05); }
+
+/* How It Works — orbit line */
+[data-theme="dark"] .seo-v2 .prail::before { background: rgba(255, 255, 255, 0.12); }
+
+/* Good fit — outlined "no" card + dash markers */
+[data-theme="dark"] .seo-v2 .fit-card--no { background: transparent; }
+[data-theme="dark"] .seo-v2 .fit-list--no li::before {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) center / 8px 1.5px no-repeat;
 }
