@@ -184,7 +184,7 @@
 .form-field select:focus,
 .form-field textarea:focus {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 104, 217, 0.1);
   background: var(--color-white);
 }
 
@@ -425,8 +425,8 @@
 [data-theme="dark"] .form-field select:focus,
 [data-theme="dark"] .form-field textarea:focus {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.18);
-  background: rgba(0, 102, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(30, 104, 217, 0.18);
+  background: rgba(30, 104, 217, 0.06);
 }
 
 [data-theme="dark"] .form-checkbox {

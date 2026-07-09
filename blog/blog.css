@@ -84,7 +84,7 @@
   flex-shrink: 0;
 }
 
-.blog-card__banner--web-design    { background: linear-gradient(90deg, #0066FF, #0047B3); }
+.blog-card__banner--web-design    { background: linear-gradient(90deg, #1E68D9, #164DA1); }
 .blog-card__banner--seo           { background: linear-gradient(90deg, #059669, #034D36); }
 .blog-card__banner--branding      { background: linear-gradient(90deg, #7C3AED, #4C1D95); }
 .blog-card__banner--maintenance   { background: linear-gradient(90deg, #EA580C, #9A3412); }
@@ -385,7 +385,7 @@
   border-left: 3px solid var(--color-blue);
   padding: 16px 24px;
   margin: 32px 0;
-  background: rgba(0, 102, 255, 0.04);
+  background: rgba(30, 104, 217, 0.04);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
@@ -608,8 +608,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0,102,255,0.06);
-  border: 1px solid rgba(0,102,255,0.15);
+  background: rgba(30, 104, 217,0.06);
+  border: 1px solid rgba(30, 104, 217,0.15);
   border-radius: 100px;
   padding: 6px 14px;
   font-family: var(--font-head);
@@ -723,7 +723,7 @@
 
 #blog-search-input:focus {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 104, 217, 0.1);
   background: var(--color-white);
 }
 
@@ -923,7 +923,7 @@
 }
 
 .rp-card__accent--digital-strategy { background: linear-gradient(90deg, #1D4ED8, #0F172A); }
-.rp-card__accent--web-design        { background: linear-gradient(90deg, #0066FF, #0047B3); }
+.rp-card__accent--web-design        { background: linear-gradient(90deg, #1E68D9, #164DA1); }
 .rp-card__accent--seo               { background: linear-gradient(90deg, #059669, #034D36); }
 .rp-card__accent--branding          { background: linear-gradient(90deg, #7C3AED, #4C1D95); }
 .rp-card__accent--maintenance       { background: linear-gradient(90deg, #EA580C, #9A3412); }

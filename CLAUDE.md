@@ -69,8 +69,8 @@ sitemap.xml
 /* Colors */
 --color-black:      #0A0A0A;
 --color-white:      #FFFFFF;
---color-blue:       #0066FF;
---color-blue-hover: #0052CC;
+--color-blue:       #1E68D9;
+--color-blue-hover: #1A59BB;
 --color-gray-light: #F7F7F7;
 --color-gray-dark:  #2B2B2B;
 --color-border:     rgba(0, 0, 0, 0.08);
@@ -95,7 +95,7 @@ sitemap.xml
 
 ### Typography Classes
 
-- `.t-label` — Poppins 400, 11px, 0.14em tracking, uppercase, Electric Blue
+- `.t-label` — Poppins 400, 11px, 0.14em tracking, uppercase, Brand Blue
 - `.t-label--muted` — same as above, Dark Gray at 50% opacity
 - `h1 / .t-h1` — Poppins 700, clamp(36px, 4.5vw, 52px), line-height 1.12, -0.02em tracking
 - Always use CSS variables, never hardcode color or font values
@@ -111,7 +111,7 @@ secondary bg: #161618
 text:         #F5F5F7
 body text:    #B5B5BD
 borders:      rgba(255, 255, 255, 0.08)
-blue:         #0066FF (unchanged)
+blue:         #1E68D9 (unchanged)
 ```
 
 Light mode and dark mode only. No third theme. Do not add any other theme.
@@ -221,4 +221,4 @@ Audio option planned: /assets/audio/[post-slug].mp3 via ElevenLabs (not yet impl
 - Jon, not Jonathan
 - Texas, not Austin
 - StoryBrand architecture on all pages
-- Electric Blue #0066FF is never changed in dark mode
+- Brand Blue #1E68D9 is never changed in dark mode (history: Electric Blue #0066FF → #3C69B2 in the 2026 motif rebrand → #1E68D9 as the chosen middle ground)

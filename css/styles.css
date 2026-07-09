@@ -10,11 +10,12 @@
   /* Colors */
   --color-black:      #0A0A0A;
   --color-white:      #FFFFFF;
-  --color-blue:       #0066FF;
-  --color-blue-hover: #0052CC;
+  --color-blue:       #1E68D9;
+  --color-blue-hover: #1A59BB;
   --color-gray-light: #F7F7F7;
   --color-gray-dark:  #2B2B2B;
   --color-border:     rgba(0, 0, 0, 0.08);
+  --color-mark:       #1E68D9; /* Eclipse brand motif — always this blue, both themes */
 
   /* Typography */
   --font-head: 'Poppins', sans-serif;
@@ -314,7 +315,7 @@ p {
 
 .nav__links a:hover {
   color: var(--color-blue);
-  background: rgba(0, 102, 255, 0.05);
+  background: rgba(30, 104, 217, 0.05);
 }
 
 /* Services dropdown */
@@ -687,7 +688,7 @@ p {
 }
 
 .mockup__card:first-child {
-  border-top: 2px solid rgba(0,102,255,0.3);
+  border-top: 2px solid rgba(30, 104, 217,0.3);
 }
 
 /* ------------------------------------------------------------
@@ -840,7 +841,7 @@ p {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(0, 102, 255, 0.06);
+  background: rgba(30, 104, 217, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -850,8 +851,8 @@ p {
   width: 32px;
   height: 32px;
   display: block;
-  /* Colorize SVG to Electric Blue #0066FF */
-  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(2500%) hue-rotate(213deg) brightness(102%) contrast(102%);
+  /* Colorize SVG to Brand Blue #1E68D9 */
+  filter: brightness(0) saturate(100%) invert(48%) sepia(21%) saturate(1983%) hue-rotate(180deg) brightness(79%) contrast(122%);
 }
 
 /* Scribble icon: slight rotation for a hand-drawn feel */
@@ -1186,7 +1187,7 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 102, 255, 0.1);
+  background: rgba(30, 104, 217, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1290,10 +1291,12 @@ p {
    16. Closing CTA — Section 09
    ------------------------------------------------------------ */
 .closing-cta {
-  padding: 100px 0;
+  padding: 0 0 100px;
   position: relative;
   overflow: hidden;
 }
+/* Motif 1c — content clears the crescent-arc divider at the top */
+.closing-cta__inner { padding-top: 88px; }
 
 .closing-cta__circles {
   position: absolute;
@@ -1330,7 +1333,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-color: rgba(0, 102, 255, 0.08);
+  border-color: rgba(30, 104, 217, 0.08);
 }
 
 .closing-cta__inner {
@@ -1641,7 +1644,7 @@ p {
     justify-content: center;
   }
 
-  .closing-cta { padding: 72px 0; }
+  .closing-cta { padding: 0 0 72px; }
 }
 
 /* ============================================================
@@ -1807,7 +1810,7 @@ body:not(.preload) *::after {
   flex-shrink: 0;
 }
 
-.blog-card__banner--web-design       { background: linear-gradient(90deg, #0066FF, #0047B3); }
+.blog-card__banner--web-design       { background: linear-gradient(90deg, #1E68D9, #164DA1); }
 .blog-card__banner--seo              { background: linear-gradient(90deg, #059669, #034D36); }
 .blog-card__banner--branding         { background: linear-gradient(90deg, #7C3AED, #4C1D95); }
 .blog-card__banner--maintenance      { background: linear-gradient(90deg, #EA580C, #9A3412); }
@@ -2097,7 +2100,7 @@ details.faq-item summary:hover {
   inset: 0;
   border-radius: var(--radius);
   padding: 1px;
-  background: linear-gradient(140deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 40%, rgba(0,102,255,0.1) 100%);
+  background: linear-gradient(140deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 40%, rgba(30, 104, 217,0.1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -2114,7 +2117,7 @@ details.faq-item summary:hover {
   transform: translateX(-50%);
   width: 60%;
   height: 80%;
-  background: radial-gradient(circle, rgba(0,102,255,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30, 104, 217,0.07) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -2132,7 +2135,7 @@ details.faq-item summary:hover {
 
 .stats-radar {
   fill: none;
-  stroke: #0066ff;
+  stroke: #1E68D9;
   stroke-width: 1;
   opacity: 0;
 }
@@ -2202,14 +2205,14 @@ details.faq-item summary:hover {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #0066ff;
+  background: #1E68D9;
   flex-shrink: 0;
   animation: stats-led-pulse 2.4s ease-in-out infinite;
 }
 
 @keyframes stats-led-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0,102,255,0.7); opacity: 1; }
-  50%       { box-shadow: 0 0 0 5px rgba(0,102,255,0); opacity: 0.8; }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(30, 104, 217,0.7); opacity: 1; }
+  50%       { box-shadow: 0 0 0 5px rgba(30, 104, 217,0); opacity: 0.8; }
 }
 
 @media (max-width: 600px) {
@@ -2281,14 +2284,14 @@ details.faq-item summary:hover {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #0066ff;
+  background: #1E68D9;
   flex-shrink: 0;
   animation: wc-led-pulse 2s ease-in-out infinite;
 }
 
 @keyframes wc-led-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0,102,255,0.6); }
-  50%       { box-shadow: 0 0 0 5px rgba(0,102,255,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(30, 104, 217,0.6); }
+  50%       { box-shadow: 0 0 0 5px rgba(30, 104, 217,0); }
 }
 
 /* ============================================================
@@ -2360,7 +2363,7 @@ details.faq-item summary:hover {
 .cursor-ring {
   width: 34px;
   height: 34px;
-  border: 1.5px solid rgba(0, 102, 255, 0.45);
+  border: 1.5px solid rgba(30, 104, 217, 0.45);
   transition: opacity 0.3s, width 0.35s cubic-bezier(0.25,0.46,0.45,0.94), height 0.35s cubic-bezier(0.25,0.46,0.45,0.94), border-color 0.35s;
 }
 
@@ -2373,7 +2376,7 @@ details.faq-item summary:hover {
 .cursor-hover .cursor-ring {
   width: 52px;
   height: 52px;
-  border-color: rgba(0, 102, 255, 0.2);
+  border-color: rgba(30, 104, 217, 0.2);
 }
 
 /* ============================================================
@@ -2452,5 +2455,308 @@ details.faq-item summary:hover {
 .service-card--text .service-card__desc {
   font-size: 14px;
   line-height: 1.6;
+}
+
+/* ============================================================
+   BRAND MOTIF SYSTEM — Eclipse mark
+   Handoff: "Origo Visual Motif System". The mark (traced from
+   favicon.svg, /images/eclipse-mark.svg) is always --color-mark
+   (#1E68D9) in both light and dark themes.
+     1a  Punctuation ...... mark before eyebrows + orbit-line steps
+     1c  Eclipse Horizon .. crescent arc band divider + ghost mark
+   ============================================================ */
+
+/* --- Motif 1a: mark as punctuation before an eyebrow label --- */
+.t-label--mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.t-label--mark::before {
+  content: "";
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background: url("../images/eclipse-mark.svg") center / contain no-repeat;
+}
+
+/* --- Motif 1a: orbit-line process steps --- */
+.process--orbit { text-align: left; }
+.process--orbit .process__label { margin-bottom: 18px; }
+.process--orbit .process__headline {
+  text-align: left;
+  max-width: 640px;
+  margin-bottom: 18px;
+}
+.process--orbit .process__intro {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  max-width: 560px;
+  margin: 0;
+}
+
+.orbit-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin: 56px 0 48px;
+}
+
+/* The 2px orbit line runs behind the markers */
+.orbit-line {
+  position: absolute;
+  top: 12px;            /* aligns with the 26px marker centre */
+  left: 13px;
+  right: 13px;
+  height: 2px;
+  background: #ECECEC;
+  z-index: 0;
+}
+
+.orbit-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* White box punches the marker out of the orbit line (mark + 12px gap) */
+.orbit-step__marker {
+  width: 38px;
+  height: 26px;
+  background: var(--color-white) url("../images/eclipse-mark.svg") left center / 26px 26px no-repeat;
+}
+
+.orbit-step__num {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--color-mark);
+}
+
+.orbit-step__title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--color-black);
+  margin-top: -6px;
+}
+
+.orbit-step__body {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+}
+
+/* --- Motif 1c: Eclipse Horizon — crescent arc band divider --- */
+.horizon {
+  background: var(--color-gray-light); /* matches the light section above */
+  color: #0A0A0A;                      /* arc fill (currentColor) = the dark band below */
+  line-height: 0;
+}
+.horizon svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+[data-theme="dark"] .horizon { color: #161618; } /* matches dark-mode dark bands */
+
+/* Ghost eclipse cropped off the edge inside the dark band */
+.closing-cta__ghost,
+.stakes__ghost {
+  position: absolute;
+  top: -40px;
+  right: -180px;
+  width: 640px;
+  height: 640px;
+  max-width: none;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Motif 1c applied to the Problem -> Stakes section */
+.problem-horizon { overflow: hidden; }
+.problem-light {
+  background: var(--color-gray-light); /* matches .horizon background above the arc */
+  padding: var(--section-pad) 0 76px;
+}
+.problem-light .t-label { margin-bottom: 18px; }
+.problem-horizon__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  max-width: 640px;
+  margin: 0;
+}
+.problem-horizon__body {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+  max-width: 560px;
+  margin: 20px 0 0;
+}
+.problem-dark {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 100px;
+}
+.problem-dark__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+.problem-dark__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 720px;
+  margin: 0 0 22px;
+}
+.problem-dark__body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.7);
+  max-width: 620px;
+  margin: 0 0 34px;
+}
+
+@media (max-width: 768px) {
+  .orbit-steps { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
+  .orbit-line { display: none; }
+  .horizon svg { height: 56px; }
+  .closing-cta__ghost,
+  .stakes__ghost { width: 420px; height: 420px; right: -150px; top: -20px; }
+  .problem-light { padding: var(--section-pad-sm) 0 56px; }
+  .problem-dark { padding: 64px 0 72px; }
+}
+
+/* --- Motif 1b: "Who you'll work with" — one face up front --- */
+.workwith__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  max-width: 640px;
+  margin-top: 18px;
+}
+
+.workwith__intro {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  max-width: 580px;
+  margin: 18px 0 0;
+}
+
+.workwith__grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 56px;
+}
+
+.workwith__portrait {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 380 / 440;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-gray-light);
+}
+.workwith__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.workwith__caption {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.workwith__caption-name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--color-black);
+}
+.workwith__caption-role {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: var(--color-gray-dark);
+}
+
+.workwith__bio {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+  margin: 20px 0 24px;
+}
+
+.workwith__roster { padding-top: 8px; }
+.workwith__roster-label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gray-dark);
+  margin-bottom: 14px;
+}
+.workwith__member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 0;
+  border-bottom: 1px solid #ECECEC;
+}
+.workwith__member-mark { flex: none; width: 18px; height: 18px; }
+.workwith__member-name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--color-black);
+}
+.workwith__member-role {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: var(--color-gray-dark);
+}
+.workwith__note {
+  margin: 22px 0 0;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  max-width: 420px;
+}
+[data-theme="dark"] .workwith__member { border-bottom-color: rgba(255, 255, 255, 0.08); }
+
+@media (max-width: 768px) {
+  .workwith__grid { grid-template-columns: 1fr; gap: 40px; }
+  .workwith__portrait { max-width: 100%; }
 }
 
