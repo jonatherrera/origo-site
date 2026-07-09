@@ -46,7 +46,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=29">
+  <link rel="stylesheet" href="css/styles.css?v=31">
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -166,7 +166,26 @@
   <script nowprocket nitro-exclude type="text/javascript" id="sa-dynamic-optimization" data-uuid="19e3718f-11a9-4259-b434-329a56593be4" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjE5ZTM3MThmLTExYTktNDI1OS1iNDM0LTMyOWE1NjU5M2JlNCI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="></script>
 </head>
 
-<body class="preload">
+<body class="preload home">
+
+  <!-- ========================================================
+       UTILITY STRIP
+  ======================================================== -->
+  <div class="util-strip">
+    <div class="container">
+      <div class="util-strip__inner">
+        <div class="util-strip__brand">
+          <img class="util-strip__mark" src="/images/eclipse-mark-white.svg" alt="" width="14" height="14" aria-hidden="true">
+          <span class="util-strip__tag">Build trust. Own your presence.</span>
+        </div>
+        <div class="util-strip__contact">
+          <a href="tel:+15129715789">(512) 971-5789</a>
+          <span class="util-strip__dot" aria-hidden="true"></span>
+          <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================
        NAVIGATION
@@ -191,7 +210,6 @@
         <!-- Desktop Links -->
         <nav class="nav__links" aria-label="Primary navigation">
           <a href="/about">About</a>
-          <a href="/team">Team</a>
 
           <!-- Services dropdown -->
           <div class="nav__dropdown">
@@ -208,18 +226,19 @@
             </div>
           </div>
 
+          <a href="/work">Work</a>
+          <a href="/team">Team</a>
           <a href="/blog">Blog</a>
           <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
         </nav>
 
         <!-- Desktop CTA -->
         <div class="nav__cta">
           <a href="https://go.origo.ooo/call"
-             class="btn btn--primary"
+             class="btn btn--primary btn--mark"
              target="_blank"
              rel="noopener">
-            Book a call
+            <img class="btn__mark" src="/images/eclipse-mark-white.svg" alt="" width="15" height="15" aria-hidden="true">Book a call
           </a>
         </div>
 
@@ -306,7 +325,7 @@
             <p class="t-label t-label--mark hero__label reveal">Boutique Digital Presence Agency</p>
 
             <h1 class="hero__headline split-headline reveal reveal-delay-1" id="hero-headline">
-              Your business has earned its reputation. Your digital presence should prove it.
+              Your business has earned its reputation. <em>Your digital presence should prove it.</em>
             </h1>
 
             <p class="hero__sub reveal reveal-delay-2">
@@ -326,9 +345,18 @@
             </div>
           </div>
 
-          <!-- Hero visual -->
-          <div class="hero__visual reveal reveal-delay-2">
-            <img src="images/hero-mock-up.png" alt="Website design example by Origo" class="hero__mockup-img">
+          <!-- Hero visual — browser-card mockup (matches reference comp) -->
+          <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
+            <div class="hero-card">
+              <span class="hero-card__panel"></span>
+              <div class="hero-card__window">
+                <div class="hero-card__dots"><span></span><span></span><span></span></div>
+                <img class="hero-card__mark" src="images/eclipse-mark.svg" alt="" width="64" height="64">
+                <span class="hero-card__bar hero-card__bar--lg"></span>
+                <span class="hero-card__bar hero-card__bar--sm"></span>
+                <span class="hero-card__pill">Book a call →</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -344,9 +372,8 @@
       <!-- Motif 1c — Eclipse Horizon: light "problem" band -->
       <div class="problem-light">
         <div class="container">
-          <p class="t-label reveal">The problem</p>
-          <h2 class="problem-horizon__headline split-headline reveal reveal-delay-1" id="problem-headline">You've built something real. Your presence should show it.</h2>
-          <p class="problem-horizon__body reveal reveal-delay-2">Most established businesses have earned a great reputation, but their digital presence doesn't reflect it.</p>
+          <p class="t-label t-label--mark reveal">The problem</p>
+          <h2 class="problem-horizon__headline split-headline reveal reveal-delay-1" id="problem-headline">You've done the hard part. Your clients trust you. But online, you're invisible.</h2>
         </div>
       </div>
 
@@ -362,11 +389,8 @@
         <img class="stakes__ghost" src="images/eclipse-mark.svg" alt="" aria-hidden="true" width="640" height="640">
         <div class="container">
           <div class="problem-dark__inner">
-            <h2 class="problem-dark__headline split-headline reveal">So future clients can't find you, can't tell you apart, or can't quite believe what they see.</h2>
-            <p class="problem-dark__body reveal reveal-delay-1">That's where we come in. We help owner-operated businesses build a brand, website, and online presence that earns trust, so the right people find you, believe you, and choose you.</p>
-            <div class="reveal reveal-delay-2">
-              <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
+            <p class="problem-dark__lead split-headline reveal">Your website doesn't reflect the business you've built. Your competitors show up where you don't.</p>
+            <p class="problem-dark__body reveal reveal-delay-1">Every day that gap costs you clients who would have chosen you, if they could find you. That's where we come in. We help owner-operated businesses build a presence that earns trust, so the right people find you, believe you, and choose you.</p>
           </div>
         </div>
       </div>
@@ -375,65 +399,41 @@
 
 
     <!-- ======================================================
-         SECTION 03 — THE GUIDE (WHY ORIGO)
+         SECTION 03 — WHY ORIGO + BY THE NUMBERS
     ====================================================== -->
-    <section class="section section--gray" id="why-origo" aria-labelledby="guide-headline">
+    <section class="section why" id="why-origo" aria-labelledby="guide-headline">
       <div class="container">
-        <div class="guide__inner">
+        <div class="why__inner">
 
-          <!-- Photo: Why Origo -->
-          <div class="guide__photo reveal">
-            <div class="guide__photo-wrap">
-              <img src="images/Why-Origo.jpg" alt="The Origo team at work" class="guide__photo-img">
-            </div>
-            <div class="guide__photo-accent" aria-hidden="true"></div>
-          </div>
-
-          <div class="guide__content">
-            <h2 class="guide__headline reveal reveal-delay-1" id="guide-headline">
+          <div class="why__intro">
+            <p class="t-label t-label--mark reveal">Why Origo</p>
+            <h2 class="why__headline reveal reveal-delay-1" id="guide-headline">
               We understand what it takes to earn trust.
             </h2>
-
-            <p class="guide__body reveal reveal-delay-2">
-              We're not a high-volume agency pushing cookie-cutter solutions. We're a small, focused team that does fewer things exceptionally well. And we use every smart tool available, including AI, to make our work sharper, more strategic, and more effective.
-            </p>
-
-            <p class="guide__body reveal reveal-delay-3">
-              Not cheaper. Better.
-            </p>
-
-            <p class="guide__body reveal reveal-delay-3" style="margin-top: 16px;">
-              Because you've earned the right to a presence that actually reflects who you are.
+            <p class="why__body reveal reveal-delay-2">
+              We're not a high-volume agency pushing cookie-cutter solutions. We're a small, focused team that does fewer things exceptionally well, and we use every smart tool available, including AI, to make our work sharper. Not cheaper. Better.
             </p>
           </div>
 
-        </div>
-      </div>
-    </section>
+          <div class="why__stats reveal reveal-delay-2" aria-label="By the numbers">
+            <div class="stat-card">
+              <span class="stat-card__num">8+</span>
+              <span class="stat-card__label">Years in business</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__num">100+</span>
+              <span class="stat-card__label">Clients served</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__num">6</span>
+              <span class="stat-card__label">Services offered</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__num">100%</span>
+              <span class="stat-card__label">Client site ownership</span>
+            </div>
+          </div>
 
-
-    <!-- ======================================================
-         SECTION 04: STATS (surgical, no terminal chrome)
-    ====================================================== -->
-    <section class="section stats-section" aria-label="By the numbers">
-      <div class="container">
-        <div class="stats-clean">
-          <div class="stats-clean__item reveal">
-            <p class="stats-clean__number stat-item__number" data-target="8" data-suffix="+">8+</p>
-            <p class="stats-clean__label">Years in business</p>
-          </div>
-          <div class="stats-clean__item reveal">
-            <p class="stats-clean__number stat-item__number" data-target="100" data-suffix="+">100+</p>
-            <p class="stats-clean__label">Clients served</p>
-          </div>
-          <div class="stats-clean__item reveal">
-            <p class="stats-clean__number stat-item__number" data-target="6" data-suffix="">6</p>
-            <p class="stats-clean__label">Services offered</p>
-          </div>
-          <div class="stats-clean__item reveal">
-            <p class="stats-clean__number stat-item__number" data-target="100" data-suffix="%">100%</p>
-            <p class="stats-clean__label">Client site ownership</p>
-          </div>
         </div>
       </div>
     </section>
@@ -442,11 +442,14 @@
     <!-- ======================================================
          SECTION 05 — SERVICES
     ====================================================== -->
-    <section class="section" id="services" aria-labelledby="services-headline">
+    <section class="section section--gray" id="services" aria-labelledby="services-headline">
       <div class="container">
 
         <div class="services__header reveal">
-          <h2 id="services-headline">What we do</h2>
+          <div class="services__head-text">
+            <p class="t-label t-label--mark">What we do</p>
+            <h2 id="services-headline">A focused set of services. Each one earns trust.</h2>
+          </div>
           <a href="/services" class="services__link">
             All services <span aria-hidden="true">→</span>
           </a>
@@ -454,47 +457,53 @@
 
         <div class="services__grid stagger-group">
 
-          <article class="service-card service-card--text reveal reveal-delay-1">
-            <div class="service-card__body">
-              <h3 class="service-card__name">Branding</h3>
-              <p class="service-card__desc">A brand identity that reflects who you are and earns immediate credibility.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-1" href="/services/branding">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1"></circle><circle cx="17.5" cy="10.5" r="1"></circle><circle cx="8.5" cy="7.5" r="1"></circle><circle cx="6.5" cy="12.5" r="1"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"></path></svg>
+            </span>
+            <h3 class="service-card__name">Branding</h3>
+            <p class="service-card__desc">A brand identity that reflects who you are and earns immediate credibility.</p>
+          </a>
 
-          <article class="service-card service-card--text reveal reveal-delay-2">
-            <div class="service-card__body">
-              <h3 class="service-card__name">Web Design</h3>
-              <p class="service-card__desc">A website built to convert, clear, clean, and designed to work as hard as you do.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-2" href="/services/web-design">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+            </span>
+            <h3 class="service-card__name">Web Design</h3>
+            <p class="service-card__desc">A website built to convert, clear, clean, and designed to work as hard as you do.</p>
+          </a>
 
-          <article class="service-card service-card--text reveal reveal-delay-3">
-            <div class="service-card__body">
-              <h3 class="service-card__name">SEO &amp; AEO</h3>
-              <p class="service-card__desc">Visibility where it counts, in search results and AI-powered answer engines.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-3" href="/services/seo-aeo">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </span>
+            <h3 class="service-card__name">SEO &amp; AEO</h3>
+            <p class="service-card__desc">Visibility where it counts, in search results and AI-powered answer engines.</p>
+          </a>
 
-          <article class="service-card service-card--text reveal reveal-delay-1">
-            <div class="service-card__body">
-              <h3 class="service-card__name">Copywriting</h3>
-              <p class="service-card__desc">Words that sound like you, clear, credible, and written for your ideal client.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-1" href="/services/copywriting">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+            </span>
+            <h3 class="service-card__name">Copywriting</h3>
+            <p class="service-card__desc">Words that sound like you, clear, credible, and written for your ideal client.</p>
+          </a>
 
-          <article class="service-card service-card--text reveal reveal-delay-2">
-            <div class="service-card__body">
-              <h3 class="service-card__name">Website Concierge</h3>
-              <p class="service-card__desc">Your site stays secure, updated, and maintained, without you touching a thing.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-2" href="/services/website-concierge">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <h3 class="service-card__name">Website Concierge</h3>
+            <p class="service-card__desc">Your site stays secure, updated, and maintained, without you touching a thing.</p>
+          </a>
 
-          <article class="service-card service-card--text reveal reveal-delay-3">
-            <div class="service-card__body">
-              <h3 class="service-card__name">App Development</h3>
-              <p class="service-card__desc">Custom mobile and web apps built to extend your business and serve your clients better.</p>
-            </div>
-          </article>
+          <a class="service-card service-card--icon reveal reveal-delay-3" href="/services/app-development">
+            <span class="service-card__icon-chip" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+            </span>
+            <h3 class="service-card__name">App Development</h3>
+            <p class="service-card__desc">Custom mobile and web apps built to extend your business and serve your clients better.</p>
+          </a>
 
         </div>
       </div>
@@ -504,7 +513,7 @@
     <!-- ======================================================
          SECTION 05 — SELECTED WORK
     ====================================================== -->
-    <section class="section section--gray" id="work" aria-labelledby="work-headline">
+    <section class="section" id="work" aria-labelledby="work-headline">
       <div class="container">
 
         <div class="work__header reveal">
@@ -572,14 +581,12 @@
     <!-- ======================================================
          SECTION 06 — THE PLAN (HOW IT WORKS)
     ====================================================== -->
-    <section class="section process process--orbit" id="process" aria-labelledby="process-headline">
+    <section class="section section--gray process process--orbit" id="process" aria-labelledby="process-headline">
       <div class="container">
 
-        <p class="t-label t-label--mark process__label reveal">How we do it</p>
+        <p class="t-label t-label--mark process__label reveal">Getting started is simple</p>
 
-        <h2 class="process__headline reveal reveal-delay-1" id="process-headline">A simple process, built around trust.</h2>
-
-        <p class="process__intro reveal reveal-delay-2">No handoffs, no black box. You'll know what's happening at every step, and you'll talk to the same people the whole way through.</p>
+        <h2 class="process__headline reveal reveal-delay-1" id="process-headline">Three steps to a presence that earns trust.</h2>
 
         <div class="orbit-steps stagger-group">
 
@@ -588,33 +595,24 @@
           <div class="orbit-step reveal reveal-delay-1">
             <span class="orbit-step__marker" aria-hidden="true"></span>
             <span class="orbit-step__num">01</span>
-            <h3 class="orbit-step__title">Listen first</h3>
-            <p class="orbit-step__body">A discovery call where we learn your business, your clients, and what trust means in your industry.</p>
+            <h3 class="orbit-step__title">Book a discovery call</h3>
+            <p class="orbit-step__body">We learn about your business, your goals, and where your presence is falling short. No pressure, no pitch.</p>
           </div>
 
           <div class="orbit-step reveal reveal-delay-2">
             <span class="orbit-step__marker" aria-hidden="true"></span>
             <span class="orbit-step__num">02</span>
-            <h3 class="orbit-step__title">Build it right</h3>
-            <p class="orbit-step__body">Brand, website, and copy built together, so every piece of your presence tells the same story.</p>
+            <h3 class="orbit-step__title">We build your presence</h3>
+            <p class="orbit-step__body">Brand, web, search, and copy working together as one cohesive system that tells your story.</p>
           </div>
 
           <div class="orbit-step reveal reveal-delay-3">
             <span class="orbit-step__marker" aria-hidden="true"></span>
             <span class="orbit-step__num">03</span>
-            <h3 class="orbit-step__title">Stay with you</h3>
-            <p class="orbit-step__body">Launch is the start, not the finish. We keep your presence sharp with ongoing concierge care.</p>
+            <h3 class="orbit-step__title">Watch your business grow</h3>
+            <p class="orbit-step__body">Your presence starts earning the trust your business has always deserved, and stays sharp with concierge care.</p>
           </div>
 
-        </div>
-
-        <div class="reveal reveal-delay-4">
-          <a href="https://go.origo.ooo/call"
-             class="btn btn--primary"
-             target="_blank"
-             rel="noopener">
-            Book a Discovery Call <span class="arrow" aria-hidden="true">→</span>
-          </a>
         </div>
 
       </div>
@@ -624,8 +622,10 @@
     <!-- ======================================================
          SECTION 07 — SOCIAL PROOF
     ====================================================== -->
-    <section class="section section--gray" id="testimonials" aria-labelledby="testimonials-headline">
+    <section class="section" id="testimonials" aria-labelledby="testimonials-headline">
       <div class="container">
+
+        <p class="t-label t-label--mark testimonials__label reveal">Testimonials</p>
 
         <h2 class="testimonials__headline reveal reveal-delay-1" id="testimonials-headline">
           Trust isn't claimed. It's earned.
@@ -709,7 +709,7 @@
     <!-- ======================================================
          SECTION 08 — WHO YOU'LL WORK WITH (motif 1b)
     ====================================================== -->
-    <section class="section workwith" id="team" aria-labelledby="workwith-headline">
+    <section class="section section--gray workwith" id="team" aria-labelledby="workwith-headline">
       <div class="container">
 
         <p class="t-label t-label--mark reveal">Who you'll work with</p>
@@ -769,7 +769,7 @@
     <!-- ======================================================
          SECTION 09 — RECENT BLOG POSTS
     ====================================================== -->
-    <section class="section section--gray" id="recent-posts" aria-labelledby="recent-posts-headline">
+    <section class="section" id="recent-posts" aria-labelledby="recent-posts-headline">
       <div class="container">
 
         <h2 class="recent-posts__headline reveal reveal-delay-1" id="recent-posts-headline">
@@ -827,34 +827,6 @@
       </div>
     </section>
 
-
-    <!-- ======================================================
-         SECTION 10 — CLOSING CTA
-    ====================================================== -->
-    <section class="section--dark closing-cta" id="cta" aria-labelledby="cta-headline">
-      <div class="container">
-        <div class="closing-cta__inner">
-
-          <h2 class="closing-cta__headline split-headline reveal" id="cta-headline">
-            Your reputation is already there. Let's make sure your presence is too.
-          </h2>
-
-          <p class="closing-cta__body reveal reveal-delay-1">
-            You've put in the years. The work is good. The clients are happy. Now it's time for your digital presence to match all of that, and start bringing the right people to your door.
-          </p>
-
-          <div class="reveal reveal-delay-2">
-            <a href="https://go.origo.ooo/call"
-               class="btn btn--primary magnetic"
-               target="_blank"
-               rel="noopener">
-              Book your discovery call <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
   </main>
 
@@ -924,9 +896,35 @@
 
 
   <!-- ========================================================
+       CLOSING CTA (blue band)
+  ======================================================== -->
+  <section class="closing-cta closing-cta--blue" id="cta" aria-labelledby="cta-headline">
+    <div class="container">
+      <div class="closing-cta__inner">
+        <h2 class="closing-cta__headline split-headline reveal" id="cta-headline">Your reputation is already there.<br>Let's make sure your presence is too.</h2>
+        <div class="reveal reveal-delay-2">
+          <a href="https://go.origo.ooo/call"
+             class="btn btn--onblue magnetic"
+             target="_blank"
+             rel="noopener">
+            Book your discovery call <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crescent arc divider: blue CTA -> charcoal footer -->
+  <div class="footer-horizon" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" width="100%" height="90" preserveAspectRatio="none"><path d="M0,90 L0,58 A4064,4064 0 0 1 1440,58 L1440,90 Z" fill="currentColor"></path></svg>
+  </div>
+
+
+  <!-- ========================================================
        FOOTER
   ======================================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer footer--home" role="contentinfo">
+    <img class="footer__ghost" src="/images/eclipse-mark-white.svg" alt="" aria-hidden="true" width="560" height="560">
     <div class="container">
       <div class="footer__inner">
 
@@ -957,19 +955,7 @@
           </div>
         </div>
 
-        <!-- Pages -->
-        <div class="footer__col">
-          <p class="footer__col-title">Company</p>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/team">Team</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/work/case-studies">Case Studies</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Services + Resources -->
+        <!-- Services -->
         <div class="footer__col">
           <p class="footer__col-title">Services</p>
           <ul>
@@ -980,42 +966,34 @@
             <li><a href="/services/website-concierge">Website Concierge</a></li>
             <li><a href="/services/app-development">App Development</a></li>
           </ul>
-          <p class="footer__col-title footer__col-title--stacked">Resources</p>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <p class="footer__col-title">Company</p>
           <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/work">Work</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/faq">FAQ</a></li>
-            <li><a href="/glossary">Glossary</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div class="footer__col footer__contact">
-          <p class="footer__col-title">Get in touch</p>
+          <p class="footer__col-title">Contact</p>
           <p><a href="tel:+15129715789">(512) 971-5789</a></p>
           <p><a href="mailto:jon@origo.ooo">jon@origo.ooo</a></p>
-          <p style="margin-top: 12px;">Texas, serving clients nationwide</p>
+          <p style="margin-top: 12px;">Texas, serving nationwide</p>
           <div style="margin-top: 20px;">
             <a href="https://go.origo.ooo/call"
                class="btn btn--ghost-white"
                style="font-size:13px;padding:10px 20px;"
                target="_blank"
                rel="noopener">
-              Book a call →
+              Book a discovery call →
             </a>
-          </div>
-          <div class="footer__payments-wrap">
-            <p class="footer__col-title">We accept</p>
-            <div class="footer__payments">
-              <span class="footer__payment">Visa</span>
-              <span class="footer__payment">Mastercard</span>
-              <span class="footer__payment">Amex</span>
-              <span class="footer__payment">Discover</span>
-              <span class="footer__payment">ACH</span>
-              <span class="footer__payment">Apple Pay</span>
-              <span class="footer__payment">Google Pay</span>
-              <span class="footer__payment">PayPal</span>
-              <span class="footer__payment">Crypto</span>
-            </div>
           </div>
         </div>
 

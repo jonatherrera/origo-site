@@ -2760,3 +2760,328 @@ details.faq-item summary:hover {
   .workwith__portrait { max-width: 100%; }
 }
 
+/* ============================================================
+   HOMEPAGE — "Origo Home" reference build
+   Utility strip · sticky nav (960 collapse) · why+stats ·
+   service icon cards · blue closing CTA · footer horizon.
+   HTML for these lives only on the homepage; the one shared
+   change (nav position) is scoped to body.home.
+   ============================================================ */
+
+/* Surface tints — light-blue card/chip fills. Tuned per theme. */
+:root {
+  --surface-blue: #F0F5FD;
+  --chip-blue:    #DEE8FA;
+}
+[data-theme="dark"] {
+  --surface-blue: rgba(30, 104, 217, 0.14);
+  --chip-blue:    rgba(30, 104, 217, 0.24);
+}
+
+/* --- Utility strip (charcoal, both themes) --- */
+.util-strip {
+  background: #2B2B2B;
+  color: #fff;
+}
+.util-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  min-width: 0;
+}
+.util-strip__brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.util-strip__mark { width: 14px; height: 14px; display: block; flex: none; }
+.util-strip__tag {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.82);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-strip__contact { display: flex; align-items: center; gap: 16px; flex: none; }
+.util-strip__contact a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.82);
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.util-strip__contact a:hover { color: #fff; }
+.util-strip__dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255, 255, 255, 0.35); flex: none; }
+
+/* --- Sticky nav on homepage (strip scrolls away above it) --- */
+body.home .nav { position: sticky; }
+body.home .hero { padding-top: 72px; }
+
+/* Homepage collapses to hamburger at 960 (spec), not 768 */
+@media (max-width: 960px) {
+  body.home .nav__links { display: none; }
+  body.home .nav__hamburger { display: flex; }
+}
+/* Keep the header CTA visible from 600–960, then hide it */
+@media (max-width: 768px) {
+  body.home .nav__cta { display: block; }
+}
+@media (max-width: 600px) {
+  body.home .nav__cta { display: none; }
+  .util-strip__tag { display: none; }
+  .util-strip__contact { gap: 12px; }
+  .util-strip__contact a { font-size: 12px; }
+}
+
+/* --- Eclipse mark inside the blue CTA pill --- */
+.btn--mark { gap: 8px; }
+.btn__mark { width: 15px; height: 15px; display: block; flex: none; }
+
+/* --- Hero browser-card mockup (matches reference comp) --- */
+body.home .hero__visual { align-items: center; }
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+.hero-card__panel {
+  position: absolute;
+  inset: 4% -2%;
+  background: var(--surface-blue);
+  border-radius: 28px;
+  transform: rotate(-3deg);
+}
+.hero-card__window {
+  position: relative;
+  width: 82%;
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(10, 10, 10, 0.12);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hero-card__dots { display: flex; gap: 7px; }
+.hero-card__dots span { width: 10px; height: 10px; border-radius: 50%; background: #E4E4E4; }
+.hero-card__mark { width: 64px; height: 64px; display: block; }
+.hero-card__bar { display: block; height: 12px; border-radius: 6px; background: var(--color-gray-light); }
+.hero-card__bar--lg { width: 85%; }
+.hero-card__bar--sm { width: 65%; }
+.hero-card__pill {
+  align-self: flex-start;
+  margin-top: 8px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  background: var(--color-blue);
+  padding: 9px 18px;
+  border-radius: 999px;
+}
+[data-theme="dark"] .hero-card__window { background: #161618; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); }
+[data-theme="dark"] .hero-card__dots span { background: #3a3a3c; }
+[data-theme="dark"] .hero-card__bar { background: rgba(255, 255, 255, 0.08); }
+
+/* Comp hides the hero visual on the stacked mobile layout */
+@media (max-width: 960px) {
+  body.home .hero__visual { display: none; }
+}
+
+/* Comp drops services to a single column on phones */
+@media (max-width: 600px) {
+  body.home .services__grid { grid-template-columns: 1fr; }
+}
+
+/* --- Why Origo + by-the-numbers (2-col) --- */
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.why__intro { display: flex; flex-direction: column; gap: 18px; }
+.why__intro .t-label { margin-bottom: 0; }
+.why__headline {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin: 0;
+}
+.why__body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+.why__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.stat-card {
+  background: var(--surface-blue);
+  border-radius: 16px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-card__num {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(36px, 4vw, 44px);
+  line-height: 1;
+  color: var(--color-blue);
+}
+.stat-card__label {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-gray-dark);
+}
+
+@media (max-width: 960px) {
+  .why__inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* --- Services: eyebrow + headline + icon cards --- */
+.services__header { align-items: flex-end; }
+.services__head-text { display: flex; flex-direction: column; gap: 14px; max-width: 600px; }
+.services__head-text .t-label { margin: 0; }
+.services__head-text h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.service-card--icon {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px;
+  border: none;
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.08);
+}
+.service-card--icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(10, 10, 10, 0.13);
+}
+.service-card__icon-chip {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--chip-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.service-card__icon-chip svg { display: block; }
+.service-card--icon .service-card__name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+.service-card--icon .service-card__desc {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--color-gray-dark);
+  opacity: 1;
+  margin: 0;
+}
+[data-theme="dark"] .service-card--icon {
+  background: #1a1a1c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+/* --- Problem dark band: lead line (replaces button CTA) --- */
+.problem-dark__lead {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(20px, 2.6vw, 24px);
+  line-height: 1.4;
+  color: #fff;
+  margin: 0 0 22px;
+  max-width: 720px;
+}
+
+/* --- Process on a gray band: marker punch-out matches bg --- */
+.section--gray .orbit-step__marker { background-color: var(--color-gray-light); }
+.section--gray .orbit-line { background: #E4E4E1; }
+[data-theme="dark"] .section--gray .orbit-line { background: rgba(255, 255, 255, 0.10); }
+
+/* --- Testimonials on white: gentle resting shadow for contrast --- */
+body.home #testimonials .testimonial-card {
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.05);
+}
+
+/* --- Closing CTA: blue band --- */
+.closing-cta--blue {
+  background: var(--color-blue);
+  padding: 0 0 88px;
+  overflow: hidden;
+}
+.closing-cta--blue .closing-cta__inner {
+  padding-top: 84px;
+  max-width: 760px;
+}
+.closing-cta--blue .closing-cta__headline {
+  color: #fff;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.14;
+  margin-bottom: 28px;
+}
+[data-theme="dark"] .closing-cta--blue { background: var(--color-blue); }
+[data-theme="dark"] .closing-cta--blue .closing-cta__headline { color: #fff; }
+
+.btn--onblue {
+  background: #fff;
+  color: var(--color-blue);
+}
+.btn--onblue:hover {
+  color: var(--color-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+[data-theme="dark"] .btn--onblue { background: #fff; color: var(--color-blue); }
+
+/* --- Crescent arc divider: blue CTA -> charcoal footer --- */
+.footer-horizon {
+  background: var(--color-blue);
+  color: #0A0A0A;            /* arc fill = footer colour, both themes */
+  line-height: 0;
+}
+.footer-horizon svg { display: block; width: 100%; height: 90px; }
+
+@media (max-width: 768px) {
+  .footer-horizon svg { height: 56px; }
+}
+
+/* --- Footer ghost mark (lower-left, cropped) --- */
+.footer--home { position: relative; overflow: hidden; }
+.footer--home .container { position: relative; z-index: 1; }
+.footer__ghost {
+  position: absolute;
+  left: -175px;
+  bottom: -215px;
+  width: 560px;
+  height: 560px;
+  max-width: none;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
