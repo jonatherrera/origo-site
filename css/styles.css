@@ -1141,8 +1141,21 @@ p {
   border: none;
 }
 
+/* Outlined review pill — matches the reference comp */
+.review-pill--outline {
+  background: transparent;
+  color: var(--color-gray-dark);
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+  padding: 9px 16px;
+  gap: 8px;
+  font-size: 14px;
+}
+.review-pill--outline:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.review-pill__text { font-family: var(--font-body); font-size: 14px; color: var(--color-gray-dark); }
+
 .review-pill__stars {
-  color: #FACC15;
+  color: #E0A106;
   font-size: 13px;
   letter-spacing: 1px;
 }
@@ -1175,27 +1188,46 @@ p {
 
 .testimonial-card {
   background: var(--color-white);
-  border: 0.5px solid rgba(0,0,0,0.1);
-  border-radius: var(--radius);
-  padding: 28px;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 6px 18px rgba(10,10,10,0.08);
   transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(10,10,10,0.13); }
+
+.testimonial-card__mark { width: 24px; height: 24px; display: block; }
+
+.testimonial-card__quote {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+
+.testimonial-card__cite {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .testimonial-card__avatar {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(30, 104, 217, 0.1);
+  background: var(--chip-blue);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 14px;
-  color: var(--color-blue);
-  margin-bottom: 18px;
+  font-size: 15px;
+  color: #164A9C;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -1208,37 +1240,19 @@ p {
   display: block;
 }
 
-.testimonial-card__quote {
-  font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--color-gray-dark);
-  margin-bottom: 18px;
-  font-style: italic;
-}
-
-.testimonial-card__quote::before {
-  content: '\201C';
-  font-family: Georgia, serif;
-  font-size: 28px;
-  color: var(--color-blue);
-  opacity: 0.3;
-  line-height: 0;
-  vertical-align: -10px;
-  margin-right: 2px;
-}
+.testimonial-card__person { display: flex; flex-direction: column; }
 
 .testimonial-card__name {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 13px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 15px;
   color: var(--color-black);
 }
 
 .testimonial-card__role {
-  font-size: 12px;
-  color: var(--color-gray-dark);
-  opacity: 0.6;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #6B6B6B;
   margin-top: 2px;
 }
 
@@ -1365,7 +1379,7 @@ p {
    16. Footer
    ------------------------------------------------------------ */
 .footer {
-  background: #0A0A0A;
+  background: #2B2B2B;
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 56px 0 40px;
 }
@@ -1703,8 +1717,11 @@ body:not(.preload) *::after {
 
 /* Testimonial cards have hardcoded rgba(0,0,0,0.1) border */
 [data-theme="dark"] .testimonial-card {
-  border-color: rgba(255, 255, 255, 0.1);
+  background: #1a1a1c;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
+[data-theme="dark"] .testimonial-card__avatar { color: #CDDDF7; }
 
 /* Mockup browser bar */
 [data-theme="dark"] .mockup__bar {
@@ -3023,10 +3040,6 @@ body.home .hero__visual { align-items: center; }
 .section--gray .orbit-line { background: #E4E4E1; }
 [data-theme="dark"] .section--gray .orbit-line { background: rgba(255, 255, 255, 0.10); }
 
-/* --- Testimonials on white: gentle resting shadow for contrast --- */
-body.home #testimonials .testimonial-card {
-  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.05);
-}
 
 /* --- Closing CTA: blue band --- */
 .closing-cta--blue {
@@ -3061,9 +3074,10 @@ body.home #testimonials .testimonial-card {
 /* --- Crescent arc divider: blue CTA -> charcoal footer --- */
 .footer-horizon {
   background: var(--color-blue);
-  color: #0A0A0A;            /* arc fill = footer colour, both themes */
+  color: #2B2B2B;            /* arc fill = footer colour */
   line-height: 0;
 }
+[data-theme="dark"] .footer-horizon { color: #0A0A0A; }
 .footer-horizon svg { display: block; width: 100%; height: 90px; }
 
 @media (max-width: 768px) {
@@ -3084,4 +3098,515 @@ body.home #testimonials .testimonial-card {
   pointer-events: none;
   z-index: 0;
 }
+
+/* ============================================================
+   SELECTED WORK — case-study cards (homepage)
+   Ported from the Origo Home reference. Tokens map 1:1 to the
+   export's values; the Redemption Hill brand board keeps its
+   exact brand hexes in both themes. Interaction hook names
+   (.oh-shot / .oh-shot-m / .rhc-*) preserved from the export.
+   ============================================================ */
+.selected-work__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+.selected-work__head-text { display: flex; flex-direction: column; gap: 14px; max-width: 640px; }
+.selected-work__head-text .t-label { margin: 0; }
+.selected-work__head-text h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.selected-work__link {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: gap 0.2s ease;
+}
+.selected-work__link:hover { gap: 8px; }
+
+.case-cards { display: flex; flex-direction: column; gap: 26px; }
+
+.case-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  padding: 36px;
+  border: 1px solid #E4E4E4;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06);
+  transition: transform 0.22s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.22s;
+}
+.case-card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(10, 10, 10, 0.13); }
+
+.case-card__text { display: flex; flex-direction: column; gap: 12px; }
+.case-card__tag {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--chip-blue);
+  color: #164A9C;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.case-card__name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 2px 0 0;
+  color: var(--color-black);
+}
+.case-card__meta {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #6B6B6B;
+}
+.case-card__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  margin: 6px 0 0;
+  text-wrap: pretty;
+}
+.case-card__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.case-chip {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-gray-dark);
+  border: 1px solid #E4E4E4;
+  border-radius: 999px;
+  padding: 6px 13px;
+}
+
+/* 360 Collision — stat tiles */
+.case-card__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: start; }
+.case-stat {
+  background: var(--surface-blue);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.18s ease, background 0.18s;
+}
+.case-stat:hover { transform: scale(1.05); background: var(--chip-blue); }
+.case-stat__num {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-blue);
+}
+.case-stat__label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-gray-dark);
+}
+
+/* Redemption Hill — brand board (brand colours kept exact, both themes) */
+.rhc-board { position: relative; min-height: 376px; display: flex; flex-direction: column; gap: 11px; }
+.rhc-board__meta { display: flex; align-items: center; justify-content: flex-end; }
+.rhc-board__meta span { font-family: var(--font-body); font-size: 12px; color: #6B6B6B; }
+.rhc-board__lockup {
+  background: #F7F3E7;
+  border: 1px solid #ECE6D6;
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rhc-board__lockup img { width: 84%; max-width: 300px; display: block; }
+.rhc-board__row { display: grid; grid-template-columns: 1.05fr 1fr; gap: 11px; flex: 1; }
+.rhc-seal { position: relative; border-radius: 12px; background: #2B2B2B; overflow: hidden; min-height: 138px; }
+.rhc-layer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; }
+.rhc-layer img { width: 64%; max-width: 130px; height: auto; display: block; }
+.rhc-gold { opacity: 1; }
+.rhc-seal__label {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #B5B5B5;
+}
+.rhc-tagline {
+  border-radius: 12px;
+  background: #B49B73;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 138px;
+}
+.rhc-tagline__text {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2B2B2B;
+}
+.rhc-tagline__label {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(43, 43, 43, 0.55);
+}
+.rhc-palette { display: flex; gap: 5px; }
+.rhc-swatch { flex: 1; height: 24px; border-radius: 6px; display: block; }
+.rhc-swatch--snow     { background: #FFFFFF; box-shadow: inset 0 0 0 1px #E4E4E4; }
+.rhc-swatch--moon     { background: #F7F3E7; box-shadow: inset 0 0 0 1px #ECE6D6; }
+.rhc-swatch--bronze   { background: #C4B49C; }
+.rhc-swatch--gold     { background: #B49B73; }
+.rhc-swatch--blue     { background: #69939F; }
+.rhc-swatch--green    { background: #7E9080; }
+.rhc-swatch--red      { background: #B73209; }
+.rhc-swatch--charcoal { background: #2B2B2B; }
+
+@keyframes rhcGold  { 0% { opacity: 1; } 15% { opacity: 1; } 25% { opacity: 0; } 90% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes rhcBlue  { 0%, 15% { opacity: 0; } 25%, 40% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes rhcGreen { 0%, 40% { opacity: 0; } 50%, 65% { opacity: 1; } 75%, 100% { opacity: 0; } }
+@keyframes rhcRed   { 0%, 65% { opacity: 0; } 75%, 90% { opacity: 1; } 100% { opacity: 0; } }
+.case-card:hover .rhc-gold  { animation: rhcGold  9s ease-in-out infinite; }
+.case-card:hover .rhc-blue  { animation: rhcBlue  9s ease-in-out infinite; }
+.case-card:hover .rhc-green { animation: rhcGreen 9s ease-in-out infinite; }
+.case-card:hover .rhc-red   { animation: rhcRed   9s ease-in-out infinite; }
+
+/* Alpine Humane Society — browser + phone mockup */
+.alpine-mock {
+  position: relative;
+  min-height: 376px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 30px 6px 6px;
+}
+.alpine-browser {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 22px 48px rgba(10, 10, 10, 0.20);
+  border: 1px solid #E1E1E1;
+  background: #fff;
+}
+.alpine-browser__bar {
+  height: 36px;
+  background: #F1F1F0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+  border-bottom: 1px solid #E4E4E4;
+}
+.alpine-browser__dots { display: flex; gap: 7px; }
+.alpine-browser__dots span { width: 11px; height: 11px; border-radius: 999px; }
+.alpine-browser__dots span:nth-child(1) { background: #F0655B; }
+.alpine-browser__dots span:nth-child(2) { background: #F5BE4F; }
+.alpine-browser__dots span:nth-child(3) { background: #61C554; }
+.alpine-browser__url {
+  flex: 1;
+  height: 22px;
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid #E4E4E4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 11px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #6B6B6B;
+}
+.alpine-browser__url svg { flex: none; }
+.alpine-browser__viewport { height: 336px; overflow: hidden; position: relative; background: #fff; }
+.oh-shot {
+  width: 100%;
+  display: block;
+  transform: translateY(0);
+}
+/* Higher specificity + !important: the global theme-transition layer
+   (body:not(.preload) *) is !important and would otherwise strip the
+   transform transition, killing the hover self-scroll. */
+.case-card .oh-shot { transition: transform 6.5s cubic-bezier(0.33, 0, 0.2, 1) !important; }
+.case-card:hover .oh-shot { transform: translateY(calc(-100% + 336px)); }
+.alpine-phone {
+  position: absolute;
+  right: 14px;
+  bottom: 2px;
+  width: 126px;
+  height: 256px;
+  border-radius: 22px;
+  background: #111;
+  padding: 7px 6px;
+  box-shadow: 0 18px 38px rgba(10, 10, 10, 0.30);
+}
+.alpine-phone__notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 4px;
+  border-radius: 999px;
+  background: #333;
+  z-index: 2;
+}
+.alpine-phone__viewport { height: 100%; border-radius: 16px; overflow: hidden; position: relative; background: #fff; }
+.oh-shot-m {
+  width: 100%;
+  display: block;
+  transform: translateY(0);
+}
+.case-card .oh-shot-m { transition: transform 7.5s cubic-bezier(0.33, 0, 0.2, 1) !important; }
+.case-card:hover .oh-shot-m { transform: translateY(calc(-100% + 236px)); }
+
+/* Dark mode — card chrome adapts; the RHC brand board stays exact */
+[data-theme="dark"] .case-card {
+  background: #1a1a1c;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+[data-theme="dark"] .case-card:hover { box-shadow: 0 20px 44px rgba(0, 0, 0, 0.5); }
+[data-theme="dark"] .case-card__tag { color: #CDDDF7; }
+[data-theme="dark"] .case-card__meta,
+[data-theme="dark"] .rhc-board__meta span { color: #9A9A9A; }
+[data-theme="dark"] .case-chip { border-color: rgba(255, 255, 255, 0.14); }
+[data-theme="dark"] .alpine-browser { border-color: rgba(255, 255, 255, 0.12); }
+
+/* Responsive — 2-column cards collapse to single column */
+@media (max-width: 768px) {
+  .case-card { grid-template-columns: 1fr; gap: 26px; padding: 28px; }
+}
+
+/* Reduced motion — no self-scroll reveal, no seal colour-cycle */
+@media (prefers-reduced-motion: reduce) {
+  .case-card .oh-shot,
+  .case-card .oh-shot-m,
+  .case-card:hover .oh-shot,
+  .case-card:hover .oh-shot-m { transition: none !important; transform: none !important; }
+  .case-card:hover .rhc-gold,
+  .case-card:hover .rhc-blue,
+  .case-card:hover .rhc-green,
+  .case-card:hover .rhc-red { animation: none; }
+  .rhc-blue, .rhc-green, .rhc-red { opacity: 0; }
+  .rhc-gold { opacity: 1; }
+  .case-card, .case-stat { transition: none; }
+  .case-card:hover { transform: none; }
+}
+
+/* ============================================================
+   HOMEPAGE HEADER — match the reference comp's design
+   Pill "Book a call" CTA, tighter logo + nav sizing.
+   ============================================================ */
+body.home .nav__logo svg { height: 28px; }
+body.home .nav__links a { font-size: 15px; }
+body.home .nav__cta .btn--primary {
+  border-radius: 999px;
+  padding: 11px 20px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   FROM THE BLOG — recent posts, reference comp design
+   Header row (eyebrow + heading + All posts), clean cards
+   (pill category, no banner strip, no Read link).
+   ============================================================ */
+.recent-posts__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+.recent-posts__head-text { display: flex; flex-direction: column; gap: 14px; max-width: 640px; }
+.recent-posts__head-text .t-label { margin: 0; }
+.recent-posts__head-text h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.recent-posts__link {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: gap 0.2s ease;
+}
+.recent-posts__link:hover { gap: 8px; }
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.post-card {
+  background: var(--color-white);
+  border: 1px solid #E9E9E7;
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(10, 10, 10, 0.10); }
+.post-card__cat {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #164A9C;
+  background: var(--chip-blue);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.post-card__title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 2px 0 0;
+}
+.post-card__title a { color: var(--color-black); transition: color 0.15s ease; }
+.post-card:hover .post-card__title a { color: var(--color-blue); }
+.post-card__excerpt {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-gray-dark);
+  margin: 0;
+  flex-grow: 1;
+  text-wrap: pretty;
+}
+.post-card__meta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+@media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .post-grid { grid-template-columns: 1fr; } }
+
+[data-theme="dark"] .post-card {
+  background: #1a1a1c;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+[data-theme="dark"] .post-card__cat { color: #CDDDF7; }
+[data-theme="dark"] .post-card__meta { color: #9A9A9A; }
+
+/* ============================================================
+   HOMEPAGE FAQ — reference comp design
+   Left-aligned header (eyebrow + heading), card-style items
+   with a circular +/- toggle, "See all FAQs" link.
+   ============================================================ */
+.homepage-faq .container { max-width: 948px; }
+.homepage-faq__header {
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.homepage-faq__header .t-label { margin: 0; }
+.homepage-faq .homepage-faq__title {
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  margin: 0;
+}
+.homepage-faq .faq-list { max-width: none; display: flex; flex-direction: column; gap: 12px; }
+
+/* Each FAQ becomes a rounded card */
+.homepage-faq details.faq-item {
+  border: 1px solid #E4E4E4;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--color-white);
+}
+.homepage-faq details.faq-item:last-of-type { border-bottom: 1px solid #E4E4E4; }
+.homepage-faq details.faq-item summary {
+  padding: 22px 26px;
+  font-size: 19px;
+  font-weight: 600;
+}
+/* Circular +/- toggle */
+.homepage-faq details.faq-item summary::after {
+  content: '+';
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--chip-blue);
+  color: #164A9C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  transform: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.homepage-faq details.faq-item[open] summary::after {
+  content: '\2212';
+  background: var(--color-blue);
+  color: #fff;
+  transform: none;
+}
+.homepage-faq .faq-item__answer { padding: 0 26px 24px; font-size: 16px; line-height: 1.65; }
+
+.homepage-faq__more { margin-top: 26px; }
+.homepage-faq__more a {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-blue);
+}
+
+[data-theme="dark"] .homepage-faq details.faq-item,
+[data-theme="dark"] .homepage-faq details.faq-item:last-of-type {
+  background: #1a1a1c;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .homepage-faq details.faq-item summary::after { color: #CDDDF7; }
+[data-theme="dark"] .homepage-faq details.faq-item[open] summary::after { color: #fff; }
 
