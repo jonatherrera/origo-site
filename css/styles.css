@@ -3610,3 +3610,7 @@ body.home .nav__cta .btn--primary {
 [data-theme="dark"] .homepage-faq details.faq-item summary::after { color: #CDDDF7; }
 [data-theme="dark"] .homepage-faq details.faq-item[open] summary::after { color: #fff; }
 
+/* Homepage eyebrows: drop the eclipse mark (class kept for easy revert) */
+body.home .t-label--mark::before { content: none; }
+body.home .t-label--mark { gap: 0; }
+
