@@ -40,8 +40,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=29" />
-  <link rel="stylesheet" href="/services/services.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=38" />
+  <link rel="stylesheet" href="/services/service-page.css" />
+  <link rel="stylesheet" href="/services/web-design/web-design.css" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -271,335 +272,351 @@
     </div>
   </div>
 
-  <!-- SECTION 01 — HERO -->
-  <section class="sp-hero">
-    <div class="svc-container">
-      <p class="sp-hero__breadcrumb reveal"><a href="/services">Services</a> <span>/</span> Web Design</p>
-      <p class="sp-hero__label reveal">Web Design</p>
-      <h1 class="sp-hero__headline reveal">A website that works as hard as you do.</h1>
-      <p class="sp-hero__sub reveal">We design and build websites that are clear, fast, and built to convert, not just to look good in a screenshot.</p>
-      <div class="sp-hero__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="btn btn--ghost">All Services</a>
+  <main class="bsp" id="main-content">
+
+    <!-- ===== HERO (white) ===== -->
+    <section class="bsp-hero" aria-labelledby="wd-hero-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">Services · Web Design</span>
+        </div>
+        <h1 class="bsp-hero__title reveal reveal-delay-1" id="wd-hero-title">A website that earns trust.<br>And turns visitors into clients.</h1>
+        <p class="bsp-hero__sub reveal reveal-delay-2">Most established businesses have a site that undersells them. We design and build sites that load fast, read clearly, and give your future clients a reason to reach out.</p>
+        <div class="bsp-hero__cta reveal reveal-delay-3">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--primary" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/work" class="bsp-btn bsp-btn--secondary">See our work</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 02 — PROBLEM (DARK) -->
-  <section class="sp-problem">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
-      <h2 class="sp-problem__headline reveal">Most small business websites don't convert. They just exist.</h2>
-      <p class="sp-problem__body reveal">You've got a site. Maybe you built it yourself or hired someone cheap. But it doesn't rank, it doesn't inspire confidence, and it's not bringing in leads. It's just... there.</p>
-      <ul class="sp-problem__list reveal">
-        <li>Slow load times that kill conversions before the page even loads</li>
-        <li>No clear messaging, visitors don't know what you do in 5 seconds</li>
-        <li>Looks nothing like your brand on desktop, tablet, or mobile</li>
-        <li>Hard to update, you're dependent on a developer for every small change</li>
-        <li>No strategy behind the layout or the copy</li>
-      </ul>
-    </div>
-  </section>
+    <!-- ===== PROBLEM (the ONE dark band per page) ===== -->
+    <section class="bsp-problem" aria-labelledby="wd-problem-title">
+      <div class="bsp-problem__arc" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,110 L0,64 Q720,-24 1440,64 L1440,110 Z" fill="#2B2B2B"></path></svg>
+      </div>
+      <div class="bsp-problem__band">
+        <div class="bsp-problem__ghost" aria-hidden="true">
+          <img src="/images/eclipse-mark-white.svg" alt="" width="520" height="520">
+        </div>
+        <div class="bsp-wrap bsp-problem__inner">
+          <span class="bsp-eyebrow reveal">The problem</span>
+          <h2 class="bsp-problem__headline reveal reveal-delay-1" id="wd-problem-title">Your website might be the reason good clients never call.</h2>
+          <p class="bsp-problem__body reveal reveal-delay-2">You've earned a strong reputation offline. But online, an outdated, slow, or confusing site quietly sends the people who were ready to hire you somewhere else.</p>
+          <div class="bsp-problem__list reveal reveal-delay-2">
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>A design that feels dated the moment it sits next to a competitor's.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Slow load times that lose visitors before the page even appears.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Hard to read or tap on a phone, where most of your visitors actually are.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>No clear path from "just looking" to "let's talk."</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>You can't update a word of it yourself without calling a developer.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- SECTION 03 — SOLUTION -->
-  <section class="sp-solution">
-    <div class="svc-container">
-      <div class="svc-two-col">
+    <!-- ===== APPROACH (white) ===== -->
+    <section class="bsp-section" aria-labelledby="wd-approach-title">
+      <div class="bsp-wrap bsp-approach-grid">
         <div>
-          <p class="svc-eyebrow reveal">Our Approach</p>
-          <h2 class="sp-solution__headline reveal">Strategy first. Design second. Always on brand.</h2>
-          <p class="sp-solution__body reveal">We don't start with colors and layouts. We start by asking: what do you need this website to do? Then we build a site that does it, cleanly, quickly, and with a design that reflects who you actually are.</p>
-          <p class="sp-solution__body reveal">Every Origo website is hand-coded (no bloated page builders), mobile-first, and built with clear calls to action at every step.</p>
-
-          <div class="sp-concierge-callout reveal">
-            <p class="sp-concierge-callout__text"><strong>Want us to keep it running too?</strong> Ask about our Website Concierge plan, monthly maintenance, updates, and monitoring so you never have to think about your site again.</p>
-            <a href="/services/concierge" class="btn btn--ghost" style="flex-shrink:0;">Learn More</a>
+          <span class="bsp-eyebrow reveal">Our approach</span>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-approach-title" style="margin-top:14px">Built around your visitor, not a template.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">We start with the one action you want a visitor to take, then design every page to lead there. Clean, fast, and easy to run once we hand it over to you.</p>
+        </div>
+        <div class="bsp-approach__cards reveal reveal-delay-2">
+          <div class="bsp-mini-card">
+            <div class="bsp-mini-card__label">Clarity first</div>
+            <h3>One clear next step.</h3>
+            <p>Every page points toward the action that matters to your business, so visitors always know exactly what to do next.</p>
           </div>
-        </div>
-        <div class="reveal">
-          <img src="/images/cigar-district-mobile-mock-up.png" alt="Cigar District mobile website mockup by Origo" style="width:100%;border-radius:var(--radius);display:block;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04 — WHAT'S INCLUDED -->
-  <section class="sp-included">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">What's Included</p>
-      <h2 class="sp-included__headline reveal">A complete site, not just a design file.</h2>
-      <p class="sp-included__sub reveal">We deliver a live, production-ready website ready for launch day.</p>
-      <div class="sp-deliverables stagger-group">
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Strategy Session</h3>
-          <p class="sp-deliverable__desc">Goals, audience, sitemap, and conversion priorities defined before a single page is designed.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Custom Design</h3>
-          <p class="sp-deliverable__desc">Every page designed from scratch to match your brand, not adapted from a generic template.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Responsive Build</h3>
-          <p class="sp-deliverable__desc">Pixel-perfect across desktop, tablet, and mobile, tested on real devices before launch.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Copywriting (Optional)</h3>
-          <p class="sp-deliverable__desc">We can write your site copy too, just ask. Or bring your own and we'll make it shine.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">On-Page SEO</h3>
-          <p class="sp-deliverable__desc">Meta tags, heading structure, image optimization, and schema markup baked into every page.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Launch &amp; Handoff</h3>
-          <p class="sp-deliverable__desc">We deploy your site, test everything, and walk you through how to manage it going forward.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05 — PROCESS -->
-  <section class="sp-process">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">How It Works</p>
-      <h2 class="sp-process__headline reveal">From kickoff to launch in 4–6 weeks.</h2>
-      <p class="sp-process__sub reveal">A clear process keeps projects on track and avoids surprises.</p>
-      <div class="sp-steps stagger-group">
-        <div class="sp-step reveal">
-          <div class="sp-step__num">1</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Discovery &amp; Strategy</h3>
-            <p class="sp-step__desc">We map out your sitemap, goals, target audience, and what success looks like after launch.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">2</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Wireframes</h3>
-            <p class="sp-step__desc">Low-fidelity layouts for key pages so we're aligned on structure before design begins.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">3</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Design</h3>
-            <p class="sp-step__desc">Full visual design, every page, every state, every breakpoint. Two revision rounds included.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">4</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Development</h3>
-            <p class="sp-step__desc">Clean, hand-coded HTML/CSS/JS (or your chosen CMS) built for speed and reliability.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">5</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Launch</h3>
-            <p class="sp-step__desc">Full QA, deployment to your host, DNS configuration, and a walkthrough of your new site.</p>
+          <div class="bsp-mini-card bsp-mini-card--blue">
+            <div class="bsp-mini-card__label">Built to last</div>
+            <h3>Fast, secure, yours to run.</h3>
+            <p>We build on a foundation you can actually maintain, with the speed and security that keep both visitors and search engines happy.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 06 — RIGHT FIT (DARK) -->
-  <section class="sp-fit">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">Is This Right for You?</p>
-      <h2 class="sp-fit__headline reveal">This is for you if…</h2>
-      <p class="sp-fit__sub reveal">We're selective about who we work with so we can do our best work for everyone.</p>
-      <div class="sp-fit-grid">
-        <div class="reveal">
-          <p class="sp-fit-col__label">Good fit</p>
-          <ul class="sp-fit-list sp-fit-list--yes">
-            <li>You want a site that generates leads, not just traffic</li>
-            <li>You're tired of a site you're embarrassed to share</li>
-            <li>You understand that design is a business investment</li>
-            <li>You're ready to move fast and provide feedback</li>
-            <li>You want a long-term partner, not a one-and-done vendor</li>
-          </ul>
+    <!-- ===== SIGNATURE: One site. Every screen. (gray) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wd-sig-title">
+      <div class="bsp-wrap">
+        <div style="max-width:760px">
+          <div class="bsp-eyebrow-row reveal">
+            <img src="/images/eclipse-mark.svg" alt="" width="18" height="18" aria-hidden="true">
+            <span class="bsp-eyebrow">Selected work</span>
+          </div>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-sig-title">One site. Every screen.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">We built the Alpine Humane Society site to work as well on a phone in the parking lot as it does on a desktop at home. Same clarity, same speed, at every breakpoint.</p>
         </div>
-        <div class="reveal">
-          <p class="sp-fit-col__label">Not the right fit</p>
-          <ul class="sp-fit-list sp-fit-list--no">
-            <li>You want a site built for $500</li>
-            <li>You want to use a page builder you'll manage yourself</li>
-            <li>You have no idea what you want and aren't open to guidance</li>
-            <li>You need it live by tomorrow</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SECTION 07 — SELECTED WEB DESIGN WORK -->
-  <section class="sp-portfolio">
-    <div class="svc-container">
-      <div class="sp-portfolio__header reveal">
-        <p class="sp-portfolio__eyebrow">Selected Work</p>
-        <h2 class="sp-portfolio__headline">Sites we've built.</h2>
-        <p class="sp-portfolio__sub">A look at a few of the websites we've designed and built for clients who needed more than a pretty page.</p>
-      </div>
-      <div class="sp-portfolio__grid sp-portfolio__grid--2col">
-
-        <!-- Alpine Humane Society -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap">
-            <img src="/images/mockup-1.png" alt="Alpine Humane Society website by Origo" class="sp-portfolio-card__img">
+        <div class="bp-row reveal reveal-delay-2">
+          <!-- Desktop -->
+          <div class="bp-desktop">
+            <div class="bp-browser">
+              <div class="bp-browser__bar" aria-hidden="true">
+                <span class="bp-dot bp-dot--r"></span>
+                <span class="bp-dot bp-dot--y"></span>
+                <span class="bp-dot bp-dot--g"></span>
+                <div class="bp-browser__url">alpinehumane.org</div>
+              </div>
+              <div class="bp-browser__win">
+                <div class="bp-screen" role="img" aria-label="Alpine Humane Society website, desktop view scrolling from top to bottom" data-bg="/images/work/alpine-desktop.webp"></div>
+              </div>
+            </div>
+            <div class="bp-cap">
+              <div class="bp-cap__name">Desktop</div>
+              <div class="bp-cap__px">1440px</div>
+            </div>
           </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Web Design</p>
-            <h3 class="sp-portfolio-card__name">Alpine Humane Society</h3>
-            <p class="sp-portfolio-card__desc">Eight years after building their first site, Alpine Humane Society came back to Origo to build their next one.</p>
-          </div>
-        </article>
-
-        <!-- U.S. Safety Training -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap">
-            <img src="/images/mockup-2.png" alt="U.S. Safety Training website by Origo" class="sp-portfolio-card__img">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Web Design</p>
-            <h3 class="sp-portfolio-card__name">U.S. Safety Training</h3>
-            <p class="sp-portfolio-card__desc">A 30-year safety training veteran finally has a website that communicates the credibility he's spent decades building.</p>
-          </div>
-        </article>
-
-        <!-- The Cigar District -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap sp-portfolio-card__img-wrap--cover">
-            <img src="/images/cigar-district-desktop-mock-up-5.png" alt="The Cigar District website by Origo" class="sp-portfolio-card__img">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Web Design · E-Commerce</p>
-            <h3 class="sp-portfolio-card__name">The Cigar District</h3>
-            <p class="sp-portfolio-card__desc">An online shop for Northwest Arkansas's premier Davidoff-appointed cigar lounge, built to bring the in-store experience online.</p>
-          </div>
-        </article>
-
-        <!-- Redemption Hill Church -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap sp-portfolio-card__img-wrap--cover">
-            <img src="/images/redemption-hill-desktop-mock-up-2.png" alt="Redemption Hill Church website by Origo" class="sp-portfolio-card__img">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Web Design</p>
-            <h3 class="sp-portfolio-card__name">Redemption Hill Church</h3>
-            <p class="sp-portfolio-card__desc">A Reformed church plant in San Antonio with a clear identity, and a website that reflects it.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 08 — TESTIMONIALS -->
-  <section class="sp-testimonials">
-    <div class="svc-container">
-      <h2 class="sp-testimonials__headline reveal">What clients say.</h2>
-      <div class="sp-testi-grid stagger-group">
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Our church recently worked with Jon at Origo to update all of our branding, and our online presence, including a new logo and brand new website. We are incredibly happy with how everything turned out. They were great to work with and very patient. They took time to understand both our wants and needs and then delivered a product that we can be proud of. Great work! Well done! Thanks guys!"</p>
-          <div class="sp-testi__author">
-            <img src="/images/Mike-Hooper-headshot.jpg" alt="Mike Hooper" class="sp-testi__avatar">
-            <div>
-              <p class="sp-testi__name">Mike Hooper</p>
-              <p class="sp-testi__title">Pastor, Redemption Hill Church</p>
+          <!-- Phone -->
+          <div class="bp-phone-wrap">
+            <div class="bp-phone">
+              <div class="bp-phone__notch" aria-hidden="true"></div>
+              <div class="bp-phone__win">
+                <div class="bp-screen bp-screen--phone" role="img" aria-label="Alpine Humane Society website, phone view scrolling from top to bottom" data-bg="/images/work/alpine-phone.webp"></div>
+              </div>
+            </div>
+            <div class="bp-cap">
+              <div class="bp-cap__name">Phone</div>
+              <div class="bp-cap__px">390px</div>
             </div>
           </div>
         </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"I just had Origo create two sites for me and I couldn't be happier! The sites look great and Origo was super easy to work with."</p>
-          <div class="sp-testi__author">
-            <img src="/images/jeanine-head-shot.jpg" alt="Jeanine Southerland" class="sp-testi__avatar">
+
+        <div class="bp-more">
+          <a href="/work" class="bsp-morelink">View full web design portfolio →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT'S INCLUDED (white, bento) ===== -->
+    <section class="bsp-section" aria-labelledby="wd-incl-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's included</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-incl-title" style="margin:14px 0 8px">Everything you need to launch with confidence.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Every web project is scoped to your business and your goals. Here's what we typically deliver.</p>
+        <div class="bsp-bento reveal reveal-delay-2">
+          <div class="bsp-bento__cell bsp-bento__feature">
+            <h3>Custom Design &amp; Build</h3>
+            <p>Not a template with your logo dropped in. We design every page around how your visitors actually move, then build it to load fast and read clearly on any device.</p>
+            <div class="bsp-bento__feature-tags">
+              <span>UX &amp; UI</span><span>Responsive</span><span>Accessible</span><span>Launch</span>
+            </div>
+          </div>
+          <div class="bsp-bento__dark">
+            <h3>Mobile-First Layout</h3>
+            <p>Most of your visitors show up on a phone, so that's where we design first. Every layout is built to feel right on a small screen before it ever scales up.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c2">
+            <h3>SEO-Ready Structure</h3>
+            <p>Clean markup and a sound structure so search engines can find and rank you.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Contact &amp; Lead Capture</h3>
+            <p>Forms and calls-to-action that make it easy for the right people to reach you.</p>
+          </div>
+          <div class="bsp-bento__blue">
             <div>
-              <p class="sp-testi__name">Jeanine Southerland</p>
-              <p class="sp-testi__title">Client</p>
+              <h3>Easy-to-Update CMS</h3>
+              <p>Change your text, swap photos, and add pages yourself. No developer, no waiting.</p>
+            </div>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Launch, Then Your Call</h3>
+            <p>We set up hosting and connect your domain. Run it yourself, or let our Website Concierge keep it maintained for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS (gray, orbit) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wd-how-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">How it works</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-how-title" style="margin:14px 0 8px">A clear process. No surprises.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 56px;max-width:620px">Most websites take four to six weeks from kickoff to launch, depending on scope.</p>
+        <div class="bsp-process">
+          <div class="bsp-orbit-line" aria-hidden="true"></div>
+          <div class="bsp-process-grid stagger-group">
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">01</div>
+              <h3>Discovery Call</h3>
+              <p>We learn your business, your goals, and the one action a new site needs to drive.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">02</div>
+              <h3>Design Direction</h3>
+              <p>We map the pages, then design your home page so you can react to something real before we build.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">03</div>
+              <h3>Build &amp; Content</h3>
+              <p>We build every page, wire up your copy, images, and forms, and test it on real devices.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">04</div>
+              <h3>Launch &amp; Handoff</h3>
+              <p>We take it live, then walk you through running it yourself, so you're never stuck waiting on us.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 09 — CLOSING CTA (DARK) -->
+    <!-- ===== IS THIS RIGHT FOR YOU (white) ===== -->
+    <section class="bsp-section" aria-labelledby="wd-fit-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">Is this right for you?</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-fit-title" style="margin:14px 0 48px">We'd rather be honest up front.</h2>
+        <div class="bsp-fit-grid">
+          <div class="bsp-fit-card reveal">
+            <h3>This is for you if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>Your current site is dated, slow, or a pain to update.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You're getting visitors, but not enough calls or inquiries.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>Most of your visitors are on their phones.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You want a site you can maintain without a developer.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You care how your business shows up online.</p></div>
+            </div>
+          </div>
+          <div class="bsp-fit-card bsp-fit-card--no reveal reveal-delay-1">
+            <h3>It's probably not, if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You need a large web app with complex logic. Our App Development service fits better.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You're shopping purely on price for the cheapest build you can find.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You'd rather we copy a competitor's site exactly as it is.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You're not ready to make a few decisions about your business.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============================================================
-       SERVICE FAQ
-  ============================================================ -->
-  <section class="service-faq">
-    <div class="container">
-      <div class="service-faq__header">
-        <span class="service-faq__label">Web Design FAQ</span>
-        <h2 class="service-faq__title">Web Design Questions</h2>
+    <!-- ===== TESTIMONIALS (gray, two quotes) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wd-tst-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">What clients say</span>
+        </div>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-tst-title" style="margin:0 0 44px">Trust, in their words.</h2>
+        <div class="bsp-quote-grid stagger-group">
+          <div class="bsp-quote reveal">
+            <blockquote>"Our church recently worked with Jon at Origo to update all of our branding, and our online presence, including a new logo and brand new website. We are incredibly happy with how everything turned out. They were great to work with and very patient. They took time to understand both our wants and needs and then delivered a product that we can be proud of. Great work! Well done! Thanks guys!"</blockquote>
+            <div class="bsp-quote__author">
+              <span class="bsp-quote__avatar"><img src="/images/Mike-Hooper-headshot.jpg" alt="Mike Hooper" loading="lazy"></span>
+              <div>
+                <div class="bsp-quote__name">Mike Hooper</div>
+                <div class="bsp-quote__role">Pastor, Redemption Hill Church</div>
+              </div>
+            </div>
+          </div>
+          <div class="bsp-quote reveal reveal-delay-1">
+            <blockquote>"I just had Origo create two sites for me and I couldn't be happier! The sites look great and Origo was super easy to work with."</blockquote>
+            <div class="bsp-quote__author">
+              <span class="bsp-quote__avatar"><img src="/images/jeanine-head-shot.jpg" alt="Jeanine Southerland" loading="lazy"></span>
+              <div>
+                <div class="bsp-quote__name">Jeanine Southerland</div>
+                <div class="bsp-quote__role">Alpine Humane Society</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What kind of websites does Origo build?</summary>
-          <div class="faq-item__answer">
-            <p>Origo builds custom marketing websites and e-commerce stores for established, <a href='/glossary#owner-operated-business'>owner-operated businesses</a>, typically sites in the range of 5 to 25 pages designed to build trust, generate leads, and rank in search.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>What technology does Origo use to build websites?</summary>
-          <div class="faq-item__answer">
-            <p>We build using two primary approaches: custom-coded sites for businesses that want maximum performance and longevity, and WordPress for businesses that need flexibility, e-commerce, or content management built in. Both approaches use modern web standards optimized for speed, <a href='/services/seo-aeo'>SEO</a>, and ease of maintenance.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Will my website be mobile-friendly?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. Every Origo website is built mobile-first and tested across devices, browsers, and screen sizes. The majority of your visitors will arrive on a phone, and your site has to perform there before anywhere else.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Will my website be optimized for SEO?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. Every Origo website is built with SEO foundations baked in: clean code, fast load times, proper structure, and on-page optimization for your priority keywords. Ongoing <a href='/services/seo-aeo'>SEO</a> is a separate service that builds on this foundation.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Who hosts my website after launch?</summary>
-          <div class="faq-item__answer">
-            <p>You always have the option to host your website wherever you choose. We don't lock you into our infrastructure. If you'd like Origo to handle hosting, your site is cared for on a stateside server with managed performance, security, and backups, typically as part of <a href='/services/website-concierge'>Website Concierge</a>.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Can I update the website myself after launch?</summary>
-          <div class="faq-item__answer">
-            <p>Most of our clients prefer to hand updates to us through <a href='/services/website-concierge'>Website Concierge</a> rather than manage the site themselves. That's part of why concierge exists. If you want direct edit access for certain sections, we can build that in during the design phase.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How long does a website project take?</summary>
-          <div class="faq-item__answer">
-            <p>Most Origo websites launch within 6 to 12 weeks, depending on scope, content readiness, and how quickly feedback comes back. See our <a href='/faq#process'>full FAQ</a> for more detail.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Does Origo believe in website ownership?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. We believe every business should fully <a href='/glossary#website-ownership'>own its website</a>. That's why our contracts state that the business owns the property outright, and it's why we don't build on closed platforms like Squarespace, Wix, or Webflow where you're effectively renting your site. For the full thinking behind this, read our guide: <a href="/blog/digital-ownership">Digital Ownership: Why Your Business Should Own What It Builds Online →</a></p>
-          </div>
-        </details>
-        <p class="faq-updated"><a href="/faq">See all frequently asked questions →</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Let's build your site.</h2>
-      <p class="sp-cta__sub reveal">Book a free discovery call. No pitch, no pressure, just a real conversation about what your business needs.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="sp-cta__secondary">View All Services</a>
+    <!-- ===== FAQ (white, accordion) ===== -->
+    <section class="bsp-section" aria-labelledby="wd-faq-title">
+      <div class="bsp-wrap" style="max-width:820px">
+        <span class="bsp-eyebrow reveal">Web Design FAQ</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-faq-title" style="margin:14px 0 40px">Questions, answered.</h2>
+        <div class="bsp-faq-list">
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How long does a website project take?</summary>
+            <p class="bsp-faq__a">Most sites take four to six weeks from kickoff to launch, depending on the number of pages and how quickly we get your content and feedback. We'll give you a clear timeline on the discovery call.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do you write the content too?</summary>
+            <p class="bsp-faq__a">We can. Great design needs great words. We'll either build around copy you provide or bring in our copywriting service so the writing works as hard as the design does.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Can I update the site myself after launch?</summary>
+            <p class="bsp-faq__a">Yes. We build on a system you can manage and walk you through it before handoff. Change text, swap photos, and add pages, no developer needed. And if you'd rather not touch it, our Website Concierge service can handle updates and upkeep for you.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do you handle hosting and the domain?</summary>
+            <p class="bsp-faq__a">We'll set up hosting, connect your domain, and make sure everything's secure and backed up. You own all of it, no strings attached.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Will my site work on phones?</summary>
+            <p class="bsp-faq__a">Every site we build is designed mobile-first and tested across phones, tablets, and desktops before it goes live. That's the whole point of how we work.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What if I already have a site?</summary>
+            <p class="bsp-faq__a">We start from what's working and rebuild the rest. Sometimes that's a refresh, sometimes a clean start. We'll be honest about which one you actually need.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do you help with SEO?</summary>
+            <p class="bsp-faq__a">Every site we build sits on a clean, search-friendly structure. For deeper keyword and content work, our SEO &amp; AEO service picks up right where the build leaves off.</p>
+          </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== WHAT'S NEXT (gray, related-service cross-sell) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wd-next-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's next</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wd-next-title" style="margin:14px 0 8px;font-size:clamp(28px,3.6vw,40px)">A great site is the start, not the finish.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Once your site is live, two things keep it working: getting found, and staying in good shape. We handle both.</p>
+        <div class="bsp-next-grid stagger-group">
+          <a class="bsp-next-card reveal" href="/services/seo-aeo">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>SEO &amp; AEO</h3>
+            <p>A beautiful site only helps if people find it. We make sure your business shows up when clients search, on Google and in AI answers alike.</p>
+            <span class="bsp-next-card__link">Explore SEO &amp; AEO →</span>
+          </a>
+          <a class="bsp-next-card reveal reveal-delay-1" href="/services/website-concierge">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>Website Concierge</h3>
+            <p>Rather not manage the site yourself? We handle the updates, edits, and upkeep, so your site stays current while you run your business.</p>
+            <span class="bsp-next-card__link">Explore Website Concierge →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA (blue, the only blue band) ===== -->
+    <section class="bsp-cta" id="cta" aria-labelledby="wd-cta-title">
+      <div class="bsp-cta__inner">
+        <h2 class="bsp-cta__title reveal" id="wd-cta-title">Ready for a site that pulls its weight?</h2>
+        <p class="bsp-cta__body reveal reveal-delay-1">Book a discovery call and we'll walk through what a new site would look like for your business. No pitch, no pressure, just an honest conversation.</p>
+        <div class="bsp-cta__buttons reveal reveal-delay-2">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--white" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/services" class="bsp-btn bsp-btn--ghost-white">View all services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Signature: lazy-load the large screenshots as background images once the section nears the viewport -->
+  <script>
+    (function () {
+      var screens = document.querySelectorAll('.bp-screen[data-bg]');
+      if (!screens.length) return;
+      function load(el) { el.style.backgroundImage = 'url("' + el.getAttribute('data-bg') + '")'; el.removeAttribute('data-bg'); }
+      if (!('IntersectionObserver' in window)) { screens.forEach(load); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '400px 0px' });
+      screens.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 
   <footer class="footer" role="contentinfo">
     <div class="container">
