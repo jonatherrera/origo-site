@@ -40,8 +40,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=29" />
-  <link rel="stylesheet" href="/services/services.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=38" />
+  <link rel="stylesheet" href="/services/service-page.css" />
+  <link rel="stylesheet" href="/services/app-development/app-development.css" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -266,299 +267,390 @@
     </div>
   </div>
 
-  <!-- SECTION 01 — HERO -->
-  <section class="sp-hero">
-    <div class="svc-container">
-      <p class="sp-hero__breadcrumb reveal"><a href="/services">Services</a> <span>/</span> App Development</p>
-      <p class="sp-hero__label reveal">App Development</p>
-      <h1 class="sp-hero__headline reveal">Custom tools built for how your business actually works.</h1>
-      <p class="sp-hero__sub reveal">Web applications and client portals built to scale your operations, designed around your workflow, not the other way around.</p>
-      <div class="sp-hero__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="btn btn--ghost">All Services</a>
-      </div>
-    </div>
-  </section>
+  <main class="bsp" id="main-content">
 
-  <!-- SECTION 02 — PROBLEM (DARK) -->
-  <section class="sp-problem">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
-      <h2 class="sp-problem__headline reveal">Off-the-shelf software almost fits, and that gap costs you every day.</h2>
-      <p class="sp-problem__body reveal">You've tried the SaaS tools. Some come close. But they were built for the average business, not yours. So you end up with workarounds, manual processes, and software you've partially outgrown from day one.</p>
-      <ul class="sp-problem__list reveal">
-        <li>You're paying for 10 features and using 2, and still missing the one you need</li>
-        <li>Your team is using spreadsheets for things that should be automated</li>
-        <li>Client onboarding is a mess of emails and PDFs instead of a clean portal</li>
-        <li>No single system, data lives in five different tools that don't talk to each other</li>
-        <li>You've hit the ceiling of what a template-based tool can do</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SECTION 03 — SOLUTION -->
-  <section class="sp-solution">
-    <div class="svc-container">
-      <div class="svc-two-col">
-        <div>
-          <p class="svc-eyebrow reveal">Our Approach</p>
-          <h2 class="sp-solution__headline reveal">Built for your business. Not adapted from someone else's.</h2>
-          <p class="sp-solution__body reveal">We build custom web applications, client portals, internal tools, booking systems, dashboards, that are purpose-built for the way you operate. Clean code, modern stack, designed to grow with you.</p>
-          <p class="sp-solution__body reveal">Every app we build starts with a thorough discovery process. We map your workflow, identify where software can save you time and money, and build exactly what you need, nothing more, nothing less.</p>
+    <!-- ===== HERO (white) ===== -->
+    <section class="bsp-hero" aria-labelledby="ad-hero-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">Services · App Development</span>
         </div>
-        <div class="reveal app-device-wrap">
-          <div class="app-phone">
-            <div class="app-phone__frame">
-              <div class="app-phone__notch"></div>
-              <div class="app-phone__screen">
-                <div class="app-ui">
-                  <div class="app-ui__topbar">
-                    <div class="app-ui__topbar-dot"></div>
-                    <div class="app-ui__topbar-title"></div>
-                    <div class="app-ui__topbar-icon"></div>
+        <h1 class="bsp-hero__title reveal reveal-delay-1" id="ad-hero-title">Software that fits your business.<br>Not the other way around.</h1>
+        <p class="bsp-hero__sub reveal reveal-delay-2">Most tools force you to change how you work to fit them. We build custom apps and web apps around your business, so the software finally works the way you already do.</p>
+        <div class="bsp-hero__cta reveal reveal-delay-3">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--primary" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/work" class="bsp-btn bsp-btn--secondary">See our work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEM (the ONE dark band per page) ===== -->
+    <section class="bsp-problem" aria-labelledby="ad-problem-title">
+      <div class="bsp-problem__arc" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,110 L0,64 Q720,-24 1440,64 L1440,110 Z" fill="#2B2B2B"></path></svg>
+      </div>
+      <div class="bsp-problem__band">
+        <div class="bsp-problem__ghost" aria-hidden="true">
+          <img src="/images/eclipse-mark-white.svg" alt="" width="520" height="520">
+        </div>
+        <div class="bsp-wrap bsp-problem__inner">
+          <span class="bsp-eyebrow reveal">The problem</span>
+          <h2 class="bsp-problem__headline reveal reveal-delay-1" id="ad-problem-title">You're running your business on tools that don't quite fit.</h2>
+          <p class="bsp-problem__body reveal reveal-delay-2">You've patched together spreadsheets, generic software, and a few workarounds only you understand. It works, barely. But every duct-taped process is time and focus you're not putting into the actual business.</p>
+          <div class="bsp-problem__list reveal reveal-delay-2">
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Spreadsheets and manual steps that break the moment someone's out sick.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Off-the-shelf software you pay for every month but only half use.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>The same information re-entered by hand into three different systems.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>A process only one person truly understands, and the risk when they leave.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Customers asking for an app, a portal, or online booking you can't offer yet.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPROACH (white) ===== -->
+    <section class="bsp-section" aria-labelledby="ad-approach-title">
+      <div class="bsp-wrap bsp-approach-grid">
+        <div>
+          <span class="bsp-eyebrow reveal">Our approach</span>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-approach-title" style="margin-top:14px">We build the smallest thing that solves the real problem.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">We don't start with technology, we start with the bottleneck that's actually costing you. Then we build the simplest tool that clears it, ship it, and grow it only as far as your business needs.</p>
+        </div>
+        <div class="bsp-approach__cards reveal reveal-delay-2">
+          <div class="bsp-mini-card">
+            <div class="bsp-mini-card__label">Built around you</div>
+            <h3>Your process, not a template.</h3>
+            <p>We map how your business really runs, then shape the software to match it, so your team adopts it without a fight.</p>
+          </div>
+          <div class="bsp-mini-card bsp-mini-card--blue">
+            <div class="bsp-mini-card__label">Ship, then grow</div>
+            <h3>Live sooner, not someday.</h3>
+            <p>We launch a focused first version you can use in weeks, then build on what's working instead of guessing everything up front.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIGNATURE: What we build (gray, four div-drawn UI motifs) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="ad-sig-title">
+      <div class="bsp-wrap">
+        <div style="max-width:760px">
+          <div class="bsp-eyebrow-row reveal">
+            <img src="/images/eclipse-mark.svg" alt="" width="18" height="18" aria-hidden="true">
+            <span class="bsp-eyebrow">What we build</span>
+          </div>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-sig-title">Four kinds of software. One honest approach.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">Whether it lives on a phone, in a browser, or quietly behind the scenes for your team, we build the custom tools established businesses actually need. Here's the range.</p>
+        </div>
+
+        <div class="ad-type-grid stagger-group">
+
+          <!-- Mobile apps -->
+          <div class="ad-type-card reveal">
+            <div class="ad-motif" aria-hidden="true">
+              <div class="ad-phone">
+                <div class="ad-phone__notch"></div>
+                <div class="ad-phone__screen">
+                  <div class="ad-ln ad-ln--head"></div>
+                  <div class="ad-ln ad-ln--block"></div>
+                  <div class="ad-ln ad-ln--t1"></div>
+                  <div class="ad-ln ad-ln--t2"></div>
+                  <div class="ad-ln ad-ln--btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ad-type-card__body">
+              <h3>Mobile apps</h3>
+              <p>Apps your customers or your team carry with them, on iOS and Android. Built for the handful of things they'll actually do, and built to do them well.</p>
+              <div class="ad-chips"><span>Booking</span><span>Ordering</span><span>Loyalty</span><span>Field teams</span></div>
+            </div>
+          </div>
+
+          <!-- Web apps -->
+          <div class="ad-type-card reveal reveal-delay-1">
+            <div class="ad-motif" aria-hidden="true">
+              <div class="ad-browser">
+                <div class="ad-browser__bar">
+                  <span class="ad-dot ad-dot--r"></span><span class="ad-dot ad-dot--y"></span><span class="ad-dot ad-dot--g"></span>
+                  <div class="ad-browser__url"></div>
+                </div>
+                <div class="ad-browser__body">
+                  <div class="ad-tiles">
+                    <div class="ad-tile ad-tile--blue"></div><div class="ad-tile"></div><div class="ad-tile"></div>
                   </div>
-                  <div class="app-ui__hero-card">
-                    <div class="app-ui__hero-label"></div>
-                    <div class="app-ui__hero-value"></div>
-                    <div class="app-ui__hero-sub"></div>
-                  </div>
-                  <div class="app-ui__row">
-                    <div class="app-ui__stat-card">
-                      <div class="app-ui__stat-num"></div>
-                      <div class="app-ui__stat-lbl"></div>
-                    </div>
-                    <div class="app-ui__stat-card">
-                      <div class="app-ui__stat-num"></div>
-                      <div class="app-ui__stat-lbl"></div>
-                    </div>
-                  </div>
-                  <div class="app-ui__list-item"></div>
-                  <div class="app-ui__list-item app-ui__list-item--short"></div>
-                  <div class="app-ui__list-item"></div>
-                  <div class="app-ui__nav">
-                    <div class="app-ui__nav-dot app-ui__nav-dot--active"></div>
-                    <div class="app-ui__nav-dot"></div>
-                    <div class="app-ui__nav-dot"></div>
-                    <div class="app-ui__nav-dot"></div>
+                  <div class="ad-chart">
+                    <span style="height:42%"></span><span class="ad-chart--hi" style="height:72%"></span><span style="height:54%"></span><span class="ad-chart--hi" style="height:92%"></span><span style="height:60%"></span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04 — WHAT'S INCLUDED -->
-  <section class="sp-included">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">What We Build</p>
-      <h2 class="sp-included__headline reveal">Custom applications for every type of operation.</h2>
-      <p class="sp-included__sub reveal">We've built tools across industries. Here's what we do most.</p>
-      <div class="sp-deliverables stagger-group">
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Client Portals</h3>
-          <p class="sp-deliverable__desc">Branded portals where clients can log in, review deliverables, approve work, and communicate, all in one place.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Booking &amp; Scheduling Systems</h3>
-          <p class="sp-deliverable__desc">Custom booking flows with intake forms, calendar sync, and automated follow-ups built to your process.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Internal Dashboards</h3>
-          <p class="sp-deliverable__desc">Operations dashboards, reporting tools, and admin panels that give you a clear view of your business in real time.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Lead &amp; CRM Tools</h3>
-          <p class="sp-deliverable__desc">Custom lead capture, intake, and follow-up systems that fit your sales process, not a generic pipeline.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Membership &amp; Access Systems</h3>
-          <p class="sp-deliverable__desc">Gated content, member portals, and tiered access for courses, communities, or subscription businesses.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Workflow Automation</h3>
-          <p class="sp-deliverable__desc">Custom integrations and automations that eliminate manual tasks and connect the tools you already use.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05 — PROCESS -->
-  <section class="sp-process">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">How It Works</p>
-      <h2 class="sp-process__headline reveal">Discovery to delivery, without the chaos.</h2>
-      <p class="sp-process__sub reveal">Every app project starts with clarity and ends with a product you can actually use.</p>
-      <div class="sp-steps stagger-group">
-        <div class="sp-step reveal">
-          <div class="sp-step__num">1</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Discovery &amp; Scoping</h3>
-            <p class="sp-step__desc">We map your current workflow, identify pain points, and define exactly what the app needs to do.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">2</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Proposal &amp; Approval</h3>
-            <p class="sp-step__desc">We present a clear spec and fixed-price proposal, no surprise scope creep.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">3</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Design &amp; Prototype</h3>
-            <p class="sp-step__desc">UI design and interactive prototype so you can see how it works before a line of code is written.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">4</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Build &amp; Test</h3>
-            <p class="sp-step__desc">Clean, documented code built in sprints with regular check-ins. Thoroughly tested before delivery.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">5</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Launch &amp; Support</h3>
-            <p class="sp-step__desc">Deployment, training, and 30 days of post-launch support included in every project.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 06 — RIGHT FIT (DARK) -->
-  <section class="sp-fit">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">Is This Right for You?</p>
-      <h2 class="sp-fit__headline reveal">This is for you if…</h2>
-      <p class="sp-fit__sub reveal">Custom software is a meaningful investment. Here's how to know if it's the right move.</p>
-      <div class="sp-fit-grid">
-        <div class="reveal">
-          <p class="sp-fit-col__label">Good fit</p>
-          <ul class="sp-fit-list sp-fit-list--yes">
-            <li>You've maxed out what off-the-shelf software can do for you</li>
-            <li>You have a clear workflow that needs to be systematized</li>
-            <li>You're spending hours on manual tasks that could be automated</li>
-            <li>You want a client experience that reflects your professionalism</li>
-            <li>You're ready to invest in infrastructure that pays for itself</li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <p class="sp-fit-col__label">Not the right fit</p>
-          <ul class="sp-fit-list sp-fit-list--no">
-            <li>You don't have a defined workflow yet</li>
-            <li>A SaaS tool would actually solve your problem for less</li>
-            <li>You have a very limited budget for a complex build</li>
-            <li>You need a native iOS or Android app (we focus on web apps)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 07 — TESTIMONIALS -->
-  <section class="sp-testimonials">
-    <div class="svc-container">
-      <h2 class="sp-testimonials__headline reveal">What clients say.</h2>
-      <div class="sp-testi-grid stagger-group">
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"We have come to heavily rely on the expertise and care of the team at Origo. Their candor and responses always set us at ease and even make us feel like we are their only and favorite client. Their work is outstanding. The timelines for projects have not had delays as is so often the case with web development companies. Their artistic flare and creative eye has taken our site and social media to a whole new level. We feel like they are a part of our team, and we cannot imagine GoSendMe Global without them! You NEED to let Origo resolve why you're banging your head against the wall."</p>
-          <div class="sp-testi__author">
-            <img src="/images/Rob-Casey-Testimonial-Photo-.jpg" alt="Rob Casey" class="sp-testi__avatar">
-            <div>
-              <p class="sp-testi__name">Rob Casey</p>
-              <p class="sp-testi__title">Executive Director &amp; Founder, GoSendMe Global</p>
+            <div class="ad-type-card__body">
+              <h3>Web apps</h3>
+              <p>Software that runs in any browser, custom to your workflow. Nothing to install, reachable from anywhere, and yours to grow as the business does.</p>
+              <div class="ad-chips"><span>Dashboards</span><span>Scheduling</span><span>Quoting</span><span>Reporting</span></div>
             </div>
           </div>
+
+          <!-- Internal tools -->
+          <div class="ad-type-card reveal">
+            <div class="ad-motif" aria-hidden="true">
+              <div class="ad-table">
+                <div class="ad-table__head">
+                  <div class="ad-tbar ad-tbar--1"></div><div class="ad-tbar ad-tbar--2"></div><div class="ad-tbar ad-tbar--3"></div>
+                </div>
+                <div class="ad-table__row">
+                  <div class="ad-tbar ad-tbar--1"></div><div class="ad-tbar ad-tbar--2"></div><span class="ad-status ad-status--on"></span>
+                </div>
+                <div class="ad-table__row">
+                  <div class="ad-tbar ad-tbar--1"></div><div class="ad-tbar ad-tbar--2"></div><span class="ad-status"></span>
+                </div>
+                <div class="ad-table__row">
+                  <div class="ad-tbar ad-tbar--1"></div><div class="ad-tbar ad-tbar--2"></div><span class="ad-status"></span>
+                </div>
+              </div>
+            </div>
+            <div class="ad-type-card__body">
+              <h3>Internal tools</h3>
+              <p>The system your team runs on. We replace the fragile spreadsheet and the manual workaround with something built for the actual job.</p>
+              <div class="ad-chips"><span>Inventory</span><span>Job tracking</span><span>Admin</span><span>Approvals</span></div>
+            </div>
+          </div>
+
+          <!-- Customer portals -->
+          <div class="ad-type-card reveal reveal-delay-1">
+            <div class="ad-motif" aria-hidden="true">
+              <div class="ad-login">
+                <div class="ad-login__avatar"><span></span></div>
+                <div class="ad-login__head"></div>
+                <div class="ad-login__input"></div>
+                <div class="ad-login__input"></div>
+                <div class="ad-login__btn"></div>
+              </div>
+            </div>
+            <div class="ad-type-card__body">
+              <h3>Customer portals</h3>
+              <p>A secure place for your clients to log in, see their own information, and handle things themselves, instead of emailing you for every little thing.</p>
+              <div class="ad-chips"><span>Accounts</span><span>Documents</span><span>Payments</span><span>Status</span></div>
+            </div>
+          </div>
+
         </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Origo is amazing at what they do. They really take the time to understand your business and make sure your online presence actually reflects the level of service you provide. I love that you work directly with their team, they're responsive, thoughtful, and truly care about getting it right. They blend strategy, creativity, and just the right amount of AI without losing that personal touch. If your website or brand doesn't match how great your business is, Origo will fix that. Highly recommend!"</p>
-          <div class="sp-testi__author">
-            <img src="/images/Robin-testimonial-photo.jpeg" alt="Robin Balanciere" class="sp-testi__avatar">
+
+        <p class="ad-sig-note reveal">Not sure which one your business actually needs? <a href="#cta">That's exactly what the discovery call is for →</a></p>
+      </div>
+    </section>
+
+    <!-- ===== WHAT'S INCLUDED (white, bento) ===== -->
+    <section class="bsp-section" aria-labelledby="ad-incl-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's included</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-incl-title" style="margin:14px 0 8px">Everything it takes to ship, and to keep it running.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Every build is scoped to your business and the problem you're solving. Here's what a typical engagement includes.</p>
+        <div class="bsp-bento reveal reveal-delay-2">
+          <div class="bsp-bento__cell bsp-bento__feature">
+            <h3>Discovery &amp; Scope</h3>
+            <p>Before we write a line of code, we map how your business actually works, agree on the one problem worth solving first, and define exactly what the first version does. You approve the plan, and the estimate, before we build.</p>
+            <div class="bsp-bento__feature-tags">
+              <span>Process map</span><span>User flows</span><span>Scope</span><span>Fixed estimate</span>
+            </div>
+          </div>
+          <div class="bsp-bento__dark">
+            <h3>Custom Build</h3>
+            <p>We design and build your app from the ground up, front end, back end, and the connections between them. Clean, well-documented code that you own outright, on technology that won't trap you.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c2">
+            <h3>Works On Every Device</h3>
+            <p>Native-feeling mobile apps and responsive web apps that hold up on phones, tablets, and desktops.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Integrations</h3>
+            <p>We connect your app to the payment, calendar, and business tools you already run on.</p>
+          </div>
+          <div class="bsp-bento__blue">
             <div>
-              <p class="sp-testi__name">Robin Balanciere</p>
-              <p class="sp-testi__title">Agent, New York Life</p>
+              <h3>Launch &amp; Training</h3>
+              <p>We deploy it, walk your team through it, and hand over documentation. Your software, your accounts, your data.</p>
+            </div>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Support &amp; Iteration</h3>
+            <p>After launch we fix, refine, and grow it as your business does, or hand it off cleanly if you'd rather run it yourself.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS (gray, orbit) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="ad-how-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">How it works</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-how-title" style="margin:14px 0 8px">A build you can follow, week by week.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 56px;max-width:620px">Most first versions go from kickoff to launch in a matter of weeks, not months, because we build something focused instead of everything at once.</p>
+        <div class="bsp-process">
+          <div class="bsp-orbit-line" aria-hidden="true"></div>
+          <div class="bsp-process-grid stagger-group">
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">01</div>
+              <h3>Discovery Call</h3>
+              <p>We dig into how you work today and the one problem that's most worth solving first.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">02</div>
+              <h3>Scope &amp; Design</h3>
+              <p>We map the flows and design the key screens, so you react to something real before we build.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">03</div>
+              <h3>Build &amp; Test</h3>
+              <p>We build in short cycles, show you working software along the way, and test it on real devices.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">04</div>
+              <h3>Launch &amp; Support</h3>
+              <p>We deploy, train your team, and stay on to refine it, or hand it over clean if you'd rather run it.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 08 — CLOSING CTA (DARK) -->
+    <!-- ===== IS THIS RIGHT FOR YOU (white) ===== -->
+    <section class="bsp-section" aria-labelledby="ad-fit-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">Is this right for you?</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-fit-title" style="margin:14px 0 48px">We'd rather be honest up front.</h2>
+        <div class="bsp-fit-grid">
+          <div class="bsp-fit-card reveal">
+            <h3>This is for you if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>A manual process or spreadsheet has outgrown what it can handle.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You need something custom that off-the-shelf software just can't do.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>Your customers keep asking for an app, a portal, or online booking.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You want to own your software outright, not rent it forever.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You've got a clear problem worth solving, not just a wish for "an app."</p></div>
+            </div>
+          </div>
+          <div class="bsp-fit-card bsp-fit-card--no reveal reveal-delay-1">
+            <h3>It's probably not, if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>A simple website is really all you need. Our Web Design service fits better.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You want an app built just to have one, with no real problem behind it.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You need it live next week. Good software takes a little longer than that.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You're shopping purely on price for the cheapest build you can find.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============================================================
-       SERVICE FAQ
-  ============================================================ -->
-  <section class="service-faq">
-    <div class="container">
-      <div class="service-faq__header">
-        <span class="service-faq__label">App Development FAQ</span>
-        <h2 class="service-faq__title">App Development Questions</h2>
+    <!-- ===== TESTIMONIALS (gray; avatars omitted) ===== -->
+    <!-- TODO: general Origo trust quotes (no app-specific testimonial yet). Swap in an app-specific quote once first projects ship. -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="ad-tst-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">What clients say</span>
+        </div>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-tst-title" style="margin:0 0 44px">Trust, in their words.</h2>
+        <div class="bsp-quote-grid stagger-group">
+          <div class="bsp-quote reveal">
+            <blockquote>"Integrity is what Jon is all about and how he runs his business. Honest and as straight forward as they come. A man you can absolutely trust to help grow your business."</blockquote>
+            <div class="bsp-quote__author">
+              <div>
+                <div class="bsp-quote__name">Vern Lieb</div>
+                <div class="bsp-quote__role">Owner, Game Day Men's Health</div>
+              </div>
+            </div>
+          </div>
+          <div class="bsp-quote reveal reveal-delay-1">
+            <blockquote>"Working with Origo has been an excellent experience. Their level of knowledge and expertise in SEO and website development is beyond impressive!"</blockquote>
+            <div class="bsp-quote__author">
+              <div>
+                <div class="bsp-quote__name">Tressa Lyman</div>
+                <div class="bsp-quote__role">Owner, TRR Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="ad-sig-note" style="color:#9A9A9A;font-style:italic;font-size:14px">Real Origo client quotes. Swap for an app-specific testimonial once your first projects ship.</p>
       </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What kind of apps does Origo build?</summary>
-          <div class="faq-item__answer">
-            <p>Origo builds custom mobile and web applications for businesses with a clear use case: typically client portals, booking and scheduling apps, loyalty and membership apps, and internal business tools. We don't build consumer social apps or games.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>What technology does Origo use to build apps?</summary>
-          <div class="faq-item__answer">
-            <p>We build using FlutterFlow, a modern platform that produces native iOS apps, Android apps, and web apps from a single codebase. This lets us ship faster and at lower cost than traditional native development without sacrificing quality.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How much does a custom app cost?</summary>
-          <div class="faq-item__answer">
-            <p>App pricing varies widely based on functionality, integrations, and scope. App Development is positioned as a premium service, and we provide custom proposals after a <a href='https://go.origo.ooo/call' target='_blank' rel='noopener'>discovery call</a> to scope exactly what your business needs.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How long does it take to build an app?</summary>
-          <div class="faq-item__answer">
-            <p>Most app projects take 3 to 6 months from kickoff to launch, depending on complexity, integrations, and feedback turnaround. Larger or more complex apps can take longer.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Will my app be on iOS, Android, and the web?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. FlutterFlow lets us ship to the App Store, Google Play, and the web from a single codebase, so you can launch across all three platforms without tripling the cost. Many clients start with one platform and expand to others as the product proves itself.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Who handles the App Store and Google Play submissions?</summary>
-          <div class="faq-item__answer">
-            <p>We do. Origo handles the full submission process for both stores, including the technical configuration, store listing assets, and review responses needed to get approved. For web apps, we handle deployment and hosting setup as well.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Can Origo maintain my app after launch?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. Apps require ongoing updates as iOS and Android evolve, and we offer post-launch maintenance to keep your app current, secure, and compatible with the latest devices.</p>
-          </div>
-        </details>
-        <p class="faq-updated"><a href="/faq">See all frequently asked questions →</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Let's build the tool your business actually needs.</h2>
-      <p class="sp-cta__sub reveal">Book a discovery call. We'll learn how you work and tell you honestly whether a custom app is the right investment.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="sp-cta__secondary">View All Services</a>
+    <!-- ===== FAQ (white, accordion) ===== -->
+    <section class="bsp-section" aria-labelledby="ad-faq-title">
+      <div class="bsp-wrap" style="max-width:820px">
+        <span class="bsp-eyebrow reveal">App Development FAQ</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-faq-title" style="margin:14px 0 40px">Questions, answered.</h2>
+        <div class="bsp-faq-list">
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How much does a custom app cost?</summary>
+            <p class="bsp-faq__a">It depends on what the app needs to do, so we scope every project after we understand the problem. You'll get a clear, fixed estimate before any work starts, and we'll tell you honestly if a simpler solution would serve you better.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How long does it take to build?</summary>
+            <p class="bsp-faq__a">Most focused first versions launch in a matter of weeks. We build in short cycles and get working software in front of you early, so you're never waiting months to see progress.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do I own the app and the code?</summary>
+            <p class="bsp-faq__a">Completely. The code, the accounts, and the data are yours. We build on standard, well-documented technology, so you're never locked to us and can take it anywhere.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Can you build both mobile and web apps?</summary>
+            <p class="bsp-faq__a">Yes. We build native-feeling mobile apps for iOS and Android, web apps that run in the browser, internal tools, and customer portals. On the discovery call we'll help you figure out which one your business actually needs.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What happens after it launches?</summary>
+            <p class="bsp-faq__a">We stay on to fix, refine, and grow the app as your business changes, or we hand it off cleanly with documentation if you'd rather run it yourself. Either way, it's yours.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Can you work with software we already have?</summary>
+            <p class="bsp-faq__a">Usually, yes. We can build around and connect to the tools you already run on, and we'll be upfront if a clean rebuild would actually cost you less over time.</p>
+          </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== WHAT'S NEXT (gray, 2-up cross-sell) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="ad-next-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's next</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="ad-next-title" style="margin:14px 0 8px;font-size:clamp(28px,3.6vw,40px)">An app is one piece of the picture.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Software works best when the brand around it is clear and the words inside it land. Here's where to go next.</p>
+        <div class="bsp-next-grid stagger-group">
+          <a class="bsp-next-card reveal" href="/services/branding">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>Branding</h3>
+            <p>A new app is a chance to get the look right. We shape the identity your product, and everything around it, gets to live inside.</p>
+            <span class="bsp-next-card__link">Explore Branding →</span>
+          </a>
+          <a class="bsp-next-card reveal reveal-delay-1" href="/services/copywriting">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>Copywriting</h3>
+            <p>The words inside an app do real work: buttons, empty states, the messages that guide people. We write the ones that make it feel effortless.</p>
+            <span class="bsp-next-card__link">Explore Copywriting →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA (blue, the only blue band) ===== -->
+    <section class="bsp-cta" id="cta" aria-labelledby="ad-cta-title">
+      <div class="bsp-cta__inner">
+        <h2 class="bsp-cta__title reveal" id="ad-cta-title">Got a process that's begging for better software?</h2>
+        <p class="bsp-cta__body reveal reveal-delay-1">Book a discovery call and we'll figure out what's worth building, and what isn't. No pitch, no pressure, just an honest conversation about your business.</p>
+        <div class="bsp-cta__buttons reveal reveal-delay-2">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--white" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/services" class="bsp-btn bsp-btn--ghost-white">View all services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container">
