@@ -40,8 +40,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=29" />
-  <link rel="stylesheet" href="/services/services.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=38" />
+  <link rel="stylesheet" href="/services/branding/branding.css" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -266,332 +266,382 @@
     </div>
   </div>
 
-  <!-- SECTION 01 — HERO -->
-  <section class="sp-hero">
-    <div class="svc-container">
-      <p class="sp-hero__breadcrumb reveal"><a href="/services">Services</a> <span>/</span> Branding</p>
-      <p class="sp-hero__label reveal">Branding</p>
-      <h1 class="sp-hero__headline reveal">Your brand is the first impression. Make it count.</h1>
-      <p class="sp-hero__sub reveal">We build brand identities that communicate who you are, what you stand for, and why clients should choose you, before you say a word.</p>
-      <div class="sp-hero__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="btn btn--ghost">All Services</a>
+  <main class="bsp" id="main-content">
+
+    <!-- ===== HERO (white) ===== -->
+    <section class="bsp-hero" aria-labelledby="bsp-hero-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">Services · Branding</span>
+        </div>
+        <h1 class="bsp-hero__title reveal reveal-delay-1" id="bsp-hero-title">Your brand is the first impression.<br>Make it count.</h1>
+        <p class="bsp-hero__sub reveal reveal-delay-2">We build brand identities that communicate who you are, what you stand for, and why clients should choose you, before you say a word.</p>
+        <div class="bsp-hero__cta reveal reveal-delay-3">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--primary" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/work" class="bsp-btn bsp-btn--secondary">See our work</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 02 — PROBLEM (DARK) -->
-  <section class="sp-problem">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
-      <h2 class="sp-problem__headline reveal">A logo isn't a brand. And a bad brand costs you more than you think.</h2>
-      <p class="sp-problem__body reveal">Most small businesses have a logo they've outgrown, colors they chose randomly, and no consistent way to present themselves. The result? They look like every other company in their industry, and prospects don't remember them.</p>
-      <ul class="sp-problem__list reveal">
-        <li>Inconsistent visuals that look unprofessional across platforms</li>
-        <li>No clear brand voice, messaging that sounds generic or off</li>
-        <li>A logo that doesn't scale, print well, or work in different contexts</li>
-        <li>Prospects can't tell what makes you different from the competition</li>
-        <li>You're embarrassed to hand out your business card or share your website</li>
-      </ul>
-    </div>
-  </section>
+    <!-- ===== PROBLEM (the ONE dark band per page) ===== -->
+    <section class="bsp-problem" aria-labelledby="bsp-problem-title">
+      <!-- eclipse motif: the dark band rises as a shallow crescent arc -->
+      <div class="bsp-problem__arc" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,110 L0,64 Q720,-24 1440,64 L1440,110 Z" fill="#2B2B2B"></path></svg>
+      </div>
+      <div class="bsp-problem__band">
+        <!-- faint ghost mark cropped at the right edge -->
+        <div class="bsp-problem__ghost" aria-hidden="true">
+          <img src="/images/eclipse-mark-white.svg" alt="" width="520" height="520">
+        </div>
+        <div class="bsp-wrap bsp-problem__inner">
+          <span class="bsp-eyebrow reveal">The problem</span>
+          <h2 class="bsp-problem__headline reveal reveal-delay-1" id="bsp-problem-title">A logo isn't a brand. And a bad brand costs you more than you think.</h2>
+          <p class="bsp-problem__body reveal reveal-delay-2">Most small businesses have a logo they've outgrown, colors they chose randomly, and no consistent way to present themselves. The result? They look like every other company in their industry, and prospects don't remember them.</p>
+          <div class="bsp-problem__list reveal reveal-delay-2">
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Inconsistent visuals that look unprofessional across platforms.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>No clear brand voice, messaging that sounds generic or off.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>A logo that doesn't scale, print well, or work in different contexts.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Prospects can't tell what makes you different from the competition.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>You're embarrassed to hand out your business card or share your website.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- SECTION 03 — SOLUTION -->
-  <section class="sp-solution">
-    <div class="svc-container">
-      <div class="svc-two-col">
+    <!-- ===== APPROACH (white) ===== -->
+    <section class="bsp-section" aria-labelledby="bsp-approach-title">
+      <div class="bsp-wrap bsp-approach-grid">
         <div>
-          <p class="svc-eyebrow reveal">Our Approach</p>
-          <h2 class="sp-solution__headline reveal">A brand system built to communicate, not just decorate.</h2>
-          <p class="sp-solution__body reveal">We start with strategy, who you are, who you serve, and what makes you different. Then we build a visual and verbal identity system that expresses that clearly and consistently across every touchpoint.</p>
-          <p class="sp-solution__body reveal">The goal isn't to make something pretty. The goal is to make something that works, that attracts the right clients, builds trust faster, and makes every piece of your marketing stronger.</p>
+          <span class="bsp-eyebrow reveal">Our approach</span>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-approach-title" style="margin-top:14px">A brand system built to communicate, not just decorate.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">We start with strategy, who you are, who you serve, and what makes you different. Then we build a visual and verbal identity system that expresses that clearly and consistently across every touchpoint.</p>
         </div>
-        <div class="reveal">
-          <img src="/images/Redemption-Hill-Branding-Portfolio.png" alt="Redemption Hill Church brand identity system by Origo, mockups across print, apparel, signage, and digital" style="width:100%;border-radius:var(--radius);display:block;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04 — WHAT'S INCLUDED -->
-  <section class="sp-included">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">What's Included</p>
-      <h2 class="sp-included__headline reveal">Everything you need to show up with confidence.</h2>
-      <p class="sp-included__sub reveal">Each branding engagement is scoped to your business. Here's what we typically deliver.</p>
-      <div class="sp-deliverables stagger-group">
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Brand Discovery</h3>
-          <p class="sp-deliverable__desc">A structured session to understand your business, your audience, and what makes you distinct.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Logo System</h3>
-          <p class="sp-deliverable__desc">Primary, secondary, and icon marks, delivered in every format you'll ever need.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Color Palette</h3>
-          <p class="sp-deliverable__desc">A defined set of brand colors with usage guidelines for digital and print.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Typography System</h3>
-          <p class="sp-deliverable__desc">Headline and body typefaces that reflect your brand's personality and work at every size.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Brand Voice Guide</h3>
-          <p class="sp-deliverable__desc">Tone, language, and messaging guidelines so your words sound as sharp as your visuals.</p>
-        </div>
-        <div class="sp-deliverable reveal">
-          <h3 class="sp-deliverable__title">Brand Style Guide</h3>
-          <p class="sp-deliverable__desc">A complete reference document for how to use your brand across every context.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05 — PROCESS -->
-  <section class="sp-process">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">How It Works</p>
-      <h2 class="sp-process__headline reveal">A clear process. No surprises.</h2>
-      <p class="sp-process__sub reveal">Most branding projects take 3–5 weeks from kickoff to delivery.</p>
-      <div class="sp-steps stagger-group">
-        <div class="sp-step reveal">
-          <div class="sp-step__num">1</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Discovery Call</h3>
-            <p class="sp-step__desc">We start by learning your business, your goals, and your audience. No questionnaire, a real conversation.</p>
+        <div class="bsp-approach__cards reveal reveal-delay-2">
+          <div class="bsp-mini-card">
+            <div class="bsp-mini-card__label">Strategy first</div>
+            <h3>We listen before we design.</h3>
+            <p>The right idea comes from understanding your business, not from a trend. Positioning and voice come before a single pixel.</p>
           </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">2</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Brand Strategy</h3>
-            <p class="sp-step__desc">We define your positioning, your voice, and the core idea your brand will be built around.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">3</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Visual Direction</h3>
-            <p class="sp-step__desc">We present 2 distinct creative directions for you to choose from, mood boards and initial concepts.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">4</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Design &amp; Refinement</h3>
-            <p class="sp-step__desc">We build out your chosen direction and refine it with your feedback over 2 revision rounds.</p>
-          </div>
-        </div>
-        <div class="sp-step reveal">
-          <div class="sp-step__num">5</div>
-          <div class="sp-step__content">
-            <h3 class="sp-step__title">Final Delivery</h3>
-            <p class="sp-step__desc">You receive your complete brand package, every file, every format, and a guide for how to use it.</p>
+          <div class="bsp-mini-card bsp-mini-card--blue">
+            <div class="bsp-mini-card__label">Built to work</div>
+            <h3>Not pretty. Effective.</h3>
+            <p>The goal is a brand that attracts the right clients, builds trust faster, and makes every piece of your marketing stronger.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 06 — RIGHT FIT (DARK) -->
-  <section class="sp-fit">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">Is This Right for You?</p>
-      <h2 class="sp-fit__headline reveal">This is for you if…</h2>
-      <p class="sp-fit__sub reveal">Honest criteria. We'd rather tell you now than waste both our time.</p>
-      <div class="sp-fit-grid">
-        <div class="reveal">
-          <p class="sp-fit-col__label">Good fit</p>
-          <ul class="sp-fit-list sp-fit-list--yes">
-            <li>You're launching a new business and need a brand from scratch</li>
-            <li>Your existing brand no longer reflects where your business is</li>
-            <li>You want something that looks as good as your competitors, or better</li>
-            <li>You're ready to invest in your business's long-term perception</li>
-            <li>You want a team that listens before they design</li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <p class="sp-fit-col__label">Not the right fit</p>
-          <ul class="sp-fit-list sp-fit-list--no">
-            <li>You need a logo done in 48 hours</li>
-            <li>You want to design it yourself and just need someone to "clean it up"</li>
-            <li>You're not open to strategic input, just execution</li>
-            <li>You're not sure branding is worth investing in</li>
-          </ul>
+    <!-- ===== SELECTED WORK (signature, light gray) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="bsp-work-title">
+      <div class="bsp-wrap">
+        <div style="max-width:760px">
+          <div class="bsp-eyebrow-row reveal">
+            <img src="/images/eclipse-mark.svg" alt="" width="18" height="18" aria-hidden="true">
+            <span class="bsp-eyebrow">Selected work</span>
+          </div>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-work-title">Brands we've built.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">A look at a few of the identities we've crafted for clients who trusted us to get it right. This is the work no other page can show you.</p>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="bsp-wrap">
+        <div class="bsp-cases stagger-group">
 
-  <!-- SECTION 07 — SELECTED BRANDING WORK -->
-  <section class="sp-portfolio">
-    <div class="svc-container">
-      <div class="sp-portfolio__header reveal">
-        <p class="sp-portfolio__eyebrow">Selected Work</p>
-        <h2 class="sp-portfolio__headline">Brands we've built.</h2>
-        <p class="sp-portfolio__sub">A look at a few of the identities we've crafted for clients who trusted us to get it right.</p>
-        <a href="/work/branding" class="sp-portfolio__view-all">View full branding portfolio →</a>
+          <!-- Redemption Hill -->
+          <article class="bsp-case reveal">
+            <div class="bsp-case__panel" style="background:#0A0A0A">
+              <img src="/images/work/rhc-horizontal-gold.png" alt="Redemption Hill Church">
+            </div>
+            <div class="bsp-case__body">
+              <div class="bsp-case__tag">Branding · Identity</div>
+              <h3>Redemption Hill Church</h3>
+              <p>A complete identity for a church planting deep roots in its community, from the primary mark through a full color system and printed collateral.</p>
+              <div class="bsp-chips">
+                <span class="bsp-chip">Logo System</span>
+                <span class="bsp-chip">Color Palette</span>
+                <span class="bsp-chip">Print Collateral</span>
+                <span class="bsp-chip">Style Guide</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- First Baptist (reversed) -->
+          <article class="bsp-case bsp-case--rev reveal">
+            <div class="bsp-case__body">
+              <div class="bsp-case__tag">Branding · Identity</div>
+              <h3>First Baptist Church North Vernon</h3>
+              <p>A heritage crest that finally matched the congregation's conviction, extended into a full print kit of connect cards, invites, and banners.</p>
+              <div class="bsp-chips">
+                <span class="bsp-chip">Logo System</span>
+                <span class="bsp-chip">Print Kit</span>
+                <span class="bsp-chip">Brand Guidelines</span>
+              </div>
+            </div>
+            <div class="bsp-case__panel" style="background:#B0883F">
+              <img src="/images/work/first-baptist-nv-logo.png" alt="First Baptist Church North Vernon">
+            </div>
+          </article>
+
+          <!-- Jeff Davis County Library -->
+          <article class="bsp-case reveal">
+            <div class="bsp-case__panel" style="background:#281858">
+              <img src="/images/work/jeff-davis-library-logo.png" alt="Jeff Davis County Library">
+            </div>
+            <div class="bsp-case__body">
+              <div class="bsp-case__tag">Branding · Identity</div>
+              <h3>Jeff Davis County Library</h3>
+              <p>A community institution people already trusted, given a mark as welcoming as the place itself. A desert-sky badge that reads clearly at any size.</p>
+              <div class="bsp-chips">
+                <span class="bsp-chip">Logo System</span>
+                <span class="bsp-chip">Color Palette</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serenity Hospice (reversed) -->
+          <article class="bsp-case bsp-case--rev reveal">
+            <div class="bsp-case__body">
+              <div class="bsp-case__tag">Branding · Identity</div>
+              <h3>Serenity Hospice</h3>
+              <p>End-of-life care asks for a gentle hand. We drew a soft, botanical script that carries real warmth and calm, an identity families can lean on.</p>
+              <div class="bsp-chips">
+                <span class="bsp-chip">Logo Design</span>
+                <span class="bsp-chip">Brand Mark</span>
+              </div>
+            </div>
+            <div class="bsp-case__panel" style="background:#48B8B8">
+              <img src="/images/work/serenity-hospice-logo.png" alt="Serenity Hospice">
+            </div>
+          </article>
+
+        </div>
+        <div style="margin-top:10px">
+          <a href="/work/branding" class="bsp-morelink">View full branding portfolio →</a>
+        </div>
       </div>
-      <div class="sp-portfolio__grid stagger-group">
+    </section>
 
-        <!-- VanGelder Technologies -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap sp-portfolio-card__img-wrap--cover">
-            <img src="/images/vangelder-tech-hero.webp" alt="VanGelder Technologies brand identity by Origo" class="sp-portfolio-card__img">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Branding · Identity</p>
-            <h3 class="sp-portfolio-card__name">VanGelder Technologies</h3>
-            <p class="sp-portfolio-card__desc">A software development firm with an impressive client roster, and now a brand that shows it.</p>
-          </div>
-        </article>
-
-        <!-- First Baptist Church North Vernon -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap sp-portfolio-card__img-wrap--cover">
-            <img src="/images/first-baptist-church-nv-hero.jpg" alt="First Baptist Church North Vernon brand identity by Origo" class="sp-portfolio-card__img">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Branding · Identity</p>
-            <h3 class="sp-portfolio-card__name">First Baptist Church North Vernon</h3>
-            <p class="sp-portfolio-card__desc">A church that knew what it stood for, and finally had a logo that showed it.</p>
-          </div>
-        </article>
-
-        <!-- Staunch Realty -->
-        <article class="sp-portfolio-card reveal">
-          <div class="sp-portfolio-card__img-wrap sp-portfolio-card__img-wrap--cover">
-            <img src="/images/staunch-realty-hero.png" alt="Staunch Realty brand identity by Origo" class="sp-portfolio-card__img" style="object-position: center 45%;">
-          </div>
-          <div class="sp-portfolio-card__body">
-            <p class="sp-portfolio-card__tag">Branding · Identity</p>
-            <h3 class="sp-portfolio-card__name">Staunch Realty</h3>
-            <p class="sp-portfolio-card__desc">A real estate brand built to stand out in a market full of agents who all look the same.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 08 — TESTIMONIALS -->
-  <section class="sp-testimonials">
-    <div class="svc-container">
-      <h2 class="sp-testimonials__headline reveal">What clients say.</h2>
-      <div class="sp-testi-grid stagger-group">
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Origo recently re-designed our church logo and did a wonderful job. Jon took the time to understand exactly what we were looking for. There were many times where he took my jumbled thoughts and made them make sense, and we couldn't be happier with the finished product. If you're looking for design work, I'd definitely recommend Origo!"</p>
-          <div class="sp-testi__author">
-            <img src="/images/braden-head-shot.jpg" alt="Braden Adams" class="sp-testi__avatar">
-            <div>
-              <p class="sp-testi__name">Braden Adams</p>
-              <p class="sp-testi__title">Pastor, First Baptist North Vernon</p>
+    <!-- ===== WHAT'S INCLUDED (white, varied-weight bento) ===== -->
+    <section class="bsp-section" aria-labelledby="bsp-incl-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's included</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-incl-title" style="margin:14px 0 8px">Everything you need to show up with confidence.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Each branding engagement is scoped to your business. Here's what we typically deliver.</p>
+        <div class="bsp-bento reveal reveal-delay-2">
+          <div class="bsp-bento__cell bsp-bento__feature">
+            <h3>Brand Discovery</h3>
+            <p>A structured session to understand your business, your audience, and what makes you distinct. Everything we design starts here, because a brand built on real strategy is the only kind that lasts.</p>
+            <div class="bsp-bento__feature-tags">
+              <span>Positioning</span><span>Audience</span><span>Voice</span><span>Differentiation</span>
             </div>
           </div>
-        </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"My experience with Origo can be explained as nothing less than incredible. Jon really cares about his clients and goes the extra mile. I started out commissioning them to do a simple logo design (which came out perfect), but now I'm looking to them as a long term partner in my business. I can't say enough good things about this incredible company!"</p>
-          <div class="sp-testi__author">
-            <img src="/images/brandon-mills-head-shot.jpg" alt="Brandon Mills" class="sp-testi__avatar">
+          <div class="bsp-bento__dark">
+            <h3>Brand Style Guide</h3>
+            <p>A complete reference document for how to use your brand across every context, so it stays consistent whether you're building with it or someone else is.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c2">
+            <h3>Color Palette</h3>
+            <p>A defined set of brand colors with usage guidelines for digital and print.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Typography System</h3>
+            <p>Headline and body typefaces that reflect your brand's personality and work at every size.</p>
+          </div>
+          <div class="bsp-bento__blue">
             <div>
-              <p class="sp-testi__name">Brandon Mills</p>
-              <p class="sp-testi__title">Owner, Roofers Catalyst</p>
+              <h3>Logo System</h3>
+              <p>Primary, secondary, and icon marks, delivered in every format you'll ever need.</p>
             </div>
           </div>
-        </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Our church recently worked with Jon at Origo to update all of our branding, and our online presence, including a new logo and brand new website. We are incredibly happy with how everything turned out. They were great to work with and very patient. They took time to understand both our wants and needs and then delivered a product that we can be proud of. Great work! Well done! Thanks guys!"</p>
-          <div class="sp-testi__author">
-            <img src="/images/Mike-Hooper-headshot.jpg" alt="Mike Hooper" class="sp-testi__avatar">
-            <div>
-              <p class="sp-testi__name">Mike Hooper</p>
-              <p class="sp-testi__title">Pastor, Redemption Hill</p>
-            </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Brand Voice Guide</h3>
+            <p>Tone, language, and messaging guidelines so your words sound as sharp as your visuals.</p>
           </div>
         </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"I've commissioned Origo both for building a website and for logo design and both times, they've done excellent work! If you're starting from scratch or have an idea in mind, they're prompt, available and overall easy to work with. I highly recommend them!"</p>
-          <div class="sp-testi__author">
-            <div>
-              <p class="sp-testi__name">Kyle Crim</p>
-              <p class="sp-testi__title">BSM Director, Angelo State University</p>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS (light gray, 4 steps on the orbit line) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="bsp-how-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">How it works</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-how-title" style="margin:14px 0 8px">A clear process. No surprises.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 56px;max-width:620px">Most branding projects take three to five weeks from kickoff to delivery.</p>
+        <div class="bsp-process">
+          <div class="bsp-orbit-line" aria-hidden="true"></div>
+          <div class="bsp-process-grid stagger-group">
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">01</div>
+              <h3>Discovery Call</h3>
+              <p>We start by learning your business, your goals, and your audience. No questionnaire, a real conversation.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">02</div>
+              <h3>Brand Strategy</h3>
+              <p>We define your positioning, your voice, and the core idea your brand will be built around.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">03</div>
+              <h3>Visual Direction</h3>
+              <p>We present two distinct creative directions for you to choose from, with mood boards and initial concepts.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">04</div>
+              <h3>Build &amp; Handoff</h3>
+              <p>We refine the direction you choose into a complete identity system, then hand over every file you'll need.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 08 — CLOSING CTA (DARK) -->
+    <!-- ===== IS THIS RIGHT FOR YOU (white, honest two columns) ===== -->
+    <section class="bsp-section" aria-labelledby="bsp-fit-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">Is this right for you?</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-fit-title" style="margin:14px 0 48px">We'd rather be honest up front.</h2>
+        <div class="bsp-fit-grid">
+          <div class="bsp-fit-card reveal">
+            <h3>This is for you if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You're launching a new business and need a brand from scratch.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>Your existing brand no longer reflects where your business is.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You want something that looks as good as your competitors, or better.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You're ready to invest in your business's long-term perception.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You want a team that listens before they design.</p></div>
+            </div>
+          </div>
+          <div class="bsp-fit-card bsp-fit-card--no reveal reveal-delay-1">
+            <h3>It's probably not, if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You need a logo done in 48 hours.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You want to design it yourself and just need someone to clean it up.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You're not open to strategic input, just execution.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You're not sure branding is worth investing in.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============================================================
-       SERVICE FAQ
-  ============================================================ -->
-  <section class="service-faq">
-    <div class="container">
-      <div class="service-faq__header">
-        <span class="service-faq__label">Branding FAQ</span>
-        <h2 class="service-faq__title">Branding Questions</h2>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What's included in an Origo branding project?</summary>
-          <div class="faq-item__answer">
-            <p>A full <a href='/glossary#brand-identity-system'>branding project</a> includes brand strategy, logo design, color palette, typography system, and a brand guidelines document. Depending on scope, we can also include secondary marks, brand voice, photography direction, and launch assets.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Do I get a logo or a full brand identity?</summary>
-          <div class="faq-item__answer">
-            <p>You get a full <a href='/glossary#brand-identity-system'>brand identity system</a>, not just a logo. A logo on its own can't carry a brand. You need a coordinated system of marks, colors, type, and voice that work together everywhere your business shows up.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How many logo concepts will I see?</summary>
-          <div class="faq-item__answer">
-            <p>We typically present a small number of refined directions rather than a large volume of rough concepts. Our process invests heavily in strategy upfront so the directions we present are already aligned with your business, making the decision easier, not harder.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>What if I already have a logo I like?</summary>
-          <div class="faq-item__answer">
-            <p>We can refresh and extend an existing logo into a fuller identity system rather than starting from scratch. Many established businesses don't need a rebrand. They need their existing brand to work harder across more places.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Do I own the final brand files?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. You own all final brand assets and receive them in editable source files plus production-ready exports. We deliver everything you need to hand off to printers, signage vendors, or future partners. If you're evaluating any branding agency, including us, read our guide: <a href="/blog/six-questions-brand-agency">Six Questions to Ask Before Trusting an Agency With Your Brand →</a></p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Can Origo handle printed materials too?</summary>
-          <div class="faq-item__answer">
-            <p>Yes. While our focus is <a href='/glossary#digital-presence-agency'>digital presence</a>, we routinely design business cards, signage, and other print materials as extensions of the brand identities we build. We don't print in-house. We have partnerships with small-business print shops who handle production and ship directly to you.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How long does a branding project take?</summary>
-          <div class="faq-item__answer">
-            <p>Branding projects typically run 6 to 12 weeks from kickoff to final delivery, depending on the depth of strategy work and feedback turnaround. See our <a href='/faq#process'>full FAQ</a> for more on timelines.</p>
-          </div>
-        </details>
-        <p class="faq-updated"><a href="/faq">See all frequently asked questions →</a></p>
-      </div>
-    </div>
-  </section>
+    <!-- ===== TESTIMONIALS (light gray, 2x2) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="bsp-tst-title">
+      <div class="bsp-wrap" style="max-width:1120px">
+        <div class="bsp-tst-head">
+          <img src="/images/eclipse-mark.svg" alt="" width="28" height="28" aria-hidden="true" class="reveal">
+          <span class="bsp-eyebrow reveal">What clients say</span>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-tst-title">Trusted to get it right.</h2>
+        </div>
+        <div class="bsp-tst-grid stagger-group">
 
-  <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Ready to look the part?</h2>
-      <p class="sp-cta__sub reveal">Book a free discovery call. We'll learn about your business and tell you exactly what a branding project would look like for you.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="sp-cta__secondary">View All Services</a>
+          <div class="bsp-tst-card reveal">
+            <div class="bsp-tst-card__quote" aria-hidden="true">“</div>
+            <blockquote>Origo recently re-designed our church logo and did a wonderful job. Jon took the time to understand exactly what we were looking for. There were many times where he took my jumbled thoughts and made them make sense, and we couldn't be happier with the finished product. If you're looking for design work, I'd definitely recommend Origo.</blockquote>
+            <div class="bsp-tst-card__author">
+              <span class="bsp-tst-avatar"><img src="/images/braden-head-shot.jpg" alt="Braden Adams"></span>
+              <div>
+                <div class="bsp-tst-name">Braden Adams</div>
+                <div class="bsp-tst-role">Pastor, First Baptist North Vernon</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bsp-tst-card reveal reveal-delay-1">
+            <div class="bsp-tst-card__quote" aria-hidden="true">“</div>
+            <blockquote>My experience with Origo can be explained as nothing less than incredible. Jon really cares about his clients and goes the extra mile. I started out commissioning them to do a simple logo design (which came out perfect), but now I'm looking to them as a long term partner in my business. I can't say enough good things about this incredible company.</blockquote>
+            <div class="bsp-tst-card__author">
+              <span class="bsp-tst-avatar"><img src="/images/brandon-mills-head-shot.jpg" alt="Brandon Mills"></span>
+              <div>
+                <div class="bsp-tst-name">Brandon Mills</div>
+                <div class="bsp-tst-role">Owner, Roofers Catalyst</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bsp-tst-card reveal">
+            <div class="bsp-tst-card__quote" aria-hidden="true">“</div>
+            <blockquote>Our church recently worked with Jon at Origo to update all of our branding and our online presence, including a new logo and brand new website. We are incredibly happy with how everything turned out. They were great to work with and very patient. They took time to understand both our wants and needs and then delivered a product that we can be proud of. Great work.</blockquote>
+            <div class="bsp-tst-card__author">
+              <span class="bsp-tst-avatar"><img src="/images/Mike-Hooper-headshot.jpg" alt="Mike Hooper"></span>
+              <div>
+                <div class="bsp-tst-name">Mike Hooper</div>
+                <div class="bsp-tst-role">Pastor, Redemption Hill</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bsp-tst-card reveal reveal-delay-1">
+            <div class="bsp-tst-card__quote" aria-hidden="true">“</div>
+            <blockquote>I've commissioned Origo both for building a website and for logo design, and both times they've done excellent work. If you're starting from scratch or have an idea in mind, they're prompt, available and overall easy to work with. I highly recommend them.</blockquote>
+            <div class="bsp-tst-card__author">
+              <span class="bsp-tst-avatar" aria-hidden="true">KC</span>
+              <div>
+                <div class="bsp-tst-name">Kyle Crim</div>
+                <div class="bsp-tst-role">BSM Director, Angelo State University</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== FAQ (white, accordion) ===== -->
+    <section class="bsp-section" aria-labelledby="bsp-faq-title">
+      <div class="bsp-wrap" style="max-width:820px">
+        <span class="bsp-eyebrow reveal">Branding FAQ</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="bsp-faq-title" style="margin:14px 0 40px">Questions, answered.</h2>
+        <div class="bsp-faq-list">
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What's included in an Origo branding project?</summary>
+            <p class="bsp-faq__a">Every project is scoped to your business, but most include brand discovery, a full logo system, a color palette, a type system, a voice guide, and a complete brand style guide. We'll walk you through exactly what's right for you on the discovery call.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do I get a logo or a full brand identity?</summary>
+            <p class="bsp-faq__a">A full identity. A logo on its own can't carry a brand. You get the marks plus the colors, type, voice, and guidelines that make them work together everywhere.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How many logo concepts will I see?</summary>
+            <p class="bsp-faq__a">We present two distinct creative directions, each with its own rationale, then refine the one you choose. We'd rather go deep on two strong ideas than thin on ten.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What if I already have a logo I like?</summary>
+            <p class="bsp-faq__a">Then we build around it. If it's working, we'll keep it and develop the system it's missing. If it's holding you back, we'll tell you honestly and talk through options.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do I own the final brand files?</summary>
+            <p class="bsp-faq__a">Yes. Every final file is yours, in every format you'll need for digital and print. No licensing games, no holding your brand hostage.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Can Origo handle printed materials too?</summary>
+            <p class="bsp-faq__a">Yes. Business cards, signage, packaging, and more. We design your brand to print as well as it shows up on screen.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How long does a branding project take?</summary>
+            <p class="bsp-faq__a">Most run three to five weeks from kickoff to delivery, depending on scope and how quickly we get feedback.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA (blue closer, the only blue band) ===== -->
+    <section class="bsp-cta" id="cta" aria-labelledby="bsp-cta-title">
+      <div class="bsp-cta__inner">
+        <h2 class="bsp-cta__title reveal" id="bsp-cta-title">Ready to look the part?</h2>
+        <p class="bsp-cta__body reveal reveal-delay-1">Book a discovery call and we'll tell you exactly what a branding project would look like for you. No pitch, no pressure, just an honest conversation.</p>
+        <div class="bsp-cta__buttons reveal reveal-delay-2">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--white" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/services" class="bsp-btn bsp-btn--ghost-white">View all services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container">
