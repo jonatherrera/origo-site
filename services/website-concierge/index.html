@@ -40,8 +40,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=29" />
-  <link rel="stylesheet" href="/services/services.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=38" />
+  <link rel="stylesheet" href="/services/service-page.css" />
+  <link rel="stylesheet" href="/services/website-concierge/concierge.css" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -262,282 +263,373 @@
     </div>
   </div>
 
-  <!-- SECTION 01 — HERO -->
-  <section class="sp-hero">
-    <div class="svc-container">
-      <p class="sp-hero__breadcrumb reveal"><a href="/services">Services</a> <span>/</span> Website Concierge</p>
-      <p class="sp-hero__label reveal">Website Concierge</p>
-      <h1 class="sp-hero__headline reveal">Your website, managed. You, focused on your business.</h1>
-      <p class="sp-hero__sub reveal">Monthly website management so you never have to worry about updates, downtime, security, or broken pages again. We handle all of it.</p>
-      <div class="sp-hero__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="btn btn--ghost">All Services</a>
+  <main class="bsp" id="main-content">
+
+    <!-- ===== HERO (white) ===== -->
+    <section class="bsp-hero" aria-labelledby="wc-hero-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">Services · Website Concierge</span>
+        </div>
+        <h1 class="bsp-hero__title reveal reveal-delay-1" id="wc-hero-title">Your website, managed.<br>You, focused on your business.</h1>
+        <p class="bsp-hero__sub reveal reveal-delay-2">Monthly website management so you never have to worry about updates, downtime, security, or broken pages again. We handle all of it.</p>
+        <div class="bsp-hero__cta reveal reveal-delay-3">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--primary" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/work" class="bsp-btn bsp-btn--secondary">See our work</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 02 — PROBLEM (DARK) -->
-  <section class="sp-problem">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">The Problem</p>
-      <h2 class="sp-problem__headline reveal">A neglected website is a liability, not an asset.</h2>
-      <p class="sp-problem__body reveal">Most small business owners built their website and then forgot about it. Plugins go out of date. Security vulnerabilities accumulate. Pages break. And every day your site underperforms is a day you're leaving leads on the table.</p>
-      <ul class="sp-problem__list reveal">
-        <li>Outdated plugins and themes creating security vulnerabilities</li>
-        <li>Slow load speeds killing your SEO and conversion rate</li>
-        <li>No one monitoring uptime, your site goes down and you don't know</li>
-        <li>Small content changes that take weeks to get done because you're not a priority</li>
-        <li>No backup strategy, one bad update and everything is gone</li>
-      </ul>
-    </div>
-  </section>
+    <!-- ===== PROBLEM (the ONE dark band per page) ===== -->
+    <section class="bsp-problem" aria-labelledby="wc-problem-title">
+      <div class="bsp-problem__arc" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,110 L0,64 Q720,-24 1440,64 L1440,110 Z" fill="#2B2B2B"></path></svg>
+      </div>
+      <div class="bsp-problem__band">
+        <div class="bsp-problem__ghost" aria-hidden="true">
+          <img src="/images/eclipse-mark-white.svg" alt="" width="520" height="520">
+        </div>
+        <div class="bsp-wrap bsp-problem__inner">
+          <span class="bsp-eyebrow reveal">The problem</span>
+          <h2 class="bsp-problem__headline reveal reveal-delay-1" id="wc-problem-title">A neglected website is a liability, not an asset.</h2>
+          <p class="bsp-problem__body reveal reveal-delay-2">Most small business owners built their website and then forgot about it. Plugins go out of date. Security vulnerabilities accumulate. Pages break. And every day your site underperforms is a day you're leaving leads on the table.</p>
+          <div class="bsp-problem__list reveal reveal-delay-2">
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Outdated plugins and themes creating security vulnerabilities.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Slow load speeds killing your SEO and conversion rate.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>No one monitoring uptime, your site goes down and you don't know.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>Small content changes that take weeks to get done because you're not a priority.</p></div>
+            <div class="bsp-problem__item"><span aria-hidden="true"></span><p>No backup strategy, one bad update and everything is gone.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- SECTION 03 — SOLUTION -->
-  <section class="sp-solution">
-    <div class="svc-container">
-      <div class="svc-two-col">
+    <!-- ===== APPROACH (white) ===== -->
+    <section class="bsp-section" aria-labelledby="wc-approach-title">
+      <div class="bsp-wrap bsp-approach-grid">
         <div>
-          <p class="svc-eyebrow reveal">Our Approach</p>
-          <h2 class="sp-solution__headline reveal">We become your website team, without the overhead.</h2>
-          <p class="sp-solution__body reveal">On a Concierge plan, Origo handles everything your website needs to stay healthy, fast, secure, and up to date. Monthly maintenance, content updates, monitoring, backups, all handled proactively.</p>
-          <p class="sp-solution__body reveal">You get a dedicated point of contact who knows your site, responds fast, and treats your business like it's their own. No tickets, no queues, no runaround.</p>
+          <span class="bsp-eyebrow reveal">Our approach</span>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-approach-title" style="margin-top:14px">We become your website team, without the overhead.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">On a Concierge plan, Origo handles everything your website needs to stay healthy, fast, secure, and up to date. Monthly maintenance, content updates, monitoring, backups, all handled proactively.</p>
         </div>
-        <div class="reveal wc-dashboard">
+        <div class="bsp-approach__cards reveal reveal-delay-2">
+          <div class="bsp-mini-card">
+            <div class="bsp-mini-card__label">Proactive, not reactive</div>
+            <h3>Handled before it breaks.</h3>
+            <p>Maintenance, monitoring, and backups run on a schedule, so the problems that used to reach you never do.</p>
+          </div>
+          <div class="bsp-mini-card bsp-mini-card--blue">
+            <div class="bsp-mini-card__label">One point of contact</div>
+            <h3>A person who knows your site.</h3>
+            <p>You get a dedicated contact who responds fast and treats your business like their own. No tickets, no queues, no runaround.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Window chrome -->
-          <div class="wc-dash-header">
-            <div class="wc-dash-dots">
-              <span class="wc-dot" style="background:#FF5F57;"></span>
-              <span class="wc-dot" style="background:#FEBC2E;"></span>
-              <span class="wc-dot" style="background:#28C840;"></span>
-            </div>
-            <span class="wc-dash-title">Origo Site Monitor</span>
-            <div class="wc-dash-live">
-              <span class="wc-led"></span>
-              <span>Live</span>
+    <!-- ===== SIGNATURE: Plans & Pricing (gray) ===== -->
+    <section class="bsp-section bsp-section--gray" id="plans" aria-labelledby="wc-plans-title">
+      <div class="bsp-wrap">
+        <div style="max-width:640px;margin-bottom:44px">
+          <div class="bsp-eyebrow-row reveal">
+            <img src="/images/eclipse-mark.svg" alt="" width="18" height="18" aria-hidden="true">
+            <span class="bsp-eyebrow">Plans &amp; pricing</span>
+          </div>
+          <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-plans-title">Choose the level of support your business needs.</h2>
+          <p class="bsp-lead reveal reveal-delay-2">All plans are 12-month partnerships. Long enough to do real work.</p>
+        </div>
+
+        <!-- Plans render from the single source of truth below (no layout shift: runs during parse). -->
+        <div class="wc-plans" id="wc-plans"></div>
+        <script>
+          /* ===== Website Concierge plans - SINGLE EDITABLE DATA SOURCE =====
+             Edit prices/descriptions/features here; the cards render from this. */
+          (function () {
+            var BOOKING = 'https://go.origo.ooo/call';
+            var PLANS = [
+              {
+                name: 'Essential', price: '$147',
+                desc: 'The basics, done consistently. Great for simple sites that need to stay healthy.',
+                features: [
+                  'Monthly plugin & theme updates',
+                  'Weekly automated backups',
+                  'Uptime monitoring',
+                  '1 hour content edits/mo'
+                ]
+              },
+              {
+                name: 'Growth', price: '$297', popular: true,
+                desc: 'Full maintenance plus proactive improvements. For businesses that take their site seriously.',
+                features: [
+                  { t: 'Everything in Essential', strong: true },
+                  'Daily backups',
+                  'Security scanning & firewall',
+                  'Speed optimization (quarterly)',
+                  '3 hours content edits/mo',
+                  'Priority response (same business day)'
+                ]
+              },
+              {
+                name: 'Premium', price: '$597',
+                desc: 'Full-service website management, your site is always improving, not just maintained.',
+                features: [
+                  { t: 'Everything in Growth', strong: true },
+                  'Real-time backups',
+                  'Monthly analytics & insights report',
+                  'Conversion rate review (quarterly)',
+                  '6 hours content edits/mo',
+                  '4-hour response SLA',
+                  'Dedicated Slack channel'
+                ]
+              }
+            ];
+            var grid = document.getElementById('wc-plans');
+            if (!grid) return;
+            function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+            grid.innerHTML = PLANS.map(function (p) {
+              var feats = p.features.map(function (f) {
+                var t = typeof f === 'string' ? f : f.t;
+                var strong = (typeof f === 'object' && f.strong) ? ' wc-plan__feat-text--strong' : '';
+                return '<li class="wc-plan__feat"><span class="wc-plan__check" aria-hidden="true">✓</span>' +
+                       '<span class="wc-plan__feat-text' + strong + '">' + esc(t) + '</span></li>';
+              }).join('');
+              var badge = p.popular ? '<span class="wc-plan__badge">Most popular</span>' : '';
+              var btn = p.popular ? 'wc-plan__cta wc-plan__cta--solid' : 'wc-plan__cta wc-plan__cta--outline';
+              return '<div class="wc-plan' + (p.popular ? ' wc-plan--pop' : '') + '">' + badge +
+                '<h3 class="wc-plan__name">' + esc(p.name) + '</h3>' +
+                '<div class="wc-plan__price-row"><span class="wc-plan__price">' + esc(p.price) + '</span><span class="wc-plan__mo">/mo</span></div>' +
+                '<p class="wc-plan__desc">' + esc(p.desc) + '</p>' +
+                '<div class="wc-plan__divider" aria-hidden="true"></div>' +
+                '<ul class="wc-plan__features">' + feats + '</ul>' +
+                '<a class="' + btn + '" href="' + BOOKING + '" target="_blank" rel="noopener">Get started</a>' +
+              '</div>';
+            }).join('');
+          })();
+        </script>
+
+        <p class="wc-plans__note reveal">Not sure which fits? <a href="https://go.origo.ooo/call" target="_blank" rel="noopener">Book a call</a> and we'll tell you honestly, even if that's the smallest plan.</p>
+      </div>
+    </section>
+
+    <!-- ===== WHAT'S INCLUDED (white, bento) ===== -->
+    <section class="bsp-section" aria-labelledby="wc-incl-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's included</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-incl-title" style="margin:14px 0 8px">What we handle, so you don't have to.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">The exact mix scales with your plan, but every Concierge client gets the essentials covered, every month.</p>
+        <div class="bsp-bento reveal reveal-delay-2">
+          <div class="bsp-bento__cell bsp-bento__feature">
+            <h3>Maintenance &amp; Updates</h3>
+            <p>Plugins, themes, and core software, updated and tested every month so nothing drifts out of date or quietly opens a security hole. The unglamorous work that keeps everything else running.</p>
+            <div class="bsp-bento__feature-tags">
+              <span>Plugins</span><span>Themes</span><span>Core</span><span>Tested</span>
             </div>
           </div>
+          <div class="bsp-bento__dark">
+            <h3>Backups &amp; Recovery</h3>
+            <p>Automated backups on a schedule that matches your plan, restore-tested so one bad update or one bad day never means starting over. This is the safety net most sites don't have until they need it.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c2">
+            <h3>Uptime Monitoring</h3>
+            <p>We watch your site around the clock and act the moment something goes down, often before you'd notice.</p>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Security &amp; SSL</h3>
+            <p>Scanning, a firewall, and always-on encryption keep your site and your visitors safe.</p>
+          </div>
+          <div class="bsp-bento__blue">
+            <div>
+              <h3>Content Edits, Done For You</h3>
+              <p>Send the change the way you'd text a friend. We make the edit and confirm when it's live. No forms, no logins.</p>
+            </div>
+          </div>
+          <div class="bsp-bento__cell bsp-bento__c3">
+            <h3>Performance &amp; Reports</h3>
+            <p>Speed tuning plus a plain-language monthly report on what we did and how your site is doing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- 99.9% Uptime with ring -->
-          <div class="wc-dash-row">
-            <div class="wc-uptime">
-              <div class="wc-uptime__ring">
-                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <circle class="wc-ring-track" cx="26" cy="26" r="22"/>
-                  <circle class="wc-ring-fill" cx="26" cy="26" r="22" id="wc-ring-fill"/>
-                </svg>
+    <!-- ===== HOW IT WORKS (gray, orbit) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wc-how-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">How it works</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-how-title" style="margin:14px 0 8px">Getting started is the easy part.</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 56px;max-width:620px">We do the heavy lifting up front so that, from month one, your site is simply taken care of.</p>
+        <div class="bsp-process">
+          <div class="bsp-orbit-line" aria-hidden="true"></div>
+          <div class="bsp-process-grid stagger-group">
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">01</div>
+              <h3>Discovery Call</h3>
+              <p>We learn your site, your goals, and what's been getting neglected.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">02</div>
+              <h3>Onboarding &amp; Audit</h3>
+              <p>We take stock of your site, run a first full backup, and fix anything urgent right away.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">03</div>
+              <h3>Ongoing Care</h3>
+              <p>Every month we maintain, monitor, back up, and turn around your edit requests, quietly.</p>
+            </div>
+            <div class="bsp-step reveal">
+              <div class="bsp-step__mark"><img src="/images/eclipse-mark.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+              <div class="bsp-step__num">04</div>
+              <h3>Monthly Check-in</h3>
+              <p>You get a plain-language report and a note on what's next. No logins, no chasing us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IS THIS RIGHT FOR YOU (white) ===== -->
+    <section class="bsp-section" aria-labelledby="wc-fit-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">Is this right for you?</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-fit-title" style="margin:14px 0 48px">The Concierge service works best for businesses with a site to protect and grow.</h2>
+        <div class="bsp-fit-grid">
+          <div class="bsp-fit-card reveal">
+            <h3>This is for you if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You have a live website that represents your business.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You don't want to think about your website, you just want it to work.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You're tired of chasing a developer for small changes.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You want proactive management, not reactive fixes.</p></div>
+              <div class="bsp-fit-item"><span class="bsp-fit-dot" aria-hidden="true"></span><p>You understand your website is a business tool that deserves care.</p></div>
+            </div>
+          </div>
+          <div class="bsp-fit-card bsp-fit-card--no reveal reveal-delay-1">
+            <h3>It's probably not, if…</h3>
+            <div class="bsp-fit-list">
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You don't have a website yet. Start with our Web Design service first.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You want a developer on call 24/7 for custom builds.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>You need hourly development work, not a retainer.</p></div>
+              <div class="bsp-fit-item bsp-fit-item--no"><span class="bsp-fit-x" aria-hidden="true">–</span><p>Your site is on a platform we can't access or manage.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (gray, two quotes; avatars omitted) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wc-tst-title">
+      <div class="bsp-wrap">
+        <div class="bsp-eyebrow-row reveal">
+          <img src="/images/eclipse-mark.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span class="bsp-eyebrow">What clients say</span>
+        </div>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-tst-title" style="margin:0 0 44px">Trust, in their words.</h2>
+        <div class="bsp-quote-grid stagger-group">
+          <div class="bsp-quote reveal">
+            <blockquote>"Integrity is what Jon is all about and how he runs his business. Honest and as straight forward as they come. A man you can absolutely trust to help grow your business."</blockquote>
+            <div class="bsp-quote__author">
+              <div>
+                <div class="bsp-quote__name">Vern Lieb</div>
+                <div class="bsp-quote__role">Owner, Game Day Men's Health</div>
               </div>
-              <span class="wc-dash-number wc-counter" data-target="99.9">0%</span>
-              <span class="wc-led wc-led--sm"></span>
-            </div>
-            <span class="wc-dash-label">Uptime SLA</span>
-          </div>
-
-          <!-- Daily backups -->
-          <div class="wc-dash-row">
-            <span class="wc-dash-number">Daily</span>
-            <span class="wc-dash-label">Automated backups</span>
-          </div>
-
-          <!-- 24/7 with radar sweep -->
-          <div class="wc-dash-row">
-            <div class="wc-monitoring">
-              <div class="wc-radar"><div class="wc-radar__sweep"></div></div>
-              <span class="wc-dash-number">24/7</span>
-              <span class="wc-led wc-led--sm"></span>
-            </div>
-            <span class="wc-dash-label">Security monitoring</span>
-          </div>
-
-          <!-- SSL -->
-          <div class="wc-dash-row">
-            <span class="wc-dash-number">SSL</span>
-            <span class="wc-dash-label">Always encrypted</span>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04 — PLANS -->
-  <section class="sp-included">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">Plans &amp; Pricing</p>
-      <h2 class="sp-included__headline reveal">Choose the level of support your business needs.</h2>
-      <p class="sp-included__sub reveal">All plans are 12-month partnerships. Long enough to do real work.</p>
-      <div class="sp-plans">
-
-        <div class="sp-plan reveal">
-          <h3 class="sp-plan__name">Essential</h3>
-          <p class="sp-plan__price">$147<span>/mo</span></p>
-          <p class="sp-plan__desc">The basics, done consistently. Great for simple sites that need to stay healthy.</p>
-          <ul class="sp-plan__list">
-            <li>Monthly plugin &amp; theme updates</li>
-            <li>Weekly automated backups</li>
-            <li>Uptime monitoring</li>
-            <li>Monthly performance report</li>
-            <li>1 hour content edits/mo</li>
-          </ul>
-          <a href="https://go.origo.ooo/call" class="btn btn--ghost" target="_blank" rel="noopener" style="text-align:center;">Get Started</a>
-        </div>
-
-        <div class="sp-plan sp-plan--featured reveal">
-          <span class="sp-plan__badge">Most Popular</span>
-          <h3 class="sp-plan__name">Growth</h3>
-          <p class="sp-plan__price">$297<span>/mo</span></p>
-          <p class="sp-plan__desc">Full maintenance plus proactive improvements. For businesses that take their site seriously.</p>
-          <ul class="sp-plan__list">
-            <li>Everything in Essential</li>
-            <li>Daily backups</li>
-            <li>Security scanning &amp; firewall</li>
-            <li>Speed optimization (quarterly)</li>
-            <li>3 hours content edits/mo</li>
-            <li>Priority response (same business day)</li>
-          </ul>
-          <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener" style="text-align:center;">Get Started</a>
-        </div>
-
-        <div class="sp-plan reveal">
-          <h3 class="sp-plan__name">Premium</h3>
-          <p class="sp-plan__price">$597<span>/mo</span></p>
-          <p class="sp-plan__desc">Full-service website management, your site is always improving, not just maintained.</p>
-          <ul class="sp-plan__list">
-            <li>Everything in Growth</li>
-            <li>Real-time backups</li>
-            <li>Monthly SEO report &amp; tweaks</li>
-            <li>Conversion rate review (quarterly)</li>
-            <li>6 hours content edits/mo</li>
-            <li>4-hour response SLA</li>
-            <li>Dedicated Slack channel</li>
-          </ul>
-          <a href="https://go.origo.ooo/call" class="btn btn--ghost" target="_blank" rel="noopener" style="text-align:center;">Get Started</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05 — RIGHT FIT (DARK) -->
-  <section class="sp-fit">
-    <div class="svc-container">
-      <p class="svc-eyebrow svc-eyebrow--dark reveal">Is This Right for You?</p>
-      <h2 class="sp-fit__headline reveal">This is for you if…</h2>
-      <p class="sp-fit__sub reveal">The Concierge service works best for businesses with an established site they need to protect and grow.</p>
-      <div class="sp-fit-grid">
-        <div class="reveal">
-          <p class="sp-fit-col__label">Good fit</p>
-          <ul class="sp-fit-list sp-fit-list--yes">
-            <li>You have a live website that represents your business</li>
-            <li>You don't want to think about your website, you just want it to work</li>
-            <li>You're tired of chasing a developer for small changes</li>
-            <li>You want proactive management, not reactive fixes</li>
-            <li>You understand your website is a business tool that deserves care</li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <p class="sp-fit-col__label">Not the right fit</p>
-          <ul class="sp-fit-list sp-fit-list--no">
-            <li>You don't have a website yet (check out Web Design first)</li>
-            <li>You want a developer on call 24/7 for custom builds</li>
-            <li>You need hourly development work, not a retainer</li>
-            <li>Your site is on a platform we can't access or manage</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 06 — TESTIMONIALS (placeholder) -->
-  <section class="sp-testimonials">
-    <div class="svc-container">
-      <h2 class="sp-testimonials__headline reveal">What clients say.</h2>
-      <div class="sp-testi-grid stagger-group">
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Integrity is what Jon is all about and how he runs his business. Honest and as straight forward as they come. A man you can absolutely trust to help grow your business."</p>
-          <div class="sp-testi__author">
-            <div>
-              <p class="sp-testi__name">Vern Lieb</p>
-              <p class="sp-testi__title">Owner, Game Day Men's Health</p>
             </div>
           </div>
-        </div>
-        <div class="sp-testi reveal">
-          <p class="sp-testi__quote">"Working with Origo has been an excellent experience. Their level of knowledge and expertise in SEO and website development is beyond impressive!"</p>
-          <div class="sp-testi__author">
-            <div>
-              <p class="sp-testi__name">Tressa Lyman</p>
-              <p class="sp-testi__title">Owner, TRR Solutions</p>
+          <div class="bsp-quote reveal reveal-delay-1">
+            <blockquote>"Working with Origo has been an excellent experience. Their level of knowledge and expertise in SEO and website development is beyond impressive!"</blockquote>
+            <div class="bsp-quote__author">
+              <div>
+                <div class="bsp-quote__name">Tressa Lyman</div>
+                <div class="bsp-quote__role">Owner, TRR Solutions</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 07 — CLOSING CTA (DARK) -->
+    <!-- ===== FAQ (white, accordion) ===== -->
+    <section class="bsp-section" aria-labelledby="wc-faq-title">
+      <div class="bsp-wrap" style="max-width:820px">
+        <span class="bsp-eyebrow reveal">Website Concierge FAQ</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-faq-title" style="margin:14px 0 40px">Questions, answered.</h2>
+        <div class="bsp-faq-list">
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What is Website Concierge?</summary>
+            <p class="bsp-faq__a">It's ongoing care for your website. Every month we handle updates, backups, security, monitoring, and small content edits, so your site stays healthy and you never have to touch it or wait on a developer.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Why is Website Concierge a 12-month agreement?</summary>
+            <p class="bsp-faq__a">Real maintenance is a relationship, not a one-off. Twelve months gives us time to actually improve your site, not just keep the lights on, and it keeps your monthly cost low and predictable.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What's included in Website Concierge?</summary>
+            <p class="bsp-faq__a">That depends on your plan. Every plan covers updates, backups, and monitoring. Higher plans add security, speed work, more content-edit hours, SEO tweaks, and faster response times. See the plans above for the full breakdown.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>How fast does Origo respond to update requests?</summary>
+            <p class="bsp-faq__a">On Growth we respond the same business day. On Premium you get a 4-hour response SLA. Most small edits are live the same day you ask.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>What if I need a major change to my website?</summary>
+            <p class="bsp-faq__a">Small edits are part of your plan. For a larger project, like a new section or a redesign, we'll scope it separately and pick up right where your plan leaves off.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Do I have to use Website Concierge if Origo built my site?</summary>
+            <p class="bsp-faq__a">Not at all. Every site we build is yours to run. Concierge is for owners who'd simply rather we keep it maintained, and we're happy to take over a site we didn't build too.</p>
+          </details>
+          <details class="bsp-faq">
+            <summary><span class="bsp-faq__plus" aria-hidden="true">+</span>Can I cancel or change plans?</summary>
+            <p class="bsp-faq__a">You can move up or down a plan as your needs change. After the initial 12 months, Concierge continues month to month, and your site and everything we've done stays yours.</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============================================================
-       SERVICE FAQ
-  ============================================================ -->
-  <section class="service-faq">
-    <div class="container">
-      <div class="service-faq__header">
-        <span class="service-faq__label">Website Concierge FAQ</span>
-        <h2 class="service-faq__title">Website Concierge Questions</h2>
+    <!-- ===== WHAT'S NEXT (gray, 3-up cross-sell) ===== -->
+    <section class="bsp-section bsp-section--gray" aria-labelledby="wc-next-title">
+      <div class="bsp-wrap">
+        <span class="bsp-eyebrow reveal">What's next</span>
+        <h2 class="bsp-h2 reveal reveal-delay-1" id="wc-next-title" style="margin:14px 0 8px;font-size:clamp(28px,3.6vw,40px)">Need more than upkeep?</h2>
+        <p class="bsp-lead reveal reveal-delay-2" style="margin:0 0 40px;max-width:600px">Concierge keeps a site you already have in great shape. If you need to build, refresh, or get found first, here's where to start.</p>
+        <div class="bsp-next-grid bsp-next-grid--3 stagger-group">
+          <a class="bsp-next-card reveal" href="/services/web-design">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>Web Design</h3>
+            <p>No site yet, or one that's past saving? We design and build a site worth maintaining, then Concierge keeps it that way.</p>
+            <span class="bsp-next-card__link">Explore Web Design →</span>
+          </a>
+          <a class="bsp-next-card reveal reveal-delay-1" href="/services/branding">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>Branding</h3>
+            <p>If the look no longer fits the business you've become, we'll shape an identity your site can be built and cared for around.</p>
+            <span class="bsp-next-card__link">Explore Branding →</span>
+          </a>
+          <a class="bsp-next-card reveal reveal-delay-2" href="/services/seo-aeo">
+            <span class="bsp-next-card__eyebrow">Service</span>
+            <h3>SEO &amp; AEO</h3>
+            <p>A healthy site only helps if people find it. We make sure your business shows up when clients search, on Google and in AI answers alike.</p>
+            <span class="bsp-next-card__link">Explore SEO &amp; AEO →</span>
+          </a>
+        </div>
       </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What is Website Concierge?</summary>
-          <div class="faq-item__answer">
-            <p><a href='/glossary#website-concierge'>Website Concierge</a> is Origo's ongoing website management service: a 12-month partnership where we handle updates, monitoring, security, performance, and content changes so you never have to think about your website. It's offered in three tiers based on how much support and capacity you need.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Why is Website Concierge a 12-month agreement?</summary>
-          <div class="faq-item__answer">
-            <p>Websites need consistent attention to perform, security patches, content updates, performance tuning, and SEO maintenance compound over time. A 12-month commitment lets us actually do the work that produces results, not just react to emergencies.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>What's included in Website Concierge?</summary>
-          <div class="faq-item__answer">
-            <p>All tiers include hosting management, security monitoring, regular backups, performance optimization, and small content updates. Higher tiers add larger content updates, design changes, new pages, analytics reporting, and priority response times.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How fast does Origo respond to update requests?</summary>
-          <div class="faq-item__answer">
-            <p>Response times depend on your tier, ranging from same-week turnaround to priority same-day response. Emergencies, like security issues or site downtime, are addressed immediately regardless of tier.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>What if I need a major change to my website?</summary>
-          <div class="faq-item__answer">
-            <p>Major changes like new sections, redesigns, or substantial new functionality are handled as separate scoped projects rather than concierge work. We'll quote those in advance so you always know what's covered and what isn't.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Do I have to use Website Concierge if Origo built my site?</summary>
-          <div class="faq-item__answer">
-            <p>No, but most clients choose to. The <a href='/services/web-design'>sites we build</a> perform best when the team that built them keeps maintaining them, and concierge is significantly more cost-effective than rebuilding a neglected site later.</p>
-          </div>
-        </details>
-        <p class="faq-updated"><a href="/faq">See all frequently asked questions →</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Stop babysitting your website.</h2>
-      <p class="sp-cta__sub reveal">Book a call and we'll tell you exactly what plan fits your business and what we'll take off your plate from day one.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/services" class="sp-cta__secondary">View All Services</a>
+    <!-- ===== CTA (blue, the only blue band) ===== -->
+    <section class="bsp-cta" id="cta" aria-labelledby="wc-cta-title">
+      <div class="bsp-cta__inner">
+        <h2 class="bsp-cta__title reveal" id="wc-cta-title">Stop babysitting your website.</h2>
+        <p class="bsp-cta__body reveal reveal-delay-1">Book a call and we'll tell you exactly what plan fits your business and what we'll take off your plate from day one. No pitch, no pressure.</p>
+        <div class="bsp-cta__buttons reveal reveal-delay-2">
+          <a href="https://go.origo.ooo/call" class="bsp-btn bsp-btn--white" target="_blank" rel="noopener">Book a Discovery Call →</a>
+          <a href="/services" class="bsp-btn bsp-btn--ghost-white">View all services</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container">

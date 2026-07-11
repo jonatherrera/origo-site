@@ -1,0 +1,81 @@
+/* ============================================================
+   ORIGO - Website Concierge service page (page-specific)
+   Shared skeleton lives in /services/service-page.css.
+   This file: the Plans & Pricing signature (three tiers).
+   Prices/features come from a single data source rendered inline from
+   a single data array. Palette + no-gradient rules inherited.
+   ============================================================ */
+
+.wc-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.wc-plan {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.wc-plan--pop {
+  border: 2px solid var(--color-blue);
+  box-shadow: 0 18px 44px rgba(30, 104, 217, 0.16);
+}
+.wc-plan__badge {
+  position: absolute;
+  top: -13px;
+  left: 30px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-blue);
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+.wc-plan__name { font-family: var(--font-head); font-weight: 700; font-size: 22px; color: var(--color-black); margin: 0; }
+.wc-plan__price-row { display: flex; align-items: baseline; gap: 4px; margin: 16px 0 4px; }
+.wc-plan__price { font-family: var(--font-head); font-weight: 700; font-size: 44px; letter-spacing: -0.02em; color: var(--color-black); }
+.wc-plan__mo { font-family: var(--font-body); font-size: 16px; color: #9A9A9A; }
+.wc-plan__desc { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--color-gray-mid, #6B6B6B); margin: 8px 0 24px; }
+.wc-plan__divider { height: 1px; background: #EDEDED; margin-bottom: 22px; }
+.wc-plan__features { display: flex; flex-direction: column; gap: 13px; flex: 1; margin: 0; padding: 0; list-style: none; }
+.wc-plan__feat { display: flex; gap: 11px; }
+.wc-plan__check { color: var(--color-blue); font-weight: 700; flex-shrink: 0; }
+.wc-plan__feat-text { font-family: var(--font-body); font-size: 15px; line-height: 1.45; color: var(--color-gray-dark); }
+.wc-plan__feat-text--strong { font-weight: 600; }
+.wc-plan__cta {
+  margin-top: 26px;
+  text-align: center;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--ease), color var(--ease), border-color var(--ease), transform 0.18s ease;
+  transition-duration: 0.18s;
+}
+.wc-plan__cta--outline { color: var(--color-black); background: transparent; border: 2px solid var(--color-gray-dark); padding: 13px 20px; }
+.wc-plan__cta--outline:hover { background: var(--color-gray-dark); color: #fff; }
+.wc-plan__cta--solid { color: #fff; background: var(--color-blue); padding: 15px 20px; }
+.wc-plan__cta--solid:hover { background: #1857BE; color: #fff; transform: translateY(-2px); }
+
+.wc-plans__note { font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--color-gray-mid, #6B6B6B); margin: 28px 0 0; }
+
+/* Dark mode */
+[data-theme="dark"] .wc-plan { background: #1a1a1c; border-color: rgba(255, 255, 255, 0.08); }
+[data-theme="dark"] .wc-plan--pop { border-color: var(--color-blue); }
+[data-theme="dark"] .wc-plan__divider { background: rgba(255, 255, 255, 0.1); }
+[data-theme="dark"] .wc-plan__desc { color: #9A9A9A; }
+
+/* Responsive: single column below 900px */
+@media (max-width: 900px) {
+  .wc-plans { grid-template-columns: 1fr; }
+  .wc-plan--pop { margin-top: 8px; }
+}
