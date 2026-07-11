@@ -1,0 +1,111 @@
+/* ============================================================
+   ORIGO - Copywriting service page (page-specific)
+   Shared skeleton lives in /services/service-page.css.
+   This file: the two-part signature (before/after rewrites +
+   messaging framework), and the background-flip overrides this
+   page needs (its extra signature section shifts the gray/white
+   section rhythm, so bento/fit/testimonial/orbit invert).
+   Palette + no-gradient rules inherited from the skeleton.
+   ============================================================ */
+
+/* ---- Background-flip overrides (scoped to this page) ---- */
+.bsp-copywriting .bsp-bento__cell { background: var(--color-white); }
+.bsp-copywriting .bsp-bento__feature-tags span { background: var(--color-gray-light); }
+.bsp-copywriting .bsp-fit-card { background: var(--color-white); }
+.bsp-copywriting .bsp-quote { background: var(--color-gray-light); }
+.bsp-copywriting .bsp-step__mark { background: var(--color-white); }
+[data-theme="dark"] .bsp-copywriting .bsp-bento__cell { background: #202023; }
+[data-theme="dark"] .bsp-copywriting .bsp-fit-card { background: #202023; }
+[data-theme="dark"] .bsp-copywriting .bsp-quote { background: #202023; }
+
+/* ---- SIGNATURE (a): before/after rewrites ---- */
+.cw-rewrites { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.cw-pair {
+  background: var(--color-white);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.cw-panel { border-radius: 12px; padding: 26px 28px; }
+.cw-panel--before { background: var(--color-gray-light); }
+.cw-panel--after { background: #0A0A0A; }
+.cw-panel__label { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.cw-chip-minus {
+  width: 16px; height: 16px; border-radius: 999px; border: 1.5px solid #C9C9C9;
+  display: inline-flex; align-items: center; justify-content: center; color: #9A9A9A; font-size: 11px; line-height: 1;
+}
+.cw-panel__tag { font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.cw-panel--before .cw-panel__tag { color: #9A9A9A; }
+.cw-panel--after .cw-panel__tag { color: #7FA6E8; }
+.cw-panel__check { color: #7FA6E8; font-weight: 700; font-size: 14px; line-height: 1; }
+.cw-panel--before p { font-family: var(--font-body); font-size: 17px; line-height: 1.55; color: var(--color-gray-mid, #6B6B6B); margin: 0; }
+.cw-panel--after p { font-family: var(--font-head); font-weight: 600; font-size: 18px; line-height: 1.45; color: #fff; margin: 0; }
+
+.cw-cta-card {
+  margin-top: 32px;
+  background: var(--color-white);
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06);
+}
+.cw-cta-card h3 { font-family: var(--font-head); font-weight: 700; font-size: 18px; color: var(--color-black); margin: 0 0 18px; }
+.cw-cta-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.cw-cta-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--color-gray-light); border-radius: 999px; padding: 8px 8px 8px 16px;
+}
+.cw-cta-chip__old { font-family: var(--font-body); font-size: 14px; color: #9A9A9A; text-decoration: line-through; }
+.cw-cta-chip__arrow { color: var(--color-blue); font-weight: 700; }
+.cw-cta-chip__new { font-family: var(--font-head); font-weight: 600; font-size: 14px; color: #fff; background: var(--color-blue); padding: 7px 14px; border-radius: 999px; }
+
+.cw-caption { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: #9A9A9A; margin: 20px 0 0; font-style: italic; }
+
+/* ---- SIGNATURE (b): messaging framework document ---- */
+.cw-framework {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(10, 10, 10, 0.06);
+}
+.cw-framework__bar {
+  background: #0A0A0A;
+  padding: 22px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.cw-framework__brand { display: flex; align-items: center; gap: 12px; }
+.cw-framework__brand img { display: block; }
+.cw-framework__title { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: #fff; }
+.cw-framework__meta { font-family: var(--font-body); font-size: 13px; color: rgba(255, 255, 255, 0.55); }
+.cw-framework__body { padding: 36px 32px 40px; }
+
+.cw-core { background: var(--color-blue); border-radius: 16px; padding: 30px 32px; color: #fff; }
+.cw-core__label { font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 255, 255, 0.72); }
+.cw-core__text { font-family: var(--font-head); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; letter-spacing: -0.01em; color: #fff; margin: 12px 0 0; }
+
+.cw-principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.cw-principle { background: var(--color-gray-light); border-radius: 14px; padding: 24px; }
+.cw-principle__num { font-family: var(--font-head); font-weight: 700; font-size: 14px; color: var(--color-blue); margin-bottom: 8px; }
+.cw-principle h4 { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: var(--color-black); margin: 0 0 6px; }
+.cw-principle p { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--color-gray-mid, #6B6B6B); margin: 0; }
+
+.cw-fw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.cw-fw-col { border: 1.5px solid var(--color-border); border-radius: 14px; padding: 24px; }
+.cw-fw-col h4 { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--color-black); margin: 0 0 16px; }
+.cw-fw-list { display: flex; flex-direction: column; gap: 12px; }
+.cw-fw-item { display: flex; align-items: flex-start; gap: 10px; }
+.cw-fw-item__mark { color: var(--color-blue); font-weight: 700; flex-shrink: 0; line-height: 1.5; }
+.cw-fw-item span:last-child { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--color-gray-dark); }
+.cw-fw-item--feel span:last-child { font-style: italic; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .cw-principles { grid-template-columns: 1fr 1fr; }
+  .cw-fw-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .cw-pair { grid-template-columns: 1fr; }
+  .cw-principles { grid-template-columns: 1fr; }
+}
