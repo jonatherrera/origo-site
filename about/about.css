@@ -310,8 +310,12 @@
 .ab-avatar {
   width: 96px;
   height: 96px;
+  flex: none;
   border-radius: 999px;
+  object-fit: cover;
+  object-position: 50% 22%;
   background: var(--chip-blue);
+  /* Fallback styling if the image is ever missing / for a text monogram */
   color: var(--ab-blue-300);
   font-family: var(--font-head);
   font-weight: 800;
@@ -320,6 +324,7 @@
   align-items: center;
   justify-content: center;
 }
+img.ab-avatar { display: block; }
 .ab-founder h3 {
   font-family: var(--font-head);
   font-weight: 700;
