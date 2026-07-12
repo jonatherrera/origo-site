@@ -45,8 +45,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/styles.css?v=29">
-  <link rel="stylesheet" href="/about/about.css">
+  <link rel="stylesheet" href="/css/styles.css?v=38">
+  <link rel="stylesheet" href="/about/about.css?v=2">
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -188,186 +188,272 @@
   </header>
 
 
-  <main>
+  <main class="ab-main">
 
     <!-- ======================================================
-         SECTION 01 — HERO
+         SECTION 01 — HERO (Alpine, TX + blue gradient overlay)
     ====================================================== -->
-    <section class="about-hero reveal">
-      <div class="about-container">
-        <p class="about-eyebrow">About Origo</p>
-        <h1 class="about-hero__headline">We started Origo because we believe great businesses deserve to be seen.</h1>
-      </div>
-    </section>
-
-
-    <!-- ======================================================
-         SECTION 02 — ORIGIN STORY
-    ====================================================== -->
-    <section class="about-section about-origin reveal">
-      <div class="about-container">
-        <div class="two-col">
-
-          <!-- Left: Copy -->
-          <div class="about-origin__content">
-            <p class="about-eyebrow">Where we started</p>
-            <h2 class="about-h2">Not just another agency origin story.</h2>
-            <p class="about-body">Before Origo, my wife Emily and I ran a health-focused food truck in a small town out in far West Texas. We called it Chop'd. Salads and wraps, soups and smoothies, the kind of food that small community didn't have yet. We found an old RV trailer that needed a lot of work, bought it for a good price, and Emily and her dad renovated the entire thing inside and out. New tires, new paint, new floors, new equipment. We brought it up to code and opened for business.</p>
-            <p class="about-body">We ran Chop'd for about a year. We had a small, loyal customer base and very high ratings across social media and review platforms, reflecting the quality of the food, the service, and the experience. But the plan we'd laid out didn't give us enough runway to build the business to where it needed to be. It wasn't that the food truck was failing. It was that we didn't have the time and resources to keep building long enough for it to succeed the way it could have.</p>
-            <p class="about-body">Going further back, to 2015, Emily and I were planting a church out of our living room. That work, ministry, community-building, showing up for the people around us, had been on our hearts for years. It's still central to how we live.</p>
+    <section class="ab-hero reveal">
+      <div class="ab-hero__stage">
+        <img src="/images/about-hero-alpine.webp"
+             alt="Alpine, Texas from atop Hancock Hill"
+             class="ab-hero__img" width="1800" height="1225" fetchpriority="high">
+        <div class="ab-hero__overlay" aria-hidden="true"></div>
+        <div class="ab-wrap ab-hero__inner">
+          <div class="ab-hero__content">
+            <p class="ab-eyebrow">About Origo</p>
+            <h1 class="ab-hero__h1">We started Origo because great businesses deserve to be seen.</h1>
+            <p class="ab-hero__lead">A boutique digital presence agency for established, owner-operated businesses. Born in Alpine, Texas, serving clients nationwide.</p>
           </div>
-
-          <!-- Right: Photo -->
-          <div class="about-origin__photo">
-            <img src="/images/jon-emily-about-photo.jpg" alt="Jon and Emily, founders of Origo" class="about-photo">
-          </div>
-
-        </div>
-
-        <!-- Last 3 paragraphs run full-width below the photo -->
-        <div class="about-origin__below">
-          <p class="about-body">Even further back, to being a kid: I've always had fun with technology. Playing with code. Setting up servers. Building things that worked. In high school, a friend and I custom-coded two websites that were legitimately good enough to have been paid work. The interest in this field has always been there.</p>
-          <p class="about-body">I started Origo because I'm wired for this life. Not "this digital work" specifically, this life of building. I love taking nothing and turning it into something. I love the chaos and the messiness of it. I love being part of watching something come into being. That drive has expressed itself through church planting, through the food truck, and now through Origo. The vehicle changes. The wiring doesn't.</p>
-          <p class="about-body">Origo is what it looks like when the wiring for building meets eight years of digital experience and a conviction that good work, done on purpose, with care, still matters.</p>
-        </div>
-
-        <div class="about-pullquote">
-          <p class="about-pullquote__text">"Every human act of creation is a response to the divine call to unfold the potentialities of creation."</p>
-          <p class="about-pullquote__attr">, Albert Wolters, <em>Creation Regained</em></p>
         </div>
       </div>
     </section>
 
 
     <!-- ======================================================
-         SECTION 03 — WHY WE EXIST
+         SECTION 02 — ORIGIN STORY A (image left)
     ====================================================== -->
-    <section class="about-section about-why reveal">
-      <div class="about-container about-why__inner">
-        <p class="about-section-label">Why we exist</p>
-        <h2 class="about-why__headline">We're living through a strange moment.</h2>
-        <p class="about-why__body">AI is flooding the internet with content. Trust in institutions, media, and even the businesses we interact with is at a historic low. People are more skeptical than ever about what's real, what's credible, and who's worth their time and money.</p>
-        <p class="about-why__body">In that environment, a strong, consistent, human digital presence isn't just nice to have, it's one of the most valuable things a business can build. It's the difference between being overlooked and being chosen.</p>
-        <p class="about-why__body">That's what drives us. We want businesses that have earned their reputation to have a presence that reflects it. We want the right clients to find them, trust them, and choose them.</p>
-      </div>
-    </section>
-
-
-    <!-- ======================================================
-         SECTION 04 — MISSION, VISION & VALUES
-    ====================================================== -->
-    <section class="about-section about-mvv reveal">
-      <div class="about-container">
-
-        <!-- Mission & Vision row -->
-        <div class="mvv-top">
-          <div class="mvv-block">
-            <p class="mvv-label">Mission</p>
-            <p class="mvv-body">To help established, owner-operated businesses build a digital presence that earns trust, so they can grow with confidence and serve their clients well.</p>
+    <section class="ab-origin reveal">
+      <div class="ab-wrap">
+        <div class="ab-grid2">
+          <div class="ab-figure ab-figure--5x4">
+            <img src="/images/about-chopd.webp"
+                 alt="Jon and Emily in front of the Chop'd food truck"
+                 width="1000" height="800" loading="lazy" style="object-position: 50% 35%;">
           </div>
-          <div class="mvv-block">
-            <p class="mvv-label">Vision</p>
-            <p class="mvv-body">A world where great businesses are easy to find, easy to trust, and impossible to overlook.</p>
+          <div class="ab-col">
+            <p class="ab-eyebrow">Where we started</p>
+            <h2 class="ab-h2">Not just another agency origin story.</h2>
+            <p class="ab-body">Before Origo, my wife Emily and I ran a health-focused food truck in a small town out in far West Texas. We called it Chop'd. Salads and wraps, soups and smoothies, the kind of food that small community didn't have yet. We found an old RV trailer that needed a lot of work, bought it for a good price, and Emily and her dad renovated the entire thing inside and out. New tires, new paint, new floors, new equipment.</p>
+            <p class="ab-body">We ran Chop'd for about a year. We had a small, loyal customer base and very high ratings. It wasn't that the food truck was failing. We just didn't have the time and resources to keep building long enough for it to succeed the way it could have.</p>
           </div>
-        </div>
-
-        <!-- Values grid -->
-        <div class="values-grid stagger-group">
-
-          <div class="value-card">
-            <p class="value-card__label">Trust is the foundation</p>
-            <p class="value-card__body">Everything we build is designed to earn trust, for our clients and for the people they serve.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-card__label">Relationships over transactions</p>
-            <p class="value-card__body">We're partners, not vendors. We care about your business long after the project is done.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-card__label">Design is a language</p>
-            <p class="value-card__body">Good design doesn't just look right, it communicates clearly, builds credibility, and earns attention.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-card__label">Human first, always</p>
-            <p class="value-card__body">We use AI as a partner in our work, but the strategy, the craft, and the care are always human.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-card__label">Do fewer things better</p>
-            <p class="value-card__body">We don't try to be everything to everyone. We do a focused set of things exceptionally well.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-card__label">Work worth doing</p>
-            <p class="value-card__body">We believe work is meaningful. We bring that conviction to every project, every client, every detail.</p>
-          </div>
-
-        </div>
-
-        <div class="about-pullquote">
-          <p class="about-pullquote__text">"Your true worth is determined by how much more you give in value than you take in payment."</p>
-          <p class="about-pullquote__attr">, Bob Burg, <em>The Go-Giver</em></p>
         </div>
       </div>
     </section>
 
 
     <!-- ======================================================
-         SECTION 05 — HOW WE WORK
+         SECTION 03 — ORIGIN STORY B (image right + blockquote)
     ====================================================== -->
-    <section class="about-section about-how reveal">
-      <div class="about-container">
-        <div class="two-col">
+    <section class="ab-origin ab-origin--b reveal">
+      <div class="ab-wrap">
+        <div class="ab-grid2 ab-grid2--img-right">
+          <div class="ab-col">
+            <p class="ab-body">Going further back, to 2015, Emily and I were planting a church out of our living room. That work, ministry, community-building, showing up for the people around us, had been on our hearts for years. It's still central to how we live. And even further back, as a kid, I've always had fun with technology, playing with code, setting up servers, building things that worked.</p>
+            <p class="ab-body">I started Origo because I'm wired for this life. Not "this digital work" specifically, this life of building. I love taking nothing and turning it into something. That drive has expressed itself through church planting, through the food truck, and now through Origo. The vehicle changes. The wiring doesn't.</p>
+            <figure class="ab-wolters">
+              <blockquote>"Every human act of creation is a response to the divine call to unfold the potentialities of creation."</blockquote>
+              <figcaption>Albert Wolters, <em>Creation Regained</em></figcaption>
+            </figure>
+          </div>
+          <div class="ab-figure ab-figure--5x4">
+            <img src="/images/about-early-days.webp"
+                 alt="Jon working on an early project"
+                 width="1000" height="1000" loading="lazy" style="object-position: 50% 40%;">
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Left: Copy -->
-          <div class="about-how__content">
-            <p class="about-eyebrow">How we work</p>
-            <h2 class="about-h2">Small list. Full attention.</h2>
-            <p class="about-body">We work with a small number of clients at a time, by design. That means you get our full attention, honest communication, and a team that actually knows your business.</p>
-            <p class="about-body">We don't drop a proposal and disappear. We walk you through it. We ask good questions. We push back when something isn't right and celebrate when it is.</p>
-            <blockquote class="about-callout">
-              We use the best tools available, including AI, to do our sharpest work. And we stay in it with you long after launch.
-            </blockquote>
-            <div class="about-pills">
-              <span class="about-pill">Texas-based</span>
-              <span class="about-pill">Serving clients nationwide</span>
-              <span class="about-pill">AI-assisted</span>
-              <span class="about-pill">Always human</span>
+
+    <!-- ======================================================
+         SECTION 04 — WHY WE EXIST (charcoal band)
+    ====================================================== -->
+    <section class="ab-why reveal">
+      <div class="ab-why__inner">
+        <p class="ab-eyebrow">Why we exist</p>
+        <h2 class="ab-h2 ab-why__h2">We're living through a strange moment.</h2>
+        <p class="ab-body">AI is flooding the internet with content. Trust in institutions, media, and even the businesses we interact with is at a historic low. People are more skeptical than ever about what's real, what's credible, and who's worth their time and money.</p>
+        <p class="ab-body">In that environment, a strong, consistent, human digital presence isn't just nice to have, it's one of the most valuable things a business can build. It's the difference between being overlooked and being chosen.</p>
+        <p class="ab-body">That's what drives us. We want businesses that have earned their reputation to have a presence that reflects it, so the right clients find them, trust them, and choose them.</p>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 05 — STATS (blue-50 tiles / .stat-card)
+    ====================================================== -->
+    <section class="ab-stats reveal">
+      <div class="ab-wrap">
+        <div class="ab-stats__grid">
+          <div class="stat-card">
+            <span class="stat-card__num">1:1</span>
+            <span class="stat-card__label">You work directly with the founder.</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">6</span>
+            <span class="stat-card__label">Focused services, done well.</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">100%</span>
+            <span class="stat-card__label">Human-led strategy and craft.</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">TX&rarr;US</span>
+            <span class="stat-card__label">Texas roots, clients nationwide.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 06 — MISSION + VISION
+    ====================================================== -->
+    <section class="ab-mvv reveal">
+      <div class="ab-wrap">
+        <div class="ab-mvv__grid">
+          <div class="ab-mvv__card ab-mvv__card--mission">
+            <span class="ab-mvv__label">Mission</span>
+            <p class="ab-mvv__statement">To help established, owner-operated businesses build a digital presence that earns trust, so they can grow with confidence and serve their clients well.</p>
+          </div>
+          <div class="ab-mvv__card ab-mvv__card--vision">
+            <span class="ab-mvv__label">Vision</span>
+            <p class="ab-mvv__statement">A world where great businesses are easy to find, easy to trust, and impossible to overlook.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 07 — VALUES
+    ====================================================== -->
+    <section class="ab-values reveal">
+      <div class="ab-wrap">
+        <div class="ab-values__head">
+          <h2 class="ab-h2">What we believe.</h2>
+        </div>
+        <div class="ab-values__grid">
+          <div class="ab-value-card">
+            <h3>Trust is the foundation</h3>
+            <p>Everything we build is designed to earn trust, for our clients and for the people they serve.</p>
+          </div>
+          <div class="ab-value-card">
+            <h3>Relationships over transactions</h3>
+            <p>We're partners, not vendors. We care about your business long after the project is done.</p>
+          </div>
+          <div class="ab-value-card">
+            <h3>Design is a language</h3>
+            <p>Good design doesn't just look right, it communicates clearly, builds credibility, and earns attention.</p>
+          </div>
+          <div class="ab-value-card">
+            <h3>Human first, always</h3>
+            <p>We use AI as a partner in our work, but the strategy, the craft, and the care are always human.</p>
+          </div>
+          <div class="ab-value-card">
+            <h3>Do fewer things better</h3>
+            <p>We don't try to be everything to everyone. We do a focused set of things exceptionally well.</p>
+          </div>
+          <div class="ab-value-card">
+            <h3>Work worth doing</h3>
+            <p>We believe work is meaningful. We bring that conviction to every project, every client, every detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 08 — GO-GIVER QUOTE
+    ====================================================== -->
+    <section class="ab-quote reveal">
+      <div class="ab-narrow">
+        <span class="ab-quote__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>Your true worth is determined by how much more you give in value than you take in payment.</blockquote>
+        <p class="ab-quote__attr">Bob Burg, <em>The Go-Giver</em></p>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 09 — TEAM
+    ====================================================== -->
+    <section class="ab-team reveal">
+      <div class="ab-wrap">
+        <div class="ab-team__head">
+          <p class="ab-eyebrow">The people behind Origo</p>
+          <h2 class="ab-h2">A small team that answers the phone.</h2>
+        </div>
+
+        <div class="ab-founders">
+          <div class="ab-founder">
+            <span class="ab-avatar" aria-hidden="true">JH</span>
+            <div>
+              <h3>Jon</h3>
+              <span class="ab-role">Founder</span>
             </div>
-            <p class="about-ai-ref">Curious about how we actually use AI? We wrote an open policy. <a href="/ai-policy">Read our AI Policy →</a></p>
+            <p>Builder at heart. Jon leads strategy, design, and every client conversation. He started Origo to turn nothing into something worth trusting.</p>
           </div>
-
-          <!-- Right: Photo -->
-          <div class="about-how__photo">
-            <img src="/images/jon-work-in-progress-about.jpg" alt="Jon working on a client project at Origo" class="about-photo">
+          <div class="ab-founder">
+            <span class="ab-avatar" aria-hidden="true">EH</span>
+            <div>
+              <h3>Emily</h3>
+              <span class="ab-role">Co-founder</span>
+            </div>
+            <p>Emily has been building alongside Jon from the food-truck days. She brings the hands-on craft and steady care that keeps every project grounded.</p>
           </div>
+        </div>
 
+        <div class="ab-support">
+          <div class="ab-support-card">
+            <span class="ab-support__badge" aria-hidden="true">K</span>
+            <div>
+              <h4>Kalyn</h4>
+              <span class="ab-role">Virtual Assistant</span>
+            </div>
+          </div>
+          <div class="ab-support-card">
+            <span class="ab-support__badge" aria-hidden="true">B</span>
+            <div>
+              <h4>Brian</h4>
+              <span class="ab-role">SEO + AEO Specialist</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
 
     <!-- ======================================================
-         SECTION 06 — CLOSING CTA
+         SECTION 10 — HOW WE WORK (gray band)
     ====================================================== -->
-    <section class="about-cta reveal">
-      <div class="about-container">
-        <div class="about-cta__inner">
-          <h2 class="about-cta__headline">If this sounds like the kind of agency you've been looking for, let's meet.</h2>
-          <p class="about-cta__sub">No pressure, no pitch. Just an honest conversation about your business and where you want to take it.</p>
-          <div class="about-cta__buttons">
-            <a href="https://go.origo.ooo/call"
-               class="btn btn--primary"
-               target="_blank"
-               rel="noopener">
-              Book a Discovery Call
-            </a>
-            <a href="/work" class="about-cta__secondary">
-              See Our Work <span aria-hidden="true">→</span>
-            </a>
+    <section class="ab-how reveal">
+      <div class="ab-wrap ab-how__inner">
+        <div class="ab-grid2">
+          <div class="ab-figure ab-figure--4x3">
+            <img src="/images/about-networking.webp"
+                 alt="Jon with a fellow local business owner"
+                 width="1100" height="734" loading="lazy" style="object-position: 50% 35%;">
           </div>
+          <div class="ab-col">
+            <p class="ab-eyebrow">How we work</p>
+            <h2 class="ab-h2">Small list. Full attention.</h2>
+            <p class="ab-body">We work with a small number of clients at a time, by design. That means you get our full attention, honest communication, and a team that actually knows your business.</p>
+            <p class="ab-body">We don't drop a proposal and disappear. We walk you through it, ask good questions, and stay in it with you long after launch.</p>
+            <p class="ab-how__link">Curious how we actually use AI? We wrote an open policy. <a href="/ai-policy">Read our AI Policy &rarr;</a></p>
+            <div class="ab-chips">
+              <span class="ab-chip">Texas-based</span>
+              <span class="ab-chip">Nationwide</span>
+              <span class="ab-chip">AI-assisted</span>
+              <span class="ab-chip">Always human</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECTION 11 — CLOSING CTA (blue band)
+    ====================================================== -->
+    <section class="ab-cta reveal">
+      <div class="ab-wrap ab-cta__inner">
+        <h2 class="ab-cta__h2">If this sounds like the kind of agency you've been looking for, let's meet.</h2>
+        <p class="ab-cta__sub">No pressure, no pitch. Just an honest conversation about your business and where you want to take it.</p>
+        <div class="ab-cta__actions">
+          <a href="https://go.origo.ooo/call" class="btn btn--onblue" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="/work" class="btn btn--ghost-white">See Our Work <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
