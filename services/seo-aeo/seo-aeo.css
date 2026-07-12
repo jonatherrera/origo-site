@@ -67,7 +67,7 @@
    01 · HERO
    ------------------------------------------------------------ */
 .seo-v2 .sp-hero {
-  padding: 120px 0 92px;      /* extra top clears the fixed site nav */
+  padding: 64px 0 92px;
   background: var(--color-white);
 }
 

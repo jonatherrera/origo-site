@@ -69,7 +69,7 @@
    Services overview — Hero
    ------------------------------------------------------------ */
 .svc-overview-hero {
-  padding: 120px 0 80px;
+  padding: 64px 0 80px;
   background: var(--color-white);
 }
 
@@ -224,7 +224,7 @@
    Individual service pages — Hero
    ------------------------------------------------------------ */
 .sp-hero {
-  padding: 120px 0 80px;
+  padding: 64px 0 80px;
   background: var(--color-white);
 }
 
