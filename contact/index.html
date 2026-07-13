@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=39" />
-  <link rel="stylesheet" href="/contact/contact.css?v=39" />
+  <link rel="stylesheet" href="/contact/contact.css?v=40" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -242,155 +242,200 @@
   <!-- ============================================================
        SECTION 01 — HERO
        ============================================================ -->
-  <section class="contact-hero">
-    <div class="container">
-      <p class="contact-hero__eyebrow reveal">Contact</p>
-      <h1 class="contact-hero__headline reveal">Let's start a conversation.</h1>
-      <p class="contact-hero__sub reveal">Whether you have a project in mind or just want to talk through where your business is and where you want to take it, we're happy to listen. No pressure, no pitch. Just an honest conversation.</p>
-    </div>
-  </section>
+    <main class="cx-main" id="main-content">
 
-
-  <!-- ============================================================
-       SECTION 02 — CALENDAR
-       ============================================================ -->
-  <section class="contact-calendar-section">
-    <div class="container">
-      <h2 class="contact-col__heading reveal">Book a discovery call</h2>
-      <p class="contact-col__sub reveal">The fastest way to get started. Pick a time that works for you and we'll take it from there.</p>
-      <div class="contact-iframe-wrap reveal">
-        <iframe
-          src="https://api.gohighlevelfor19.com/widget/booking/JR1iTTfMGeCy46qqCPvr"
-          frameborder="0"
-          title="Book a discovery call with Origo"
-        ></iframe>
+    <!-- SECTION 01 - HERO -->
+    <section class="cx-hero">
+      <div class="cx-hero__inner">
+        <span class="cx-eyebrow">Contact</span>
+        <h1>Let&rsquo;s start a conversation.</h1>
+        <p>Whether you have a project in mind or just want to talk through where your business is and where you want to take it, we&rsquo;re happy to listen. No pressure, no pitch. Just an honest conversation.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- SECTION 02 - BOOK A CALL (real GHL calendar) -->
+    <section class="cx-block">
+      <div class="cx-wrap">
+        <div class="cx-sec-head">
+          <p class="cx-sec-eyebrow">The fastest way</p>
+          <h2>Book a discovery call</h2>
+          <p>Pick a time that works for you and we&rsquo;ll take it from there. The call is free, about an hour, and comes with no obligation.</p>
+        </div>
+        <div class="cx-cal-card">
+          <iframe src="https://api.gohighlevelfor19.com/widget/booking/JR1iTTfMGeCy46qqCPvr" frameborder="0" title="Book a discovery call with Origo" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============================================================
-       SECTION 03 — FORM
-       ============================================================ -->
-  <section class="contact-form-section">
-    <div class="container">
-      <div class="contact-form-inner">
-        <h2 class="contact-col__heading reveal">Send us a message</h2>
-        <p class="contact-col__sub reveal">Prefer to reach out on your own time? Fill this out and we'll get back to you personally, usually within one business day.</p>
+    <!-- SECTION 03 - FORM -->
+    <section class="cx-block cx-block--muted">
+      <div class="cx-wrap">
+        <div class="cx-sec-head">
+          <p class="cx-sec-eyebrow">Prefer to write</p>
+          <h2>Send your inquiry</h2>
+          <p>Reach out on your own time. Fill this out and we&rsquo;ll get back to you personally, usually within one business day.</p>
+        </div>
+        <div class="cx-form-card">
+          <div class="cx-success" id="form-success" role="alert">
+            <div class="cx-success__check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Transmission received.</h3>
+            <p>We&rsquo;ll be in touch within one business day. We respond to every inquiry personally.</p>
+          </div>
 
-            <!-- Success state -->
-            <div class="contact-form__success" id="form-success" role="alert">
-              <p>Transmission received. We'll be in touch within one business day.</p>
+          <form class="cx-form" id="contact-form" novalidate>
+            <div class="cx-fld">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" aria-describedby="first-name-error" aria-required="true" name="firstName" placeholder="First name" autocomplete="given-name">
+              <span class="cx-err" role="alert" id="first-name-error">This field is required.</span>
+            </div>
+            <div class="cx-fld">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" aria-describedby="last-name-error" aria-required="true" name="lastName" placeholder="Last name" autocomplete="family-name">
+              <span class="cx-err" role="alert" id="last-name-error">This field is required.</span>
+            </div>
+            <div class="cx-fld">
+              <label for="email">Email</label>
+              <input type="email" id="email" aria-describedby="email-error" aria-required="true" name="email" placeholder="your@email.com" autocomplete="email">
+              <span class="cx-err" role="alert" id="email-error">Please enter a valid email.</span>
+            </div>
+            <div class="cx-fld">
+              <label for="phone">Phone <span class="cx-opt">optional</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+            </div>
+            <div class="cx-fld">
+              <label for="business">Business name <span class="cx-opt">optional</span></label>
+              <input type="text" id="business" name="business" placeholder="Your company" autocomplete="organization">
+            </div>
+            <div class="cx-fld">
+              <label for="website">Website <span class="cx-opt">optional</span></label>
+              <input type="url" id="website" name="website" placeholder="yourbusiness.com" autocomplete="url">
+            </div>
+            <div class="cx-fld cx-fld--full">
+              <label>What are you interested in? <span class="cx-opt">optional &middot; pick any</span></label>
+              <div class="cx-chips" role="group" aria-label="Services interested in">
+              <label class="cx-chip"><input type="checkbox" name="service" value="Branding"><span>Branding</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="Web Design"><span>Web Design</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="SEO & AEO"><span>SEO &amp; AEO</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="Copywriting"><span>Copywriting</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="Website Concierge"><span>Website Concierge</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="App Development"><span>App Development</span></label>
+              <label class="cx-chip"><input type="checkbox" name="service" value="Not sure yet"><span>Not sure yet</span></label>
+              </div>
+            </div>
+            <div class="cx-fld cx-fld--full">
+              <label for="referral">How&rsquo;d you find us? <span class="cx-opt">optional</span></label>
+              <select id="referral" name="referral">
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option value="Search">Google or search</option>
+                <option value="Referral">Referral from someone</option>
+                <option value="Social">Social media</option>
+                <option value="AI">ChatGPT or an AI assistant</option>
+                <option value="Returning">We&rsquo;ve worked together before</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="cx-fld cx-fld--full cx-reveal" id="referral-name-fld">
+              <label for="referral-name">Who can we thank? <span class="cx-opt">optional</span></label>
+              <input type="text" id="referral-name" name="referralName" placeholder="The name of whoever sent you our way">
+            </div>
+            <div class="cx-fld cx-fld--full">
+              <label>What kind of budget are we playing with? <span class="cx-opt">optional &middot; no wrong answer</span></label>
+              <div class="cx-chips" role="radiogroup" aria-label="Budget range">
+              <label class="cx-chip"><input type="radio" name="budget" value="Under $5k"><span>Testing the waters <em class="cx-fun">under $5k</em></span></label>
+              <label class="cx-chip"><input type="radio" name="budget" value="$5k–$10k"><span>Ready to invest <em class="cx-fun">$5–10k</em></span></label>
+              <label class="cx-chip"><input type="radio" name="budget" value="$10k–$25k"><span>Let&rsquo;s do it right <em class="cx-fun">$10–25k</em></span></label>
+              <label class="cx-chip"><input type="radio" name="budget" value="$25k+"><span>Go all in <em class="cx-fun">$25k+</em></span></label>
+              <label class="cx-chip"><input type="radio" name="budget" value="Not sure yet"><span>Haven&rsquo;t a clue yet</span></label>
+              </div>
+            </div>
+            <div class="cx-fld cx-fld--full">
+              <label>And when are you hoping to start? <span class="cx-opt">optional</span></label>
+              <div class="cx-chips" role="radiogroup" aria-label="Timeline">
+              <label class="cx-chip"><input type="radio" name="timeline" value="ASAP"><span>Yesterday, ideally <em class="cx-fun">ASAP</em></span></label>
+              <label class="cx-chip"><input type="radio" name="timeline" value="1–3 months"><span>This quarter <em class="cx-fun">1–3 mo</em></span></label>
+              <label class="cx-chip"><input type="radio" name="timeline" value="3–6 months"><span>Later this year <em class="cx-fun">3–6 mo</em></span></label>
+              <label class="cx-chip"><input type="radio" name="timeline" value="Just exploring"><span>Just dreaming for now</span></label>
+              </div>
+            </div>
+            <div class="cx-fld cx-fld--full">
+              <label for="message">Tell us about your business <span class="cx-opt">optional</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="What do you do, who do you serve, and where are you hoping to take things?"></textarea>
             </div>
 
-            <!-- Form -->
-            <form class="contact-form" id="contact-form" novalidate>
+            <div class="cx-consent-group">
+              <label class="cx-consent">
+                <input type="checkbox" id="email-optin" name="emailOptin">
+                <span>Keep me in the loop. I&rsquo;d like Origo&rsquo;s monthly note, one genuinely useful idea. <span class="cx-opt">optional</span></span>
+              </label>
+              <label class="cx-consent">
+                <input type="checkbox" id="sms-consent-transactional" name="smsConsentTransactional">
+                <span>Texting&rsquo;s fine for reminders about my scheduled call. That&rsquo;s the only thing we&rsquo;ll ever text you about. <span class="cx-opt">optional</span></span>
+              </label>
+              <p class="cx-fine">Unsubscribe from emails anytime. For texts, message &amp; data rates may apply; reply STOP to opt out, HELP for help. By submitting you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms</a>.</p>
+            </div>
 
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="first-name">First name</label>
-                  <input type="text" id="first-name" name="firstName" placeholder="First name" autocomplete="given-name" />
-                  <span class="form-field__error" id="first-name-error">This field is required.</span>
-                </div>
-                <div class="form-field">
-                  <label for="last-name">Last name</label>
-                  <input type="text" id="last-name" name="lastName" placeholder="Last name" autocomplete="family-name" />
-                  <span class="form-field__error" id="last-name-error">This field is required.</span>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
-                  <span class="form-field__error" id="email-error">Please enter a valid email.</span>
-                </div>
-                <div class="form-field">
-                  <label for="phone">Phone <span class="form-label-opt">(optional)</span></label>
-                  <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
-                </div>
-              </div>
-
-              <div class="form-field">
-                <label for="service">Service interested in <span class="form-label-opt">(optional)</span></label>
-                <select id="service" name="service">
-                  <option value="" disabled selected>Select a service...</option>
-                  <option value="Branding">Branding</option>
-                  <option value="Web Design">Web Design</option>
-                  <option value="SEO & AEO">SEO &amp; AEO</option>
-                  <option value="Copywriting">Copywriting</option>
-                  <option value="Website Concierge">Website Concierge</option>
-                  <option value="App Development">App Development</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label for="message">Tell us about your business <span class="form-label-opt">(optional)</span></label>
-                <textarea id="message" name="message" rows="4" placeholder="What do you do, who do you serve, and where are you hoping to take things?"></textarea>
-              </div>
-
-              <div class="form-field form-field--consent">
-                <label class="form-checkbox">
-                  <input type="checkbox" id="sms-consent-marketing" name="smsConsentMarketing" />
-                  <span>I consent to receive marketing text messages about special offers, discounts, and service updates from Origo Solutions LLC at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
-                </label>
-              </div>
-
-              <div class="form-field form-field--consent">
-                <label class="form-checkbox">
-                  <input type="checkbox" id="sms-consent-transactional" name="smsConsentTransactional" />
-                  <span>I consent to receive non-marketing text messages from Origo Solutions LLC about project updates, appointment reminders, and service notifications. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
-                </label>
-              </div>
-
-              <p class="form-consent-links">By submitting, you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms &amp; Conditions</a>.</p>
-
-              <button type="submit" class="contact-form__submit" id="form-submit">Send Message</button>
-              <p class="contact-form__note">We respond to every inquiry personally, usually within one business day.</p>
-              <p class="contact-form__submit-error" style="display:none;font-size:12px;color:#f87171;text-align:center;margin-top:8px;">Something went wrong. Please try again or email us at <a href="/contact">jon@origo.ooo</a></p>
-
-            </form>
+            <div class="cx-submit-row">
+              <button type="submit" class="cx-btn cx-btn-submit" id="form-submit">Send message</button>
+            </div>
+            <p class="cx-submit-error">Something went wrong sending your message. Please try again, or email us at <a href="mailto:jon@origo.ooo">jon@origo.ooo</a>.</p>
+            <p class="cx-form-note">We respond to every inquiry personally, usually within one business day.</p>
+          </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ============================================================
-       SECTION 04 — CONTACT INFO (dark)
-       ============================================================ -->
-  <section class="contact-info">
-    <div class="container">
-      <h2 class="contact-info__heading reveal">Other ways to reach us</h2>
-      <div class="contact-info-grid">
-
-        <div class="contact-info-card reveal">
-          <p class="contact-info-card__label">Phone</p>
-          <p class="contact-info-card__value"><a href="tel:+15129715789">(512) 971-5789</a></p>
+    <!-- SECTION 04 - WHAT HAPPENS NEXT (charcoal) -->
+    <section class="cx-info">
+      <div class="cx-wrap cx-info__wrap">
+        <h2>What happens after you reach out</h2>
+        <p class="cx-info__lead">No auto-responders, no sales sequence, no getting passed around. Here&rsquo;s exactly what to expect.</p>
+        <div class="cx-steps">
+          <div class="cx-step">
+            <span class="cx-step__num">1</span>
+            <h3>A real person reads it</h3>
+            <p>Your message comes straight to us, not a shared inbox or a bot. We read every word.</p>
+          </div>
+          <div class="cx-step">
+            <span class="cx-step__num">2</span>
+            <h3>We reply personally</h3>
+            <p>You&rsquo;ll hear back within one business day, usually sooner, with honest first thoughts, not a template.</p>
+          </div>
+          <div class="cx-step">
+            <span class="cx-step__num">3</span>
+            <h3>We talk it through</h3>
+            <p>If it feels like a fit, we&rsquo;ll set up a free discovery call. If it&rsquo;s not, we&rsquo;ll point you somewhere better.</p>
+          </div>
         </div>
-
-        <div class="contact-info-card reveal">
-          <p class="contact-info-card__label">Email</p>
-          <p class="contact-info-card__value"><a href="/contact">jon@origo.ooo</a></p>
+        <div class="cx-info-foot">
+          <span class="cx-foot-label">Prefer to keep it low-key? Follow along instead.</span>
+          <span class="cx-foot-dot">&bull;</span>
+          <div class="cx-socials">
+          <a href="https://x.com/designorig0" target="_blank" rel="noopener" aria-label="Origo on X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.73-8.835L1.254 2.25H8.08l4.261 5.636 5.903-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.instagram.com/designorigo" target="_blank" rel="noopener" aria-label="Origo on Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/designorigo" target="_blank" rel="noopener" aria-label="Origo on Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://www.linkedin.com/company/33516468/" target="_blank" rel="noopener" aria-label="Origo on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.youtube.com/@designorigo" target="_blank" rel="noopener" aria-label="Origo on YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
         </div>
-
-        <div class="contact-info-card reveal">
-          <p class="contact-info-card__label">Location</p>
-          <p class="contact-info-card__value">Texas, serving clients nationwide</p>
-        </div>
-
-        <div class="contact-info-card reveal">
-          <p class="contact-info-card__label">Website</p>
-          <p class="contact-info-card__value"><a href="https://origo.ooo">origo.ooo</a></p>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- SECTION 05 - CTA BAND -->
+    <section class="cx-cta">
+      <div class="cx-cta__inner">
+        <span class="cx-eyebrow">Ready when you are</span>
+        <h2>Let&rsquo;s build something worth trusting.</h2>
+        <p>Book a free discovery call and we&rsquo;ll talk through where you are and where you want to go. No pitch, no obligation.</p>
+        <div class="cx-cta__row">
+          <a href="https://go.origo.ooo/call" class="cx-btn cx-btn-dark" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="/work" class="cx-btn cx-btn-ghost">See Our Work <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 
-  <!-- FOOTER -->
   <footer class="footer footer--home" role="contentinfo">
     <img class="footer__ghost" src="/images/eclipse-mark-white.svg" alt="" aria-hidden="true" width="560" height="560">
     <div class="container">
@@ -484,131 +529,105 @@
   </footer>
 
   <script src="/js/main.js?v=7"></script>
-  <script>
-    /* GHL iframe auto-resize */
+    <script>
+    /* GHL calendar iframe auto-resize (postMessage height) */
     (function () {
-      var calIframe = document.querySelector('.contact-iframe-wrap iframe');
-      if (!calIframe) return;
+      var cal = document.querySelector('.cx-cal-card iframe');
+      if (!cal) return;
       window.addEventListener('message', function (e) {
         if (!e.data) return;
         var d = e.data;
         if (typeof d === 'string') { try { d = JSON.parse(d); } catch (_) {} }
-        var h = (d && (d.height || (d.data && d.data.height)));
-        if (h && parseInt(h) > 200) {
-          calIframe.style.height = (parseInt(h) + 40) + 'px';
-        }
+        var h = d && (d.height || (d.data && d.data.height));
+        if (h && parseInt(h) > 200) { cal.style.height = (parseInt(h) + 40) + 'px'; }
       });
     })();
   </script>
   <script>
     (function () {
-      const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/uEL4ayBklqQs6ylNNJt6/webhook-trigger/U10w8mh8SBByvMDNAUuN';
-
-      const form    = document.getElementById('contact-form');
-      const success = document.getElementById('form-success');
-      const submit  = document.getElementById('form-submit');
-
+      var GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/uEL4ayBklqQs6ylNNJt6/webhook-trigger/U10w8mh8SBByvMDNAUuN';
+      var form = document.getElementById('contact-form');
+      var success = document.getElementById('form-success');
+      var submit = document.getElementById('form-submit');
       if (!form) return;
 
-      function getField(id) { return document.getElementById(id); }
-      function getError(id) { return document.getElementById(id + '-error'); }
-
-      function showError(fieldId, msg) {
-        const field = getField(fieldId);
-        const error = getError(fieldId);
-        if (field) field.classList.add('field-error');
-        if (error) { error.textContent = msg; error.classList.add('visible'); }
-      }
-
-      function clearError(fieldId) {
-        const field = getField(fieldId);
-        const error = getError(fieldId);
-        if (field) field.classList.remove('field-error');
-        if (error) error.classList.remove('visible');
-      }
-
-      function isValidEmail(val) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-      }
+      var field = function (id) { return document.getElementById(id); };
+      var errEl = function (id) { return document.getElementById(id + '-error'); };
+      function showError(id, msg) { var f = field(id), e = errEl(id); if (f) f.classList.add('field-error'); if (e) { e.textContent = msg; e.classList.add('visible'); } }
+      function clearError(id) { var f = field(id), e = errEl(id); if (f) f.classList.remove('field-error'); if (e) e.classList.remove('visible'); }
+      function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
 
       ['first-name', 'last-name', 'email'].forEach(function (id) {
-        const el = getField(id);
-        if (el) el.addEventListener('input', function () { clearError(id); });
+        var el = field(id); if (el) el.addEventListener('input', function () { clearError(id); });
       });
+
+      /* Conditional "Who can we thank?" reveal for personal referrals */
+      var referral = field('referral'), refFld = field('referral-name-fld');
+      if (referral && refFld) {
+        referral.addEventListener('change', function () {
+          var show = referral.value === 'Referral';
+          refFld.classList.toggle('show', show);
+          if (!show) { var n = field('referral-name'); if (n) n.value = ''; }
+        });
+      }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        /* Validate */
-        let valid = true;
-        const firstName = getField('first-name').value.trim();
-        const lastName  = getField('last-name').value.trim();
-        const email     = getField('email').value.trim();
-
-        if (!firstName) { showError('first-name', 'This field is required.'); valid = false; }
-        else clearError('first-name');
-
-        if (!lastName) { showError('last-name', 'This field is required.'); valid = false; }
-        else clearError('last-name');
-
-        if (!email || !isValidEmail(email)) { showError('email', 'Please enter a valid email.'); valid = false; }
-        else clearError('email');
-
-        if (!valid) return;
+        var ok = true;
+        var first = field('first-name').value.trim();
+        var last = field('last-name').value.trim();
+        var email = field('email').value.trim();
+        if (!first) { showError('first-name', 'This field is required.'); ok = false; } else clearError('first-name');
+        if (!last) { showError('last-name', 'This field is required.'); ok = false; } else clearError('last-name');
+        if (!email || !validEmail(email)) { showError('email', 'Please enter a valid email.'); ok = false; } else clearError('email');
+        if (!ok) return;
 
         submit.disabled = true;
-        submit.textContent = 'Sending…';
+        submit.textContent = 'Sending\u2026';
 
-        const payload = {
-          first_name: firstName,
-          last_name:  lastName,
-          email:      email,
-          phone:      getField('phone').value.trim(),
-          service:    getField('service').value,
-          message:    getField('message').value.trim(),
-          sms_consent_marketing:     document.getElementById('sms-consent-marketing').checked,
-          sms_consent_transactional: document.getElementById('sms-consent-transactional').checked,
+        var services = Array.prototype.map.call(form.querySelectorAll('input[name="service"]:checked'), function (c) { return c.value; });
+        var budgetEl = form.querySelector('input[name="budget"]:checked');
+        var timelineEl = form.querySelector('input[name="timeline"]:checked');
+        var referralVal = field('referral').value;
+
+        var payload = {
+          first_name: first,
+          last_name: last,
+          email: email,
+          phone: field('phone').value.trim(),
+          business: field('business').value.trim(),
+          website: field('website').value.trim(),
+          service: services,
+          referral: referralVal,
+          budget: budgetEl ? budgetEl.value : '',
+          timeline: timelineEl ? timelineEl.value : '',
+          message: field('message').value.trim(),
+          email_optin: field('email-optin').checked,
+          sms_consent_transactional: field('sms-consent-transactional').checked
         };
+        if (referralVal === 'Referral') { payload.referral_name = field('referral-name').value.trim(); }
 
-        console.log('[Contact Form] Submitting to:', GHL_WEBHOOK_URL);
-        console.log('[Contact Form] Payload:', payload);
+        var submitErr = form.querySelector('.cx-submit-error');
+        if (submitErr) submitErr.style.display = 'none';
 
         fetch(GHL_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(payload)
         })
-        .then(function (res) {
-          console.log('[Contact Form] Response status:', res.status, res.statusText);
-          console.log('[Contact Form] Response headers:', [...res.headers.entries()]);
-          return res.text().then(function (body) {
-            console.log('[Contact Form] Response body:', body);
-            return { ok: res.ok, status: res.status, body: body };
-          });
+        .then(function (res) { if (!res.ok) throw new Error('non-ok: ' + res.status); return res; })
+        .then(function () {
+          form.style.display = 'none';
+          success.classList.add('visible');
+          if (typeof gtag === 'function') { gtag('event', 'contact_form_submit', { form_id: 'contact-form' }); }
         })
-        .then(function (result) {
-          if (result.ok) {
-            console.log('[Contact Form] Success');
-            form.style.display = 'none';
-            success.classList.add('visible');
-            if (typeof gtag === 'function') {
-              gtag('event', 'contact_form_submit', { form_id: 'contact-form' });
-            }
-          } else {
-            console.error('[Contact Form] Server returned non-OK status:', result.status, result.body);
-            throw new Error('non-ok: ' + result.status);
-          }
-        })
-        .catch(function (err) {
-          console.error('[Contact Form] Fetch error:', err);
+        .catch(function () {
           submit.disabled = false;
-          submit.textContent = 'Send Message';
-          const errEl = form.querySelector('.contact-form__submit-error');
-          if (errEl) errEl.style.display = 'block';
+          submit.textContent = 'Send message';
+          if (submitErr) submitErr.style.display = 'block';
         });
       });
     })();
   </script>
-
 </body>
 </html>
