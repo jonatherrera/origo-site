@@ -1,0 +1,120 @@
+/* ============================================================
+   ORIGO - Blog article (redesign)
+   Applies the new article treatment on top of the existing post
+   structure (kept, incl. sidebar): reading-progress bar, byline +
+   share buttons, branded type-panel cover, restyled prose (pull-
+   quote + callout), author-bio card, newsletter band. Scoped under
+   .post-v2 so posts convert one at a time without breaking others.
+   Built on the global tokens; non-global handoff values page-scoped
+   at exact hex (no invented colors).
+   ============================================================ */
+
+/* Reading-progress bar (fixed, global) */
+.post-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--color-blue); z-index: 70; transition: width .1s linear; }
+@media (prefers-reduced-motion: reduce) { .post-progress { transition: none; } }
+
+.post-v2 {
+  --ba-gray-mid: #6B6B6B;
+  --ba-gray-border: #E4E4E4;
+  --ba-radius-lg: 16px;
+  --ba-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+[data-theme="dark"] .post-v2 { --ba-gray-mid: #8A8A93; --ba-gray-border: rgba(255,255,255,0.12); }
+
+/* ---------- Header / byline ---------- */
+.post-v2 .post-hero { padding: 40px 0 0; background: transparent; }
+.post-v2 .post-hero__inner { max-width: 720px; margin: 0 auto; }
+.post-v2 .post-hero__category {
+  display: inline-block; font-family: var(--font-head); font-weight: 600; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-blue);
+  background: var(--surface-blue); border-radius: 999px; padding: 5px 12px; text-decoration: none;
+}
+.post-v2 .post-hero__title {
+  font-family: var(--font-head); font-weight: 700; letter-spacing: -0.025em; line-height: 1.08;
+  font-size: clamp(32px, 4.4vw, 50px); color: var(--color-black); margin: 18px 0 16px;
+}
+.post-v2 .post-hero__subtitle { font-family: var(--font-body); font-size: 20px; line-height: 1.6; color: var(--color-gray-dark); margin: 0; }
+
+.post-v2 .post-hero__meta {
+  display: flex; align-items: center; gap: 12px; margin: 26px 0 0;
+  padding-bottom: 30px; border-bottom: 1px solid var(--ba-gray-border);
+}
+.post-v2 .post-hero__author { display: flex; align-items: center; gap: 12px; }
+.post-v2 .post-hero__author-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.post-v2 .post-byline__who { display: flex; flex-direction: column; }
+.post-v2 .post-byline__name { font-family: var(--font-head); font-weight: 600; font-size: 15px; color: var(--color-black); }
+.post-v2 .post-byline__name a { color: inherit; text-decoration: none; }
+.post-v2 .post-byline__when { font-family: var(--font-body); font-size: 13px; color: var(--ba-gray-mid); margin-top: 2px; }
+
+.post-share { margin-left: auto; display: flex; gap: 8px; }
+.post-share button, .post-share a {
+  width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--ba-gray-border);
+  display: flex; align-items: center; justify-content: center; color: var(--color-gray-dark);
+  background: none; cursor: pointer; transition: border-color .16s var(--ba-ease), color .16s var(--ba-ease);
+}
+.post-share button:hover, .post-share a:hover { border-color: var(--color-blue); color: var(--color-blue); }
+.post-share svg { width: 17px; height: 17px; }
+.post-share__copied { position: absolute; }
+
+/* ---------- Cover (branded type-panel) ---------- */
+.post-cover { max-width: 1000px; margin: 34px auto 0; padding: 0 32px; }
+.post-cover__inner {
+  position: relative; height: clamp(280px, 44vw, 480px); border-radius: var(--ba-radius-lg);
+  border: 1px solid var(--ba-gray-border); overflow: hidden; display: flex; align-items: flex-end;
+  padding: 30px 34px; background: var(--ba-c, var(--color-blue));
+}
+.post-cover__inner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(120% 130% at 100% 0%, rgba(255,255,255,0.16), rgba(255,255,255,0) 55%),
+              repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, rgba(255,255,255,0) 2px 12px);
+}
+.post-cover__inner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.post-cover__mark { position: absolute; top: 20px; right: 26px; font-family: var(--font-head); font-weight: 700; font-size: 16px; color: rgba(255,255,255,0.5); letter-spacing: -0.02em; }
+.post-cover__big { position: absolute; left: 8px; bottom: -30px; font-family: var(--font-head); font-weight: 700; font-size: 190px; line-height: 1; color: rgba(255,255,255,0.10); letter-spacing: -0.04em; white-space: nowrap; pointer-events: none; }
+.post-cover__cat { position: relative; font-family: var(--font-head); font-weight: 600; font-size: 17px; color: #fff; }
+
+/* ---------- Prose ---------- */
+.post-v2 .prose p { font-family: var(--font-body); font-size: 18px; line-height: 1.78; color: var(--color-gray-dark); margin: 0 0 24px; }
+.post-v2 .prose h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; font-size: 28px; line-height: 1.2; color: var(--color-black); margin: 46px 0 16px; }
+.post-v2 .prose h3 { font-family: var(--font-head); font-weight: 600; font-size: 21px; line-height: 1.3; color: var(--color-black); margin: 34px 0 12px; }
+.post-v2 .prose ul { margin: 0 0 24px; padding-left: 4px; list-style: none; }
+.post-v2 .prose ul li { position: relative; font-family: var(--font-body); font-size: 18px; line-height: 1.7; color: var(--color-gray-dark); padding-left: 30px; margin-bottom: 12px; }
+.post-v2 .prose ul li::before { content: ''; position: absolute; left: 4px; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue); }
+.post-v2 .prose strong { color: var(--color-black); font-weight: 700; }
+.post-v2 .prose blockquote { margin: 34px 0; padding: 4px 0 4px 26px; border-left: 4px solid var(--color-blue); }
+.post-v2 .prose blockquote p { font-family: var(--font-head); font-weight: 600; font-size: 23px; line-height: 1.4; letter-spacing: -0.01em; color: var(--color-black); margin: 0; }
+.post-v2 .prose hr { border: none; border-top: 1px solid var(--ba-gray-border); margin: 34px 0; }
+.post-v2 .prose .callout { background: var(--surface-blue); border-radius: var(--ba-radius-lg); padding: 26px 28px; margin: 34px 0; }
+.post-v2 .prose .callout p { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--color-gray-dark); margin: 0; }
+
+/* ---------- Author bio card ---------- */
+.post-v2 .post-author-bio {
+  display: flex; gap: 18px; align-items: flex-start; background: var(--color-gray-light);
+  border-radius: var(--ba-radius-lg); padding: 28px; margin-top: 40px;
+}
+.post-v2 .post-author-bio__avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; }
+.post-v2 .post-author-bio__name { font-family: var(--font-head); font-weight: 600; font-size: 17px; color: var(--color-black); margin: 0 0 2px; }
+.post-v2 .post-author-bio__role { font-family: var(--font-body); font-size: 13px; color: var(--color-blue); margin: 0 0 10px; }
+.post-v2 .post-author-bio__text { font-family: var(--font-body); font-size: 15px; line-height: 1.65; color: var(--ba-gray-mid); margin: 0 0 10px; }
+.post-v2 .post-author-bio__link { font-family: var(--font-head); font-weight: 600; font-size: 14px; color: var(--color-blue); text-decoration: none; }
+
+/* ---------- Newsletter band ---------- */
+.post-news { background: var(--color-blue); margin-top: 80px; }
+.post-news__inner { max-width: 1200px; margin: 0 auto; padding: 76px 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.post-news__eyebrow { display: inline-block; font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); border-radius: 999px; padding: 6px 14px; }
+.post-news h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(28px,3.4vw,40px); line-height: 1.12; color: #fff; max-width: 640px; margin: 0; }
+.post-news p { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0; }
+.post-news form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 10px; width: 100%; max-width: 480px; }
+.post-news input { flex: 1; min-width: 220px; font-family: var(--font-body); font-size: 16px; color: var(--color-black); background: #fff; border: 1.5px solid transparent; border-radius: 999px; padding: 15px 22px; outline: none; }
+.post-news input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.35); }
+.post-news__btn { font-family: var(--font-head); font-weight: 600; background: var(--color-gray-dark); color: #fff; font-size: 16px; padding: 15px 28px; border: none; border-radius: 999px; cursor: pointer; transition: background .18s var(--ba-ease); }
+.post-news__btn:hover { background: var(--color-black); }
+[data-theme="dark"] .post-news__btn { background: #000; }
+.post-news__fine { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.65); margin: 2px 0 0; }
+.post-news__ok { font-family: var(--font-head); font-weight: 600; font-size: 16px; color: #fff; margin: 6px 0 0; }
+
+@media (max-width: 760px) {
+  .post-cover { padding: 0 24px; }
+  .post-cover__big { font-size: 130px; }
+  .post-news__inner { padding: 60px 24px; }
+}
