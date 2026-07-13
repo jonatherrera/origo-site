@@ -44,6 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=39" />
   <link rel="stylesheet" href="/blog/blog.css" />
+  <link rel="stylesheet" href="/blog/blog-article.css?v=1" />
 
   <style>
     /* Principle headings, consistent blue set */
@@ -145,6 +146,7 @@
   </script>
 </head>
 <body class="preload">
+  <div id="post-progress" class="post-progress" aria-hidden="true"></div>
   <!-- ========================================================
        UTILITY STRIP
   ======================================================== -->
@@ -281,7 +283,7 @@
     </div>
   </div>
 
-  <main>
+  <main class="post-v2">
     <div class="post-back container">
       <a href="/blog" class="post-back__link">← Back to Blog</a>
     </div>
@@ -292,13 +294,19 @@
           <h1 class="post-hero__title">On Purpose</h1>
           <p class="post-hero__subtitle">Why the businesses winning AI visibility aren't doing anything special.</p>
           <div class="post-hero__meta">
-            <span>April 23, 2026</span>
-            <span class="post-hero__author"><img src="/images/jon-headshot.jpg" alt="Jon Herrera" class="post-hero__author-avatar"><a href="/blog">Jon Herrera</a></span>
-            <span>5 min read</span>
+            <span class="post-hero__author"><img src="/images/jon-headshot.jpg" alt="Jon Herrera" class="post-hero__author-avatar"><span class="post-byline__who"><span class="post-byline__name"><a href="/blog">Jon Herrera</a></span><span class="post-byline__when">April 23, 2026 &nbsp;·&nbsp; 5 min read</span></span></span>
+            <div class="post-share"><a class="post-share__x" href="#" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.73-8.835L1.254 2.25H8.08l4.261 5.636 5.903-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="post-share__li" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a><button class="post-share__copy" type="button" aria-label="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button></div>
           </div>
-        </div>
       </div>
     </section>
+    <div class="post-cover">
+      <div class="post-cover__inner" style="--ba-c:#1D4ED8;">
+        <span class="post-cover__mark">Origo</span>
+        <span class="post-cover__big" aria-hidden="true">Digital Strategy</span>
+        <span class="post-cover__cat">Digital Strategy</span>
+      </div>
+    </div>
+
 
     <section class="post-wrap">
       <div class="container">
@@ -424,7 +432,26 @@
     </section>
   </main>
 
-  <footer class="footer footer--home" role="contentinfo">
+  <section class="post-news">
+    <div class="post-news__inner">
+      <span class="post-news__eyebrow">Stay in the loop</span>
+      <h2>One useful idea, once a month.</h2>
+      <p>Short, practical notes on building a digital presence people trust. No spam, unsubscribe anytime.</p>
+      <form id="post-news-form">
+        <input type="email" placeholder="you@yourbusiness.com" aria-label="Email address" required>
+        <button class="post-news__btn" type="submit">Subscribe</button>
+      </form>
+      <p class="post-news__ok" id="post-news-ok" hidden>Thanks &mdash; you're on the list.</p>
+      <p class="post-news__fine">We'll only ever email you the journal. Nothing else.</p>
+    </div>
+  </section>
+
+  <div class="footer-horizon" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" width="100%" height="90" preserveAspectRatio="none"><path d="M0,90 L0,64 A5209,5209 0 0 1 1440,64 L1440,90 Z" fill="currentColor"></path></svg>
+  </div>
+
+
+    <footer class="footer footer--home" role="contentinfo">
     <img class="footer__ghost" src="/images/eclipse-mark-white.svg" alt="" aria-hidden="true" width="560" height="560">
     <div class="container">
       <div class="footer__inner">
@@ -518,5 +545,6 @@
   <script src="/js/main.js?v=7"></script>
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69e1b1d325604d88f062888e"></script>
   <script src="/blog/related-posts.js"></script>
+  <script src="/blog/blog-article.js?v=1" defer></script>
 </body>
 </html>
