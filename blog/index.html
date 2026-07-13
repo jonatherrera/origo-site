@@ -40,6 +40,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=39" />
   <link rel="stylesheet" href="/blog/blog.css" />
+  <link rel="stylesheet" href="/blog/blog-list.css?v=1" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -237,605 +238,417 @@
     </div>
   </div>
 
-  <main id="main-content">
+    <main class="bl-main" id="main-content">
 
-    <!-- HERO -->
-    <section class="blog-hero">
-      <div class="container">
-        <p class="t-label blog-hero__label reveal">From the Origo Blog</p>
-        <h1 class="blog-hero__title reveal reveal-delay-1">Insights on brand, web&nbsp;&amp;&nbsp;growth</h1>
-        <p class="blog-hero__sub reveal reveal-delay-2">Practical advice on branding, web design, SEO, and building a digital presence that earns trust, written by Jon Herrera, founder of Origo.</p>
-      </div>
+    <!-- Hero -->
+    <section class="bl-hero">
+      <span class="bl-eyebrow">From the Origo Blog</span>
+      <h1>Insights on brand, web&nbsp;&amp;&nbsp;growth</h1>
+      <p>Practical advice on branding, web design, SEO, and building a digital presence that earns trust, written by Jon Herrera, founder of Origo.</p>
     </section>
 
-    <!-- SEARCH + FILTER BAR -->
-    <section class="blog-filters">
-      <div class="container">
-        <div class="blog-filters__inner">
-
-          <!-- Search bar -->
-          <div class="blog-search-bar">
-            <div class="blog-search-bar__inner">
-              <svg class="blog-search-bar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="search" id="blog-search-input" placeholder="Search posts…" autocomplete="off" aria-label="Search blog posts" spellcheck="false">
-              <button id="blog-search-clear" aria-label="Clear search">×</button>
-            </div>
-          </div>
-
-          <!-- Divider -->
-          <span class="blog-filter-divider" aria-hidden="true">or</span>
-
-          <!-- Category filter buttons -->
-          <div class="blog-filter-buttons">
-            <button class="blog-filter-btn active" data-filter="all">All</button>
-            <button class="blog-filter-btn" data-filter="digital-strategy">Digital Strategy</button>
-            <button class="blog-filter-btn" data-filter="web-design">Website Design</button>
-            <button class="blog-filter-btn" data-filter="seo">SEO</button>
-            <button class="blog-filter-btn" data-filter="branding">Branding</button>
-            <button class="blog-filter-btn" data-filter="maintenance">Website Maintenance</button>
-            <button class="blog-filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-            <button class="blog-filter-btn" data-filter="growth">Growth</button>
-            <button class="blog-filter-btn" data-filter="announcement">Announcements</button>
-          </div>
-        </div>
+    <!-- Toolbar: search + category chips -->
+    <div class="bl-toolbar">
+      <div class="bl-search">
+        <svg class="bl-search__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="bl-search" type="search" placeholder="Search articles&hellip;" aria-label="Search articles" autocomplete="off">
       </div>
-    </section>
-
-    <!-- SEARCH RESULTS (shown when search is active, hidden by default) -->
-    <section class="section" style="padding-top:0;display:none;" id="blog-search-section">
-      <div class="container">
-        <p class="blog-search-meta" id="blog-search-meta"></p>
-        <div id="blog-search-results"></div>
+      <div id="bl-chips" class="bl-chips">
+          <button class="bl-chip active" type="button" data-filter="all">All</button>
+          <button class="bl-chip" type="button" data-filter="digital-strategy">Digital Strategy</button>
+          <button class="bl-chip" type="button" data-filter="web-design">Website Design</button>
+          <button class="bl-chip" type="button" data-filter="seo">SEO</button>
+          <button class="bl-chip" type="button" data-filter="branding">Branding</button>
+          <button class="bl-chip" type="button" data-filter="maintenance">Website Maintenance</button>
+          <button class="bl-chip" type="button" data-filter="cybersecurity">Cybersecurity</button>
+          <button class="bl-chip" type="button" data-filter="growth">Growth</button>
+          <button class="bl-chip" type="button" data-filter="announcement">Announcements</button>
       </div>
-    </section>
+    </div>
 
-    <!-- POSTS GRID -->
-    <section class="section" style="padding-top:0;">
-      <div class="container">
-        <div class="blog-grid"><!-- Post 55 — Essay #4: Citations Are the New Clicks -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/citations-are-the-new-clicks">Citations Are the New Clicks: How AI Search Changed Visibility</a></h2>
-              <p class="blog-card__excerpt">For 25 years, online visibility meant clicks. AI search changed the rules. Now visibility means citations, and most businesses haven't noticed yet.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 21, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/citations-are-the-new-clicks" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
+    <!-- Featured + grid -->
+    <div class="bl-content">
+      <a class="bl-featured" id="bl-featured" href="/blog/citations-are-the-new-clicks">
+        <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+        <span class="bl-featured__body">
+          <span class="bl-featured__label">Featured</span>
+          <span class="bl-cat">Digital Strategy</span>
+          <h2>Citations Are the New Clicks: How AI Search Changed Visibility</h2>
+          <p>For 25 years, online visibility meant clicks. AI search changed the rules. Now visibility means citations, and most businesses haven't noticed yet.</p>
+          <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 21, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+        </span>
+      </a>
+      <div id="bl-grid" class="bl-grid">
+        <a class="bl-card" href="/blog/citations-are-the-new-clicks" data-category="digital-strategy" data-featured="true" data-text="citations are the new clicks: how ai search changed visibility for 25 years, online visibility meant clicks. ai search changed the rules. now visibility means citations, and most businesses haven&#x27;t noticed yet.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Citations Are the New Clicks: How AI Search Changed Visibility</h3>
+            <p>For 25 years, online visibility meant clicks. AI search changed the rules. Now visibility means citations, and most businesses haven't noticed yet.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 21, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/what-is-a-digital-presence-agency" data-category="digital-strategy" data-featured="false" data-text="what is a digital presence agency? the complete guide a digital presence agency builds and maintains all the digital assets shaping how your business shows up online, brand, web, search, and content. here&#x27;s everything you need to know.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>What Is a Digital Presence Agency? The Complete Guide</h3>
+            <p>A digital presence agency builds and maintains all the digital assets shaping how your business shows up online, brand, web, search, and content. Here's everything you need to know.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 19, 2026</span><span class="bl-dot"></span><span>12 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/build-on-your-own-land" data-category="digital-strategy" data-featured="false" data-text="build on your own land: why you should own your website most businesses don&#x27;t actually own their websites. they&#x27;re renting on platforms they don&#x27;t control. here&#x27;s why that matters, and what to do about it.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Build on Your Own Land: Why You Should Own Your Website</h3>
+            <p>Most businesses don't actually own their websites. They're renting on platforms they don't control. Here's why that matters, and what to do about it.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 17, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/digital-ownership" data-category="digital-strategy" data-featured="false" data-text="digital ownership: why your business should own what it builds online most businesses don&#x27;t actually own their websites, email lists, or customer data. here&#x27;s what digital ownership means across six asset types, and how to start moving toward what&#x27;s yours.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Digital Ownership: Why Your Business Should Own What It Builds Online</h3>
+            <p>Most businesses don't actually own their websites, email lists, or customer data. Here's what digital ownership means across six asset types, and how to start moving toward what's yours.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 14, 2026</span><span class="bl-dot"></span><span>12 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/on-purpose" data-category="digital-strategy" data-featured="false" data-text="on purpose: how citable businesses win ai visibility the businesses winning ai visibility aren&#x27;t doing anything special. they&#x27;re doing the obvious things on purpose, while everyone else is doing them by accident.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>On Purpose: How Citable Businesses Win AI Visibility</h3>
+            <p>The businesses winning AI visibility aren't doing anything special. They're doing the obvious things on purpose, while everyone else is doing them by accident.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 11, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/how-to-tell-if-youre-ai-visible" data-category="digital-strategy" data-featured="false" data-text="how to tell if your business is ai-visible three tests you can run in five minutes to find out whether chatgpt, claude, and gemini are recommending your business, or your competitors.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>How to Tell If Your Business Is AI-Visible</h3>
+            <p>Three tests you can run in five minutes to find out whether ChatGPT, Claude, and Gemini are recommending your business, or your competitors.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 8, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/six-questions-brand-agency" data-category="digital-strategy" data-featured="false" data-text="six questions to ask before trusting an agency with your brand the questions every business owner should ask before signing the contract, and the answers that separate agencies worth hiring from the ones that aren&#x27;t.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Six Questions to Ask Before Trusting an Agency With Your Brand</h3>
+            <p>The questions every business owner should ask before signing the contract, and the answers that separate agencies worth hiring from the ones that aren't.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 5, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/what-is-aeo" data-category="digital-strategy" data-featured="false" data-text="aeo: how ai search is changing what it means to be found online what answer engine optimization actually is, why it matters now, and what businesses need to do to stay visible as search shifts toward ai.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>AEO: How AI Search Is Changing What It Means to Be Found Online</h3>
+            <p>What Answer Engine Optimization actually is, why it matters now, and what businesses need to do to stay visible as search shifts toward AI.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 2, 2026</span><span class="bl-dot"></span><span>12 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/social-media-is-rented-land" data-category="digital-strategy" data-featured="false" data-text="why social media is rented land every piece of content you publish to a social platform is building someone else&#x27;s asset. here&#x27;s why, and how to keep using social without giving away the equity.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Why Social Media Is Rented Land</h3>
+            <p>Every piece of content you publish to a social platform is building someone else's asset. Here's why, and how to keep using social without giving away the equity.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 30, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/the-website-is-the-symptom" data-category="digital-strategy" data-featured="false" data-text="the website is the symptom, not the problem most established businesses think they need a new website. they almost always do, but the website is the visible symptom of a deeper problem. here&#x27;s the real one.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>The Website Is the Symptom, Not the Problem</h3>
+            <p>Most established businesses think they need a new website. They almost always do, but the website is the visible symptom of a deeper problem. Here's the real one.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 27, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/you-dont-own-your-email-list" data-category="digital-strategy" data-featured="false" data-text="you don&#x27;t own your email list if you can&#x27;t take it with you the asset most businesses assume they own, and almost never fully do. here&#x27;s what real email list ownership looks like and what to do about it.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>You Don't Own Your Email List If You Can't Take It With You</h3>
+            <p>The asset most businesses assume they own, and almost never fully do. Here's what real email list ownership looks like and what to do about it.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 24, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/not-cheaper-better" data-category="digital-strategy" data-featured="false" data-text="not cheaper. better. how to use ai without losing trust ai is being used by most agencies to ship cheaper work. there&#x27;s another way to use it, to ship better work. the difference is exactly what your customers feel.">
+          <span class="bl-panel" style="--bl-c:#1D4ED8;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Digital Strategy</span><span class="bl-panel__cat">Digital Strategy</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Digital Strategy</span>
+            <h3>Not Cheaper. Better. How to Use AI Without Losing Trust</h3>
+            <p>AI is being used by most agencies to ship cheaper work. There's another way to use it, to ship better work. The difference is exactly what your customers feel.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 21, 2026</span><span class="bl-dot"></span><span>5 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/why-your-small-business-website-needs-a-professional-redesign-in-2026" data-category="web-design" data-featured="false" data-text="why your small business website needs a professional redesign in 2026 most small business websites are not built to generate leads, they are built to look &quot;fine.&quot; here are the most common reasons websites fail to convert, and what to fix first.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Why Your Small Business Website Needs a Professional Redesign in 2026</h3>
+            <p>Most small business websites are not built to generate leads, they are built to look "fine." Here are the most common reasons websites fail to convert, and what to fix first.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 20, 2026</span><span class="bl-dot"></span><span>8 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/googles-android-developer-verification-changes-in-2026-what-small-businesses-need-to-know" data-category="cybersecurity" data-featured="false" data-text="google&#x27;s android developer verification changes in 2026: what small businesses need to know a major android change is on the calendar for 2026 that could affect how apps get installed on many certified android devices. here&#x27;s what small businesses need to understand and do now.">
+          <span class="bl-panel" style="--bl-c:#DC2626;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Cybersecurity</span><span class="bl-panel__cat">Cybersecurity</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Cybersecurity</span>
+            <h3>Google's Android Developer Verification Changes in 2026: What Small Businesses Need to Know</h3>
+            <p>A major Android change is on the calendar for 2026 that could affect how apps get installed on many certified Android devices. Here's what small businesses need to understand and do now.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Feb 28, 2026</span><span class="bl-dot"></span><span>9 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/simple-seo-fixes-how-to-write-image-alt-text-that-google-loves-and-people-understand" data-category="seo" data-featured="false" data-text="simple seo fixes: how to write image alt text that google loves (and people understand) alt text is one of the most overlooked parts of on-page seo and one of the easiest to fix. here&#x27;s how to do it right, in less than 10 seconds per image.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Simple SEO Fixes: How to Write Image Alt Text That Google Loves (And People Understand)</h3>
+            <p>Alt text is one of the most overlooked parts of on-page SEO and one of the easiest to fix. Here's how to do it right, in less than 10 seconds per image.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Oct 24, 2025</span><span class="bl-dot"></span><span>7 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/simple-seo-fixes-h1-tags-that-help-seo" data-category="seo" data-featured="false" data-text="simple seo fixes: h1 tags that help seo multiple h1s. missing h1s. or a homepage with an h1 that just says &quot;welcome.&quot; here&#x27;s how to fix your h1 tags the right way, without breaking your layout or messing with your design.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Simple SEO Fixes: H1 Tags That Help SEO</h3>
+            <p>Multiple H1s. Missing H1s. Or a homepage with an H1 that just says "Welcome." Here's how to fix your H1 tags the right way, without breaking your layout or messing with your design.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Oct 17, 2025</span><span class="bl-dot"></span><span>7 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/simple-seo-fixes-how-to-write-meta-descriptions-that-drive-clicks" data-category="seo" data-featured="false" data-text="simple seo fixes: how to write meta descriptions that drive clicks your meta description is your pitch to a potential customer scanning search results. most are blank, boring, or too long. here&#x27;s how to write one that actually gets clicked.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Simple SEO Fixes: How to Write Meta Descriptions That Drive Clicks</h3>
+            <p>Your meta description is your pitch to a potential customer scanning search results. Most are blank, boring, or too long. Here's how to write one that actually gets clicked.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Oct 10, 2025</span><span class="bl-dot"></span><span>6 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/simple-seo-fixes-how-to-write-title-tags-that-convert" data-category="seo" data-featured="false" data-text="simple seo fixes: how to write title tags that convert your title tag is your handshake with google and your pitch to a potential customer. yet it&#x27;s botched more often than not. part 1 of the simple seo fixes series.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Simple SEO Fixes: How to Write Title Tags That Convert</h3>
+            <p>Your title tag is your handshake with Google and your pitch to a potential customer. Yet it's botched more often than not. Part 1 of the Simple SEO Fixes series.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Sep 24, 2025</span><span class="bl-dot"></span><span>7 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/beyond-seasonal-looks-geo-aeo-strategies-for-year-round-visibility" data-category="seo" data-featured="false" data-text="beyond seasonal looks: geo &amp; aeo strategies for year-round visibility seasonal campaigns come and go, but the way people search is changing in ways that last all year. here&#x27;s how geo and aeo help your business stay visible no matter the season.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Beyond Seasonal Looks: GEO &amp; AEO Strategies for Year-Round Visibility</h3>
+            <p>Seasonal campaigns come and go, but the way people search is changing in ways that last all year. Here's how GEO and AEO help your business stay visible no matter the season.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Sep 16, 2025</span><span class="bl-dot"></span><span>10 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/know-your-audience-why-cracker-barrels-branding-misstep-matters-to-your-business" data-category="branding" data-featured="false" data-text="know your audience, why cracker barrel&#x27;s branding misstep matters to your business cracker barrel spent $10 million on a redesign that alienated their core customers and wiped out nearly $700 million in market value. here&#x27;s what small businesses can learn from it.">
+          <span class="bl-panel" style="--bl-c:#7C3AED;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Branding</span><span class="bl-panel__cat">Branding</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Branding</span>
+            <h3>Know Your Audience, Why Cracker Barrel's Branding Misstep Matters to Your Business</h3>
+            <p>Cracker Barrel spent $10 million on a redesign that alienated their core customers and wiped out nearly $700 million in market value. Here's what small businesses can learn from it.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Aug 29, 2025</span><span class="bl-dot"></span><span>7 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/local-to-nationwide-how-small-businesses-can-scale-their-online-presence" data-category="growth" data-featured="false" data-text="local to nationwide: how small businesses can scale their online presence small businesses are often closer to scaling nationwide than they realize. here&#x27;s how to build a brand and seo strategy that holds up anywhere someone finds you.">
+          <span class="bl-panel" style="--bl-c:#0891B2;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Growth</span><span class="bl-panel__cat">Growth</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Growth</span>
+            <h3>Local to Nationwide: How Small Businesses Can Scale Their Online Presence</h3>
+            <p>Small businesses are often closer to scaling nationwide than they realize. Here's how to build a brand and SEO strategy that holds up anywhere someone finds you.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Aug 20, 2025</span><span class="bl-dot"></span><span>4 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/3-ways-to-update-your-website-before-fall-without-a-full-redesign" data-category="web-design" data-featured="false" data-text="3 ways to update your website without a full redesign you don&#x27;t have to tear down your site to make it work harder. here are three strategic updates that make an immediate difference, without the cost or downtime of a full rebuild.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>3 Ways to Update Your Website Without a Full Redesign</h3>
+            <p>You don't have to tear down your site to make it work harder. Here are three strategic updates that make an immediate difference, without the cost or downtime of a full rebuild.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Aug 14, 2025</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/how-to-update-your-website-without-starting-over" data-category="web-design" data-featured="false" data-text="how to update your website without starting over most small business owners think the only way to fix their website is to start from scratch. the truth is, a handful of thoughtful updates can breathe new life into your site.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>How to Update Your Website Without Starting Over</h3>
+            <p>Most small business owners think the only way to fix their website is to start from scratch. The truth is, a handful of thoughtful updates can breathe new life into your site.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Jul 11, 2025</span><span class="bl-dot"></span><span>4 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/simple-seo-fixes-you-can-do-without-redesigning-your-website" data-category="seo" data-featured="false" data-text="simple seo fixes you can do without redesigning your website if your site is working okay but not getting found, you don&#x27;t need a full redesign. here are five seo fixes you can make right now, no developer required.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>Simple SEO Fixes You Can Do Without Redesigning Your Website</h3>
+            <p>If your site is working okay but not getting found, you don't need a full redesign. Here are five SEO fixes you can make right now, no developer required.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Jun 11, 2025</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/how-much-does-a-website-really-cost-in-2025" data-category="web-design" data-featured="false" data-text="how much does a website really cost in 2025? website pricing is confusing because the industry is full of varying levels of quality, transparency, and support. here&#x27;s an honest breakdown of what you&#x27;re really paying for.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>How Much Does a Website Really Cost in 2025?</h3>
+            <p>Website pricing is confusing because the industry is full of varying levels of quality, transparency, and support. Here's an honest breakdown of what you're really paying for.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>May 20, 2025</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/spring-cleaning-for-your-brand-refreshing-your-business-image-in-2025" data-category="branding" data-featured="false" data-text="spring cleaning for your brand: refreshing your business image if your business has grown, shifted, or just feels a little outdated, it might be time for a refresh. here are five practical ways to clean up your brand and digital presence.">
+          <span class="bl-panel" style="--bl-c:#7C3AED;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Branding</span><span class="bl-panel__cat">Branding</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Branding</span>
+            <h3>Spring Cleaning for Your Brand: Refreshing Your Business Image</h3>
+            <p>If your business has grown, shifted, or just feels a little outdated, it might be time for a refresh. Here are five practical ways to clean up your brand and digital presence.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Apr 15, 2025</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/how-to-get-found-on-google-seo-tips-for-small-business-owner" data-category="seo" data-featured="false" data-text="how to get found on google: seo tips for small business owners having a website isn&#x27;t enough, people need to be able to find it. here&#x27;s a practical breakdown of the seo strategies that actually move the needle for small businesses.">
+          <span class="bl-panel" style="--bl-c:#059669;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">SEO</span><span class="bl-panel__cat">SEO</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">SEO</span>
+            <h3>How to Get Found on Google: SEO Tips for Small Business Owners</h3>
+            <p>Having a website isn't enough, people need to be able to find it. Here's a practical breakdown of the SEO strategies that actually move the needle for small businesses.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 19, 2025</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/5-website-fixes-that-instantly-make-your-small-business-look-more-professional" data-category="web-design" data-featured="false" data-text="5 website fixes that instantly make your small business look more professional you don&#x27;t need a full website redesign to make a stronger first impression. a few small, intentional changes can make your site look polished, credible, and trustworthy.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>5 Website Fixes That Instantly Make Your Small Business Look More Professional</h3>
+            <p>You don't need a full website redesign to make a stronger first impression. A few small, intentional changes can make your site look polished, credible, and trustworthy.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Mar 6, 2025</span><span class="bl-dot"></span><span>4 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/why-a-website-redesign-is-the-smartest-investment-for-2025" data-category="web-design" data-featured="false" data-text="why a website redesign is the smartest investment for your business your website is working for you or against you whether you think about it or not. if it&#x27;s not bringing in leads, it&#x27;s quietly costing you money every week.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Why a Website Redesign is the Smartest Investment for Your Business</h3>
+            <p>Your website is working for you or against you whether you think about it or not. If it's not bringing in leads, it's quietly costing you money every week.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Feb 20, 2025</span><span class="bl-dot"></span><span>4 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/5-signs-it-might-be-time-to-rebrand-your-small-business" data-category="branding" data-featured="false" data-text="5 signs it might be time to rebrand your small business i held onto my old branding for a long time. then one day i looked at my website and had a weird realization, this doesn&#x27;t feel like me anymore. here are the five signs i wish i&#x27;d noticed sooner.">
+          <span class="bl-panel" style="--bl-c:#7C3AED;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Branding</span><span class="bl-panel__cat">Branding</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Branding</span>
+            <h3>5 Signs It Might Be Time to Rebrand Your Small Business</h3>
+            <p>I held onto my old branding for a long time. Then one day I looked at my website and had a weird realization, this doesn't feel like me anymore. Here are the five signs I wish I'd noticed sooner.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Feb 7, 2025</span><span class="bl-dot"></span><span>6 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/top-website-maintenance-tips-to-keep-your-site-ready-for-end-of-year-traffic" data-category="web-design" data-featured="false" data-text="top website maintenance tips to keep your site ready for peak traffic when traffic spikes, websites get tested. a well-maintained site handles increased demand smoothly, here are the maintenance steps that prevent costly disruptions.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Top Website Maintenance Tips to Keep Your Site Ready for Peak Traffic</h3>
+            <p>When traffic spikes, websites get tested. A well-maintained site handles increased demand smoothly, here are the maintenance steps that prevent costly disruptions.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Nov 25, 2024</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/mastering-branding-in-2024-how-to-build-a-memorable-and-impactful-brand" data-category="branding" data-featured="false" data-text="mastering branding: how to build a memorable and impactful brand branding is no longer just about a catchy logo or tagline, it&#x27;s about building a full identity that resonates. here&#x27;s a guide to the essentials of building a brand that drives long-term loyalty.">
+          <span class="bl-panel" style="--bl-c:#7C3AED;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Branding</span><span class="bl-panel__cat">Branding</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Branding</span>
+            <h3>Mastering Branding: How to Build a Memorable and Impactful Brand</h3>
+            <p>Branding is no longer just about a catchy logo or tagline, it's about building a full identity that resonates. Here's a guide to the essentials of building a brand that drives long-term loyalty.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Nov 4, 2024</span><span class="bl-dot"></span><span>4 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/google-websites-ends" data-category="announcement" data-featured="false" data-text="websites made with google business profiles are being discontinued google is ending support for websites created through google business profile. here&#x27;s what it means, what happens to your site, and what to do before the deadline.">
+          <span class="bl-panel" style="--bl-c:#374151;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Announcements</span><span class="bl-panel__cat">Announcements</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Announcements</span>
+            <h3>Websites Made with Google Business Profiles Are Being Discontinued</h3>
+            <p>Google is ending support for websites created through Google Business Profile. Here's what it means, what happens to your site, and what to do before the deadline.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Feb 27, 2024</span><span class="bl-dot"></span><span>1 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/what-does-website-maintenance-entails" data-category="maintenance" data-featured="false" data-text="what does website maintenance entail: why is it necessary? regular maintenance is as essential to a website&#x27;s healthy growth as regular checkups are to a person. here&#x27;s what it means, why it matters, and the signs it&#x27;s time.">
+          <span class="bl-panel" style="--bl-c:#EA580C;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Maintenance</span><span class="bl-panel__cat">Website Maintenance</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Maintenance</span>
+            <h3>What Does Website Maintenance Entail: Why Is It Necessary?</h3>
+            <p>Regular maintenance is as essential to a website's healthy growth as regular checkups are to a person. Here's what it means, why it matters, and the signs it's time.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Jan 28, 2023</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/which-item-is-most-important-for-a-successful-website-design" data-category="web-design" data-featured="false" data-text="which item is most important for a successful website design? visual, functional, or practical, a successful website design strikes a balance between all three. here&#x27;s what each element contributes and why none can be skipped.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Which Item Is Most Important for a Successful Website Design?</h3>
+            <p>Visual, functional, or practical, a successful website design strikes a balance between all three. Here's what each element contributes and why none can be skipped.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Jan 24, 2023</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/why-web-design-still-matters-in-2023" data-category="web-design" data-featured="false" data-text="why web design still matters as apps, podcasts, and social feeds multiply, it&#x27;s easy to wonder if websites are less essential. the truth is, websites remain the irreplaceable cornerstone of any digital presence.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Why Web Design Still Matters</h3>
+            <p>As apps, podcasts, and social feeds multiply, it's easy to wonder if websites are less essential. The truth is, websites remain the irreplaceable cornerstone of any digital presence.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Jan 7, 2023</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/why-hire-a-web-designer" data-category="web-design" data-featured="false" data-text="why hire a web designer instead of diy: 5 benefits of hiring a pro unless you&#x27;re a professional web designer, getting a high-quality, fully responsive, and highly intuitive site on your own is a far-fetched idea. here&#x27;s why hiring a pro makes sense.">
+          <span class="bl-panel" style="--bl-c:#1E68D9;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Website Design</span><span class="bl-panel__cat">Website Design</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Website Design</span>
+            <h3>Why Hire a Web Designer Instead of DIY: 5 Benefits of Hiring a Pro</h3>
+            <p>Unless you're a professional web designer, getting a high-quality, fully responsive, and highly intuitive site on your own is a far-fetched idea. Here's why hiring a pro makes sense.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Dec 12, 2022</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+        <a class="bl-card" href="/blog/best-branding-practices-you-need-to-follow-in-2022" data-category="branding" data-featured="false" data-text="best branding practices you need to follow what does it take to be a great brand? in today&#x27;s landscape, branding is all about building trust with your customers and demonstrating what makes your company unique.">
+          <span class="bl-panel" style="--bl-c:#7C3AED;"><span class="bl-panel__mark">Origo</span><span class="bl-panel__big" aria-hidden="true">Branding</span><span class="bl-panel__cat">Branding</span></span>
+          <span class="bl-card__body">
+            <span class="bl-cat">Branding</span>
+            <h3>Best Branding Practices You Need To Follow</h3>
+            <p>What does it take to be a great brand? In today's landscape, branding is all about building trust with your customers and demonstrating what makes your company unique.</p>
+            <span class="bl-meta"><span class="bl-avatar" aria-hidden="true">JH</span><span class="bl-meta__name">Jon Herrera</span><span class="bl-dot"></span><span>Aug 9, 2022</span><span class="bl-dot"></span><span>3 min read</span></span>
+          </span>
+        </a>
+      </div>
+      <p id="bl-empty" class="bl-empty">No articles match your search.</p>
+    </div>
 
-          <!-- Post 54 — Digital Presence Agency Pillar -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/what-is-a-digital-presence-agency">What Is a Digital Presence Agency? The Complete Guide</a></h2>
-              <p class="blog-card__excerpt">A digital presence agency builds and maintains all the digital assets shaping how your business shows up online, brand, web, search, and content. Here's everything you need to know.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 19, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/what-is-a-digital-presence-agency" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 51 -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/build-on-your-own-land">Build on Your Own Land: Why You Should Own Your Website</a></h2>
-              <p class="blog-card__excerpt">Most businesses don't actually own their websites. They're renting on platforms they don't control. Here's why that matters, and what to do about it.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 17, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/build-on-your-own-land" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 58 — Pillar #3: Digital Ownership -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/digital-ownership">Digital Ownership: Why Your Business Should Own What It Builds Online</a></h2>
-              <p class="blog-card__excerpt">Most businesses don't actually own their websites, email lists, or customer data. Here's what digital ownership means across six asset types, and how to start moving toward what's yours.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 14, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/digital-ownership" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 57 — Essay #6: On Purpose -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/on-purpose">On Purpose: How Citable Businesses Win AI Visibility</a></h2>
-              <p class="blog-card__excerpt">The businesses winning AI visibility aren't doing anything special. They're doing the obvious things on purpose, while everyone else is doing them by accident.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 11, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/on-purpose" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 56 — Essay #5: How to Tell If You're AI-Visible -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/how-to-tell-if-youre-ai-visible">How to Tell If Your Business Is AI-Visible</a></h2>
-              <p class="blog-card__excerpt">Three tests you can run in five minutes to find out whether ChatGPT, Claude, and Gemini are recommending your business, or your competitors.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 8, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/how-to-tell-if-youre-ai-visible" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 60 — Essay #9: Six Questions to Ask Before Trusting an Agency With Your Brand -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/six-questions-brand-agency">Six Questions to Ask Before Trusting an Agency With Your Brand</a></h2>
-              <p class="blog-card__excerpt">The questions every business owner should ask before signing the contract, and the answers that separate agencies worth hiring from the ones that aren't.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 5, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/six-questions-brand-agency" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 53 — AEO Pillar -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/what-is-aeo">AEO: How AI Search Is Changing What It Means to Be Found Online</a></h2>
-              <p class="blog-card__excerpt">What Answer Engine Optimization actually is, why it matters now, and what businesses need to do to stay visible as search shifts toward AI.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 2, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/what-is-aeo" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 59b — Essay #8: Why Social Media Is Rented Land -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/social-media-is-rented-land">Why Social Media Is Rented Land</a></h2>
-              <p class="blog-card__excerpt">Every piece of content you publish to a social platform is building someone else's asset. Here's why, and how to keep using social without giving away the equity.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 30, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/social-media-is-rented-land" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 50 -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/the-website-is-the-symptom">The Website Is the Symptom, Not the Problem</a></h2>
-              <p class="blog-card__excerpt">Most established businesses think they need a new website. They almost always do, but the website is the visible symptom of a deeper problem. Here's the real one.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 27, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/the-website-is-the-symptom" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 59 — Essay #7: You Don't Own Your Email List -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/you-dont-own-your-email-list">You Don't Own Your Email List If You Can't Take It With You</a></h2>
-              <p class="blog-card__excerpt">The asset most businesses assume they own, and almost never fully do. Here's what real email list ownership looks like and what to do about it.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 24, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/you-dont-own-your-email-list" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 52 -->
-          <article class="blog-card reveal" data-category="digital-strategy">
-            <div class="blog-card__banner blog-card__banner--digital-strategy"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Digital Strategy</span>
-              <h2 class="blog-card__title"><a href="/blog/not-cheaper-better">Not Cheaper. Better. How to Use AI Without Losing Trust</a></h2>
-              <p class="blog-card__excerpt">AI is being used by most agencies to ship cheaper work. There's another way to use it, to ship better work. The difference is exactly what your customers feel.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 21, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/not-cheaper-better" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 49 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/why-your-small-business-website-needs-a-professional-redesign-in-2026">Why Your Small Business Website Needs a Professional Redesign in 2026</a></h2>
-              <p class="blog-card__excerpt">Most small business websites are not built to generate leads, they are built to look "fine." Here are the most common reasons websites fail to convert, and what to fix first.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 20, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/why-your-small-business-website-needs-a-professional-redesign-in-2026" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 48 -->
-          <article class="blog-card reveal" data-category="cybersecurity">
-            <div class="blog-card__banner blog-card__banner--cybersecurity"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Cybersecurity</span>
-              <h2 class="blog-card__title"><a href="/blog/googles-android-developer-verification-changes-in-2026-what-small-businesses-need-to-know">Google's Android Developer Verification Changes in 2026: What Small Businesses Need to Know</a></h2>
-              <p class="blog-card__excerpt">A major Android change is on the calendar for 2026 that could affect how apps get installed on many certified Android devices. Here's what small businesses need to understand and do now.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Feb 28, 2026 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/googles-android-developer-verification-changes-in-2026-what-small-businesses-need-to-know" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 47 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/simple-seo-fixes-how-to-write-image-alt-text-that-google-loves-and-people-understand">Simple SEO Fixes: How to Write Image Alt Text That Google Loves (And People Understand)</a></h2>
-              <p class="blog-card__excerpt">Alt text is one of the most overlooked parts of on-page SEO and one of the easiest to fix. Here's how to do it right, in less than 10 seconds per image.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Oct 24, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/simple-seo-fixes-how-to-write-image-alt-text-that-google-loves-and-people-understand" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 46 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/simple-seo-fixes-h1-tags-that-help-seo">Simple SEO Fixes: H1 Tags That Help SEO</a></h2>
-              <p class="blog-card__excerpt">Multiple H1s. Missing H1s. Or a homepage with an H1 that just says "Welcome." Here's how to fix your H1 tags the right way, without breaking your layout or messing with your design.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Oct 17, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/simple-seo-fixes-h1-tags-that-help-seo" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 44 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/simple-seo-fixes-how-to-write-meta-descriptions-that-drive-clicks">Simple SEO Fixes: How to Write Meta Descriptions That Drive Clicks</a></h2>
-              <p class="blog-card__excerpt">Your meta description is your pitch to a potential customer scanning search results. Most are blank, boring, or too long. Here's how to write one that actually gets clicked.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Oct 10, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/simple-seo-fixes-how-to-write-meta-descriptions-that-drive-clicks" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 43 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/simple-seo-fixes-how-to-write-title-tags-that-convert">Simple SEO Fixes: How to Write Title Tags That Convert</a></h2>
-              <p class="blog-card__excerpt">Your title tag is your handshake with Google and your pitch to a potential customer. Yet it's botched more often than not. Part 1 of the Simple SEO Fixes series.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Sep 24, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/simple-seo-fixes-how-to-write-title-tags-that-convert" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 42 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO &amp; Digital Marketing</span>
-              <h2 class="blog-card__title"><a href="/blog/beyond-seasonal-looks-geo-aeo-strategies-for-year-round-visibility">Beyond Seasonal Looks: GEO &amp; AEO Strategies for Year-Round Visibility</a></h2>
-              <p class="blog-card__excerpt">Seasonal campaigns come and go, but the way people search is changing in ways that last all year. Here's how GEO and AEO help your business stay visible no matter the season.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Sep 16, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/beyond-seasonal-looks-geo-aeo-strategies-for-year-round-visibility" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 41 -->
-          <article class="blog-card reveal" data-category="branding">
-            <div class="blog-card__banner blog-card__banner--branding"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Branding</span>
-              <h2 class="blog-card__title"><a href="/blog/know-your-audience-why-cracker-barrels-branding-misstep-matters-to-your-business">Know Your Audience, Why Cracker Barrel's Branding Misstep Matters to Your Business</a></h2>
-              <p class="blog-card__excerpt">Cracker Barrel spent $10 million on a redesign that alienated their core customers and wiped out nearly $700 million in market value. Here's what small businesses can learn from it.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Aug 29, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/know-your-audience-why-cracker-barrels-branding-misstep-matters-to-your-business" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 40 -->
-          <article class="blog-card reveal" data-category="growth">
-            <div class="blog-card__banner blog-card__banner--growth"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Small Business Growth</span>
-              <h2 class="blog-card__title"><a href="/blog/local-to-nationwide-how-small-businesses-can-scale-their-online-presence">Local to Nationwide: How Small Businesses Can Scale Their Online Presence</a></h2>
-              <p class="blog-card__excerpt">Small businesses are often closer to scaling nationwide than they realize. Here's how to build a brand and SEO strategy that holds up anywhere someone finds you.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Aug 20, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/local-to-nationwide-how-small-businesses-can-scale-their-online-presence" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 39 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/3-ways-to-update-your-website-before-fall-without-a-full-redesign">3 Ways to Update Your Website Without a Full Redesign</a></h2>
-              <p class="blog-card__excerpt">You don't have to tear down your site to make it work harder. Here are three strategic updates that make an immediate difference, without the cost or downtime of a full rebuild.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Aug 14, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/3-ways-to-update-your-website-before-fall-without-a-full-redesign" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 38 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/how-to-update-your-website-without-starting-over">How to Update Your Website Without Starting Over</a></h2>
-              <p class="blog-card__excerpt">Most small business owners think the only way to fix their website is to start from scratch. The truth is, a handful of thoughtful updates can breathe new life into your site.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Jul 11, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/how-to-update-your-website-without-starting-over" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 37 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/simple-seo-fixes-you-can-do-without-redesigning-your-website">Simple SEO Fixes You Can Do Without Redesigning Your Website</a></h2>
-              <p class="blog-card__excerpt">If your site is working okay but not getting found, you don't need a full redesign. Here are five SEO fixes you can make right now, no developer required.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Jun 11, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/simple-seo-fixes-you-can-do-without-redesigning-your-website" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 36 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/how-much-does-a-website-really-cost-in-2025">How Much Does a Website Really Cost in 2025?</a></h2>
-              <p class="blog-card__excerpt">Website pricing is confusing because the industry is full of varying levels of quality, transparency, and support. Here's an honest breakdown of what you're really paying for.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">May 20, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/how-much-does-a-website-really-cost-in-2025" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 35 -->
-          <article class="blog-card reveal" data-category="branding">
-            <div class="blog-card__banner blog-card__banner--branding"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Branding</span>
-              <h2 class="blog-card__title"><a href="/blog/spring-cleaning-for-your-brand-refreshing-your-business-image-in-2025">Spring Cleaning for Your Brand: Refreshing Your Business Image</a></h2>
-              <p class="blog-card__excerpt">If your business has grown, shifted, or just feels a little outdated, it might be time for a refresh. Here are five practical ways to clean up your brand and digital presence.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Apr 15, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/spring-cleaning-for-your-brand-refreshing-your-business-image-in-2025" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 34 -->
-          <article class="blog-card reveal" data-category="seo">
-            <div class="blog-card__banner blog-card__banner--seo"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">SEO</span>
-              <h2 class="blog-card__title"><a href="/blog/how-to-get-found-on-google-seo-tips-for-small-business-owner">How to Get Found on Google: SEO Tips for Small Business Owners</a></h2>
-              <p class="blog-card__excerpt">Having a website isn't enough, people need to be able to find it. Here's a practical breakdown of the SEO strategies that actually move the needle for small businesses.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 19, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/how-to-get-found-on-google-seo-tips-for-small-business-owner" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 33 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/5-website-fixes-that-instantly-make-your-small-business-look-more-professional">5 Website Fixes That Instantly Make Your Small Business Look More Professional</a></h2>
-              <p class="blog-card__excerpt">You don't need a full website redesign to make a stronger first impression. A few small, intentional changes can make your site look polished, credible, and trustworthy.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Mar 6, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/5-website-fixes-that-instantly-make-your-small-business-look-more-professional" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 32 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/why-a-website-redesign-is-the-smartest-investment-for-2025">Why a Website Redesign is the Smartest Investment for Your Business</a></h2>
-              <p class="blog-card__excerpt">Your website is working for you or against you whether you think about it or not. If it's not bringing in leads, it's quietly costing you money every week.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Feb 20, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/why-a-website-redesign-is-the-smartest-investment-for-2025" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 31 -->
-          <article class="blog-card reveal" data-category="branding">
-            <div class="blog-card__banner blog-card__banner--branding"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Branding</span>
-              <h2 class="blog-card__title"><a href="/blog/5-signs-it-might-be-time-to-rebrand-your-small-business">5 Signs It Might Be Time to Rebrand Your Small Business</a></h2>
-              <p class="blog-card__excerpt">I held onto my old branding for a long time. Then one day I looked at my website and had a weird realization, this doesn't feel like me anymore. Here are the five signs I wish I'd noticed sooner.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Feb 7, 2025 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/5-signs-it-might-be-time-to-rebrand-your-small-business" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 24 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Optimization</span>
-              <h2 class="blog-card__title"><a href="/blog/top-website-maintenance-tips-to-keep-your-site-ready-for-end-of-year-traffic">Top Website Maintenance Tips to Keep Your Site Ready for Peak Traffic</a></h2>
-              <p class="blog-card__excerpt">When traffic spikes, websites get tested. A well-maintained site handles increased demand smoothly, here are the maintenance steps that prevent costly disruptions.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Nov 25, 2024 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/top-website-maintenance-tips-to-keep-your-site-ready-for-end-of-year-traffic" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 21 -->
-          <article class="blog-card reveal" data-category="branding">
-            <div class="blog-card__banner blog-card__banner--branding"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Branding</span>
-              <h2 class="blog-card__title"><a href="/blog/mastering-branding-in-2024-how-to-build-a-memorable-and-impactful-brand">Mastering Branding: How to Build a Memorable and Impactful Brand</a></h2>
-              <p class="blog-card__excerpt">Branding is no longer just about a catchy logo or tagline, it's about building a full identity that resonates. Here's a guide to the essentials of building a brand that drives long-term loyalty.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Nov 4, 2024 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/mastering-branding-in-2024-how-to-build-a-memorable-and-impactful-brand" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 10 -->
-          <article class="blog-card reveal" data-category="announcement">
-            <div class="blog-card__banner blog-card__banner--announcement"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Announcement</span>
-              <h2 class="blog-card__title"><a href="/blog/google-websites-ends">Websites Made with Google Business Profiles Are Being Discontinued</a></h2>
-              <p class="blog-card__excerpt">Google is ending support for websites created through Google Business Profile. Here's what it means, what happens to your site, and what to do before the deadline.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Feb 27, 2024 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/google-websites-ends" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 9 -->
-          <article class="blog-card reveal" data-category="maintenance">
-            <div class="blog-card__banner blog-card__banner--maintenance"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Maintenance</span>
-              <h2 class="blog-card__title"><a href="/blog/what-does-website-maintenance-entails">What Does Website Maintenance Entail: Why Is It Necessary?</a></h2>
-              <p class="blog-card__excerpt">Regular maintenance is as essential to a website's healthy growth as regular checkups are to a person. Here's what it means, why it matters, and the signs it's time.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Jan 28, 2023 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/what-does-website-maintenance-entails" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 6 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/which-item-is-most-important-for-a-successful-website-design">Which Item Is Most Important for a Successful Website Design?</a></h2>
-              <p class="blog-card__excerpt">Visual, functional, or practical, a successful website design strikes a balance between all three. Here's what each element contributes and why none can be skipped.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Jan 24, 2023 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/which-item-is-most-important-for-a-successful-website-design" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 4 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/why-web-design-still-matters-in-2023">Why Web Design Still Matters</a></h2>
-              <p class="blog-card__excerpt">As apps, podcasts, and social feeds multiply, it's easy to wonder if websites are less essential. The truth is, websites remain the irreplaceable cornerstone of any digital presence.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Jan 7, 2023 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/why-web-design-still-matters-in-2023" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 3 -->
-          <article class="blog-card reveal" data-category="web-design">
-            <div class="blog-card__banner blog-card__banner--web-design"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Website Design</span>
-              <h2 class="blog-card__title"><a href="/blog/why-hire-a-web-designer">Why Hire a Web Designer Instead of DIY: 5 Benefits of Hiring a Pro</a></h2>
-              <p class="blog-card__excerpt">Unless you're a professional web designer, getting a high-quality, fully responsive, and highly intuitive site on your own is a far-fetched idea. Here's why hiring a pro makes sense.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Dec 12, 2022 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/why-hire-a-web-designer" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post 1 -->
-          <article class="blog-card reveal" data-category="branding">
-            <div class="blog-card__banner blog-card__banner--branding"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__category">Branding</span>
-              <h2 class="blog-card__title"><a href="/blog/best-branding-practices-you-need-to-follow-in-2022">Best Branding Practices You Need To Follow</a></h2>
-              <p class="blog-card__excerpt">What does it take to be a great brand? In today's landscape, branding is all about building trust with your customers and demonstrating what makes your company unique.</p>
-              <div class="blog-card__footer">
-                <span class="blog-card__meta">Aug 9, 2022 &nbsp;·&nbsp; Jon</span>
-                <a href="/blog/best-branding-practices-you-need-to-follow-in-2022" class="blog-card__link">Read →</a>
-              </div>
-            </div>
-          </article>
-
-        
-
-          
-
-        </div>
+    <!-- Newsletter band -->
+    <section class="bl-news">
+      <div class="bl-news__inner">
+        <span class="bl-eyebrow">Stay in the loop</span>
+        <h2>One useful idea, once a month.</h2>
+        <p>Short, practical notes on building a digital presence people trust. No spam, unsubscribe anytime.</p>
+        <form id="bl-news-form">
+          <input type="email" placeholder="you@yourbusiness.com" aria-label="Email address" required>
+          <button class="bl-news__btn" type="submit">Subscribe</button>
+        </form>
+        <p class="bl-news__ok" id="bl-news-ok" hidden>Thanks &mdash; you're on the list.</p>
+        <p class="bl-news__fine">We'll only ever email you the journal. Nothing else.</p>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer footer--home" role="contentinfo">
+  <div class="footer-horizon" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" width="100%" height="90" preserveAspectRatio="none"><path d="M0,90 L0,64 A5209,5209 0 0 1 1440,64 L1440,90 Z" fill="currentColor"></path></svg>
+  </div>
+
+
+    <footer class="footer footer--home" role="contentinfo">
     <img class="footer__ghost" src="/images/eclipse-mark-white.svg" alt="" aria-hidden="true" width="560" height="560">
     <div class="container">
       <div class="footer__inner">
@@ -928,7 +741,7 @@
   </footer>
 
   <script src="/js/main.js?v=7"></script>
-  <script src="/blog/search.js"></script>
+  <script src="/blog/blog-list.js?v=1" defer></script>
   <script>
     (function () {
       var filterBtns = document.querySelectorAll('.blog-filter-btn');
