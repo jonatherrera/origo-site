@@ -2292,3 +2292,56 @@
   55%  { fill: #22c55e;               stroke: rgba(34,230,100,0.7);   transform: scale(1.5); }
   100% { fill: rgba(34,197,94,0.82);  stroke: rgba(34,197,94,0.4);   transform: scale(1.15); }
 }
+
+/* ============================================================
+   SERVICES OVERVIEW — redesign to the new site design language
+   (FAQ / Blog / Contact / homepage). Scoped under .sv-main so it
+   doesn't touch the SEO page's shared sp-/svc- classes. Reuses the
+   homepage's global .services__grid / .service-card--icon cards and
+   the global tokens; adds hero / charcoal / blue-CTA bands.
+   ============================================================ */
+.sv-main { --sv-gray-mid: #6B6B6B; --sv-gray-border: #E4E4E4; }
+[data-theme="dark"] .sv-main { --sv-gray-mid: #8A8A93; --sv-gray-border: rgba(255,255,255,0.12); }
+.sv-main .btn { border-radius: 999px; }
+.sv-eyebrow { display: inline-block; font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-blue); background: var(--surface-blue); border-radius: 999px; padding: 6px 14px; }
+
+/* Hero (centered, gray band) */
+.sv-hero { background: var(--color-gray-light); border-bottom: 1px solid var(--sv-gray-border); }
+.sv-hero__inner { max-width: 820px; margin: 0 auto; text-align: center; padding: 84px 32px 72px; }
+.sv-hero h1 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; font-size: clamp(40px, 5.2vw, 60px); color: var(--color-black); margin: 18px 0; }
+.sv-hero__sub { font-family: var(--font-body); font-size: 19px; line-height: 1.7; color: var(--color-gray-dark); max-width: 620px; margin: 0 auto 30px; }
+.sv-hero__btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+/* Services section (white) */
+.sv-services { padding: 84px 0; }
+.sv-head { max-width: 720px; margin: 0 auto 44px; text-align: center; }
+.sv-head h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; font-size: clamp(28px, 3.4vw, 38px); color: var(--color-black); margin: 12px 0 0; }
+
+/* Better together (charcoal band, centered) */
+.sv-diff { background: var(--color-gray-dark); color: #fff; }
+[data-theme="dark"] .sv-diff { background: #161618; }
+.sv-diff__inner { max-width: 760px; margin: 0 auto; text-align: center; padding: 88px 32px; }
+.sv-diff .sv-eyebrow { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); }
+.sv-diff h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; line-height: 1.14; font-size: clamp(28px, 3.4vw, 40px); color: #fff; margin: 14px 0 18px; }
+.sv-diff p { font-family: var(--font-body); font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.72); margin: 0 auto 16px; max-width: 640px; }
+.sv-diff__btn { margin-top: 20px; }
+
+/* Not sure where to start (light band, centered) */
+.sv-notsure { background: var(--color-gray-light); }
+.sv-notsure__inner { max-width: 680px; margin: 0 auto; text-align: center; padding: 76px 32px; }
+.sv-notsure h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(26px, 3vw, 34px); color: var(--color-black); margin: 0 0 14px; }
+.sv-notsure p { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--sv-gray-mid); margin: 0 auto 26px; max-width: 560px; }
+
+/* Closing CTA (blue brand band) */
+.sv-cta { background: var(--color-blue); }
+.sv-cta__inner { max-width: 1000px; margin: 0 auto; text-align: center; padding: 92px 32px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.sv-cta .sv-eyebrow { color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.12); }
+.sv-cta h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(30px, 4vw, 46px); color: #fff; max-width: 820px; margin: 0; }
+.sv-cta p { font-family: var(--font-body); font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0; }
+.sv-cta__row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+
+@media (max-width: 760px) {
+  .sv-hero__inner { padding: 56px 24px 48px; }
+  .sv-services { padding: 56px 0; }
+  .sv-diff__inner, .sv-notsure__inner, .sv-cta__inner { padding-top: 64px; padding-bottom: 64px; }
+}

@@ -40,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=39" />
-  <link rel="stylesheet" href="/services/services.css?v=39" />
+  <link rel="stylesheet" href="/services/services.css?v=2" />
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -249,133 +249,107 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       SECTION 01 — HERO
-       ============================================================ -->
-  <section class="svc-overview-hero">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">What We Do</p>
-      <h1 class="svc-overview-hero__headline reveal">Digital presence, built to perform.</h1>
-      <p class="svc-overview-hero__sub reveal">From brand identity to web design, SEO, copywriting, and beyond, every service Origo offers is designed to make you look the part and grow your business.</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;" class="reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/about" class="btn btn--ghost">About Origo</a>
+    <main class="sv-main" id="main-content">
+
+    <!-- HERO -->
+    <section class="sv-hero">
+      <div class="sv-hero__inner">
+        <span class="sv-eyebrow">What we do</span>
+        <h1>Digital presence, built to perform.</h1>
+        <p class="sv-hero__sub">From brand identity to web design, SEO, copywriting, and beyond, every service Origo offers is designed to make you look the part and grow your business.</p>
+        <div class="sv-hero__btns">
+          <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="/about" class="btn btn--ghost">About Origo</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       SECTION 02 — SERVICE CARDS
-       ============================================================ -->
-  <section class="svc-section svc-section--white">
-    <div class="svc-container">
-      <p class="svc-eyebrow reveal">Our Services</p>
-      <h2 style="font-family:var(--font-head);font-weight:700;font-size:clamp(26px,3vw,34px);color:var(--color-black);margin-bottom:40px;line-height:1.15;" class="reveal">Six ways we show up for your business.</h2>
-      <div class="svc-card-grid">
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/scribble-loop-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">Branding</h3>
-          <p class="svc-card__desc">Logo, color, type, and messaging, a brand system built to communicate who you are and why you matter, instantly.</p>
-          <a href="/services/branding" class="svc-card__link">Learn more →</a>
+    <!-- SERVICES GRID -->
+    <section class="sv-services">
+      <div class="container">
+        <div class="sv-head">
+          <span class="sv-eyebrow">Our services</span>
+          <h2>Six ways we show up for your business.</h2>
         </div>
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/browser-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">Web Design</h3>
-          <p class="svc-card__desc">Strategy-first websites designed for conversion, built fast, built clean, and built to represent your brand at every touchpoint.</p>
-          <a href="/services/web-design" class="svc-card__link">Learn more →</a>
+        <div class="services__grid">
+          <a class="service-card service-card--icon" href="/services/branding">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1"></circle><circle cx="17.5" cy="10.5" r="1"></circle><circle cx="8.5" cy="7.5" r="1"></circle><circle cx="6.5" cy="12.5" r="1"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"></path></svg></span>
+            <h3 class="service-card__name">Branding</h3>
+            <p class="service-card__desc">Logo, color, type, and messaging, a brand system built to communicate who you are and why you matter, instantly.</p>
+          </a>
+          <a class="service-card service-card--icon" href="/services/web-design">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></span>
+            <h3 class="service-card__name">Web Design</h3>
+            <p class="service-card__desc">Strategy-first websites designed for conversion, built fast, built clean, and built to represent your brand at every touchpoint.</p>
+          </a>
+          <a class="service-card service-card--icon" href="/services/seo-aeo">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+            <h3 class="service-card__name">SEO &amp; AEO</h3>
+            <p class="service-card__desc">Rank on Google and get cited by AI. We optimize for both traditional search and the new answer engines that are reshaping discovery.</p>
+          </a>
+          <a class="service-card service-card--icon" href="/services/copywriting">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></span>
+            <h3 class="service-card__name">Copywriting</h3>
+            <p class="service-card__desc">Words that work. Clear, persuasive copy for your website, landing pages, and sales materials, written to convert, not just communicate.</p>
+          </a>
+          <a class="service-card service-card--icon" href="/services/website-concierge">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+            <h3 class="service-card__name">Website Concierge</h3>
+            <p class="service-card__desc">Ongoing website management so you never have to worry about updates, speed, security, or uptime. We keep your site running like it should.</p>
+          </a>
+          <a class="service-card service-card--icon" href="/services/app-development">
+            <span class="service-card__icon-chip" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E68D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></span>
+            <h3 class="service-card__name">App Development</h3>
+            <p class="service-card__desc">Custom web applications and client portals built to scale your operations, designed to fit your workflow, not the other way around.</p>
+          </a>
         </div>
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/sparkle-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">SEO &amp; AEO</h3>
-          <p class="svc-card__desc">Rank on Google and get cited by AI. We optimize for both traditional search and the new answer engines that are reshaping discovery.</p>
-          <a href="/services/seo" class="svc-card__link">Learn more →</a>
-        </div>
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/pennib-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">Copywriting</h3>
-          <p class="svc-card__desc">Words that work. Clear, persuasive copy for your website, landing pages, and sales materials, written to convert, not just communicate.</p>
-          <a href="/services/copywriting" class="svc-card__link">Learn more →</a>
-        </div>
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/key-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">Website Concierge</h3>
-          <p class="svc-card__desc">Ongoing website management so you never have to worry about updates, speed, security, or uptime. We keep your site running like it should.</p>
-          <a href="/services/concierge" class="svc-card__link">Learn more →</a>
-        </div>
-
-        <div class="svc-card reveal">
-          <div class="svc-card__icon-wrap">
-            <img src="/images/icons/mibile-duotone.svg" class="svc-card__icon" alt="" />
-          </div>
-          <h3 class="svc-card__title">App Development</h3>
-          <p class="svc-card__desc">Custom web applications and client portals built to scale your operations, designed to fit your workflow, not the other way around.</p>
-          <a href="/services/app-development" class="svc-card__link">Learn more →</a>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       SECTION 03 — BETTER TOGETHER (DARK)
-       ============================================================ -->
-  <section class="svc-better">
-    <div class="svc-container">
-      <div class="svc-better__inner">
-        <p class="svc-eyebrow svc-eyebrow--dark reveal">The Origo Difference</p>
-        <h2 class="svc-better__headline reveal">Better together, and better than the alternative.</h2>
-        <p class="svc-better__body reveal">Most agencies specialize in one thing. You hire a web designer, then a separate copywriter, then someone for SEO. Every handoff is a liability. At Origo, every service is designed to work with the others, so your brand, site, and messaging stay consistent from end to end.</p>
-        <p class="svc-better__body reveal">That's not just more efficient. It's a better product.</p>
-        <div style="margin-top:32px;" class="reveal">
+    <!-- BETTER TOGETHER (charcoal) -->
+    <section class="sv-diff">
+      <div class="sv-diff__inner">
+        <span class="sv-eyebrow">The Origo difference</span>
+        <h2>Better together, and better than the alternative.</h2>
+        <p>Most agencies specialize in one thing. You hire a web designer, then a separate copywriter, then someone for SEO. Every handoff is a liability. At Origo, every service is designed to work with the others, so your brand, site, and messaging stay consistent from end to end.</p>
+        <p>That&rsquo;s not just more efficient. It&rsquo;s a better product.</p>
+        <div class="sv-diff__btn">
           <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       SECTION 04 — NOT SURE WHERE TO START
-       ============================================================ -->
-  <section class="svc-notsure">
-    <div class="svc-container">
-      <h2 class="svc-notsure__headline reveal">Not sure where to start?</h2>
-      <p class="svc-notsure__body reveal">Book a free 30-minute discovery call. We'll look at where you are, where you want to go, and tell you honestly what will move the needle, whether that's one service or five.</p>
-      <div class="reveal">
+    <!-- NOT SURE WHERE TO START -->
+    <section class="sv-notsure">
+      <div class="sv-notsure__inner">
+        <h2>Not sure where to start?</h2>
+        <p>Book a free 30-minute discovery call. We&rsquo;ll look at where you are, where you want to go, and tell you honestly what will move the needle, whether that&rsquo;s one service or five.</p>
         <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Free Call</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       SECTION 05 — CLOSING CTA
-       ============================================================ -->
-  <section class="sp-cta">
-    <div class="sp-cta__inner">
-      <h2 class="sp-cta__headline reveal">Let's build something worth showing.</h2>
-      <p class="sp-cta__sub reveal">No fluff, no bloated retainers. Just clear strategy and clean execution from a team that gives a damn.</p>
-      <div class="sp-cta__buttons reveal">
-        <a href="https://go.origo.ooo/call" class="btn btn--primary" target="_blank" rel="noopener">Book a Discovery Call</a>
-        <a href="/team" class="sp-cta__secondary">Meet the Team</a>
+    <!-- CLOSING CTA (blue) -->
+    <section class="sv-cta">
+      <div class="sv-cta__inner">
+        <span class="sv-eyebrow">Ready when you are</span>
+        <h2>Let&rsquo;s build something worth showing.</h2>
+        <p>No fluff, no bloated retainers. Just clear strategy and clean execution from a team that gives a damn.</p>
+        <div class="sv-cta__row">
+          <a href="https://go.origo.ooo/call" class="btn btn--onblue" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="/work" class="btn btn--ghost-white">See Our Work <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer footer--home" role="contentinfo">
+  </main>
+
+
+  <div class="footer-horizon" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" width="100%" height="90" preserveAspectRatio="none"><path d="M0,90 L0,64 A5209,5209 0 0 1 1440,64 L1440,90 Z" fill="currentColor"></path></svg>
+  </div>
+
+
+    <footer class="footer footer--home" role="contentinfo">
     <img class="footer__ghost" src="/images/eclipse-mark-white.svg" alt="" aria-hidden="true" width="560" height="560">
     <div class="container">
       <div class="footer__inner">
