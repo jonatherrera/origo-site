@@ -65,7 +65,9 @@
 
 /* ---------- Calendar card (real GHL iframe) ---------- */
 .cx-cal-card { max-width: 900px; margin: 0 auto; background: var(--cx-surface); border: 1px solid var(--cx-gray-border); border-radius: var(--cx-radius-lg); box-shadow: var(--cx-shadow-md); overflow: hidden; }
-.cx-cal-card iframe { width: 100%; min-height: 620px; border: 0; display: block; }
+/* min-height is a floor for while GHL's form_embed.js measures the widget;
+   the script then sets the exact height so the calendar never scrolls or clips. */
+.cx-cal-card iframe { width: 100%; min-height: 760px; border: 0; display: block; }
 
 /* ---------- Form ---------- */
 .cx-form-card { max-width: 760px; margin: 0 auto; background: var(--cx-surface); border: 1px solid var(--cx-gray-border); border-radius: var(--cx-radius-xl); box-shadow: var(--cx-shadow-md); padding: 40px; }
