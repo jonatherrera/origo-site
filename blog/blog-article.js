@@ -43,14 +43,25 @@
     }
   }
 
-  // Newsletter form — placeholder until wired to the provider endpoint.
-  var form = document.getElementById('post-news-form');
-  if (form && !form.getAttribute('action')) {
-    form.addEventListener('submit', function (e) {
+  // Newsletter form -> GoHighLevel webhook
+  var NEWSLETTER_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/uEL4ayBklqQs6ylNNJt6/webhook-trigger/532005fe-212e-4c46-b27d-b2a310a0b9c0";
+  var nlForm = document.getElementById('post-news-form');
+  var nlOk = document.getElementById('post-news-ok');
+  if (nlForm) {
+    nlForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var ok = document.getElementById('post-news-ok');
-      if (ok) ok.hidden = false;
-      form.hidden = true;
+      var email = nlForm.querySelector('input[type="email"]').value.trim();
+      if (!email) return;
+      fetch(NEWSLETTER_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'origo.ooo newsletter cta' })
+      }).then(function () {
+        nlForm.hidden = true;
+        if (nlOk) nlOk.hidden = false;
+      }).catch(function () {
+        if (nlOk) { nlOk.hidden = false; nlOk.textContent = 'Something went wrong. Try again in a moment.'; }
+      });
     });
   }
 })();
