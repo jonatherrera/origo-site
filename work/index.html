@@ -46,7 +46,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css?v=39">
-  <link rel="stylesheet" href="/work/work.css">
+  <link rel="stylesheet" href="/work/work.css?v=2">
 
   <!-- Schema.org: Organization / ProfessionalService -->
   <script type="application/ld+json">
@@ -261,118 +261,112 @@
   </div>
 
 
-  <main>
+    <main class="wk-main" id="main-content">
 
-    <!-- ======================================================
-         HERO
-    ====================================================== -->
-    <section class="section">
-      <div class="container">
-        <p class="t-label reveal">Selected Work</p>
-        <h1 class="reveal">Work that earns trust.</h1>
-        <p class="work-page__sub reveal">A look at how we've helped established, owner-operated businesses build brands, websites, and search visibility worth being proud of.</p>
+    <!-- HERO -->
+    <section class="wk-hero">
+      <div class="wk-hero__inner">
+        <span class="wk-eyebrow">Selected Work</span>
+        <h1>Work that earns trust.</h1>
+        <p>A look at how we&rsquo;ve helped established, owner-operated businesses build brands, websites, and search visibility worth being proud of.</p>
       </div>
     </section>
 
-    <!-- ======================================================
-         WORK GRID
-    ====================================================== -->
-    <section class="section section--gray" aria-label="Selected work">
-      <div class="container">
-        <div class="work-page__grid stagger-group">
+    <!-- FILTER CHIPS -->
+    <div class="wk-tools">
+      <div class="wk-chips" id="wk-chips" role="group" aria-label="Filter work by service">
+        <span class="wk-chip-pill" aria-hidden="true"></span>
+        <button class="wk-chip active" type="button" data-id="all">All work<span class="cnt">4</span></button>
+        <button class="wk-chip" type="button" data-id="branding">Branding<span class="cnt">1</span></button>
+        <button class="wk-chip" type="button" data-id="web">Web Design<span class="cnt">2</span></button>
+        <button class="wk-chip" type="button" data-id="seo">SEO &amp; AEO<span class="cnt">2</span></button>
+      </div>
+    </div>
 
-          <!-- Alpine Humane Society -->
-          <article class="work-card reveal" id="alpine-humane">
-            <div class="work-card__visual">
-              <div class="work-card__bg">
-                <img src="/images/mockup-1.png" alt="Alpine Humane Society website redesign" class="work-card__img" loading="lazy">
-              </div>
-              <div class="work-card__overlay">
-                <span class="work-card__tag">Branding · Web Design</span>
-                <div class="work-card__name">Alpine Humane Society</div>
-                <p class="work-card__desc">A longtime partner. A brand refresh that finally matched the heart behind their mission.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- U.S. Safety Training -->
-          <article class="work-card reveal" id="us-safety-training">
-            <div class="work-card__visual">
-              <div class="work-card__bg">
-                <img src="/images/mockup-2.png" alt="U.S. Safety Training website redesign" class="work-card__img" loading="lazy">
-              </div>
-              <div class="work-card__overlay">
-                <span class="work-card__tag">Web Design</span>
-                <div class="work-card__name">U.S. Safety Training</div>
-                <p class="work-card__desc">A modern presence built to help a Texas safety training company grow.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 360 Collision -->
-          <article class="work-card reveal" id="360-collision">
-            <a href="/work/case-studies" aria-label="360 Collision: SEO and digital presence">
-              <div class="work-card__visual">
-                <div class="work-card__bg">
-                  <img src="/images/360-collision-selected-work.png" alt="360 Collision digital presence" class="work-card__img" loading="lazy">
-                </div>
-                <div class="work-card__overlay">
-                  <span class="work-card__tag">SEO · Digital Presence</span>
-                  <div class="work-card__name">360 Collision</div>
-                  <p class="work-card__desc">SEO and AEO work that earned a San Antonio collision shop a top ranking in AI search.</p>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Groomer's Seafood -->
-          <article class="work-card reveal" id="groomers-seafood">
-            <a href="/work/case-studies/groomers-seafood" aria-label="Groomer's Seafood case study">
-              <div class="work-card__visual">
-                <div class="work-card__bg">
-                  <span class="work-card__bg-text">Groomer's Seafood</span>
-                </div>
-                <div class="work-card__overlay">
-                  <span class="work-card__tag">Branding · Web Design · SEO</span>
-                  <div class="work-card__name">Groomer's Seafood</div>
-                  <p class="work-card__desc">A complete digital overhaul for a trusted seafood wholesaler: coastal branding, a rebuilt site, and SEO that moved 20 terms to page one.</p>
-                </div>
-              </div>
-            </a>
-          </article>
-
+    <!-- WORK -->
+    <section class="wk-work">
+      <div class="wk-wrap">
+        <div id="wk-featured-slot">
+      <a class="wk-featured wk-reveal" href="/work/case-studies/360-collision" data-slug="360-collision" data-services="seo" data-featured="true" aria-label="360 Collision case study">
+        <div class="wk-cover report" style="--rp-accent:#2B2B2B"><span class="rp-mark">ORIGO</span><div class="rp-panel"><div class="rp-head"><span class="rp-src"><span class="live" aria-hidden="true"></span>Search Console · Clicks</span><span class="rp-badge">LIVE</span></div><span class="rp-delta"><span class="arw" aria-hidden="true">&#9650;</span>+294.8%</span><div class="rp-dlabel">more search clicks year over year</div><div class="rp-chart"><svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><g class="rp-grid"><line x1="0" y1="25" x2="300" y2="25" vector-effect="non-scaling-stroke"/><line x1="0" y1="50" x2="300" y2="50" vector-effect="non-scaling-stroke"/><line x1="0" y1="75" x2="300" y2="75" vector-effect="non-scaling-stroke"/></g><defs><linearGradient id="g-360-collision" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2B2B" stop-opacity="0.20"/><stop offset="1" stop-color="#2B2B2B" stop-opacity="0"/></linearGradient></defs><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3 L300,100 L0,100 Z" fill="url(#g-360-collision)"/><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3" fill="none" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div><div class="rp-chips"><span class="rp-chip"><b>+329.8%</b><span>keyword growth</span></span><span class="rp-chip"><b>#7</b><span>on ChatGPT</span></span></div></div></div>
+        <div class="fbody">
+          <span class="flabel">Featured project</span>
+          <span class="ftag">SEO · Digital Presence</span>
+          <h2>360 Collision</h2>
+          <p class="fexcerpt">SEO and AEO work that earned a San Antonio collision shop a top ranking in AI search.</p>
+          <div class="fmeta"><span class="fstat">#7 <span>in ChatGPT results</span></span></div>
+          <span class="flink">Read the case study <span class="arw" aria-hidden="true">&rarr;</span></span>
         </div>
-
-        <p class="work-page__more reveal">
-          <a href="/work/case-studies" class="work__link">Explore the full case studies <span aria-hidden="true">→</span></a>
-        </p>
+      </a>
+        </div>
+        <div class="wk-grid" id="wk-grid">
+        <a class="wk-card wk-reveal" style="animation-delay:0ms" href="/work/case-studies/360-collision" data-slug="360-collision" data-services="seo" data-featured="true" aria-label="360 Collision case study">
+          <div class="wk-cover report" style="--rp-accent:#2B2B2B"><span class="rp-mark">ORIGO</span><div class="rp-panel"><div class="rp-head"><span class="rp-src"><span class="live" aria-hidden="true"></span>Search Console · Clicks</span><span class="rp-badge">LIVE</span></div><span class="rp-delta"><span class="arw" aria-hidden="true">&#9650;</span>+294.8%</span><div class="rp-dlabel">more search clicks year over year</div><div class="rp-chart"><svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><g class="rp-grid"><line x1="0" y1="25" x2="300" y2="25" vector-effect="non-scaling-stroke"/><line x1="0" y1="50" x2="300" y2="50" vector-effect="non-scaling-stroke"/><line x1="0" y1="75" x2="300" y2="75" vector-effect="non-scaling-stroke"/></g><defs><linearGradient id="g-360-collision" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2B2B" stop-opacity="0.20"/><stop offset="1" stop-color="#2B2B2B" stop-opacity="0"/></linearGradient></defs><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3 L300,100 L0,100 Z" fill="url(#g-360-collision)"/><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3" fill="none" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div><div class="rp-chips"><span class="rp-chip"><b>+329.8%</b><span>keyword growth</span></span><span class="rp-chip"><b>#7</b><span>on ChatGPT</span></span></div></div></div>
+          <div class="wk-cap"><span class="name">360 Collision</span><span class="stat"><span class="arw" aria-hidden="true">&#9650;</span>#7<span class="sl">in ChatGPT results</span></span><p class="desc">SEO and AEO work that earned a San Antonio collision shop a top ranking in AI search.</p></div>
+        </a>
+        <a class="wk-card wk-reveal" style="animation-delay:55ms" href="/work/case-studies/groomers-seafood" data-slug="groomers-seafood" data-services="seo" data-featured="false" aria-label="Groomer&#x27;s Seafood case study">
+          <div class="wk-cover report" style="--rp-accent:#12508F"><span class="rp-mark">ORIGO</span><div class="rp-panel"><div class="rp-head"><span class="rp-src"><span class="live" aria-hidden="true"></span>Analytics · Active users</span><span class="rp-badge">LIVE</span></div><span class="rp-delta"><span class="arw" aria-hidden="true">&#9650;</span>+423.1%</span><div class="rp-dlabel">more active users year over year</div><div class="rp-chart"><svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><g class="rp-grid"><line x1="0" y1="25" x2="300" y2="25" vector-effect="non-scaling-stroke"/><line x1="0" y1="50" x2="300" y2="50" vector-effect="non-scaling-stroke"/><line x1="0" y1="75" x2="300" y2="75" vector-effect="non-scaling-stroke"/></g><defs><linearGradient id="g-groomers-seafood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12508F" stop-opacity="0.20"/><stop offset="1" stop-color="#12508F" stop-opacity="0"/></linearGradient></defs><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3 L300,100 L0,100 Z" fill="url(#g-groomers-seafood)"/><path d="M0,86 C34,82 50,72 76,72 S126,50 154,42 S208,28 238,18 S286,6 300,3" fill="none" stroke="#12508F" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div><div class="rp-chips"><span class="rp-chip"><b>+399.4%</b><span>organic clicks</span></span><span class="rp-chip"><b>+399%</b><span>new users</span></span></div></div></div>
+          <div class="wk-cap"><span class="name">Groomer&#x27;s Seafood</span><span class="stat"><span class="arw" aria-hidden="true">&#9650;</span>+423%<span class="sl">active users</span></span><p class="desc">A complete digital overhaul for a trusted seafood wholesaler: coastal branding, a rebuilt site, and SEO that moved 20 terms to page one.</p></div>
+        </a>
+        <a class="wk-card wk-reveal" style="animation-delay:110ms" href="/work/case-studies/alpine-humane-society" data-slug="alpine-humane-society" data-services="branding web" data-featured="false" aria-label="Alpine Humane Society case study">
+          <div class="wk-cover showcase" style="--sc-accent:#1E68D9"><span class="sc-mark">ORIGO</span><div class="wk-bw"><div class="wk-bw-bar"><span class="wk-bw-dots"><i></i><i></i><i></i></span><span class="wk-bw-url">alpinehumanesociety.org</span></div><img class="wk-bw-shot" src="/images/work/alpine-cover.webp" alt="Alpine Humane Society website" loading="lazy"></div></div>
+          <div class="wk-cap"><span class="name">Alpine Humane Society</span><span class="stat"><span class="arw" aria-hidden="true">&#9650;</span>8 yrs<span class="sl">partnership</span></span><p class="desc">A longtime partner. A brand refresh that finally matched the heart behind their mission.</p></div>
+        </a>
+        <a class="wk-card wk-reveal" style="animation-delay:165ms" href="/work/case-studies/us-safety-training" data-slug="us-safety-training" data-services="web" data-featured="false" aria-label="U.S. Safety Training case study">
+          <div class="wk-cover showcase" style="--sc-accent:#0F3D80"><span class="sc-mark">ORIGO</span><div class="wk-bw"><div class="wk-bw-bar"><span class="wk-bw-dots"><i></i><i></i><i></i></span><span class="wk-bw-url">us-safetytraining.com</span></div><img class="wk-bw-shot" src="/images/work/us-safety-cover.webp" alt="U.S. Safety Training website" loading="lazy"></div></div>
+          <div class="wk-cap"><span class="name">U.S. Safety Training</span><span class="stat"><span class="arw" aria-hidden="true">&#9650;</span>2x<span class="sl">lead volume</span></span><p class="desc">A modern presence built to help a Texas safety training company grow.</p></div>
+        </a>
+        </div>
+        <p class="wk-empty" id="wk-empty" hidden>No work matches that filter.</p>
       </div>
     </section>
 
-    <!-- ======================================================
-         CLOSING CTA
-    ====================================================== -->
-    <section class="section--dark closing-cta" id="cta" aria-labelledby="cta-headline">
-      <div class="container">
-        <div class="closing-cta__inner">
+    <!-- RESULTS STRIP -->
+    <section class="wk-results">
+      <div class="wk-wrap wk-results__wrap">
+        <h2>Work that moves the numbers</h2>
+        <p class="lead">Trust is the goal, but it shows up in the metrics too. A few results from recent engagements.</p>
+        <div class="wk-stat-grid">
+          <div class="wk-stat"><div class="v">+423%</div><div class="l">active users</div><div class="n">Groomer&#x27;s Seafood</div></div>
+          <div class="wk-stat"><div class="v">20</div><div class="l">terms to page one</div><div class="n">Groomer&#x27;s Seafood</div></div>
+          <div class="wk-stat"><div class="v">#7</div><div class="l">ranking in ChatGPT</div><div class="n">360 Collision</div></div>
+          <div class="wk-stat"><div class="v">8 yrs</div><div class="l">longest partnership</div><div class="n">Alpine Humane Society</div></div>
+        </div>
+      </div>
+    </section>
 
-          <h2 class="closing-cta__headline reveal" id="cta-headline">
-            Ready to build something worth being proud of?
-          </h2>
+    <!-- TESTIMONIAL -->
+    <section class="wk-quote-sec">
+      <div class="wk-wrap">
+        <div class="wk-quote-card">
+          <div class="mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>Fantastic business. Very creative, in touch with the current markets, and they have done a great job helping us grow our online presence.</blockquote>
+          <p class="attrib"><b>Kelly Rabedeau</b> &middot; <a href="/work/case-studies/360-collision">Owner, 360 Collision</a></p>
+        </div>
+      </div>
+    </section>
 
-          <p class="closing-cta__body reveal reveal-delay-1">
-            Book a free discovery call and let's talk about the brand, website, and search presence your business deserves.
-          </p>
+    <!-- TRUSTED BY -->
+    <section class="wk-trusted">
+      <div class="wk-wrap wk-trusted__wrap">
+        <p class="tlabel">Trusted by owner-operated businesses across the US</p>
+        <div class="wk-logos">
+          <span class="wk-logo">Groomer&#x27;s Seafood</span>
+          <span class="wk-logo">360 Collision</span>
+          <span class="wk-logo">Alpine Humane Society</span>
+        </div>
+      </div>
+    </section>
 
-          <div class="reveal reveal-delay-2">
-            <a href="https://go.origo.ooo/call"
-               class="btn btn--primary magnetic"
-               target="_blank"
-               rel="noopener">
-              Book your discovery call <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-
+    <!-- CTA BAND -->
+    <section class="wk-cta">
+      <div class="wk-cta__inner">
+        <span class="wk-eyebrow">Ready when you are</span>
+        <h2>Ready to build something worth being proud of?</h2>
+        <p>Book a free discovery call and let&rsquo;s talk about the brand, website, and search presence your business deserves.</p>
+        <div class="wk-cta__row">
+          <a href="https://go.origo.ooo/call" class="btn wk-btn-dark" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="/services" class="btn wk-btn-ghost">See Our Services <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -482,5 +476,6 @@
 
 
   <script src="/js/main.js?v=7"></script>
+  <script src="/work/work.js?v=1" defer></script>
 </body>
 </html>
