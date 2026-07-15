@@ -2,6 +2,9 @@ Options -Indexes
 
 RewriteEngine On
 
+# Retired /team page -> /about (301, single hop incl. http/www).
+RewriteRule ^team/?$ https://origo.ooo/about/ [R=301,L]
+
 # Canonical scheme + host: https://origo.ooo
 # Cloudways terminates SSL upstream, so Apache sees requests as HTTP and
 # %{HTTPS} is always "off". Use the proxy's X-Forwarded-Proto header as the
