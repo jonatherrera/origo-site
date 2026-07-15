@@ -1,5 +1,6 @@
 (function () {
   var posts = [
+    { slug: 'how-to-choose-a-web-design-agency-in-texas', category: 'web-design', categoryLabel: 'Web Design', title: 'How to Choose a Web Design Agency in Texas', excerpt: 'Seven questions that separate a real partner from a pretty template, plus what a website project should cost and include.' },
     { slug: 'six-questions-brand-agency', category: 'digital-strategy', categoryLabel: 'Digital Strategy', title: 'Six Questions to Ask Before Trusting an Agency With Your Brand', excerpt: 'The questions every business owner should ask before signing the contract — and the answers that separate agencies worth hiring from the ones that aren\'t.' },
     { slug: 'social-media-is-rented-land', category: 'digital-strategy', categoryLabel: 'Digital Strategy', title: 'Why Social Media Is Rented Land', excerpt: 'Every piece of content you publish to a social platform is building someone else\'s asset. Here\'s why — and how to keep using social without giving away the equity.' },
     { slug: 'you-dont-own-your-email-list', category: 'digital-strategy', categoryLabel: 'Digital Strategy', title: 'You Don\'t Own Your Email List If You Can\'t Take It With You', excerpt: 'The asset most businesses assume they own — and almost never fully do. Here\'s what real email list ownership looks like and what to do about it.' },
