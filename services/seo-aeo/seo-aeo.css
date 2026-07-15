@@ -1007,3 +1007,26 @@
   border-color: rgba(255, 255, 255, 0.28);
   background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) center / 8px 1.5px no-repeat;
 }
+
+/* ============================================================
+   Eyebrow pill treatment — matches the site-wide pill
+   (blue on --surface-blue, inverted on the dark problem band).
+   Supersedes the plain-text eyebrow styles above.
+   ============================================================ */
+.seo-v2 .sp-hero__label,
+.seo-v2 .svc-eyebrow,
+.seo-v2 .sp-results__eyebrow,
+.seo-v2 .sp-included__eyebrow {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  color: var(--color-blue);
+  background: var(--surface-blue);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.seo-v2 .sp-hero__label .seo-mark { display: none; }
+.seo-v2 .svc-eyebrow--dark {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.12);
+}

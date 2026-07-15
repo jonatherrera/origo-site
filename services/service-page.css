@@ -22,12 +22,16 @@
 .bsp-eyebrow-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .bsp-eyebrow-row img { display: block; flex-shrink: 0; object-fit: contain; }
 .bsp-eyebrow {
+  display: inline-block;
   font-family: var(--font-head);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-blue);
+  background: var(--surface-blue);
+  border-radius: 999px;
+  padding: 6px 14px;
 }
 .bsp-h2 {
   font-family: var(--font-head);
@@ -100,7 +104,7 @@
 .bsp-problem__ghost { position: absolute; top: -40px; right: -160px; pointer-events: none; }
 .bsp-problem__ghost img { display: block; width: 520px; height: 520px; max-width: none; object-fit: contain; opacity: 0.05; }
 .bsp-problem__inner { position: relative; }
-.bsp-problem .bsp-eyebrow { color: #7FA6E8; }
+.bsp-problem .bsp-eyebrow { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); }
 .bsp-problem__headline {
   font-family: var(--font-head);
   font-weight: 700;
