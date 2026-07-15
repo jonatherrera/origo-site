@@ -130,3 +130,17 @@
 .csx-btn-ghost:hover { border-color: #fff; color: #fff; transform: translateY(-1px); }
 
 @media (max-width: 760px) { .csx-cta__inner { padding: 64px 24px; } }
+
+/* ============================================================
+   Case-study FAQ (AEO) — visible Q&A that mirrors the FAQPage
+   JSON-LD in the head. Sits between the prose and next-project.
+   ============================================================ */
+.csx-faq { padding: 8px 0 40px; }
+.csx-faq .col { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+.csx-faq .kicker { font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0 0 4px; }
+.csx-faq h2 { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.02em; font-size: 28px; line-height: 1.2; margin: 0 0 20px; color: var(--color-black); }
+.csx-faq__item { border-top: 1px solid var(--csx-gray-border); padding: 22px 0; }
+.csx-faq__item:last-child { border-bottom: 1px solid var(--csx-gray-border); }
+.csx-faq__q { font-family: var(--font-head); font-weight: 600; font-size: 18px; line-height: 1.4; color: var(--color-black); margin: 0 0 8px; }
+.csx-faq__a { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--color-gray-dark); margin: 0; }
+.csx-faq__a a { color: var(--color-blue); text-decoration: underline; text-underline-offset: 2px; }
